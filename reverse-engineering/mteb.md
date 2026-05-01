@@ -97,3 +97,75 @@ Blog: approachable, tutorial-oriented. Opens with "Why Text Embeddings?", walks 
 Communication funnel: blog attracts → leaderboard provides interactive value → package enables reproduction → paper provides citation. Each artifact serves a different audience, all cross-link.
 
 Evolution: now at v2.12.37 (paper was v1). Follow-up paper MMTEB (2025) extends to multimodal. Living benchmark platform, not static artifact.
+
+## Writing Style & Prose Patterns
+
+### Sentence Structure
+
+Medium-length (15-30 words), predominantly complex (main + subordinate clause). Simple declaratives for emphatic claims. Rarely very short.
+
+> "It is unclear whether state-of-the-art embeddings on semantic textual similarity (STS) can be equally well applied to other tasks like clustering or reranking."
+> "We find that no particular text embedding method dominates across all tasks." (punch)
+
+### Hedging & Qualification
+
+Moderate hedging. Observational findings asserted with "We find." Causal explanations hedged with "may be due to" or "likely due to."
+
+> Asserted: "We find that performance strongly correlates with model size."
+> Hedged: "This may be due to the large variety of datasets MPNet has been fine-tuned on."
+> Hedged: "...which is likely due to the multilinguality of BLOOM."
+
+### Definition Conventions
+
+Parenthetical abbreviation inline: full term (ABBREVIATION), then abbreviation thereafter. For models: Name (Citation) + present-tense verb phrase.
+
+> "the Massive Text Embedding Benchmark (MTEB)"
+> "BERT (Devlin et al., 2018) uses the transformer architecture and performs large-scale self-supervised pre-training."
+
+### Citation Placement
+
+Immediately after claim or entity, always parenthetical (Author, Year). Heavy density in intro/related work (3-5 per sentence), drops to zero in results. Multiple citations semicolon-separated within one parenthetical.
+
+> "from clustering and topic representation (Aggarwal and Zhai, 2012; Angelov, 2020) to search systems (Huang et al., 2020; Zhu et al., 2021; Nayak, 2019)..."
+
+### Punctuation Patterns
+
+- **Colons**: introduce lists or elaborate
+- **Parentheses**: very frequent (citations, abbreviations, examples, asides)
+- **Em-dashes**: absent entirely
+- **Quoted terms**: sparingly for metaphorical use ("the 'blind' application")
+
+### Voice & Person
+
+Systematic split: "we" for decisions, discoveries, contributions. Passive for benchmark procedure where the agent is the system.
+
+> "We evaluate over 30 models on MTEB..."
+> "The train set embeddings are used to train a logistic regression classifier..."
+
+### Transitions
+
+Mostly implicit (new paragraph = new topic). Explicit connectors infrequent: "However," "Further," "Thus," "Meanwhile," "Relatedly." Avoids "moreover," "furthermore," "additionally." Prefers short Anglo-Saxon connectors.
+
+### Number Phrasing
+
+Concrete numbers + contextualizing comparison. Uses "x" multipliers for size, "%" for performance gaps, "ahead of" for rankings.
+
+> "ST5-XXL has the highest average performance, 3% ahead of the best non-ST5 model."
+> "Despite being almost 50x smaller, the MPNet embedding model is on par with ST5-XXL."
+
+### Recurring Templates
+
+1. "We find that [observation]." — canonical
+2. "[Model] (Citation) [present-tense verb]..." — introducing systems
+3. "This [verb]s the importance of [gerund]." — drawing implications
+4. "[System] is/are used to [infinitive]." — procedure
+5. "[This suggests / leads to / makes] [consequence]."
+6. "[Task/Model] performs X, which is likely due to [explanation]."
+
+### Register
+
+Clear gradient: Abstract/Conclusion = most formal (nominalizations). Introduction = motivational. Related Work = dense citation, thumbnail descriptions. Benchmark Design = procedural, passive, manual-like. Results = most informal (conversational hedges, speculative reasoning).
+
+### Vocabulary
+
+Technical-accessible. Assumes ML audience (cosine similarity, nDCG@10, contrastive loss used without definition). Key recurring: "embed/embeddings," "benchmark" (noun and verb), "competitive," "state-of-the-art," "geared towards," "holistic," "intractable." Never uses loose intensifiers. Tone consistently understated and evidence-forward.

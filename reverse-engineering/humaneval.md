@@ -122,3 +122,80 @@ Blog post about Codex (the product), not about HumanEval (the benchmark). Benchm
 "Fire and forget" release: MIT license, one JSONL file, one command. No registration, no submission server, no leaderboard. This became the greatest distribution advantage.
 
 No versioning, no v2, no expansion. Static dataset, 164 problems forever.
+
+## Writing Style & Prose Patterns
+
+### Sentence Structure
+
+Medium-length declaratives (15-30 words). Simple subject-verb-object dominates, with occasional compound constructions. Front-loads subject and verb, places qualifiers at end. Rarely stacks more than two subordinate clauses.
+
+> "We introduce Codex, a GPT language model fine-tuned on publicly available code from GitHub."
+> "One consequence of this is that such models may do things that are unhelpful for the user, despite having the capability to be more helpful."
+
+### Hedging & Qualification
+
+Two-tier: empirical results stated with "We find that..." (direct, no hedging). Broader implications heavily hedged with "could," "may," "we believe."
+
+> Asserted: "We find that repeated sampling from the model is a surprisingly effective strategy for producing working solutions."
+> Hedged: "We believe that at their current level of capability, Codex models do not materially lower the barrier."
+
+"Could" is the hedging verb of choice (not "might"). Paper never hedges on numbers.
+
+### Definition Conventions
+
+Naming formula: "We call X Y" or "A framework known as X." Definition and justification in the same sentence.
+
+> "We call the supervised fine-tuned models Codex-S, and show that they produce consistent gains across model size."
+
+No standalone "Definition:" blocks.
+
+### Citation Placement
+
+End-of-clause parenthetical (dominant), mid-sentence after cited concept, or integrated as grammatical subject (rare). Moderate density — cited to establish precedent, not to buttress every claim.
+
+> "Scalable sequence prediction models (Graves, 2014; Vaswani et al., 2017) have become a general-purpose method."
+
+### Punctuation Patterns
+
+- **Semicolons**: link related independent clauses
+- **Parentheticals**: brief examples and technical asides, "(e.g., polymorphic malware)"
+- **Em-dashes**: rare, for definitional asides ("there's some task X that we want it to do—and it is 'capable' of doing X")
+- **Commas**: primary clause-joiner. Conservative, functional, never decorative.
+
+### Voice & Person
+
+"We" overwhelmingly dominant (~4:1 active-to-passive). Passive only for backgrounded agents or general truths.
+
+> Active: "We develop a sandbox environment to safely run untrusted programs."
+> Passive: "Functional correctness is used by human developers to judge code."
+
+### Transitions
+
+Explicit and formulaic: "In contrast," "Furthermore," "More fundamentally," "Next, we describe..." Section-opening meta-discourse: "In this section, we discuss..." Between paragraphs, mostly implicit (new paragraph = new subject).
+
+### Number Phrasing
+
+Fixed template: subject + "solves/achieves" + percentage + "of" + benchmark, with comparison clause.
+
+> "Our model solves 28.8% of the problems, while GPT-3 solves 0% and GPT-J solves 11.4%."
+> "Within 100 samples, Codex-S is able to generate at least one correct function for 77.5%."
+
+Comparisons use "while" (not "whereas"). Equivalences: "roughly equivalent to." Always: model, then metric, then number — never leading with the number.
+
+### Recurring Templates
+
+1. "We find that [X]" — at least 5 times
+2. "To [purpose], we [action]" — purpose-fronted
+3. "In this [section/work], we [verb]" — meta-discourse
+4. "While [concession], [main clause]" — concessive
+5. "[Model] solves/achieves [N]% of [benchmark]" — results reporting
+
+### Register
+
+Introduction: accessible, narrative, lower jargon. Methods: technical, precise, mathematical notation. Results: dry, numerical, formulaic. Limitations/Impacts: speculative, cautious, heavy hedging, longer sentences. Related Work: survey-style, citation-dense.
+
+Broadest shift: assertive Results ("solves 28.8%") vs tentative Broader Impacts ("could," "may," "we believe").
+
+### Vocabulary
+
+Middle register — technical but accessible. Prefers precise verbs (solves, generates, produces, achieves) over vague ones (shows, demonstrates). Uses "leverage" (not "use"), "rudimentary" (not "basic"), "merit" (as verb). No superlatives. Closest to informal: "surprisingly effective."

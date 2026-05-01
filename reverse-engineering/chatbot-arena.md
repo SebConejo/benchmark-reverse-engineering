@@ -85,3 +85,76 @@ Each phase added legitimacy: community participation → data artifacts → peer
 Blog: accessible, collaborative ("We invite the entire community"). Paper: technical, evidence-based. Colab shared with blog, not paper.
 
 Self-reinforcing credibility loop: leaderboard exists and is live → researchers cite it → more models submit → more citations.
+
+## Writing Style & Prose Patterns
+
+### Sentence Structure
+
+Medium-length declaratives (15-25 words). Long expository sentence → short substantive claim → supporting detail. Methods paragraphs 3-4 sentences, results compress to 2-3.
+
+> "We let A denote our comparative data set." (7 words, methods)
+> "Current benchmarks often fail to capture the nuanced and diverse aspects of these models, particularly in assessing their alignment with human preferences in real-world, open-ended tasks." (28 words, introduction)
+
+### Hedging & Qualification
+
+System design: asserted directly. Generalizability: hedged with "may," "could," "we anticipate." Never uses "might." Limitations introduced with concessive clauses: acknowledge strength, then immediately qualify.
+
+> Asserted: "We confirm that the crowdsourced questions are sufficiently diverse and discriminating."
+> Hedged: "This inclination may result in a biased distribution of users."
+
+### Definition Conventions
+
+Inline with operational explanation or italicized formatting. Pattern: name the concept, then colon or "where" clause with formal definition.
+
+> "Our goal is to estimate the _win matrix_: theta*(a) = E[Ht | At = a], for all a in A"
+
+Terms never defined in isolation — always inside a sentence stating what the term is for.
+
+### Citation Placement
+
+Parenthetical after claim, never as grammatical subjects (no "Smith (2022) showed..."). Exception: when invoking a specific theorem ("Following results of Huber et al. (1967) show..."). Density moderate: 1-2 per paragraph in methods, heavier in related work.
+
+### Punctuation Patterns
+
+- **Colons**: dominant structuring punctuation, introduces lists/elaborations/equations
+- **Semicolons**: connects related independent clauses frequently
+- **Parentheticals**: supplementary data, cross-references
+- **Em-dashes**: rare (only 2 instances). Prefer colons and semicolons.
+
+### Voice & Person
+
+"We" dominates (~70% active, 30% passive). Never "I," "one," or "it is argued that."
+
+> "We confirm that..." / "We conduct a thorough analysis..."
+> Passive: "Confidence intervals are constructed using the chi-squared interval."
+
+### Transitions
+
+Explicit signposting, procedural rather than argumentative: "In this section, we..." "Next, we study..." "To examine whether..." "Finally, we report..." Never uses "Moreover," "Furthermore," "Indeed."
+
+### Number Phrasing
+
+Plain facts, no evaluative framing ("impressively," "remarkably" absent). Let numbers speak.
+
+> "As of Jan 2024, we have received around 240K votes from over 90K users."
+> "Random baseline requires 54% more data to achieve same precision level."
+> "Agreement rates range 72% to 83%."
+
+Template: "[method A] needs X vs. [method B] needs Y."
+
+### Recurring Templates
+
+1. "To address this issue, we introduce..." — problem-solution
+2. "Our goal is to [verb]." — goal statement
+3. "We confirm/demonstrate/show that [claim]." — empirical confirmation
+4. "To [control/ensure/examine] X, we [action]." — methodological justification
+5. "In this section, we [verb]..." — section opener
+6. "Although [strength], we anticipate [weakness]..." — limitation concession
+
+### Register
+
+Remarkably uniform. Abstract/intro slightly more expansive. Methods tighten into notation-heavy prose. Discussion loosens toward informal concession. Only one conversational moment: "Our data consists of pairwise comparisons—but how can we use these to recover ranking?"
+
+### Vocabulary
+
+Mid-formal academic. Key verbs: "demonstrate," "conduct," "employ," "leverage," "examine," "confirm," "validate." Adverbs: "significantly," "sufficiently," "substantially." Stays functional rather than ornate. No jargon inflation.

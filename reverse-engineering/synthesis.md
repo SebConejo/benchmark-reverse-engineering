@@ -163,3 +163,110 @@ RouterArena uses paper-first with leaderboard attached — the Rice University a
 22. **Ship a blog post on the same day** (HELM pattern). Blog leads with "why routing evaluation is broken" + one surprising finding + a link to the interactive leaderboard. Keep it to 800 words.
 23. **Automated submission via PR** (RouterArena pattern). `/evaluate` comment trigger for CI-based scoring. Provide a 10% local test subset.
 24. **Announce with the surprising finding**, not with "we release TaskBench." The finding is the hook; the benchmark is the mechanism.
+
+---
+
+## Writing Style Guide
+
+Extracted from the prose patterns of all 6 benchmarks. Directly usable by a redaction agent writing the TaskBench paper.
+
+### Universal Patterns (present in all 6 papers)
+
+**"We find that [X]"** is the universal sentence template for introducing findings. Every paper uses it as the canonical way to present empirical results. It is direct, unhedged, and attributes the observation to the authors without implying causation.
+
+**First-person plural "we"** is the only acceptable authorial voice. No paper uses "I," "one," or "it is argued that." The split is functional: "we" for what the authors chose to do; passive for what is necessarily true or for describing systems. This is non-negotiable.
+
+**Hedging is two-tiered everywhere.** Empirical observations ("We find that X") are unhedged. Predictions, implications, and causal explanations are hedged with "may," "could," "suggests." Never hedge on your own numbers. Never use "perhaps" or "it seems."
+
+**Terms are defined inline, on first use, in the same sentence that uses them.** Never in standalone "Definition:" blocks. The two sub-patterns:
+- Appositive: "Term, [definition clause], [attribution], predicate" (HELM, MMLU)
+- Operational: "We define X: [procedure]" or "Term—[noun-phrase definition]" (RouterArena, HumanEval)
+
+**Em-dashes are absent or rare** in 5 of 6 papers. RouterArena is the exception (uses them for definitions). The norm: commas and parentheticals carry all parenthetical content. Do not over-use em-dashes.
+
+**Citations are parenthetical, end-of-clause.** Never "Smith (2022) showed that..." unless the cited work is itself the topic of the sentence. Multiple citations semicolon-separated. Density drops in Results — cite to establish precedent in intro/methods, let your own numbers speak in results.
+
+### Sentence Templates to Use
+
+These templates recur across multiple papers. Use them as the backbone of TaskBench prose:
+
+| Template | Function | Example source |
+|----------|----------|---------------|
+| "We find that [observation]." | Introduce any empirical finding | All 6 |
+| "To [purpose], we [action]." | Justify a methodological choice | MMLU, HumanEval, Arena |
+| "[Prior claim]. However, [complication]." | Pivot from prior work to your gap | MMLU (signature), HELM |
+| "This [verb] that [implication]." | Draw a conclusion from evidence | MMLU, MTEB |
+| "No single X is universally Y." | State a key negative finding | RouterArena, MTEB |
+| "In contrast to [prior work], [our work] Y." | Position against baselines | RouterArena, HELM |
+| "Our [noun] features [3-4 items]." | Summarize contributions | RouterArena, HELM |
+| "We define X: [operational procedure]." | Introduce a new metric | RouterArena, HumanEval |
+| "[Model/System] achieves [N]%, while [baseline] achieves [M]%." | Report comparative results | HumanEval, MMLU |
+| "Although [strength], [limitation/qualification]." | Concede limitations gracefully | Arena |
+
+### How to Hedge vs Assert
+
+**Assert (use "We find that", "X is", "X shows")** when:
+- Reporting your own measured numbers
+- Stating what your benchmark includes/excludes (scope is a design choice)
+- Describing your methodology
+
+**Hedge (use "may," "could," "suggests," "we anticipate")** when:
+- Explaining WHY a result occurred (causal claims)
+- Discussing future implications or generalizability
+- Describing limitations of other systems
+
+**Never hedge** with "perhaps," "it seems," "arguably," "it could be argued." These are weak. Use "may" for genuine uncertainty, nothing for confidence.
+
+### Punctuation Conventions
+
+| Mark | Use | Avoid |
+|------|-----|-------|
+| Colons | Introduce lists, expansions, elaborations | |
+| Parentheses | Citations, abbreviations, quick examples "(e.g., ...)" | Long asides (>15 words) |
+| Semicolons | Join balanced independent clauses (optional — 3/6 papers avoid them entirely) | |
+| Em-dashes | Sparingly, for definitions only (RouterArena pattern). Most papers avoid. | Casual interjections |
+| Oxford comma | Always | |
+| "e.g.," | For inline examples | "for example" in running prose (too wordy) |
+
+### Register Map (How to Write Each Section)
+
+| Section | Register | Characteristics |
+|---------|----------|----------------|
+| Abstract | Accessible + assertive | Gap statement, then contribution, then scale numbers. Short sentences. No jargon. |
+| Introduction | Motivational + rhetorical | Broader stakes, evaluative language ("concerning," "unclear"), "However" pivots |
+| Methodology | Precise + procedural | Definitions, "consists of" structures, "We define X" templates, shorter clauses |
+| Results | Declarative + empirical | "We find that" sentences, numbers without hedging, comparative templates |
+| Limitations | Honest + confident | Concessive "Although X, Y" structures, "design choice" framing, no apology |
+| Conclusion | Elevated + forward-looking | Returns to intro register, "should" prescriptions, community invitation |
+
+### Vocabulary to Use
+
+From the analyzed papers, these words are safe (proven academic register, never flagged as AI-ish):
+
+- **For findings**: "we find," "we observe," "we show," "reveals," "indicates"
+- **For comparisons**: "outperforms," "on par with," "competitive with," "Nx smaller/larger"
+- **For importance**: "suggests," "highlights," "underscores" (use sparingly)
+- **For scope**: "spans," "covers," "encompasses," "consists of"
+- **For gaps**: "remains unclear," "has not been addressed," "is lacking"
+- **For contribution**: "we introduce," "we propose," "we release," "we present"
+- **One vivid word** per paper is acceptable for memorability (MMLU's "lopsided," HELM's "desperately needed," HumanEval's "surprisingly effective"). Pick one — don't over-do.
+
+### Vocabulary to Avoid
+
+These words are either too informal, too AI-sounding, or absent from all 6 papers:
+
+- "delve," "crucial," "robust" (as empty intensifier), "comprehensive" (unless it's your literal differentiator like RouterArena), "nuanced," "multifaceted," "furthermore," "moreover," "additionally" (prefer "Further," or nothing)
+- "groundbreaking," "revolutionary," "state-of-the-art" as standalone noun ("the SOTA")
+- "it should be noted that," "it is worth mentioning," "interestingly" (used once by RouterArena, otherwise absent)
+- "leverage" (overused in 2024 AI papers — use "use" or a specific verb instead)
+- All superlatives unless backed by a measurement ("best" only if literally ranked #1)
+
+### Sentence Length & Rhythm
+
+Target: 15-30 words per sentence. 60% complex (one subordinate clause), 25% compound, 15% simple (for emphasis).
+
+Pattern: substantive claim (short) → qualification or expansion (medium-long) → next claim. The short sentence carries the finding; the longer sentence provides context. Never more than 2 long sentences in a row without a short one to reset rhythm.
+
+### The Researcher Voice (Summary)
+
+The voice across all 6 papers is: **authoritative but measured, precise but accessible, confident about data but humble about implications.** It is NOT: promotional, defensive, casual, or uncertain. Write as a senior researcher presenting findings to peers — frank about what you found, clear about what it means, transparent about what it doesn't cover.

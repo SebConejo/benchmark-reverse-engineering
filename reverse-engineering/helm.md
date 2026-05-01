@@ -100,3 +100,71 @@ Leaderboard as living artifact — updated over time with new models. Paper rema
 Scale signaling: abstract/blog lead with impressive numbers (30 models, 42 scenarios, $38K, 12B tokens). Authority through exhaustiveness.
 
 Ongoing cadence: periodic updates (HELM Capabilities, HELM Safety, VHELM) maintain visibility without new papers.
+
+## Writing Style & Prose Patterns
+
+### Sentence Structure
+
+Medium-to-long sentences (20-40 words typical), heavily weighted toward complex/compound-complex structures with embedded clauses, parentheticals, and appositives. Simple sentences are rare and reserved for rhetorical emphasis.
+
+> "Unlike previous AI systems, language models are general-purpose text interfaces that could be applied across a vast expanse of scenarios from question answering to summarization to toxicity detection."
+
+> "Transparency begets trust and standards." (rare short punch)
+
+Ratio: ~15% simple, 25% compound, 60% complex. Frequently front-loads subordinate clauses ("Given language models' vast surface...", "Unlike previous AI systems...").
+
+### Hedging & Qualification
+
+Moderate hedging. Empirical findings asserted with "we find that X." Predictions hedged with "could," "suggests," "remains to be seen." Never uses "perhaps" or "it seems" — hedging always tied to temporal uncertainty, not epistemic doubt about their own data.
+
+> Hedged: "This *suggests* that better summarization datasets are desperately needed."
+> Asserted: "Instruction tuning... *is* highly effective in terms of accuracy, robustness, and fairness."
+
+### Definition Conventions
+
+Inline, immediately upon introduction, using comma-offset appositives. Pattern: **Term, [appositive definition], [attribution], predicate.** Stacks multiple appositive phrases before reaching the main verb.
+
+> "Instruction tuning, the practice of fine-tuning LMs with human feedback, pioneered by OpenAI and Anthropic, is highly effective..."
+
+### Citation Placement
+
+Inline nominal references — name-drops organization and model together. Citations are densely embedded in examples rather than appended to claims. Heavy parenthetical density (model names + parameter counts in parentheses).
+
+> "Models such as Google's T5 (11B) and Anthropic's Anthropic-LM (52B) were not evaluated on a single dataset in common."
+
+### Punctuation Patterns
+
+- **Colons**: frequent, to introduce elaborations or lists
+- **Parentheticals**: extremely heavy (examples, model sizes, metric lists). "e.g.," appears in nearly every paragraph.
+- **Em-dashes**: absent. Commas and parentheticals used instead.
+- **Semicolons**: rare, only for list items containing commas.
+
+### Voice & Person
+
+Consistently first-person plural "we" for actions, findings, and aspirations. Passive only for describing the state of the field (not their work). Deliberate: **passive = existing problems; active "we" = their contribution.**
+
+> "Let us work together to provide the much needed transparency." (aspirational "we" expanding to community)
+
+### Transitions
+
+Mostly implicit or structural. When explicit: "But," "However," "In contrast to," "Further," "Thus." Avoid "Furthermore," "Moreover," "Additionally." "Overall" marks section summaries.
+
+### Number Phrasing
+
+Concrete specifics embedded in narrative: "which we improve to X" (before/after framing), "over N [unit]" (scale emphasis), "Nx the size" (relative). Never "outperforms by X%" — frames as competitive relationships.
+
+### Recurring Templates
+
+1. "We find that X" — canonical finding opener
+2. "[Noun], the practice of [gerund], is [adj]" — stacked appositive
+3. "X should Y" — normative prescriptions
+4. "This [verb] the importance of X" — drawing implications
+5. "[Entity] such as [parenthetical list]" — example enumeration
+
+### Register
+
+Three-register structure: Introduction = elevated, rhetorical, about society. Methodology = precise, definitional, "consists of." Findings = empirical, hedged, "We find." Closing = returns to elevated, aspirational.
+
+### Vocabulary
+
+Accessible academic. Key recurring: "transparency" (thematic keyword), "holistic," "desiderata," "ecosystem," "substrate," "foregrounds." Avoids deep ML jargon; uses evaluation/measurement vocabulary. Rhetorical sections use governance/policy discourse ("democratic," "pluralistic," "norms"). Occasional colloquial punctures ("not yet a slam dunk," "desperately needed") create authoritative-but-human voice.

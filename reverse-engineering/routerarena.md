@@ -118,3 +118,88 @@ Automated leaderboard maintenance but governance details thin — no timeline co
 5. PR-based submission with automated evaluation makes leaderboard self-sustaining
 6. Related Work after results turns comparison table into a strength demonstration
 7. Scattered limitations = confident positioning for a platform paper
+
+## Writing Style & Prose Patterns
+
+### Sentence Structure
+
+Medium-length (18-30 words), strong preference for compound-complex. Simple sentences are rare — reserved for key claims. Dominant pattern: independent clause + participial or relative clause extension.
+
+> "Large Language Models (LLMs) are rapidly diversifying, offering an ever-wider spectrum of capabilities and inference costs."
+> "No single model is universally optimal: powerful models excel at complex tasks but are costly, while smaller models are more efficient yet may struggle on difficult queries."
+> "As routers proliferate, the challenge shifts from selecting the right model to selecting the right router." (parallel infinitives)
+
+### Hedging & Qualification
+
+Hedges sparingly and strategically. Own platform: asserted. Other systems / future: hedged with "should," "may," "will." Confident paper.
+
+> Asserted: "we introduce RouterArena, the first open platform enabling comprehensive comparison of LLM routers"
+> Asserted: "Current routers are inefficient at leveraging cheaper models when appropriate"
+> Hedged: "smaller models are more efficient yet may struggle on difficult queries"
+
+### Definition Conventions
+
+Operational definitions in prose flow. Pattern: "We define X" + colon + procedure, or Term + em-dash + noun-phrase definition.
+
+> "We define difficulty empirically: for each query, we count how many of the 42 models answer it correctly."
+> "Optimal Selection Ratio—the proportion of queries for which the router answers correctly by selecting the cheapest model"
+> "This captures a router's ability to perform optimal routing—that is, selecting the cheapest model that still produces a correct response."
+
+Never uses "Definition 1:" formal callouts.
+
+### Citation Placement
+
+Sentence-final brackets [cite]. Sparse outside Related Work. Two patterns:
+- Claim [cite] — authority support
+- Name [cite] verb-phrase — for prior work descriptions
+
+> "The DDC is renowned for its comprehensive and logical structure [satija2013theory]."
+> "RouterBench [routerbench] introduces a large-scale dataset consisting of over 405k inference outcomes."
+
+### Punctuation Patterns
+
+- **Colons**: dominant — introduce expansions, lists, restatements
+- **Semicolons**: join balanced independent clauses
+- **Em-dashes**: parenthetical insertors AND definition markers (distinctive)
+- **Parentheses**: brief technical asides and figure references only
+
+No comma splices, no exclamation marks, no rhetorical questions.
+
+### Voice & Person
+
+"We" for their actions, passive/impersonal for general truths and requirements. Never "I" or "one."
+
+> "we construct such a dataset by adhering to two guiding principles"
+> "the dataset must provide broad domain coverage" (impersonal necessity)
+
+Functional split: "we" = what authors chose; passive = what is necessarily true.
+
+### Transitions
+
+Explicit and formulaic: "As a result," "Given its importance," "Following these principles," "In contrast to," "To enable." Also "Notably," "Overall." Never creative or surprising — follows ML paper conventions closely.
+
+### Number Phrasing
+
+System name + verb of achievement + qualified result with relative framing.
+
+> "vLLM-SR and CARROT achieve meaningful savings: roughly 35% lower cost with under 2% accuracy degradation."
+> "accuracy drops sharply on medium and especially hard ones (often below 10%)"
+
+Uses relative terms ("significantly," "sharply," "roughly") to contextualize numbers.
+
+### Recurring Templates
+
+1. "No single X is universally Y" — thesis statement
+2. "X are increasingly recognized as Y" — establishing importance
+3. "This [metric] captures/measures/penalizes..." — metric definitions
+4. "Given/As X, Y" — causal-fronted motivation
+5. "Unlike/In contrast to X, [our work] Y" — positioning
+6. "Our [noun] features [list of 3-4 items]" — contribution summaries
+
+### Register
+
+Remarkably uniform formal academic throughout. Subtle shifts: abstract/intro more assertive; methodology more procedural with enumeration; results observational with hedging. No informal register anywhere — no contractions, no colloquialisms.
+
+### Vocabulary
+
+Formal but accessible. Key recurring terms: "core system primitive" (router framing), "comprehensive comparison" (differentiator), "principled" (signals rigor), "increasingly" (trend/urgency), "universally optimal" (negative framing), "cost-efficient." Router always framed as agent that "selects" — never "assigns," "maps," or "dispatches."
