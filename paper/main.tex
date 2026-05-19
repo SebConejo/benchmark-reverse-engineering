@@ -1,0 +1,66 @@
+\documentclass[11pt]{article}
+
+% --- Geometry ---
+\usepackage[margin=1in]{geometry}
+
+% --- Encoding & fonts ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+% --- Math ---
+\usepackage{amsmath,amssymb}
+
+% --- Tables ---
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{array}
+
+% --- Figures ---
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[dvipsnames]{xcolor}
+
+% --- Hyperlinks ---
+\usepackage[breaklinks=true,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+% --- Bibliography ---
+\usepackage{natbib}
+\bibliographystyle{plainnat}
+
+% --- Misc ---
+\usepackage{enumitem}
+\usepackage{microtype}
+
+% --- Title ---
+\title{TaskBench: Measuring Cost-Quality Tradeoffs\\Across 46 LLMs and 21 Production Tasks}
+\author{S\'{e}bastien Conejo}
+\date{}
+
+\begin{document}
+\maketitle
+
+% ============================================================
+% ABSTRACT
+% ============================================================
+\begin{abstract}
+We benchmark 46 large language models from 9 API providers across 21
+production tasks---spanning sentiment classification, intent detection,
+code generation, mathematical reasoning, and 17 others---measuring both
+per-query cost and quality on 50 cases per task (51,580 scored cases
+total). We find that Economy-tier models (\$0.05--\$0.50/M input tokens)
+show no statistically significant quality gap versus Premium models
+(\$5+/M) on any of the 21 tasks (Mann-Whitney $p > 0.05$, 21/21).
+Within providers, paying 750$\times$ more buys at most $+0.13$ quality
+points on a 1--5 scale. Per-task routing to the cheapest adequate model
+reduces cost by 99.7\% versus the best single model while matching its
+quality on every task. Quality scores are produced by an LLM judge
+validated against ground truth on three task types ($r = 0.89$--$0.91$).
+We release the full dataset, raw model responses, and evaluation
+prompts.\footnote{Data and code:
+\url{https://github.com/SebConejo/benchmark-reverse-engineering}}
+\end{abstract}
+
+% Sections will be added here as they are validated.
+
+\end{document}
