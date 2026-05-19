@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "code_generation",
+  "case": 8,
+  "response": "return [x for x in values if isinstance(x, int)]",
+  "score": 5,
+  "cost": 0.0005599499999999999,
+  "expected": "",
+  "tokens": {
+    "input": 210,
+    "output": 1814
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

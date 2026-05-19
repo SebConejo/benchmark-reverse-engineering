@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen-turbo",
+  "task": "rag_qa",
+  "case": 18,
+  "response": "Answer: Allan Bloom",
+  "score": 5,
+  "cost": 6.039e-06,
+  "expected": "Allan Bloom",
+  "tokens": {
+    "input": 179,
+    "output": 4
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

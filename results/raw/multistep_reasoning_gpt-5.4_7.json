@@ -1,0 +1,15 @@
+{
+  "model": "gpt-5.4",
+  "task": "multistep_reasoning",
+  "case": 7,
+  "response": "A",
+  "score": 5,
+  "cost": 8.6e-05,
+  "expected": "A",
+  "tokens": {
+    "input": 70,
+    "output": 4
+  },
+  "input_price_per_m": 1.0,
+  "output_price_per_m": 4.0
+}

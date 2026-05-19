@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "test_generation_v2",
+  "case": 33,
+  "response": "```python\n# tests/test_flatten_dict.py\n\nimport pytest\n\nfrom your_module import flatten_dict  # Replace with the actual module name\n\n\ndef test_flatten_flat_dictionary():\n    assert flatten_dict({\"a\": 1, \"b\": \"two\", \"c\": None}) == {\n        \"a\": 1,\n        \"b\": \"two\",\n        \"c\": None,\n    }\n\n\ndef test_flatten_nested_dictionary():\n    data = {\n        \"user\": {\n            \"name\": \"Ada\",\n            \"address\": {\n                \"city\": \"London\",\n                \"postcode\": \"SW1A\",\n            },\n        },\n        \"active\": True,\n    }\n\n    assert flatten_dict(data) == {\n        \"user.name\": \"Ada\",\n        \"user.address.city\": \"London\",\n        \"user.address.postcode\": \"SW1A\",\n        \"active\": True,\n    }\n\n\ndef test_flatten_with_custom_separator():\n    assert flatten_dict({\"a\": {\"b\": {\"c\": 1}}}, sep=\"/\") == {\n        \"a/b/c\": 1,\n    }\n\n\ndef test_flatten_with_parent_key():\n    assert flatten_dict({\"a\": {\"b\": 1}, \"c\": 2}, parent_key=\"root\") == {\n        \"root.a.b\": 1,\n        \"root.c\": 2,\n    }\n\n\ndef test_empty_dictionary_returns_empty_dictionary():\n    assert flatten_dict({}) == {}\n\n\ndef test_empty_nested_dictionaries_are_omitted():\n    assert flatten_dict({\"a\": {}, \"b\": {\"c\": {}}, \"d\": 3}) == {\n        \"d\": 3,\n    }\n\n\ndef test_non_dict_values_are_not_flattened():\n    list_value = [{\"nested\": \"dict\"}]\n\n    data = {\n        \"a\": list_value,\n        \"b\": None,\n        \"c\": {\"d\": (1, 2)},\n    }\n\n    assert flatten_dict(data) == {\n        \"a\": list_value,\n        \"b\": None,\n        \"c.d\": (1, 2),\n    }\n\n\ndef test_dict_subclass_values_are_flattened():\n    class CustomDict(dict):\n        pass\n\n    data = {\n        \"a\": CustomDict({\"b\": 1}),\n    }\n\n    assert flatten_dict(data) == {\n        \"a.b\": 1,\n    }\n\n\ndef test_original_dictionary_is_not_mutated():\n    data = {\"a\": {\"b\": 1}}\n    original = {\"a\": {\"b\": 1}}\n\n    result = flatten_dict(data)\n\n    assert result == {\"a.b\": 1}\n    assert data == original\n\n\n@pytest.mark.parametrize(\n    (\"data\", \"expected\"),\n    [\n        ({\"a\": {\"b\": \"nested\"}, \"a.b\": \"flat\"}, {\"a.b\": \"flat\"}),\n        ({\"a.b\": \"flat\", \"a\": {\"b\": \"nested\"}}, {\"a.b\": \"nested\"}),\n    ],\n)\ndef test_key_collisions_later_values_win(data, expected):\n    # The implementation returns dict(items), so duplicate flattened keys\n    # are overwritten by later entries.\n    assert flatten_dict(data) == expected\n\n\ndef test_non_string_keys():\n    data = {\n        1: \"one\",\n        \"a\": {\n            2: \"two\",\n        },\n    }\n\n    assert flatten_dict(data) == {\n        1: \"one\",\n        \"a.2\": \"two\",\n    }\n\n\n@pytest.mark.parametrize(\"bad_input\", [None, [], \"not a dict\", 123])\ndef test_invalid_input_without_items_raises_attribute_error(bad_input):\n    with pytest.raises(AttributeError):\n        flatten_dict(bad_input)\n\n\ndef test_self_referential_dictionary_raises_recursion_error():\n    data = {}\n    data[\"self\"] = data\n\n    with pytest.raises(RecursionError):\n        flatten_dict(data)\n```",
+  "score": 4,
+  "cost": 0.531855,
+  "expected": "",
+  "tokens": {
+    "input": 127,
+    "output": 7066
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

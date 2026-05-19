@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "ner_extraction",
+  "case": 33,
+  "response": "{\"persons\": [], \"organizations\": [\"International Monetary Fund\"], \"locations\": [\"Latin America\"]}",
+  "score": 5,
+  "cost": 0.000152,
+  "expected": "",
+  "tokens": {
+    "input": 70,
+    "output": 30
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

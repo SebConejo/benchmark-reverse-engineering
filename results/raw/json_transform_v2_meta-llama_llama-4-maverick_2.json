@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "json_transform_v2",
+  "case": 2,
+  "response": "```json\n{\n  \"admins\": [\"Alice\", \"Charlie\"],\n  \"users\": [\"Bob\"],\n  \"inactive_count\": 1\n}\n```",
+  "score": 5,
+  "cost": 4.98e-05,
+  "expected": "",
+  "tokens": {
+    "input": 200,
+    "output": 33
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

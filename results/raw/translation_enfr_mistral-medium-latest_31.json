@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "translation_enfr",
+  "case": 31,
+  "response": "Voici une traduction qui conserve le ton et le sens de la phrase originale :\n\n**\"On pourrait vous inculper pour racolage.\"**\n\n*Explications :*\n- **\"On pourrait\"** : Forme plus naturelle en fran\u00e7ais que *\"Nous pourrions\"* dans un contexte informel ou mena\u00e7ante (comme une mise en garde polici\u00e8re).\n- **\"vous inculper\"** : Traduction la plus pr\u00e9cise de *\"book you\"* dans un cadre judiciaire (l'inculpation est l'acte formel d'accusation en fran\u00e7ais).\n- **\"racolage\"** : Terme juridique fran\u00e7ais pour *\"solicitation\"* (surtout en contexte prostitutionnel ou ill\u00e9gal). Si le contexte est diff\u00e9rent (ex. d\u00e9marchage commercial agressif), on pourrait dire *\"prospection abusive\"*, mais *\"racolage\"* est le plus probable ici.\n\n*Variantes possibles selon le contexte :*\n- **Plus formel (police/juge)** : *\"Nous pourrions vous poursuivre pour racolage.\"*\n- **Plus familier/mena\u00e7ante** : *\"On peut te coffrer pour racolage.\"* (si le tutoiement est appropri\u00e9).\n\nBesoin de pr\u00e9cisions sur le contexte pour affiner ?",
+  "score": 4,
+  "cost": 0.000522,
+  "expected": "",
+  "tokens": {
+    "input": 30,
+    "output": 255
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

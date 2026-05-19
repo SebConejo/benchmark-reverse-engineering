@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "test_generation_v2",
+  "case": 30,
+  "response": "```python\n# test_snake_to_camel.py\nimport pytest\n\nfrom your_module import snake_to_camel          # adjust the import to where the function lives\n\n\n# ---------------------------------------------------------------------------\n# Happy-path / \u201cnormal\u201d behaviour\n# ---------------------------------------------------------------------------\n@pytest.mark.parametrize(\n    \"snake, expected\",\n    [\n        (\"hello_world\", \"helloWorld\"),          # simple, two parts\n        (\"alreadycamel\", \"alreadycamel\"),       # no underscore \u2192 unchanged\n        (\"version_2_test\", \"version2Test\"),     # numeric middle part\n        (\"mixed_Case_input\", \"mixedCaseInput\"), # mixed lower/upper\n    ],\n)\ndef test_snake_to_camel_happy_path(snake, expected):\n    assert snake_to_camel(snake) == expected\n\n\n# ---------------------------------------------------------------------------\n# Edge-case behaviour\n# ---------------------------------------------------------------------------\n@pytest.mark.parametrize(\n    \"snake, expected\",\n    [\n        (\"\", \"\"),                       # empty string\n        (\"_\", \"\"),                      # single underscore only\n        (\"___\", \"\"),                    # only underscores\n        (\"_private_var\", \"PrivateVar\"), # leading underscore\n        (\"ends_with_\", \"endsWith\"),     # trailing underscore\n        (\n            \"multiple___underscores\",\n            \"multipleUnderscores\",      # consecutive underscores collapse\n        ),\n    ],\n)\ndef test_snake_to_camel_edge_cases(snake, expected):\n    assert snake_to_camel(snake) == expected\n\n\n# ---------------------------------------------------------------------------\n# Error handling / wrong-type inputs\n# ---------------------------------------------------------------------------\n@pytest.mark.parametrize(\"bad_input\", [None, 123, 12.34, [\"not\", \"a\", \"str\"]])\ndef test_snake_to_camel_type_errors(bad_input):\n    \"\"\"\n    Any non-string argument should raise, because the object does not\n    implement .split('_').  Python raises AttributeError in that scenario.\n    \"\"\"\n    with pytest.raises(AttributeError):\n        snake_to_camel(bad_input)\n```",
+  "score": 5,
+  "cost": 0.008102,
+  "expected": "",
+  "tokens": {
+    "input": 71,
+    "output": 995
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

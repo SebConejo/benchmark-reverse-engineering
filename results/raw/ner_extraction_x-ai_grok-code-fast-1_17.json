@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "ner_extraction",
+  "case": 17,
+  "response": "{\"persons\": [], \"organizations\": [\"Toyota\"], \"locations\": [\"Greensboro\", \"North Carolina\"]}",
+  "score": 5,
+  "cost": 0.00021100000000000003,
+  "expected": "",
+  "tokens": {
+    "input": 267,
+    "output": 197
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

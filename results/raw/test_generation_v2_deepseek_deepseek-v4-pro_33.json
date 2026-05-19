@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "test_generation_v2",
+  "case": 33,
+  "response": "```python\nimport pytest\n# Assuming the function is in a module named 'example'\n# Replace with the actual module name where the function resides.\nfrom example import flatten_dict\n\n\n# --- Happy path tests ---\n\ndef test_flatten_flat_dict():\n    \"\"\"A flat dict should remain unchanged.\"\"\"\n    d = {'a': 1, 'b': 2}\n    assert flatten_dict(d) == {'a': 1, 'b': 2}\n\ndef test_flatten_single_nested_dict():\n    \"\"\"Single level of nesting should be flattened with default separator '.'.\"\"\"\n    d = {'a': 1, 'b': {'c': 2, 'd': 3}}\n    expected = {'a': 1, 'b.c': 2, 'b.d': 3}\n    assert flatten_dict(d) == expected\n\ndef test_flatten_deeply_nested_dict():\n    \"\"\"Multiple levels of nesting should produce keys joined by '.'.\"\"\"\n    d = {'x': {'y': {'z': 1}}}\n    expected = {'x.y.z': 1}\n    assert flatten_dict(d) == expected\n\ndef test_flatten_custom_separator():\n    \"\"\"A custom separator should be used in the concatenated keys.\"\"\"\n    d = {'a': {'b': 1}}\n    expected = {'a_b': 1}\n    assert flatten_dict(d, sep='_') == expected\n\ndef test_flatten_with_parent_key():\n    \"\"\"Providing a parent_key should prepend it to all keys.\"\"\"\n    d = {'a': 1}\n    expected = {'parent.a': 1}\n    assert flatten_dict(d, parent_key='parent') == expected\n\ndef test_flatten_mixed_value_types():\n    \"\"\"Non-dict values (lists, None, floats, etc.) are kept as leaf values.\"\"\"\n    d = {'a': [1, 2], 'b': None, 'c': {'d': 3.14}}\n    expected = {'a': [1, 2], 'b': None, 'c.d': 3.14}\n    assert flatten_dict(d) == expected\n\ndef test_flatten_non_string_keys():\n    \"\"\"Keys that are not strings work because f-str converts them to str.\"\"\"\n    d = {1: {'a': 2}}\n    expected = {'1.a': 2}\n    assert flatten_dict(d) == expected\n\n# --- Edge case tests ---\n\ndef test_flatten_empty_dict():\n    \"\"\"Flattening an empty dictionary returns an empty dictionary.\"\"\"\n    assert flatten_dict({}) == {}\n\ndef test_flatten_nested_empty_dict():\n    \"\"\"An empty nested dict has no items, so its key disappears in the result.\"\"\"\n    d = {'a': {}}\n    assert flatten_dict(d) == {}\n\ndef test_flatten_nested_empty_dict_with_parent():\n    \"\"\"Empty nested dict with an explicit parent_key should also disappear.\"\"\"\n    d = {'a': {}}\n    assert flatten_dict(d, parent_key='parent') == {}\n\ndef test_flatten_multiple_empty_nested():\n    \"\"\"Multiple empty nested dicts all vanish.\"\"\"\n    d = {'a': {}, 'b': {'c': {}}}\n    assert flatten_dict(d) == {}\n\n# --- Error case tests ---\n\ndef test_flatten_non_dict_input():\n    \"\"\"Passing a non-dict should raise an AttributeError (no .items()).\"\"\"\n    with pytest.raises(AttributeError):\n        flatten_dict([1, 2, 3])\n\n    with pytest.raises(AttributeError):\n        flatten_dict(\"not a dict\")\n```",
+  "score": 4,
+  "cost": 0.003710115,
+  "expected": "",
+  "tokens": {
+    "input": 125,
+    "output": 2101
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

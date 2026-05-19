@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 33,
+  "response": "First, determine the cost of the candies.\n\n- Cost of 5 lollipops: \\(5 \\times \\$0.40 = \\$2.00\\).\n- Total cost of 5 lollipops and 4 candies: \\$3.20.\n- Cost of the 4 candies: \\(\\$3.20 - \\$2.00 = \\$1.20\\).\n- Cost per candy: \\(\\$1.20 \\div 4 = \\$0.30\\).\n\nNow compute the cost for 10 lollipops and 10 candies.\n\n- Cost of 10 lollipops: \\(10 \\times \\$0.40 = \\$4.00\\).\n- Cost of 10 candies: \\(10 \\times \\$0.30 = \\$3.00\\).\n\nAdd these amounts:\n\n\\[\n\\$4.00 + \\$3.00 = \\$7.00.\n\\]\n\n**ANSWER: 7.00**",
+  "score": 5,
+  "cost": 0.0020317,
+  "expected": "7",
+  "tokens": {
+    "input": 115,
+    "output": 433
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

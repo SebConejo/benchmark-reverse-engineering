@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.4-mini",
+  "task": "instruction_following",
+  "case": 10,
+  "response": "There once was a programmer named Dave,  \nWhose code was remarkably brave.  \nWhen bugs came to call,  \nHe\u2019d just fix them all,  \nThen celebrate how much time he saved.",
+  "score": 5,
+  "cost": 5.67e-05,
+  "expected": "",
+  "tokens": {
+    "input": 17,
+    "output": 43
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

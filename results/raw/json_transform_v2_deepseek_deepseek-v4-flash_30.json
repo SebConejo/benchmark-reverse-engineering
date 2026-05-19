@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "json_transform_v2",
+  "case": 30,
+  "response": "{\"full_name\": \"Jane Doe\", \"contact\": {\"email\": \"jane.doe@email.com\", \"phone\": \"+1-555-0123\"}, \"metadata\": {\"age\": 32}}",
+  "score": 5,
+  "cost": 9.324000000000001e-05,
+  "expected": "",
+  "tokens": {
+    "input": 106,
+    "output": 140
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

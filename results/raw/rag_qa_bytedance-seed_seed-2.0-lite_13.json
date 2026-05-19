@@ -1,0 +1,18 @@
+{
+  "model": "bytedance-seed/seed-2.0-lite",
+  "task": "rag_qa",
+  "case": 13,
+  "response": "The Victorian Government",
+  "score": 1,
+  "cost": 0.00015375,
+  "expected": "Victorian Government",
+  "tokens": {
+    "input": 203,
+    "output": 103
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

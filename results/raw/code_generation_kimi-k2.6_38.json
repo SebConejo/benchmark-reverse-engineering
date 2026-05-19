@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "code_generation",
+  "case": 38,
+  "response": "negatives = [x for x in lst if x < 0]\n    positives = [x for x in lst if x > 0]\n    return (max(negatives) if negatives else None, min(positives) if positives else None)",
+  "score": 4,
+  "cost": 0.0034116,
+  "expected": "",
+  "tokens": {
+    "input": 170,
+    "output": 1379
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

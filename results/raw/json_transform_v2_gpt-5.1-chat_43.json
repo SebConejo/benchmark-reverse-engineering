@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "json_transform_v2",
+  "case": 43,
+  "response": "{\"total_credits\": 8000, \"total_debits\": 4500, \"net\": 3500, \"transaction_count\": 5}",
+  "score": 5,
+  "cost": 0.00024,
+  "expected": "",
+  "tokens": {
+    "input": 132,
+    "output": 42
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

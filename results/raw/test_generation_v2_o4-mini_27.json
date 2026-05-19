@@ -1,0 +1,16 @@
+{
+  "model": "o4-mini",
+  "task": "test_generation_v2",
+  "case": 27,
+  "response": "```python\nimport pytest\nfrom interleave import interleave\n\ndef test_equal_length_lists():\n    a = [1, 2, 3]\n    b = ['a', 'b', 'c']\n    original_a = a.copy()\n    original_b = b.copy()\n    result = interleave(a, b)\n    assert result == [1, 'a', 2, 'b', 3, 'c']\n    # ensure inputs are not modified\n    assert a == original_a\n    assert b == original_b\n\ndef test_first_list_longer():\n    a = [1, 2, 3, 4, 5]\n    b = ['x', 'y']\n    result = interleave(a, b)\n    # zipping covers first two, then remaining of a\n    assert result == [1, 'x', 2, 'y', 3, 4, 5]\n\ndef test_second_list_longer():\n    a = [10, 20]\n    b = [1, 2, 3, 4]\n    result = interleave(a, b)\n    # zipping covers first two, then remaining of b\n    assert result == [10, 1, 20, 2, 3, 4]\n\ndef test_with_empty_lists():\n    assert interleave([], []) == []\n    assert interleave([1, 2, 3], []) == [1, 2, 3]\n    assert interleave([], ['a', 'b', 'c']) == ['a', 'b', 'c']\n\ndef test_single_element_lists():\n    assert interleave([42], [99]) == [42, 99]\n\ndef test_mixed_type_elements():\n    a = [None, True, 3.14]\n    b = [False, None, \"end\"]\n    assert interleave(a, b) == [None, False, True, None, 3.14, \"end\"]\n\ndef test_nested_lists():\n    a = [[1], [2], [3]]\n    b = [['a'], ['b']]\n    result = interleave(a, b)\n    # zip covers two pairs, then remaining of a\n    assert result == [[1], ['a'], [2], ['b'], [3]]\n\ndef test_tuple_inputs_are_allowed():\n    # even though type hint is list, tuples also work\n    a = (1, 2, 3)\n    b = ('x', 'y', 'z')\n    assert interleave(list(a), list(b)) == [1, 'x', 2, 'y', 3, 'z']\n    # direct tuple slicing also works at the extend step\n    # but to respect the signature we convert to lists above\n\n@pytest.mark.parametrize(\"a,b\", [\n    (None, [1, 2, 3]),\n    ([1, 2, 3], None),\n    (5, [1, 2, 3]),\n    ([1, 2, 3], 5),\n])\ndef test_error_on_non_iterable_inputs(a, b):\n    with pytest.raises(TypeError):\n        interleave(a, b)\n\ndef test_error_on_generator_input():\n    # generators are iterable but not sliceable, slicing will raise\n    a = [1, 2, 3]\n    b = (x for x in [4, 5])\n    with pytest.raises(TypeError):\n        interleave(a, b)\n```",
+  "score": 4,
+  "cost": 0.0086988,
+  "expected": "",
+  "tokens": {
+    "input": 88,
+    "output": 1955
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

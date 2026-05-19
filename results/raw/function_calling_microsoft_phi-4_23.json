@@ -1,0 +1,16 @@
+{
+  "model": "microsoft/phi-4",
+  "task": "function_calling",
+  "case": 23,
+  "response": "```json\n{\n    \"name\": \"send_message\",\n    \"arguments\": {\n        \"channel\": \"engineering\",\n        \"text\": \"Deploy complete\"\n    }\n}\n```",
+  "score": 5,
+  "cost": 8.449999999999999e-06,
+  "expected": "",
+  "tokens": {
+    "input": 93,
+    "output": 37
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,13 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "multistep_reasoning",
+  "case": 44,
+  "response": "D) having leaves that form at a slow rate",
+  "score": 5,
+  "cost": 0.000282315,
+  "expected": "D",
+  "tokens": {
+    "input": 105,
+    "output": 136
+  }
+}

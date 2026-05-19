@@ -1,0 +1,15 @@
+{
+  "model": "grok-4-20-reasoning",
+  "task": "function_calling",
+  "case": 3,
+  "response": "{\"name\": \"create_task\", \"arguments\": {\"title\": \"Review PR #42\", \"priority\": \"high\", \"assignee\": \"alice\", \"due_date\": \"next Friday\"}}",
+  "score": 4,
+  "cost": 0.000554,
+  "tokens": {
+    "input": 117,
+    "output": 40
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "instruction_following",
+  "case": 2,
+  "response": "Lines of code whisper  \nLogic dances in the night  \nBugs fade at sunrise",
+  "score": 5,
+  "cost": 3.6089999999999995e-05,
+  "expected": "",
+  "tokens": {
+    "input": 23,
+    "output": 378
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "long_summarization",
+  "case": 11,
+  "response": "**Summary:** The EU's GDPR, effective since May 2018, revolutionized data protection by requiring explicit consent, granting rights to access and erasure of personal data, and mandating 72-hour breach reporting\u2014applying to any organization handling EU residents' data. Violations can result in fines up to 4% of global annual revenue or \u20ac20 million, with major penalties issued to Meta (\u20ac1.2 billion), Amazon (\u20ac746 million), and Google (over \u20ac200 million). The regulation has inspired similar laws worldwide, including California's CCPA and Brazil's LGPD, establishing data privacy as a fundamental right and the global standard for data protection. Critics argue GDPR disproportionately burdens small businesses and has led to frustrating cookie consent banners, while enforcement remains inconsistent across member states.",
+  "score": 5,
+  "cost": 0.0019327000000000003,
+  "expected": "",
+  "tokens": {
+    "input": 317,
+    "output": 360
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

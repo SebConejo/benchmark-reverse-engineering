@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "reasoning_gsm8k",
+  "case": 11,
+  "response": "Step 1: Find the total number of burritos given to the students.  \n50 students \u00d7 10 burritos each = 500 burritos.\n\nStep 2: Add the burritos eaten by Mr. George.  \n500 + 20 = 520 burritos consumed in total.\n\nStep 3: Subtract the total consumed from the original amount ordered.  \n600 \u2212 520 = 80 burritos.\n\nANSWER: 80",
+  "score": 5,
+  "cost": 0.0011652000000000001,
+  "expected": "80",
+  "tokens": {
+    "input": 102,
+    "output": 460
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

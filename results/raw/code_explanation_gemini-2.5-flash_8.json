@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-flash",
+  "task": "code_explanation",
+  "case": 8,
+  "response": "This code implements a **debounce** decorator, a pattern that ensures a function (`fn`) is only executed after a specified `wait` period has passed without any further calls to the debounced function. It achieves this by canceling any pending execution and rescheduling the function every time it's called, effectively delaying execution until a period of inactivity.",
+  "score": 5,
+  "cost": 5.714999999999999e-05,
+  "expected": "",
+  "tokens": {
+    "input": 109,
+    "output": 68
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

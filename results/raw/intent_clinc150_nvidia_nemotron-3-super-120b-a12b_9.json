@@ -1,0 +1,13 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "intent_clinc150",
+  "case": 9,
+  "response": "weather",
+  "score": 5,
+  "cost": 5.616e-05,
+  "expected": "weather",
+  "tokens": {
+    "input": 570,
+    "output": 54
+  }
+}

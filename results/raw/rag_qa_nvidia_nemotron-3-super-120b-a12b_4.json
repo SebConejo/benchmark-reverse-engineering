@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "rag_qa",
+  "case": 4,
+  "response": "North America",
+  "score": 2,
+  "cost": 2.7089999999999996e-05,
+  "expected": "North America",
+  "tokens": {
+    "input": 167,
+    "output": 134
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

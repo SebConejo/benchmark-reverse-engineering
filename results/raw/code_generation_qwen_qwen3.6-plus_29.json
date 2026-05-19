@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "code_generation",
+  "case": 29,
+  "response": "return sorted(nums, key=lambda x: sum(int(d) for d in str(abs(x))))",
+  "score": 4,
+  "cost": 0.008230625,
+  "expected": "",
+  "tokens": {
+    "input": 165,
+    "output": 6290
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

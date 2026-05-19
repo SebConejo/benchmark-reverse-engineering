@@ -1,0 +1,18 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "structured_output",
+  "case": 5,
+  "response": "{\n  \"name\": \"Spaghetti Carbonara\",\n  \"servings\": 4,\n  \"prep_time_minutes\": 25,\n  \"ingredients\": [\n    {\n      \"item\": \"spaghetti\",\n      \"amount\": \"400g\"\n    },\n    {\n      \"item\": \"guanciale\",\n      \"amount\": \"200g\"\n    },\n    {\n      \"item\": \"eggs\",\n      \"amount\": \"4\"\n    },\n    {",
+  "score": 2,
+  "cost": 5.661e-05,
+  "expected": "",
+  "tokens": {
+    "input": 129,
+    "output": 500
+  },
+  "judge_rerun": true,
+  "judge_raw": "2",
+  "judge_v2_score": 2,
+  "judge_v2_raw": "2",
+  "judge_v2_model": "gpt-4o"
+}

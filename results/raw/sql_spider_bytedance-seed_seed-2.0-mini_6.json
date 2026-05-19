@@ -1,0 +1,18 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "sql_spider",
+  "case": 6,
+  "response": "SELECT DISTINCT airline\nFROM flights\nWHERE destination_airport = 'AHD';",
+  "score": 5,
+  "cost": 0.0009340000000000002,
+  "expected": "",
+  "tokens": {
+    "input": 116,
+    "output": 2306
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

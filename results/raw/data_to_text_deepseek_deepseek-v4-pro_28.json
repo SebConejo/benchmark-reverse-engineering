@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "data_to_text",
+  "case": 28,
+  "response": "Founded in 1861, the Massachusetts Institute of Technology (MIT) holds the #1 ranking with an exceptionally selective 3.9% acceptance rate and an enrollment of 11,500 students. The university boasts a $24.6 billion endowment, a distinguished faculty of 1,069, and a remarkable 98 Nobel laureates among its community, with annual tuition set at $57,590.",
+  "score": 5,
+  "cost": 0.00050286,
+  "expected": "",
+  "tokens": {
+    "input": 96,
+    "output": 265
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "instruction_following",
+  "case": 48,
+  "response": "Romeo Montague and Juliet Capulet, members of feuding families in Verona, fall instantly in love at a masquerade ball and secretly marry with the help of Friar Laurence. Their union is jeopardized when Romeo kills Juliet\u2019s cousin Tybalt in retaliation for Mercutio\u2019s death, leading to his banishment. To avoid a forced marriage to Paris, Juliet takes a potion that feigns death; Romeo, unaware of the plan, believes she is truly dead and kills himself beside her. Upon awakening and finding Romeo dead, Juliet stabs herself, ending the tragedy and reconciling their families.",
+  "score": 5,
+  "cost": 1.3949999999999999e-05,
+  "expected": "",
+  "tokens": {
+    "input": 27,
+    "output": 128
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

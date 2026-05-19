@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "email_summary_v2",
+  "case": 31,
+  "response": "The email proposes adding a $29/month \u201cStarter\u201d tier between the Free and Pro plans to address the 40% of churned users who cite price as the reason for leaving. The sender recommends moving forward with this tier, projected to recover 15% of price-related churn and generate roughly $180K in ARR.",
+  "score": 5,
+  "cost": 0.0003272,
+  "expected": "",
+  "tokens": {
+    "input": 109,
+    "output": 75
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

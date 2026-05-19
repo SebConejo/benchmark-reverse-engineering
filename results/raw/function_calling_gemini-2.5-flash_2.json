@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-flash",
+  "task": "function_calling",
+  "case": 2,
+  "response": "```json\n{\n  \"name\": \"search_files\",\n  \"arguments\": {\n    \"directory\": \"src\",\n    \"pattern\": \"*.py\",\n    \"modified_within_days\": 7\n  }\n}\n```",
+  "score": 5,
+  "cost": 4.8299999999999995e-05,
+  "expected": "",
+  "tokens": {
+    "input": 106,
+    "output": 54
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

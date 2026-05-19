@@ -1,0 +1,16 @@
+{
+  "model": "microsoft/phi-4",
+  "task": "rag_qa",
+  "case": 6,
+  "response": "The context provided states that TFEU article 294 defines the \"ordinary legislative procedure\" that applies for the majority of EU acts. Therefore, the answer is TFEU article 294.",
+  "score": 5,
+  "cost": 2.8990000000000002e-05,
+  "expected": "TFEU article 294",
+  "tokens": {
+    "input": 406,
+    "output": 40
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

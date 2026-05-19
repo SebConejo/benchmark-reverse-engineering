@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "extraction_hard_v2",
+  "case": 23,
+  "response": "{\n  \"severity\": \"critical\",\n  \"component\": \"checkout\",\n  \"summary\": \"Checkout page fails after payment submission with JavaScript error and white screen\",\n  \"steps_to_reproduce\": [\n    \"Add items to the cart\",\n    \"Go to checkout page\",\n    \"Enter card information\",\n    \"Click Pay\"\n  ],\n  \"expected_behavior\": \"Payment is processed and user is redirected to order confirmation.\",\n  \"actual_behavior\": \"Spinner appears for 30 seconds, then the page goes white. No error message displayed to user. Console shows CORS error and 'undefined is not a function' at checkout.bundle.js:847.\",\n  \"environment\": {\n    \"os\": \"Windows 11\",\n    \"browser\": \"Chrome 121\"\n  }\n}",
+  "score": 5,
+  "cost": 0.0012658500000000002,
+  "expected": "",
+  "tokens": {
+    "input": 170,
+    "output": 685
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

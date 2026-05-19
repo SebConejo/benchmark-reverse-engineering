@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "instruction_following",
+  "case": 35,
+  "response": "The old lighthouse keeper had not spoken a word in forty years, his silence a tribute to the wife who drowned on the jagged rocks below. One storm-thrashed night, a frantic knocking splintered his solitude; a young woman, shipwrecked and shivering, stumbled in with a terrified child clinging to her neck. Without thinking, he guided them to the hearth, wrapped them in dusty blankets, and brewed tea with hands that remembered the rituals of care. As the child\u2019s sobs quieted, the woman whispered her thanks, and her voice unlocked a rusted chamber in his chest. He parted his dry lips and, with a sound like stones grinding, told them the tide would turn by dawn. When the first light gilded the calm sea, he watched them safely row to shore and found the ancient weight on his tongue had softened into salt.",
+  "score": 5,
+  "cost": 0.00043065,
+  "expected": "",
+  "tokens": {
+    "input": 14,
+    "output": 244
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

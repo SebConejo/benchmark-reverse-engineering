@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "ner_extraction",
+  "case": 9,
+  "response": "```json\n{\n  \"persons\": [],\n  \"organizations\": [\"World Health Organization\"],\n  \"locations\": [\"sub-Saharan Africa\", \"Geneva\"]\n}\n```",
+  "score": 4,
+  "cost": 0.001278,
+  "expected": "",
+  "tokens": {
+    "input": 74,
+    "output": 514
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

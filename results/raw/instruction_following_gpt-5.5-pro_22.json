@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "instruction_following",
+  "case": 22,
+  "response": "Dogs are loyal companions who bring comfort, joy, and friendship to their families. Their loyal nature often shows in the way they greet people with excitement and stay close during difficult moments. A loyal dog can make a home feel warmer, safer, and full of love.",
+  "score": 2,
+  "cost": 0.011685,
+  "expected": "",
+  "tokens": {
+    "input": 24,
+    "output": 151
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "instruction_following",
+  "case": 1,
+  "response": "The CPU, or central processing unit, fetches, decodes, and executes instructions from programs, performing arithmetic and logical operations to process data and coordinate the activities of all other hardware components in a computer.",
+  "score": 1,
+  "cost": 0.00071775,
+  "expected": "",
+  "tokens": {
+    "input": 14,
+    "output": 409
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

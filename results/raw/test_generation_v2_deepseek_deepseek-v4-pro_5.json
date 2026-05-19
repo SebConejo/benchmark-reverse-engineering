@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "test_generation_v2",
+  "case": 5,
+  "response": "```python\nimport pytest\nfrom your_module import count_vowels  # Replace with actual module name\n\n# Happy path tests\ndef test_count_vowels_basic():\n    \"\"\"Test basic strings with a mix of vowels and consonants.\"\"\"\n    assert count_vowels(\"hello\") == 2\n    assert count_vowels(\"world\") == 1\n    assert count_vowels(\"Python\") == 1  # 'o' only, 'y' not a vowel here\n\ndef test_count_vowels_all_vowels():\n    \"\"\"Test strings containing only vowels.\"\"\"\n    assert count_vowels(\"aeiou\") == 5\n    assert count_vowels(\"AEIOU\") == 5\n    assert count_vowels(\"aAeEiIoOuU\") == 10\n\ndef test_count_vowels_mixed_case():\n    \"\"\"Test case insensitivity.\"\"\"\n    assert count_vowels(\"hEllO wOrld\") == 3  # e, o, o\n    assert count_vowels(\"PyThOn PrOgRaMmInG\") == 4  # o, o, a, i\n\ndef test_count_vowels_with_spaces_and_punctuation():\n    \"\"\"Test strings containing spaces, punctuation, and numbers.\"\"\"\n    assert count_vowels(\"Hello, World! 123\") == 3\n    assert count_vowels(\"...\") == 0\n    assert count_vowels(\"a!e@i#o$u%\") == 5\n\n# Edge cases\ndef test_empty_string():\n    \"\"\"Empty string should return 0.\"\"\"\n    assert count_vowels(\"\") == 0\n\ndef test_no_vowels():\n    \"\"\"Strings with no vowels should return 0.\"\"\"\n    assert count_vowels(\"bcdfg\") == 0\n    assert count_vowels(\"1234567890\") == 0\n    assert count_vowels(\"!@#$%^&*()\") == 0\n\ndef test_only_consonants():\n    \"\"\"Strings with only consonants.\"\"\"\n    assert count_vowels(\"bcdfghjklmnpqrstvwxyz\") == 0\n    assert count_vowels(\"BCDFG\") == 0\n\ndef test_non_english_vowels():\n    \"\"\"Accented or non-English vowels are not counted.\"\"\"\n    assert count_vowels(\"caf\u00e9\") == 2  # 'a' and 'e', '\u00e9' not counted\n    assert count_vowels(\"na\u00efve\") == 3  # 'a', 'i', 'e' - '\u00ef' not counted\n    assert count_vowels(\"\u00fcber\") == 1  # 'e' only, '\u00fc' not counted\n\ndef test_long_string():\n    \"\"\"Test a long string for performance and correctness.\"\"\"\n    long_str = \"a\" * 1000 + \"b\" * 1000\n    assert count_vowels(long_str) == 1000\n\n# Error cases\ndef test_none_input():\n    \"\"\"Passing None should raise an AttributeError.\"\"\"\n    with pytest.raises(AttributeError):\n        count_vowels(None)\n\ndef test_non_string_input():\n    \"\"\"Passing non-string types should raise an AttributeError.\"\"\"\n    with pytest.raises(AttributeError):\n        count_vowels(42)\n    with pytest.raises(AttributeError):\n        count_vowels(3.14)\n    with pytest.raises(AttributeError):\n        count_vowels([])\n    with pytest.raises(AttributeError):\n        count_vowels({})\n```",
+  "score": 4,
+  "cost": 0.0020705999999999997,
+  "expected": "",
+  "tokens": {
+    "input": 60,
+    "output": 1175
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

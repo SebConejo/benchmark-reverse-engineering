@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 27,
+  "response": "**Step\u2011by\u2011step solution**\n\nLet the number of vacuum cleaners Melanie started with be \\(x\\).\n\n1. **Green house** \u2013 she sold a third of them:  \n   \\[\n   \\text{Sold: } \\frac{x}{3}\n   \\]\n   Remaining after this step:  \n   \\[\n   x - \\frac{x}{3}= \\frac{2x}{3}\n   \\]\n\n2. **Red house** \u2013 she sold 2 more:  \n   \\[\n   \\text{Remaining: } \\frac{2x}{3} - 2\n   \\]\n\n3. **Orange house** \u2013 she sold half of what was left:  \n   \\[\n   \\text{Sold: } \\frac{1}{2}\\Big(\\frac{2x}{3} - 2\\Big)=\\frac{x}{3} - 1\n   \\]\n   Remaining after this step:  \n   \\[\n   \\Big(\\frac{2x}{3} - 2\\Big) - \\Big(\\frac{x}{3} - 1\\Big)= \\frac{2x}{3} - 2 - \\frac{x}{3} + 1 = \\frac{x}{3} - 1\n   \\]\n\nWe are told that after the three houses she has **5** vacuum cleaners left. So\n\\[\n\\frac{x}{3} - 1 = 5\n\\]\nAdd 1 to both sides:\n\\[\n\\frac{x}{3}=6\n\\]\nMultiply by 3:\n\\[\nx = 18\n\\]\n\nThus Melanie started with **18 vacuum cleaners**.\n\n**Answer**\n\nANSWER: 18",
+  "score": 5,
+  "cost": 0.0043879,
+  "expected": "18",
+  "tokens": {
+    "input": 113,
+    "output": 969
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

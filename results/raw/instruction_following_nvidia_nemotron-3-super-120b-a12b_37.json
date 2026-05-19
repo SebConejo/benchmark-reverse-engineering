@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "instruction_following",
+  "case": 37,
+  "response": "The taste of rich, high-quality chocolate is like **sitting beside a crackling campfire on a crisp autumn evening**.  \n\nFirst, the sweetness greets you like the initial burst of warmth from the flames\u2014immediate, inviting, and softly comforting, like honeyed marshmallows toasting just shy of burning. Then, as you settle deeper, the cocoa reveals its true character: deep, earthy, and slightly smoky, reminiscent of the glowing embers beneath the fire,",
+  "score": 5,
+  "cost": 4.77e-05,
+  "expected": "",
+  "tokens": {
+    "input": 30,
+    "output": 500
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

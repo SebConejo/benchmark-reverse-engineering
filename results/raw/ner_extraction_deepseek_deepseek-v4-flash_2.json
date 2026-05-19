@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "ner_extraction",
+  "case": 2,
+  "response": "{\n  \"persons\": [],\n  \"organizations\": [\"Google DeepMind\", \"Nature\"],\n  \"locations\": []\n}",
+  "score": 4,
+  "cost": 8.554000000000001e-05,
+  "expected": "",
+  "tokens": {
+    "input": 67,
+    "output": 136
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

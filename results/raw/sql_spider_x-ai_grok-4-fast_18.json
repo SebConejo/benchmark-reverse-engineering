@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "sql_spider",
+  "case": 18,
+  "response": "```sql\nSELECT DISTINCT country\nFROM singers\nWHERE age > 40\nINTERSECT\nSELECT DISTINCT country\nFROM singers\nWHERE age < 30;\n```",
+  "score": 2,
+  "cost": 0.0002638,
+  "expected": "",
+  "tokens": {
+    "input": 227,
+    "output": 273
+  },
+  "judge_rerun": true,
+  "judge_raw": "2",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

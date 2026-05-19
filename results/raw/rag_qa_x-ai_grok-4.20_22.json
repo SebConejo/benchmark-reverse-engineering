@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-4.20",
+  "task": "rag_qa",
+  "case": 22,
+  "response": "South African Schools Act of 1996",
+  "score": 5,
+  "cost": 0.000578,
+  "expected": "South African Schools Act",
+  "tokens": {
+    "input": 257,
+    "output": 8
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "translation_enfr",
+  "case": 0,
+  "response": "Je sais comment aider, et je veux le faire.",
+  "score": 5,
+  "cost": 0.001326,
+  "expected": "",
+  "tokens": {
+    "input": 35,
+    "output": 157
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

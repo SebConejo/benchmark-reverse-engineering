@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "code_generation",
+  "case": 27,
+  "response": "best_strength = None\nbest_ext = None\nfor ext in extensions:\n    cap = sum(1 for c in ext if c.isupper())\n    sm = sum(1 for c in ext if c.islower())\n    strength = cap - sm\n    if best_strength is None or strength > best_strength:\n        best_strength = strength\n        best_ext = ext\nreturn f\"{class_name}.{best_ext}\"",
+  "score": 5,
+  "cost": 0.00026712000000000003,
+  "expected": "",
+  "tokens": {
+    "input": 304,
+    "output": 401
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

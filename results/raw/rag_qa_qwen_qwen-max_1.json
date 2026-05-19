@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen-max",
+  "task": "rag_qa",
+  "case": 1,
+  "response": "The Great Plague of London occurred in 1665.",
+  "score": 5,
+  "cost": 0.00038376,
+  "expected": "1665",
+  "tokens": {
+    "input": 313,
+    "output": 14
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

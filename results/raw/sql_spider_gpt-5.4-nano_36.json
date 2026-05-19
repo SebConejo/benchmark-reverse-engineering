@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.4-nano",
+  "task": "sql_spider",
+  "case": 36,
+  "response": "SELECT s.name\nFROM students s\nJOIN likes l ON l.student_id = s.student_id\nGROUP BY s.student_id, s.name\nORDER BY COUNT(*) DESC\nLIMIT 1;",
+  "score": 5,
+  "cost": 2.38e-05,
+  "expected": "",
+  "tokens": {
+    "input": 70,
+    "output": 42
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

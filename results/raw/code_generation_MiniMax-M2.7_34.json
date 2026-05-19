@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "code_generation",
+  "case": 34,
+  "response": "if n <= 1:\n    return y\nfor i in range(2, int(n**0.5) + 1):\n    if n % i == 0:\n        return y\nreturn x",
+  "score": 5,
+  "cost": 0.0050699,
+  "expected": "",
+  "tokens": {
+    "input": 149,
+    "output": 1115
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "long_summarization",
+  "case": 7,
+  "response": "The text outlines the multifaceted landscape of space exploration in the 2020s, spanning both scientific discovery and commercial enterprise. Key developments include SpaceX's Starship, NASA's Artemis lunar return, the James Webb Space Telescope's findings, China's space station and lunar goals, and India's Chandrayaan missions, alongside the rise of satellite internet constellations, space tourism, and asteroid mining prospects. It also highlights challenges such as the limitations of the Outer Space Treaty and the growing problem of space debris. No specific numbers are provided in the text.",
+  "score": 5,
+  "cost": 0.0009604799999999999,
+  "expected": "",
+  "tokens": {
+    "input": 128,
+    "output": 520
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

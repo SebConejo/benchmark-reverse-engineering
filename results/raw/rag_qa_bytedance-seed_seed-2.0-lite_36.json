@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-lite",
+  "task": "rag_qa",
+  "case": 36,
+  "response": "Gaseous oxygen",
+  "score": 1,
+  "cost": 0.000537,
+  "expected": "gaseous oxygen.",
+  "tokens": {
+    "input": 208,
+    "output": 485
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

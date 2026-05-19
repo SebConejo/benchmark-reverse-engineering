@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 49,
+  "response": "**Step\u2011by\u2011step solution**\n\n1. **Sisters' ages**  \n   - There are 3 sisters, each 16\u202fyears old.  \n   - Total age of the sisters = \\(3 \\times 16 = 48\\).\n\n2. **Brothers' ages**  \n   - One brother is 12\u202fyears old.  \n   - The problem states that this age is **half** the age of the older brother.  \n   - Therefore, the older brother\u2019s age = \\(2 \\times 12 = 24\\).  \n   - Total age of the brothers = \\(12 + 24 = 36\\).\n\n3. **Total age of all siblings**  \n   - Add the total age of the sisters and the brothers:  \n     \\(48 + 36 = 84\\).\n\n**Answer**\n\nANSWER: 84",
+  "score": 5,
+  "cost": 0.0023584,
+  "expected": "84",
+  "tokens": {
+    "input": 132,
+    "output": 503
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

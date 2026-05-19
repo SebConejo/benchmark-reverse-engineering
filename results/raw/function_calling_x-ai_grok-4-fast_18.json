@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "function_calling",
+  "case": 18,
+  "response": "{\"name\": \"check_domain\", \"arguments\": {\"domain\": \"coolstartup.com\"}}",
+  "score": 5,
+  "cost": 0.0001598,
+  "expected": "",
+  "tokens": {
+    "input": 235,
+    "output": 141
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

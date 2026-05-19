@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "rag_qa",
+  "case": 40,
+  "response": "Full citizenship rights (assimilation) were offered, which was rare by imperial standards.",
+  "score": 5,
+  "cost": 2.6009999999999997e-05,
+  "expected": "assimilation",
+  "tokens": {
+    "input": 183,
+    "output": 106
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

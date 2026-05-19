@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 10,
+  "response": "The low setting removes \\(1\\)\u202fL per day.\n\n- Low for 3 days: \\(3 \\times 1 = 3\\)\u202fL  \n- Medium removes twice as much as low, so \\(2\\)\u202fL per day.  \n  Medium for 3 days: \\(3 \\times 2 = 6\\)\u202fL  \n- High removes twice as much as medium, so \\(4\\)\u202fL per day.  \n  High for 5 days: \\(5 \\times 4 = 20\\)\u202fL  \n\nTotal water removed: \\(3 + 6 + 20 = 29\\)\u202fL.\n\nANSWER: 29",
+  "score": 5,
+  "cost": 0.0014861000000000002,
+  "expected": "29",
+  "tokens": {
+    "input": 215,
+    "output": 284
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

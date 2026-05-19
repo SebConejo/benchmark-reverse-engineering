@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "sql_spider",
+  "case": 3,
+  "response": "```sql\nSELECT name\nFROM country\nWHERE continent = 'Africa'\n  AND population < ALL (\n    SELECT population\n    FROM country\n    WHERE continent = 'Asia'\n  );\n```",
+  "score": 5,
+  "cost": 0.00038627999999999997,
+  "expected": "",
+  "tokens": {
+    "input": 72,
+    "output": 204
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen-max",
+  "task": "code_generation",
+  "case": 0,
+  "response": "result = \"\"\nfor string in strings:\n    result += string\nreturn result",
+  "score": 3,
+  "cost": 0.000156,
+  "expected": "",
+  "tokens": {
+    "input": 90,
+    "output": 15
+  },
+  "judge_rerun": true,
+  "judge_raw": "3",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

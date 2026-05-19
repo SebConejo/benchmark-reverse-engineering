@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "test_generation_v2",
+  "case": 9,
+  "response": "```python\n# test_max_subarray_sum.py\nimport random\nimport sys\nimport pytest\n\n# Import the function under test.  Adjust the import path to your project layout.\nfrom your_module import max_subarray_sum     # noqa: E402, F401\n\n\n# ---------- Happy-path tests --------------------------------------------------\n@pytest.mark.parametrize(\n    \"arr, expected\",\n    [\n        # Classic \u201cKadane\u201d example\n        ([1, -2, 3, 4, -1, 2, 1, -5, 4], 9),\n        # All positives\n        ([2, 3, 1, 4], 10),\n        # All negatives \u2013 the maximum sub-array is the single largest number\n        ([-2, -3, -1, -4], -1),\n        # Mix with zeros\n        ([0, -3, 5, -2, 0, 3], 6),\n        # Leading / trailing negatives\n        ([-5, -4, 10, -2, -1], 10),\n    ],\n)\ndef test_happy_paths(arr, expected):\n    assert max_subarray_sum(arr) == expected\n\n\n# ---------- Edge-case tests ---------------------------------------------------\ndef test_empty_list_returns_zero():\n    assert max_subarray_sum([]) == 0\n\n\n@pytest.mark.parametrize(\"single_value\", [42, -7, 0])\ndef test_single_element_list(single_value):\n    assert max_subarray_sum([single_value]) == single_value\n\n\ndef test_all_zeros():\n    assert max_subarray_sum([0, 0, 0, 0]) == 0\n\n\ndef test_long_list_of_ones():\n    \"\"\"Big input to make sure the algorithm scales and keeps precision.\"\"\"\n    n = 100_000\n    arr = [1] * n\n    assert max_subarray_sum(arr) == n\n\n\ndef test_none_as_argument_returns_zero_like_empty():\n    \"\"\"\n    The implementation treats any *falsy* arr as empty and returns 0.\n    Make that behaviour explicit in a test.\n    \"\"\"\n    assert max_subarray_sum(None) == 0\n\n\n# ---------- Error-case tests --------------------------------------------------\n@pytest.mark.parametrize(\n    \"bad_input\",\n    [\n        123,                       # not iterable\n        \"1,2,3\",                   # iterable of str, will try to add str+int\n        (1, \"two\", 3),             # mixed numeric / non-numeric\n        [1, None, 3],              # contains non-numeric\n    ],\n)\ndef test_non_numeric_or_invalid_types_raise_type_error(bad_input):\n    with pytest.raises(TypeError):\n        max_subarray_sum(bad_input)\n\n\n# ---------- Property-based sanity check --------------------------------------\ndef test_random_input_matches_brute_force():\n    \"\"\"\n    For random short arrays, compare the implementation against a\n    quadratic-time brute-force reference to catch subtle mistakes.\n    \"\"\"\n    def brute_force(a):\n        best = -sys.maxsize\n        for i in range(len(a)):\n            running = 0\n            for j in range(i, len(a)):\n                running += a[j]\n                best = max(best, running)\n        return best if a else 0\n\n    for _ in range(100):\n        size = random.randint(0, 15)\n        arr = [random.randint(-20, 20) for _ in range(size)]\n        assert max_subarray_sum(arr) == brute_force(arr)\n```",
+  "score": 4,
+  "cost": 0.013782,
+  "expected": "",
+  "tokens": {
+    "input": 99,
+    "output": 1698
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

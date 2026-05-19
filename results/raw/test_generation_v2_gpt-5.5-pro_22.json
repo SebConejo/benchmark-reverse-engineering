@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "test_generation_v2",
+  "case": 22,
+  "response": "Assuming `group_by` is in `your_module.py`, save this as `test_group_by.py` and replace the import as needed:\n\n```python\nimport pytest\n\nfrom your_module import group_by  # Replace with the actual module name\n\n\ndef test_group_by_happy_path_groups_by_first_letter_and_preserves_order():\n    items = [\"apple\", \"banana\", \"apricot\", \"blueberry\", \"avocado\"]\n\n    result = group_by(items, lambda s: s[0])\n\n    assert result == {\n        \"a\": [\"apple\", \"apricot\", \"avocado\"],\n        \"b\": [\"banana\", \"blueberry\"],\n    }\n\n\ndef test_group_by_empty_list_returns_empty_dict_and_does_not_call_key_fn():\n    def key_fn(_):\n        pytest.fail(\"key_fn should not be called for an empty input list\")\n\n    assert group_by([], key_fn) == {}\n\n\ndef test_group_by_all_items_same_key():\n    items = [1, 2, 3]\n\n    result = group_by(items, lambda _: \"same\")\n\n    assert result == {\"same\": [1, 2, 3]}\n\n\ndef test_group_by_allows_none_as_key():\n    items = [0, \"\", False]\n\n    result = group_by(items, lambda _: None)\n\n    assert result == {None: [0, \"\", False]}\n\n\ndef test_group_by_allows_composite_tuple_keys():\n    items = [\n        {\"kind\": \"fruit\", \"color\": \"red\"},\n        {\"kind\": \"fruit\", \"color\": \"yellow\"},\n        {\"kind\": \"fruit\", \"color\": \"red\"},\n    ]\n\n    result = group_by(items, lambda item: (item[\"kind\"], item[\"color\"]))\n\n    assert result == {\n        (\"fruit\", \"red\"): [items[0], items[2]],\n        (\"fruit\", \"yellow\"): [items[1]],\n    }\n\n\ndef test_group_by_items_may_be_unhashable_if_keys_are_hashable():\n    items = [[1], [2, 3], [], [4]]\n\n    result = group_by(items, len)\n\n    assert result == {\n        1: [[1], [4]],\n        2: [[2, 3]],\n        0: [[]],\n    }\n\n\ndef test_group_by_does_not_mutate_input_list():\n    items = [1, 2, 3, 4]\n    original = items.copy()\n\n    group_by(items, lambda x: x % 2)\n\n    assert items == original\n\n\ndef test_group_by_propagates_key_fn_exception_and_stops_processing():\n    calls = []\n\n    def key_fn(item):\n        calls.append(item)\n        if item == \"bad\":\n            raise ValueError(\"bad item\")\n        return \"ok\"\n\n    with pytest.raises(ValueError, match=\"bad item\"):\n        group_by([\"good\", \"bad\", \"later\"], key_fn)\n\n    assert calls == [\"good\", \"bad\"]\n\n\ndef test_group_by_raises_type_error_when_key_is_unhashable():\n    items = [1, 2, 3]\n\n    with pytest.raises(TypeError):\n        group_by(items, lambda x: [x])\n\n\ndef test_group_by_raises_type_error_when_key_fn_is_not_callable_for_non_empty_input():\n    with pytest.raises(TypeError):\n        group_by([1], None)\n\n\ndef test_group_by_raises_type_error_when_items_is_not_iterable():\n    with pytest.raises(TypeError):\n        group_by(None, lambda x: x)\n```",
+  "score": 4,
+  "cost": 0.338895,
+  "expected": "",
+  "tokens": {
+    "input": 78,
+    "output": 4503
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

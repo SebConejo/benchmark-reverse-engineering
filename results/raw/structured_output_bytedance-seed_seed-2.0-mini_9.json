@@ -1,0 +1,18 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "structured_output",
+  "case": 9,
+  "response": "{\"title\": \"Introduction to Machine Learning\", \"instructor\": \"Dr. Sarah Chen\", \"duration_weeks\": 12, \"prerequisites\": [\"Linear Algebra\", \"Python\"], \"level\": \"Intermediate\"}",
+  "score": 5,
+  "cost": 0.0001004,
+  "expected": "",
+  "tokens": {
+    "input": 136,
+    "output": 217
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

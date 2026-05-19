@@ -1,0 +1,16 @@
+{
+  "model": "meta-llama/llama-3.2-1b-instruct",
+  "task": "sql_spider",
+  "case": 16,
+  "response": "```sql\nSELECT DISTINCT COUNT(DISTINCT country_code) FROM players;\n```",
+  "score": 3,
+  "cost": 2.511e-06,
+  "expected": "",
+  "tokens": {
+    "input": 76,
+    "output": 17
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

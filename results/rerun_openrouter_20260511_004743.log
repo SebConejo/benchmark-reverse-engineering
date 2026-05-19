@@ -1,0 +1,150 @@
+=== OpenRouter completion started at $(date) ===
+>>> Task: code_generation at Mon May 11 00:47:43 CEST 2026
+======================================================================
+TaskBench Batch: code_generation
+Cases: 50 | Models to run: 1 | Already done: 1
+Budget: $123.0066 / $200
+======================================================================
+
+  nvidia/nemotron-3-super-120b-a12b          avg=3.4/5  cost=$0.0021  [MIXED]
+
+======================================================================
+BATCH COMPLETE: code_generation
+Total spend: $123.0137 | Calls: 60955
+
+--- Results ranked by quality ---
+  nvidia/nemotron-3-super-120b-a12b          3.4/5  $0.0021  (50 cases)
+======================================================================
+>>> Done: code_generation at Mon May 11 00:52:17 CEST 2026
+>>> Task: email_summary_v2 at Mon May 11 00:52:17 CEST 2026
+======================================================================
+TaskBench Batch: email_summary_v2
+Cases: 50 | Models to run: 1 | Already done: 1
+Budget: $123.0137 / $200
+======================================================================
+
+  nvidia/nemotron-3-super-120b-a12b          avg=4.3/5  cost=$0.0014  [PASS]
+
+======================================================================
+BATCH COMPLETE: email_summary_v2
+Total spend: $123.0201 | Calls: 61005
+
+--- Results ranked by quality ---
+  nvidia/nemotron-3-super-120b-a12b          4.3/5  $0.0014  (50 cases)
+======================================================================
+>>> Done: email_summary_v2 at Mon May 11 00:55:45 CEST 2026
+>>> Task: extraction_hard_v2 at Mon May 11 00:55:45 CEST 2026
+======================================================================
+TaskBench Batch: extraction_hard_v2
+Cases: 50 | Models to run: 1 | Already done: 1
+Budget: $123.0201 / $200
+======================================================================
+
+  ERROR nvidia/nemotron-3-super-120b-a12b case 31: Response ended prematurely
+  nvidia/nemotron-3-super-120b-a12b          avg=3.5/5  cost=$0.0041  [MIXED]
+
+======================================================================
+BATCH COMPLETE: extraction_hard_v2
+Total spend: $123.0291 | Calls: 61054
+
+--- Results ranked by quality ---
+  nvidia/nemotron-3-super-120b-a12b          3.5/5  $0.0041  (49 cases)
+======================================================================
+>>> Done: extraction_hard_v2 at Mon May 11 01:05:11 CEST 2026
+>>> Task: intent_clinc150 at Mon May 11 01:05:11 CEST 2026
+======================================================================
+TaskBench Batch: intent_clinc150
+Cases: 50 | Models to run: 1 | Already done: 1
+Budget: $123.0291 / $200
+======================================================================
+
+  nvidia/nemotron-3-super-120b-a12b          avg=0.4/5  acc=8%  cost=$0.0027  [FAIL]
+
+======================================================================
+BATCH COMPLETE: intent_clinc150
+Total spend: $123.0318 | Calls: 61104
+
+--- Results ranked by quality ---
+  nvidia/nemotron-3-super-120b-a12b          0.4/5  acc=8%  $0.0027  (50 cases)
+
+--- Native metric (accuracy) ---
+  nvidia/nemotron-3-super-120b-a12b          8%
+======================================================================
+>>> Done: intent_clinc150 at Mon May 11 01:06:30 CEST 2026
+>>> Task: moderation_toxigen at Mon May 11 01:06:30 CEST 2026
+======================================================================
+TaskBench Batch: moderation_toxigen
+Cases: 50 | Models to run: 1 | Already done: 1
+Budget: $123.0318 / $200
+======================================================================
+
+  nvidia/nemotron-3-super-120b-a12b          avg=1.1/5  acc=22%  cost=$0.0004  [FAIL]
+
+======================================================================
+BATCH COMPLETE: moderation_toxigen
+Total spend: $123.0322 | Calls: 61154
+
+--- Results ranked by quality ---
+  nvidia/nemotron-3-super-120b-a12b          1.1/5  acc=22%  $0.0004  (50 cases)
+
+--- Native metric (accuracy) ---
+  nvidia/nemotron-3-super-120b-a12b          22%
+======================================================================
+>>> Done: moderation_toxigen at Mon May 11 01:08:03 CEST 2026
+>>> Task: sentiment_sst2 at Mon May 11 01:08:03 CEST 2026
+======================================================================
+TaskBench Batch: sentiment_sst2
+Cases: 50 | Models to run: 1 | Already done: 1
+Budget: $123.0322 / $200
+======================================================================
+
+  nvidia/nemotron-3-super-120b-a12b          avg=1.0/5  acc=20%  cost=$0.0004  [FAIL]
+
+======================================================================
+BATCH COMPLETE: sentiment_sst2
+Total spend: $123.0326 | Calls: 61204
+
+--- Results ranked by quality ---
+  nvidia/nemotron-3-super-120b-a12b          1.0/5  acc=20%  $0.0004  (50 cases)
+
+--- Native metric (accuracy) ---
+  nvidia/nemotron-3-super-120b-a12b          20%
+======================================================================
+>>> Done: sentiment_sst2 at Mon May 11 01:08:49 CEST 2026
+>>> Task: multistep_reasoning at Mon May 11 01:08:49 CEST 2026
+======================================================================
+TaskBench Batch: multistep_reasoning
+Cases: 50 | Models to run: 2 | Already done: 0
+Budget: $123.0326 / $200
+======================================================================
+
+  nvidia/nemotron-3-super-120b-a12b          avg=3.9/5  acc=78%  cost=$0.0016  [MIXED]
+  ERROR qwen/qwen3.6-plus case 8: Response ended prematurely
+  ERROR qwen/qwen3.6-plus case 27: Response ended prematurely
+  ERROR qwen/qwen3.6-plus case 34: Response ended prematurely
+  ERROR qwen/qwen3.6-plus case 35: Response ended prematurely
+  ERROR qwen/qwen3.6-plus case 47: Response ended prematurely
+  qwen/qwen3.6-plus                          avg=5.0/5  acc=100%  cost=$0.0549  [PASS]
+
+======================================================================
+BATCH COMPLETE: multistep_reasoning
+Total spend: $123.0892 | Calls: 61299
+
+--- Results ranked by quality ---
+  qwen/qwen3.6-plus                          5.0/5  acc=100%  $0.0549  (45 cases)
+  nvidia/nemotron-3-super-120b-a12b          3.9/5  acc=78%  $0.0016  (50 cases)
+
+--- Native metric (accuracy) ---
+  qwen/qwen3.6-plus                          100%
+  nvidia/nemotron-3-super-120b-a12b          78%
+======================================================================
+>>> Done: multistep_reasoning at Mon May 11 01:28:43 CEST 2026
+=== OpenRouter completion DONE at $(date) ===
+Raw files scanned: 51637
+Valid rows: 51465
+Skipped (empty response, score 0): 172
+Errors: 0
+After dedup: 51465 (removed 0 duplicates)
+
+Backed up old CSV to results/benchmark_results.csv.bak
+Wrote 51465 rows to results/benchmark_results.csv

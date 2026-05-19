@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "instruction_following",
+  "case": 22,
+  "response": "Dogs are renowned as loyal companions that form deep bonds with their families. A loyal dog will faithfully guard your home and greet you with unwavering enthusiasm each day. Their loyal disposition means they often stay by your side through both joyful and challenging times. Many heartwarming tales celebrate the loyal nature of dogs who have traveled great distances to reunite with their owners. Training with positive reinforcement can nurture a dog's loyal instincts, making them even more devoted. In return, a loyal canine friend asks for little more than your love and care. Ultimately, the loyal connection between a human and a dog is one of life's most cherished relationships.",
+  "score": 4,
+  "cost": 0.00078996,
+  "expected": "",
+  "tokens": {
+    "input": 20,
+    "output": 449
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

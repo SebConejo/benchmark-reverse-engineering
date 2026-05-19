@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "task": "rag_qa",
+  "case": 1,
+  "response": "1665.",
+  "score": 1,
+  "cost": 0.0008335,
+  "expected": "1665",
+  "tokens": {
+    "input": 318,
+    "output": 754
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

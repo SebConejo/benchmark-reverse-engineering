@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.5",
+  "task": "test_generation_v2",
+  "case": 40,
+  "response": "```python\n# test_rgb_to_hex.py\n\nimport pytest\n\nfrom your_module import rgb_to_hex  # Replace \"your_module\" with the actual module name\n\n\n@pytest.mark.parametrize(\n    (\"r\", \"g\", \"b\", \"expected\"),\n    [\n        (255, 0, 255, \"#ff00ff\"),\n        (18, 52, 86, \"#123456\"),\n        (10, 11, 12, \"#0a0b0c\"),\n        (1, 2, 3, \"#010203\"),\n    ],\n)\ndef test_rgb_to_hex_happy_path(r, g, b, expected):\n    assert rgb_to_hex(r, g, b) == expected\n\n\n@pytest.mark.parametrize(\n    (\"r\", \"g\", \"b\", \"expected\"),\n    [\n        (0, 0, 0, \"#000000\"),\n        (255, 255, 255, \"#ffffff\"),\n        (0, 255, 128, \"#00ff80\"),\n        (15, 16, 17, \"#0f1011\"),\n    ],\n)\ndef test_rgb_to_hex_edge_values(r, g, b, expected):\n    assert rgb_to_hex(r, g, b) == expected\n\n\n@pytest.mark.parametrize(\n    (\"r\", \"g\", \"b\"),\n    [\n        (-1, 0, 0),\n        (0, -1, 0),\n        (0, 0, -1),\n        (256, 0, 0),\n        (0, 256, 0),\n        (0, 0, 256),\n        (-10, 300, 100),\n    ],\n)\ndef test_rgb_to_hex_out_of_range_values_raise_value_error(r, g, b):\n    with pytest.raises(ValueError, match=\"RGB values must be 0-255\"):\n        rgb_to_hex(r, g, b)\n\n\n@pytest.mark.parametrize(\n    (\"r\", \"g\", \"b\"),\n    [\n        (\"255\", 0, 0),\n        (255, None, 0),\n        (255, 0, []),\n        (1.5, 2, 3),\n    ],\n)\ndef test_rgb_to_hex_invalid_types_raise_error(r, g, b):\n    with pytest.raises((TypeError, ValueError)):\n        rgb_to_hex(r, g, b)\n```",
+  "score": 5,
+  "cost": 0.012405,
+  "expected": "",
+  "tokens": {
+    "input": 107,
+    "output": 1007
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

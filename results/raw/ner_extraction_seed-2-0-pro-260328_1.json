@@ -1,0 +1,16 @@
+{
+  "model": "seed-2-0-pro-260328",
+  "task": "ner_extraction",
+  "case": 1,
+  "response": "{\n  \"persons\": [\"Biden\", \"Macron\"],\n  \"organizations\": [\"NATO\"],\n  \"locations\": [\"White House\"]\n}",
+  "score": 5,
+  "cost": 0.00040919999999999997,
+  "expected": "",
+  "tokens": {
+    "input": 114,
+    "output": 142
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

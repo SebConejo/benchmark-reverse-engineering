@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "code_explanation",
+  "case": 32,
+  "response": "This code implements the Union-Find (Disjoint Set Union) data structure to efficiently manage a collection of disjoint sets. It employs path compression in the `find` function and union by rank in the `union` function, enabling near-constant-time operations for merging sets and locating their representative roots.",
+  "score": 5,
+  "cost": 0.002025075,
+  "expected": "",
+  "tokens": {
+    "input": 171,
+    "output": 1515
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

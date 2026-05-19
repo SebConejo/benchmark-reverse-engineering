@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "rag_qa",
+  "case": 40,
+  "response": "Full citizenship rights (assimilation).",
+  "score": 5,
+  "cost": 0.0013445850000000001,
+  "expected": "assimilation",
+  "tokens": {
+    "input": 167,
+    "output": 731
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

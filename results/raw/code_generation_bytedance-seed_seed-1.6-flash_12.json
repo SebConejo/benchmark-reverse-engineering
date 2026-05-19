@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "code_generation",
+  "case": 12,
+  "response": "result = []\n    for s in strings:\n        if substring in s:\n            result.append(s)\n    return result",
+  "score": 4,
+  "cost": 0.000161175,
+  "expected": "",
+  "tokens": {
+    "input": 209,
+    "output": 485
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

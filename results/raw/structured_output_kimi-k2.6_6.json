@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "structured_output",
+  "case": 6,
+  "response": "```json\n{\"type\": \"Bug report\", \"summary\": \"App crashes on login when using Face ID\", \"device\": \"iPhone 14\", \"os_version\": \"iOS 17.2\", \"reproducibility\": \"Reproducible every time\", \"severity\": \"critical\"}\n```",
+  "score": 5,
+  "cost": 0.0026693999999999997,
+  "expected": "",
+  "tokens": {
+    "input": 97,
+    "output": 1088
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

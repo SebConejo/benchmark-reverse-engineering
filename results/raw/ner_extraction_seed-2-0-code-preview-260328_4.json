@@ -1,0 +1,16 @@
+{
+  "model": "seed-2-0-code-preview-260328",
+  "task": "ner_extraction",
+  "case": 4,
+  "response": "{\"persons\": [], \"organizations\": [\"Bank of England\", \"European Central Bank\"], \"locations\": [\"Frankfurt\"]}",
+  "score": 4,
+  "cost": 0.0009023999999999999,
+  "expected": "",
+  "tokens": {
+    "input": 96,
+    "output": 728
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

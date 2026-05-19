@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "translation_enfr",
+  "case": 28,
+  "response": "Nous sommes capables... de lancer plus de puissance de feu... que n\u2019en ait jamais \u00e9t\u00e9 lib\u00e9r\u00e9e dans l\u2019histoire de la guerre.",
+  "score": 3,
+  "cost": 0.0008969,
+  "expected": "",
+  "tokens": {
+    "input": 89,
+    "output": 2220
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

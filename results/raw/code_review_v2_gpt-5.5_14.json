@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.5",
+  "task": "code_review_v2",
+  "case": 14,
+  "response": "The main issue is that `yaml.load()` is unsafe when used on untrusted input.\n\n```python\ndef parse_config(config_str):\n    import yaml\n    return yaml.load(config_str)\n```\n\n## Problems\n\n### 1. Unsafe YAML deserialization\n\n`yaml.load()` can construct arbitrary Python objects depending on the loader being used. With unsafe loaders, malicious YAML can potentially trigger code execution or instantiate unexpected objects.\n\nExample of dangerous YAML patterns include Python-specific tags such as:\n\n```yaml\n!!python/object/apply:os.system [\"rm -rf /\"]\n```\n\nUsing `yaml.load()` without a safe loader is a common security vulnerability.\n\n### 2. Loader is not specified\n\nIn modern PyYAML versions, calling `yaml.load(config_str)` without specifying a loader may raise an error:\n\n```text\nTypeError: load() missing 1 required positional argument: 'Loader'\n```\n\nIn older versions, it may default to unsafe behavior.\n\n### 3. No input validation\n\nThe function accepts anything as `config_str`. If `None`, bytes, or another unexpected type is passed, the behavior may be undesirable.\n\n### 4. No error handling\n\nInvalid YAML will raise a `yaml.YAMLError`. Depending on the application, that may be fine, but usually configuration parsing should produce a clear error message.\n\n### 5. No schema or type validation\n\nEven if the YAML is syntactically valid, it may not be the expected structure. For example, the config might be a list, string, integer, or `null` instead of a dictionary.\n\n### 6. Import inside the function\n\nThis is not a security bug, but it is usually cleaner to import dependencies at module level unless there is a specific reason to delay the import.\n\n## Safer version\n\n```python\nimport yaml\n\n\ndef parse_config(config_str):\n    if not isinstance(config_str, str):\n        raise TypeError(\"config_str must be a string\")\n\n    try:\n        config = yaml.safe_load(config_str)\n    except yaml.YAMLError as exc:\n        raise ValueError(f\"Invalid YAML configuration: {exc}\") from exc\n\n    if config is None:\n        return {}\n\n    if not isinstance(config, dict):\n        raise ValueError(\"Configuration must be a YAML mapping/object\")\n\n    return config\n```\n\n## Why this is better\n\n- Uses `yaml.safe_load()` instead of `yaml.load()`.\n- Prevents construction of arbitrary Python objects.\n- Handles invalid YAML with a clearer exception.\n- Ensures the result is a dictionary.\n- Treats an empty YAML document as an empty config.\n\n## If you need custom YAML types\n\nIf your application intentionally needs custom YAML tags, do not use the default unsafe loader. Instead, define a restricted custom loader:\n\n```python\nimport yaml\n\n\nclass ConfigLoader(yaml.SafeLoader):\n    pass\n\n\n# Add only specific constructors you explicitly trust.\n# ConfigLoader.add_constructor(\"!mytag\", my_constructor)\n\n\ndef parse_config(config_str):\n    return yaml.load(config_str, Loader=ConfigLoader)\n```\n\nAvoid `yaml.Loader` and `yaml.UnsafeLoader` for untrusted input.",
+  "score": 5,
+  "cost": 0.008643,
+  "expected": "",
+  "tokens": {
+    "input": 53,
+    "output": 707
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

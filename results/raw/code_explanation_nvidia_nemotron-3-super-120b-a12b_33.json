@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "code_explanation",
+  "case": 33,
+  "response": "The function implements **reservoir sampling**: it keeps a fixed\u2011size \u201creservoir\u201d of\u202fk elements, first filling it with the first\u202fk items from the stream, and then for each later item at index\u202fi it generates a random integer\u202fj\u202f\u2208\u202f[0,i]; if\u202fj\u202f<\u202fk it replaces reservoir[j] with the current item. This ensures that each element in the stream has an equal probability\u202fk/(i+1)",
+  "score": 5,
+  "cost": 2.736e-05,
+  "expected": "",
+  "tokens": {
+    "input": 104,
+    "output": 200
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

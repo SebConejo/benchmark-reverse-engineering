@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "rag_qa",
+  "case": 34,
+  "response": "Infinitely many.",
+  "score": 2,
+  "cost": 0.0013458250000000001,
+  "expected": "infinitely many prime numbers",
+  "tokens": {
+    "input": 253,
+    "output": 972
+  },
+  "judge_rerun": true,
+  "judge_raw": "2",
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

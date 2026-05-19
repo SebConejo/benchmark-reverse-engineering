@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "rag_qa",
+  "case": 33,
+  "response": "In response to American aid to Israel.",
+  "score": 5,
+  "cost": 0.0013529999999999998,
+  "expected": "In response to American aid to Israel",
+  "tokens": {
+    "input": 271,
+    "output": 496
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "instruction_following",
+  "case": 42,
+  "response": "The sky bruised swiftly, a deep charcoal smothering the last pale glow of afternoon. A sudden, sharp gust pushed through the trees, carrying the cool, metallic tang of ozone and the dusty scent of rain hitting parched soil\u2014a promise of wet earth. Then came the first fat drops, heavy as coins, exploding against windows and skin, turning the world into a drum. In the distance, thunder began as a low, tectonic grumble, a sound felt in the chest before it cracked overhead with a splintering roar, while white veins of lightning flared brilliantly, bleaching the landscape into stark, momentary negatives. The air thickened with the smell of damp stone and the faint, sweet whisper of crushed grass, everything drenched and electric.",
+  "score": 5,
+  "cost": 0.000477195,
+  "expected": "",
+  "tokens": {
+    "input": 17,
+    "output": 270
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

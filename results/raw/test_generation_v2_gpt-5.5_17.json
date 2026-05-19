@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.5",
+  "task": "test_generation_v2",
+  "case": 17,
+  "response": "```python\n# test_is_balanced_parens.py\n\nimport pytest\n\n# Adjust this import to match your project structure\n# from your_module import is_balanced_parens\n\n\ndef is_balanced_parens(s: str) -> bool:\n    stack = []\n    pairs = {'(': ')', '[': ']', '{': '}'}\n    for c in s:\n        if c in pairs:\n            stack.append(pairs[c])\n        elif c in pairs.values():\n            if not stack or stack.pop() != c:\n                return False\n    return len(stack) == 0\n\n\n@pytest.mark.parametrize(\n    \"input_str\",\n    [\n        \"\",\n        \"()\",\n        \"[]\",\n        \"{}\",\n        \"()[]{}\",\n        \"([])\",\n        \"{[()]}\",\n        \"((()))\",\n        \"[{()}]\",\n        \"abc\",\n        \"a(b)c\",\n        \"function(arg[0]) { return true; }\",\n        \"no brackets here\",\n    ],\n)\ndef test_is_balanced_parens_happy_path(input_str):\n    assert is_balanced_parens(input_str) is True\n\n\n@pytest.mark.parametrize(\n    \"input_str\",\n    [\n        \"(\",\n        \"[\",\n        \"{\",\n        \"(((\",\n        \"(()\",\n        \"[[]\",\n        \"{{}\",\n        \")\",\n        \"]\",\n        \"}\",\n        \"())\",\n        \"[]]\",\n        \"{}}\",\n    ],\n)\ndef test_is_balanced_parens_unmatched_brackets(input_str):\n    assert is_balanced_parens(input_str) is False\n\n\n@pytest.mark.parametrize(\n    \"input_str\",\n    [\n        \"(]\",\n        \"[)\",\n        \"{]\",\n        \"([)]\",\n        \"{[(])}\",\n        \"[(])\",\n        \"([}\",\n        \"{[}]\",\n    ],\n)\ndef test_is_balanced_parens_mismatched_brackets(input_str):\n    assert is_balanced_parens(input_str) is False\n\n\n@pytest.mark.parametrize(\n    \"input_str\",\n    [\n        \")(\",\n        \"][\",\n        \"}{\",\n        \"())(\",\n        \"abc)def(\",\n    ],\n)\ndef test_is_balanced_parens_wrong_order(input_str):\n    assert is_balanced_parens(input_str) is False\n\n\n@pytest.mark.parametrize(\n    \"input_value\",\n    [\n        None,\n        123,\n        object(),\n    ],\n)\ndef test_is_balanced_parens_invalid_non_iterable_input_raises_type_error(input_value):\n    with pytest.raises(TypeError):\n        is_balanced_parens(input_value)\n\n\ndef test_is_balanced_parens_iterable_non_string_input():\n    \"\"\"\n    The implementation accepts any iterable of characters, despite the type hint.\n    This documents the current behavior.\n    \"\"\"\n    assert is_balanced_parens([\"(\", \"[\", \"]\", \")\"]) is True\n    assert is_balanced_parens([\"(\", \"]\"]) is False\n```",
+  "score": 4,
+  "cost": 0.0084,
+  "expected": "",
+  "tokens": {
+    "input": 116,
+    "output": 671
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

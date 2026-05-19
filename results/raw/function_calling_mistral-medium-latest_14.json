@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "function_calling",
+  "case": 14,
+  "response": "```json\n{\n  \"name\": \"create_reminder\",\n  \"arguments\": {\n    \"message\": \"Call the dentist\",\n    \"time\": \"15:00\",\n    \"date\": \"next Wednesday\"\n  }\n}\n```",
+  "score": 4,
+  "cost": 0.0001408,
+  "expected": "",
+  "tokens": {
+    "input": 92,
+    "output": 52
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

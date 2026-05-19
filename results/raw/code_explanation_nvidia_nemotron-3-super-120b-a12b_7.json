@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "code_explanation",
+  "case": 7,
+  "response": "The decorator creates an LRU (least\u2011recently\u2011used) cache: each call\u2019s arguments are used as a key in an `OrderedDict`; when a cached result is reused, its entry is moved to the end (most\u2011recent), and when the cache exceeds `maxsize` the oldest entry (the front of the dict) is removed with `popitem(last=False)`. This implements the classic LRU eviction policy.",
+  "score": 5,
+  "cost": 2.5739999999999998e-05,
+  "expected": "",
+  "tokens": {
+    "input": 130,
+    "output": 156
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

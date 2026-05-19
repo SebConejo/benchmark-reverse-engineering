@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen3-coder",
+  "task": "code_generation",
+  "case": 38,
+  "response": "```python\nnegative_integers = [x for x in lst if x < 0]\npositive_integers = [x for x in lst if x > 0]\n\na = max(negative_integers) if negative_integers else None\nb = min(positive_integers) if positive_integers else None\n\nreturn (a, b)\n```",
+  "score": 3,
+  "cost": 0.00010185999999999999,
+  "expected": "",
+  "tokens": {
+    "input": 171,
+    "output": 73
+  },
+  "judge_rerun": true,
+  "judge_raw": "3",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

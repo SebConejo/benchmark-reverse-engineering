@@ -1,0 +1,16 @@
+{
+  "model": "devstral-latest",
+  "task": "rag_qa",
+  "case": 37,
+  "response": "Not found in context.",
+  "score": 5,
+  "cost": 2.3500000000000002e-05,
+  "expected": "northeast",
+  "tokens": {
+    "input": 217,
+    "output": 6
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

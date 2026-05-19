@@ -1,0 +1,16 @@
+{
+  "model": "seed-2-0-pro-260328",
+  "task": "sql_spider",
+  "case": 41,
+  "response": "SELECT population AS total_residents FROM district WHERE name = 'Gelderland';",
+  "score": 3,
+  "cost": 0.0011417999999999999,
+  "expected": "",
+  "tokens": {
+    "input": 115,
+    "output": 447
+  },
+  "judge_v2_score": 2,
+  "judge_v2_raw": "2",
+  "judge_v2_model": "gpt-4o"
+}

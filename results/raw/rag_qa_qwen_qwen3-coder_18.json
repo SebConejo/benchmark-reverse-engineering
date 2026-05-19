@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen3-coder",
+  "task": "rag_qa",
+  "case": 18,
+  "response": "Allan Bloom wrote \"The Closing of the American Mind\".",
+  "score": 5,
+  "cost": 4.994e-05,
+  "expected": "Allan Bloom",
+  "tokens": {
+    "input": 175,
+    "output": 13
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

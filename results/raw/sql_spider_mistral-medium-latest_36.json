@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "sql_spider",
+  "case": 36,
+  "response": "```sql\nSELECT s.name\nFROM students s\nJOIN posts p ON s.id = p.student_id\nGROUP BY s.id, s.name\nORDER BY COUNT(p.likes) DESC\nLIMIT 1;\n```",
+  "score": 4,
+  "cost": 0.0001208,
+  "expected": "",
+  "tokens": {
+    "input": 67,
+    "output": 47
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

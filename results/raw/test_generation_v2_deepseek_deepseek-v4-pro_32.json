@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "test_generation_v2",
+  "case": 32,
+  "response": "```python\nimport pytest\n# Replace 'your_module' with the actual module name where find_missing is defined.\nfrom your_module import find_missing\n\n\nclass TestFindMissing:\n    \"\"\"Unit tests for find_missing function.\"\"\"\n\n    # ---------- Happy Path ----------\n    def test_typical_case(self):\n        \"\"\"A typical unsorted list with missing number in the middle.\"\"\"\n        assert find_missing([3, 0, 1]) == 2\n\n    def test_missing_at_end(self):\n        \"\"\"The missing number is n (the largest value).\"\"\"\n        assert find_missing([0, 1, 2]) == 3\n\n    def test_missing_at_start(self):\n        \"\"\"The missing number is 0.\"\"\"\n        assert find_missing([1, 2, 3]) == 0\n\n    def test_unsorted_list(self):\n        \"\"\"Unsorted list where missing number is n.\"\"\"\n        assert find_missing([2, 0, 1]) == 3\n\n    def test_large_list(self):\n        \"\"\"Test with a larger sequence to ensure correctness and no overflow.\"\"\"\n        n = 1000\n        nums = list(range(n + 1))\n        missing = 567\n        nums.remove(missing)\n        assert find_missing(nums) == missing\n\n    # ---------- Edge Cases ----------\n    def test_empty_list(self):\n        \"\"\"An empty list: n=0, missing number is 0.\"\"\"\n        assert find_missing([]) == 0\n\n    def test_single_element_zero(self):\n        \"\"\"List with only [0]: n=1, missing number is 1.\"\"\"\n        assert find_missing([0]) == 1\n\n    def test_single_element_one(self):\n        \"\"\"List with only [1]: n=1, missing number is 0.\"\"\"\n        assert find_missing([1]) == 0\n\n    # ---------- Error / Invalid Input Cases ----------\n    def test_none_input(self):\n        \"\"\"Passing None should raise a TypeError.\"\"\"\n        with pytest.raises(TypeError):\n            find_missing(None)\n\n    def test_string_input(self):\n        \"\"\"Passing a string should raise a TypeError (len works, sum doesn't).\"\"\"\n        with pytest.raises(TypeError):\n            find_missing(\"abc\")\n\n    def test_list_with_non_integer(self):\n        \"\"\"List containing a non-numeric element should raise TypeError on sum.\"\"\"\n        with pytest.raises(TypeError):\n            find_missing([1, 2, 'a'])\n\n    def test_list_with_float(self):\n        \"\"\"List with floats: function runs but returns a float instead of int.\"\"\"\n        result = find_missing([0.0, 1.0, 2.0])\n        assert result == 3.0\n        assert isinstance(result, float)\n\n    def test_negative_numbers(self):\n        \"\"\"Negative numbers violate the sequence contract but do not raise an error.\"\"\"\n        result = find_missing([-1, 0, 1])\n        # n=3, expected sum=6, actual sum=0 -> returns 6\n        assert result == 6\n\n    def test_duplicates(self):\n        \"\"\"Duplicates violate the contract but do not raise an error.\"\"\"\n        result = find_missing([0, 0, 1])\n        # n=3, expected sum=6, actual sum=1 -> returns 5\n        assert result == 5\n```",
+  "score": 4,
+  "cost": 0.004674510000000001,
+  "expected": "",
+  "tokens": {
+    "input": 78,
+    "output": 2667
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

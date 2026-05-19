@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 11,
+  "response": "**Step\u2011by\u2011step reasoning**\n\n1. Total burritos ordered: \\(600\\).\n\n2. Burritos given to students:\n   \\[\n   50\\ \\text{students} \\times 10\\ \\text{burritos/student}=500\\ \\text{burritos}\n   \\]\n\n3. Burritos eaten by Mr. George: \\(20\\).\n\n4. Total burritos consumed:\n   \\[\n   500\\ (\\text{students}) + 20\\ (\\text{George}) = 520\\ \\text{burritos}\n   \\]\n\n5. Leftover burritos:\n   \\[\n   600\\ (\\text{ordered}) - 520\\ (\\text{consumed}) = 80\\ \\text{burritos}\n   \\]\n\n**Final answer**\n\nANSWER: 80",
+  "score": 5,
+  "cost": 0.0019151,
+  "expected": "80",
+  "tokens": {
+    "input": 133,
+    "output": 402
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "rag_qa",
+  "case": 22,
+  "response": "The South African Schools Act of 1996",
+  "score": 5,
+  "cost": 0.000185745,
+  "expected": "South African Schools Act",
+  "tokens": {
+    "input": 139,
+    "output": 72
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

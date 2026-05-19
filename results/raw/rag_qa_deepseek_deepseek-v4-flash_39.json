@@ -1,0 +1,18 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "rag_qa",
+  "case": 39,
+  "response": "Circuit switching",
+  "score": 1,
+  "cost": 4.886000000000001e-05,
+  "expected": "circuit switching",
+  "tokens": {
+    "input": 141,
+    "output": 52
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

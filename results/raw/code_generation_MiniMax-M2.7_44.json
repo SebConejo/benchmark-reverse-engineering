@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "code_generation",
+  "case": 44,
+  "response": "```python\n    result = []\n    vowels = 'aeiouAEIOU'\n    \n    for char in message:\n        if char.isalpha():\n            if char in vowels:\n                # Replace vowel with letter 2 ahead, then swap case\n                new_char = chr(ord(char.lower()) + 2)\n                new_char = new_char.swapcase()\n            else:\n                new_char = char.swapcase()\n        else:\n            new_char = char\n        result.append(new_char)\n    \n    return ''.join(result)\n```",
+  "score": 3,
+  "cost": 0.008141100000000002,
+  "expected": "",
+  "tokens": {
+    "input": 153,
+    "output": 1812
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

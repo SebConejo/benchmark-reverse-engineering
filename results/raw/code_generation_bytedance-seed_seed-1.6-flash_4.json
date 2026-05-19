@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "code_generation",
+  "case": 4,
+  "response": "increasing = True\n    for i in range(1, len(l)):\n        if l[i] < l[i-1]:\n            increasing = False\n            break\n    decreasing = True\n    for i in range(1, len(l)):\n        if l[i] > l[i-1]:\n            decreasing = False\n            break\n    return increasing or decreasing",
+  "score": 4,
+  "cost": 0.0003081,
+  "expected": "",
+  "tokens": {
+    "input": 204,
+    "output": 976
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

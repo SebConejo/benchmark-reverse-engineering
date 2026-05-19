@@ -1,0 +1,18 @@
+{
+  "model": "gemini-2.5-pro",
+  "task": "rag_qa",
+  "case": 44,
+  "response": "The Ohio Company of Virginia",
+  "score": 5,
+  "cost": 0.0003775,
+  "expected": "Ohio Company of Virginia",
+  "tokens": {
+    "input": 262,
+    "output": 5
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

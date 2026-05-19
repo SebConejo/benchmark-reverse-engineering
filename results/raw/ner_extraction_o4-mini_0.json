@@ -1,0 +1,16 @@
+{
+  "model": "o4-mini",
+  "task": "ner_extraction",
+  "case": 0,
+  "response": "{\"persons\":[\"Tim Cook\"],\"organizations\":[\"Apple\",\"Samsung\",\"CES\"],\"locations\":[\"Las Vegas\"]}",
+  "score": 5,
+  "cost": 0.0008217000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 71,
+    "output": 169
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

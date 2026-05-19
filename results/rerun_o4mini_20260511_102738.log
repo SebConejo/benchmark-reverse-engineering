@@ -1,0 +1,38 @@
+=== o4-mini completion started at $(date) ===
+>>> Task: code_review_v2 at Mon May 11 10:27:38 CEST 2026
+======================================================================
+TaskBench Batch: code_review_v2
+Cases: 50 | Models to run: 0 | Already done: 0
+Skipped providers (unavailable): azure
+Budget: $123.0931 / $200
+======================================================================
+
+
+======================================================================
+BATCH COMPLETE: code_review_v2
+Total spend: $123.0931 | Calls: 61448
+======================================================================
+>>> Done: code_review_v2 at Mon May 11 10:27:38 CEST 2026
+>>> Task: test_generation_v2 at Mon May 11 10:27:38 CEST 2026
+======================================================================
+TaskBench Batch: test_generation_v2
+Cases: 50 | Models to run: 0 | Already done: 0
+Skipped providers (unavailable): azure
+Budget: $123.0931 / $200
+======================================================================
+
+
+======================================================================
+BATCH COMPLETE: test_generation_v2
+Total spend: $123.0931 | Calls: 61448
+======================================================================
+>>> Done: test_generation_v2 at Mon May 11 10:27:38 CEST 2026
+=== o4-mini DONE at $(date) ===
+Raw files scanned: 51637
+Valid rows: 51549
+Skipped (empty response, score 0): 88
+Errors: 0
+After dedup: 51549 (removed 0 duplicates)
+
+Backed up old CSV to results/benchmark_results.csv.bak
+Wrote 51549 rows to results/benchmark_results.csv

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "instruction_following",
+  "case": 12,
+  "response": "Imagine you\u2019re sitting at a restaurant. You look at the menu and decide what you\u2019d like to eat, but you can\u2019t just walk into the kitchen and tell the chef yourself. Instead, a waiter comes to your table. You give the waiter your order, they take it to the kitchen, and then they bring the finished dish back to you.\n\nIn the world of apps and websites, an **API** is basically just that waiter. It\u2019s a messenger that lets one app ask another for something it needs\u2014like asking a weather app to send back today\u2019s forecast, or asking a maps app to show a location. The two apps don\u2019t need to know how the other one works inside (just like you don\u2019t need to know the kitchen\u2019s recipes). The API carries the request, delivers the answer, and keeps everything running smoothly without making a mess.",
+  "score": 5,
+  "cost": 0.001242795,
+  "expected": "",
+  "tokens": {
+    "input": 17,
+    "output": 710
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "code_generation",
+  "case": 11,
+  "response": "product = 1\n    for n in numbers:\n        product *= n\n    return sum(numbers), product",
+  "score": 4,
+  "cost": 0.0032802000000000005,
+  "expected": "",
+  "tokens": {
+    "input": 143,
+    "output": 1331
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

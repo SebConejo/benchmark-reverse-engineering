@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "code_generation",
+  "case": 46,
+  "response": "if not arr:\n        return []\n    min_val = float('inf')\n    min_idx = -1\n    for idx, val in enumerate(arr):\n        if val % 2 == 0:\n            if val < min_val:\n                min_val = val\n                min_idx = idx\n            elif val == min_val and idx < min_idx:\n                min_idx = idx\n    return [min_val, min_idx] if min_idx != -1 else []",
+  "score": 4,
+  "cost": 0.000372375,
+  "expected": "",
+  "tokens": {
+    "input": 449,
+    "output": 1129
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

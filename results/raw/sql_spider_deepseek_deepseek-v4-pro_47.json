@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "sql_spider",
+  "case": 47,
+  "response": "```sql\nSELECT TypeCode\nFROM TemplateType\nWHERE Description = 'Book';\n```",
+  "score": 5,
+  "cost": 0.000434565,
+  "expected": "",
+  "tokens": {
+    "input": 75,
+    "output": 231
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

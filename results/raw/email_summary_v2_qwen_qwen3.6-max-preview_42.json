@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-max-preview",
+  "task": "email_summary_v2",
+  "case": 42,
+  "response": "The recent enterprise customer workshop revealed strong approval for the new analytics dashboard but highlighted critical needs for improved bulk import functionality and SSO integration, alongside unexpected interest in commercializing an internal tool. Please review the attached follow-up report to prioritize resolving the SSO blocker and import requests while evaluating the feasibility of productizing the internal tool.",
+  "score": 5,
+  "cost": 0.007332,
+  "expected": "",
+  "tokens": {
+    "input": 116,
+    "output": 1381
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

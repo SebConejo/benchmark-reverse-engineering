@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "function_calling",
+  "case": 46,
+  "response": "{\"name\": \"restart_service\", \"arguments\": {\"name\": \"Redis cache server\"}}",
+  "score": 4,
+  "cost": 2.3800000000000006e-05,
+  "expected": "",
+  "tokens": {
+    "input": 86,
+    "output": 21
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

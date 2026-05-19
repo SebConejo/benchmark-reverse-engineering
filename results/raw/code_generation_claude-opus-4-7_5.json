@@ -1,0 +1,16 @@
+{
+  "model": "claude-opus-4-7",
+  "task": "code_generation",
+  "case": 5,
+  "response": "```python\n    m = l[0]\n    for e in l:\n        if e > m:\n            m = e\n    return m\n```",
+  "score": 5,
+  "cost": 0.005175,
+  "expected": "",
+  "tokens": {
+    "input": 145,
+    "output": 40
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

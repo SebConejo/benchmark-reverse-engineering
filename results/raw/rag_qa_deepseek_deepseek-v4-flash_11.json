@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "rag_qa",
+  "case": 11,
+  "response": "10% of the world's carbon stores in ecosystems.",
+  "score": 4,
+  "cost": 6.776e-05,
+  "expected": "10% of the carbon stores",
+  "tokens": {
+    "input": 164,
+    "output": 80
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "instruction_following",
+  "case": 14,
+  "response": "Stay hydrated in style with our sleek, double-walled stainless steel water bottle that keeps drinks icy cold for 24 hours or piping hot for 12. Its leakproof, vacuum-insulated design fits most cup holders and features a wide mouth for easy filling and cleaning. Crafted from durable, BPA-free materials, this bottle is your perfect eco-friendly companion for the gym, office, or trail.",
+  "score": 2,
+  "cost": 0.00027231,
+  "expected": "",
+  "tokens": {
+    "input": 18,
+    "output": 152
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

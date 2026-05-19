@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "instruction_following",
+  "case": 18,
+  "response": "It\u2019s a story told through the eyes of a child, set in a sleepy Southern town where the heat hangs heavy and the social lines are drawn in generations-old ink. The narrator\u2019s father, a lawyer of quiet integrity, takes on a case that exposes the town\u2019s deepest prejudices\u2014defending a Black man falsely accused of a crime against a white woman. The trial becomes a lens through which innocence confronts injustice, and the child learns that courage isn\u2019t a man with a gun, but someone who fights a losing battle because it\u2019s the right thing to do. Woven through it all is the mystery of a reclusive neighbor, a figure of local legend who becomes a symbol of empathy\u2014the idea that you never really understand a person until you climb into their skin and walk around in it. The book is tender, fierce, and heartbreakingly human, a portrait of moral awakening in a world that often punishes goodness.",
+  "score": 5,
+  "cost": 0.000552885,
+  "expected": "",
+  "tokens": {
+    "input": 15,
+    "output": 314
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

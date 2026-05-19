@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "task": "code_generation",
+  "case": 26,
+  "response": "n = len(l)\n    if n < 3:\n        return False\n    l.sort()\n    for i in range(n - 2):\n        left = i + 1\n        right = n - 1\n        target = -l[i]\n        while left < right:\n            current_sum = l[left] + l[right]\n            if current_sum == target:\n                return True\n            elif current_sum < target:\n                left += 1\n            else:\n                right -= 1\n    return False",
+  "score": 4,
+  "cost": 0.00016644999999999998,
+  "expected": "",
+  "tokens": {
+    "input": 195,
+    "output": 107
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

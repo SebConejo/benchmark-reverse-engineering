@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "code_explanation",
+  "case": 12,
+  "response": "This code implements topological sorting of a directed acyclic graph using depth-first search. It recursively visits each unvisited node, processes all its neighbors first, appends the node to a stack in post-order, and finally returns the reversed stack to ensure every directed edge \\(u \\to v\\) has \\(u\\) before \\(v\\) in the ordering.",
+  "score": 5,
+  "cost": 0.0005742000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 104,
+    "output": 304
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

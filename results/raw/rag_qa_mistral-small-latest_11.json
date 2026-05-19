@@ -1,0 +1,16 @@
+{
+  "model": "mistral-small-latest",
+  "task": "rag_qa",
+  "case": 11,
+  "response": "Not found in context.",
+  "score": 5,
+  "cost": 2.05e-05,
+  "expected": "10% of the carbon stores",
+  "tokens": {
+    "input": 187,
+    "output": 6
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "data_to_text",
+  "case": 4,
+  "response": "Flight AA 1234 from New York's JFK to Los Angeles (LAX) departs at 8:30 AM and arrives at 11:45 AM, giving a total flight time of 5 hours and 15 minutes aboard a Boeing 787 in Economy class. The fare is priced at $289, and this flight maintains an 82% on-time record.",
+  "score": 5,
+  "cost": 0.0006011699999999999,
+  "expected": "",
+  "tokens": {
+    "input": 94,
+    "output": 322
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

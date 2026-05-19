@@ -1,0 +1,16 @@
+{
+  "model": "devstral-latest",
+  "task": "function_calling",
+  "case": 27,
+  "response": "```json\n{\"name\": \"convert_currency\", \"arguments\": {\"amount\": 500, \"from_currency\": \"EUR\", \"to_currency\": \"JPY\"}}\n```",
+  "score": 5,
+  "cost": 2.23e-05,
+  "expected": "",
+  "tokens": {
+    "input": 103,
+    "output": 40
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

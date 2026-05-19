@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "email_summary_v2",
+  "case": 2,
+  "response": "Critical SQL injection vulnerability (CVSS 9.8) in /api/v2/auth/login affects versions v3.2.0-v3.4.1, with a parameterized query fix available in auth_controller.py:142 and a patch ready for review. The email recommends deploying a hotfix within 24 hours.",
+  "score": 5,
+  "cost": 0.0013365,
+  "expected": "",
+  "tokens": {
+    "input": 131,
+    "output": 271
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

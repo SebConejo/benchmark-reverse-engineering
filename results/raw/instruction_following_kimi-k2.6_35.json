@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "instruction_following",
+  "case": 35,
+  "response": "The old lighthouse keeper climbed the spiral stairs for the last time, his arthritis protesting every step. Through the salt-crusted glass, he watched the storm swallow the horizon whole, waves rising like angry fists. When the generator sputtered and died, he struck a match with trembling hands and lit the backup oil lamp by memory alone. The beam cut through the darkness, sweeping across the heaving black water in its ancient rhythm. A distant horn answered\u2014a cargo ship, blind and searching\u2014adjusting its course by his solitary light. He sank into the worn wooden chair, knowing the automation crew would arrive at dawn, but tonight the coast was still his to save.",
+  "score": 5,
+  "cost": 0.001035,
+  "expected": "",
+  "tokens": {
+    "input": 17,
+    "output": 427
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

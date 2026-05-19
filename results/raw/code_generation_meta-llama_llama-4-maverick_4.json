@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "code_generation",
+  "case": 4,
+  "response": "```python\nincreasing = all(l[i] <= l[i + 1] for i in range(len(l) - 1))\ndecreasing = all(l[i] >= l[i + 1] for i in range(len(l) - 1))\nreturn increasing or decreasing\n```",
+  "score": 4,
+  "cost": 5.2799999999999996e-05,
+  "expected": "",
+  "tokens": {
+    "input": 116,
+    "output": 59
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

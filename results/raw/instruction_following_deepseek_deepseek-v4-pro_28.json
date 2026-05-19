@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "instruction_following",
+  "case": 28,
+  "response": "Your only limit is the one you set in your own mind.",
+  "score": 3,
+  "cost": 0.00056376,
+  "expected": "",
+  "tokens": {
+    "input": 20,
+    "output": 319
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

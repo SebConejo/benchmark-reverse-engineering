@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 13,
+  "response": "**Step\u2011by\u2011step solution**\n\n1. **Cost of material:**\u202f$500  \n2. **Cost of jeweler:**\u202f$800  \n\n   *Total cost before insurance*  \n   \\[\n   500 + 800 = 1300\\text{ dollars}\n   \\]\n\n3. **Insurance cost:**\u202f10\u202f% of the total so far  \n\n   \\[\n   0.10 \\times 1300 = 130\\text{ dollars}\n   \\]\n\n4. **Total amount paid**  \n\n   \\[\n   1300 + 130 = 1430\\text{ dollars}\n   \\]\n\n---\n\nANSWER: 1430",
+  "score": 5,
+  "cost": 0.003036,
+  "expected": "1430",
+  "tokens": {
+    "input": 132,
+    "output": 657
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

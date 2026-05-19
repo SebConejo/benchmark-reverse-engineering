@@ -1,0 +1,130 @@
+=== gpt-5.5-pro completion at $(date) ===
+>>> Task: code_review_v2 at Mon May 11 13:59:40 CEST 2026
+======================================================================
+TaskBench Batch: code_review_v2
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $124.0140 / $200
+======================================================================
+
+  ERROR gpt-5.5-pro case 11: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 12: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 13: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 14: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 15: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 16: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 17: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 18: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 19: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 20: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 21: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 22: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 23: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 24: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 25: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 26: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 27: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 28: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 29: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 30: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 31: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 32: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 33: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 34: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 35: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 36: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 37: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 38: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 39: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 40: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 41: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 42: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 43: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 44: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 45: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 46: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 47: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 48: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 49: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  gpt-5.5-pro                                avg=4.9/5  cost=$5.8865  [PASS]
+
+======================================================================
+BATCH COMPLETE: code_review_v2
+Total spend: $129.9016 | Calls: 61559
+
+--- Results ranked by quality ---
+  gpt-5.5-pro                                4.9/5  $5.8865  (11 cases)
+======================================================================
+>>> Done: code_review_v2 at Mon May 11 15:14:25 CEST 2026
+>>> Task: test_generation_v2 at Mon May 11 15:14:25 CEST 2026
+======================================================================
+TaskBench Batch: test_generation_v2
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $129.9016 / $200
+======================================================================
+
+  ERROR gpt-5.5-pro case 0: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 1: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 2: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 3: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 4: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 5: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 6: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 7: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 8: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 9: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 10: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 11: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 12: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 13: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 14: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 15: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 16: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 17: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 18: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 19: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 20: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 21: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 22: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 23: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 24: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 25: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 26: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 27: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 28: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 29: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 30: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 31: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 32: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 33: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 34: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 35: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 36: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 37: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 38: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 39: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 40: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 41: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 42: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 43: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 44: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 45: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 46: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 47: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 48: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  ERROR gpt-5.5-pro case 49: HTTPSConnectionPool(host='api.openai.com', port=443): Max retries exceeded with 
+  gpt-5.5-pro                                NO RESULTS
+
+======================================================================
+BATCH COMPLETE: test_generation_v2
+Total spend: $129.9016 | Calls: 61559
+======================================================================
+>>> Done: test_generation_v2 at Mon May 11 15:14:26 CEST 2026
+=== gpt-5.5-pro DONE at $(date) ===
+Raw files scanned: 51699
+Valid rows: 51611
+Skipped (empty response, score 0): 88
+Errors: 0
+After dedup: 51611 (removed 0 duplicates)
+
+Backed up old CSV to results/benchmark_results.csv.bak
+Wrote 51611 rows to results/benchmark_results.csv

@@ -1,0 +1,16 @@
+{
+  "model": "meta-llama/llama-3.2-1b-instruct",
+  "task": "instruction_following",
+  "case": 6,
+  "response": "The ocean is vast.",
+  "score": 2,
+  "cost": 7.29e-07,
+  "expected": "",
+  "tokens": {
+    "input": 21,
+    "output": 6
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

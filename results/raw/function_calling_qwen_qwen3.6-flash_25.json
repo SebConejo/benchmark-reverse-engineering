@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "task": "function_calling",
+  "case": 25,
+  "response": "{\"name\": \"schedule_meeting\", \"arguments\": {\"title\": \"Standup meeting\", \"duration_minutes\": 30, \"time\": \"9am\", \"recurrence\": \"every weekday\", \"attendees\": [\"dev team\"]}}",
+  "score": 5,
+  "cost": 0.0010925,
+  "expected": "",
+  "tokens": {
+    "input": 126,
+    "output": 1061
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

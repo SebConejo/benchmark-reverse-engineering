@@ -1,0 +1,16 @@
+{
+  "model": "seed-2-0-pro-260328",
+  "task": "code_generation",
+  "case": 5,
+  "response": "max_val = l[0]\n    for element in l:\n        if element > max_val:\n            max_val = element\n    return max_val",
+  "score": 4,
+  "cost": 0.0006492000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 166,
+    "output": 229
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

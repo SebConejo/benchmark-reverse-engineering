@@ -1,0 +1,16 @@
+{
+  "model": "o4-mini",
+  "task": "sql_spider",
+  "case": 42,
+  "response": "SELECT id\nFROM cre_Doc_Template_Mgt.doc_templates\nWHERE description = 'Presentation';",
+  "score": 5,
+  "cost": 0.0030646000000000002,
+  "expected": "",
+  "tokens": {
+    "input": 74,
+    "output": 678
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

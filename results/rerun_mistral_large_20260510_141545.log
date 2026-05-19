@@ -1,0 +1,590 @@
+=== Mistral Large completion started at $(date) ===
+>>> Task: code_explanation at Sun May 10 14:15:45 CEST 2026
+======================================================================
+TaskBench Batch: code_explanation
+Cases: 48 | Models to run: 1 | Already done: 0
+Budget: $122.3749 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=5.0/5  cost=$0.0311  [PASS]
+
+======================================================================
+BATCH COMPLETE: code_explanation
+Total spend: $122.4108 | Calls: 60114
+
+--- Results ranked by quality ---
+  mistral-large-latest                       5.0/5  $0.0311  (48 cases)
+======================================================================
+>>> Done: code_explanation at Sun May 10 14:18:56 CEST 2026
+>>> Task: code_generation at Sun May 10 14:18:57 CEST 2026
+======================================================================
+TaskBench Batch: code_generation
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.4108 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=4.6/5  cost=$0.0367  [PASS]
+
+======================================================================
+BATCH COMPLETE: code_generation
+Total spend: $122.4525 | Calls: 60164
+
+--- Results ranked by quality ---
+  mistral-large-latest                       4.6/5  $0.0367  (50 cases)
+======================================================================
+>>> Done: code_generation at Sun May 10 14:22:43 CEST 2026
+>>> Task: data_to_text at Sun May 10 14:22:44 CEST 2026
+======================================================================
+TaskBench Batch: data_to_text
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.4525 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=5.0/5  cost=$0.0449  [PASS]
+
+======================================================================
+BATCH COMPLETE: data_to_text
+Total spend: $122.5024 | Calls: 60214
+
+--- Results ranked by quality ---
+  mistral-large-latest                       5.0/5  $0.0449  (50 cases)
+======================================================================
+>>> Done: data_to_text at Sun May 10 14:26:20 CEST 2026
+>>> Task: email_summary_v2 at Sun May 10 14:26:21 CEST 2026
+======================================================================
+TaskBench Batch: email_summary_v2
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.5024 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=5.0/5  cost=$0.0277  [PASS]
+
+======================================================================
+BATCH COMPLETE: email_summary_v2
+Total spend: $122.5351 | Calls: 60264
+
+--- Results ranked by quality ---
+  mistral-large-latest                       5.0/5  $0.0277  (50 cases)
+======================================================================
+>>> Done: email_summary_v2 at Sun May 10 14:29:43 CEST 2026
+>>> Task: function_calling at Sun May 10 14:29:44 CEST 2026
+======================================================================
+TaskBench Batch: function_calling
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.5351 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=4.5/5  cost=$0.0221  [PASS]
+
+======================================================================
+BATCH COMPLETE: function_calling
+Total spend: $122.5622 | Calls: 60314
+
+--- Results ranked by quality ---
+  mistral-large-latest                       4.5/5  $0.0221  (50 cases)
+======================================================================
+>>> Done: function_calling at Sun May 10 14:33:07 CEST 2026
+>>> Task: instruction_following at Sun May 10 14:33:08 CEST 2026
+======================================================================
+TaskBench Batch: instruction_following
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.5622 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=4.5/5  cost=$0.0472  [PASS]
+
+======================================================================
+BATCH COMPLETE: instruction_following
+Total spend: $122.6143 | Calls: 60364
+
+--- Results ranked by quality ---
+  mistral-large-latest                       4.5/5  $0.0472  (50 cases)
+======================================================================
+>>> Done: instruction_following at Sun May 10 14:37:17 CEST 2026
+>>> Task: intent_clinc150 at Sun May 10 14:37:17 CEST 2026
+======================================================================
+TaskBench Batch: intent_clinc150
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.6143 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 2/5 in 10s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=4.4/5  acc=88%  cost=$0.0571  [PASS]
+
+======================================================================
+BATCH COMPLETE: intent_clinc150
+Total spend: $122.6714 | Calls: 60414
+
+--- Results ranked by quality ---
+  mistral-large-latest                       4.4/5  acc=88%  $0.0571  (50 cases)
+
+--- Native metric (accuracy) ---
+  mistral-large-latest                       88%
+======================================================================
+>>> Done: intent_clinc150 at Sun May 10 14:40:51 CEST 2026
+>>> Task: json_transform_v2 at Sun May 10 14:40:51 CEST 2026
+======================================================================
+TaskBench Batch: json_transform_v2
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.6714 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=4.4/5  cost=$0.0404  [PASS]
+
+======================================================================
+BATCH COMPLETE: json_transform_v2
+Total spend: $122.7168 | Calls: 60464
+
+--- Results ranked by quality ---
+  mistral-large-latest                       4.4/5  $0.0404  (50 cases)
+======================================================================
+>>> Done: json_transform_v2 at Sun May 10 14:44:16 CEST 2026
+>>> Task: long_summarization at Sun May 10 14:44:16 CEST 2026
+======================================================================
+TaskBench Batch: long_summarization
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.7168 / $200
+======================================================================
+
+  mistral-large-latest                       avg=5.0/5  cost=$0.0813  [PASS]
+
+======================================================================
+BATCH COMPLETE: long_summarization
+Total spend: $122.8032 | Calls: 60514
+
+--- Results ranked by quality ---
+  mistral-large-latest                       5.0/5  $0.0813  (50 cases)
+======================================================================
+>>> Done: long_summarization at Sun May 10 14:48:27 CEST 2026
+>>> Task: moderation_toxigen at Sun May 10 14:48:27 CEST 2026
+======================================================================
+TaskBench Batch: moderation_toxigen
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.8032 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=4.5/5  acc=90%  cost=$0.0063  [PASS]
+
+======================================================================
+BATCH COMPLETE: moderation_toxigen
+Total spend: $122.8094 | Calls: 60564
+
+--- Results ranked by quality ---
+  mistral-large-latest                       4.5/5  acc=90%  $0.0063  (50 cases)
+
+--- Native metric (accuracy) ---
+  mistral-large-latest                       90%
+======================================================================
+>>> Done: moderation_toxigen at Sun May 10 14:51:47 CEST 2026
+>>> Task: multistep_reasoning at Sun May 10 14:51:48 CEST 2026
+======================================================================
+TaskBench Batch: multistep_reasoning
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.8094 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=4.8/5  acc=96%  cost=$0.0193  [PASS]
+
+======================================================================
+BATCH COMPLETE: multistep_reasoning
+Total spend: $122.8287 | Calls: 60614
+
+--- Results ranked by quality ---
+  mistral-large-latest                       4.8/5  acc=96%  $0.0193  (50 cases)
+
+--- Native metric (accuracy) ---
+  mistral-large-latest                       96%
+======================================================================
+>>> Done: multistep_reasoning at Sun May 10 14:55:11 CEST 2026
+>>> Task: ner_extraction at Sun May 10 14:55:11 CEST 2026
+======================================================================
+TaskBench Batch: ner_extraction
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.8287 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=4.5/5  cost=$0.0182  [PASS]
+
+======================================================================
+BATCH COMPLETE: ner_extraction
+Total spend: $122.8519 | Calls: 60664
+
+--- Results ranked by quality ---
+  mistral-large-latest                       4.5/5  $0.0182  (50 cases)
+======================================================================
+>>> Done: ner_extraction at Sun May 10 14:58:35 CEST 2026
+>>> Task: rag_qa at Sun May 10 14:58:36 CEST 2026
+======================================================================
+TaskBench Batch: rag_qa
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.8519 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=4.9/5  cost=$0.0305  [PASS]
+
+======================================================================
+BATCH COMPLETE: rag_qa
+Total spend: $122.8874 | Calls: 60714
+
+--- Results ranked by quality ---
+  mistral-large-latest                       4.9/5  $0.0305  (50 cases)
+======================================================================
+>>> Done: rag_qa at Sun May 10 15:02:53 CEST 2026
+>>> Task: sentiment_sst2 at Sun May 10 15:02:53 CEST 2026
+======================================================================
+TaskBench Batch: sentiment_sst2
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.8874 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=5.0/5  acc=100%  cost=$0.0065  [PASS]
+
+======================================================================
+BATCH COMPLETE: sentiment_sst2
+Total spend: $122.8940 | Calls: 60764
+
+--- Results ranked by quality ---
+  mistral-large-latest                       5.0/5  acc=100%  $0.0065  (50 cases)
+
+--- Native metric (accuracy) ---
+  mistral-large-latest                       100%
+======================================================================
+>>> Done: sentiment_sst2 at Sun May 10 15:06:11 CEST 2026
+>>> Task: sql_spider at Sun May 10 15:06:11 CEST 2026
+======================================================================
+TaskBench Batch: sql_spider
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.8940 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=4.7/5  cost=$0.0212  [PASS]
+
+======================================================================
+BATCH COMPLETE: sql_spider
+Total spend: $122.9202 | Calls: 60814
+
+--- Results ranked by quality ---
+  mistral-large-latest                       4.7/5  $0.0212  (50 cases)
+======================================================================
+>>> Done: sql_spider at Sun May 10 15:09:39 CEST 2026
+>>> Task: structured_output at Sun May 10 15:09:40 CEST 2026
+======================================================================
+TaskBench Batch: structured_output
+Cases: 41 | Models to run: 1 | Already done: 0
+Budget: $122.9202 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=4.9/5  cost=$0.0344  [PASS]
+
+======================================================================
+BATCH COMPLETE: structured_output
+Total spend: $122.9587 | Calls: 60855
+
+--- Results ranked by quality ---
+  mistral-large-latest                       4.9/5  $0.0344  (41 cases)
+======================================================================
+>>> Done: structured_output at Sun May 10 15:12:25 CEST 2026
+>>> Task: translation_enfr at Sun May 10 15:12:26 CEST 2026
+======================================================================
+TaskBench Batch: translation_enfr
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $122.9587 / $200
+======================================================================
+
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+    RATE_LIMIT mistral-large-latest (429), retry 1/5 in 5s
+  mistral-large-latest                       avg=4.8/5  cost=$0.0429  [PASS]
+
+======================================================================
+BATCH COMPLETE: translation_enfr
+Total spend: $123.0066 | Calls: 60905
+
+--- Results ranked by quality ---
+  mistral-large-latest                       4.8/5  $0.0429  (50 cases)
+======================================================================
+>>> Done: translation_enfr at Sun May 10 15:16:17 CEST 2026
+=== Mistral Large completion DONE at $(date) ===
+Raw files scanned: 51636
+Valid rows: 51403
+Skipped (empty response, score 0): 233
+Errors: 0
+After dedup: 51403 (removed 0 duplicates)
+
+Backed up old CSV to results/benchmark_results.csv.bak
+Wrote 51403 rows to results/benchmark_results.csv

@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "translation_enfr",
+  "case": 40,
+  "response": "Nous avons juste besoin d'obtenir plus d'informations.",
+  "score": 5,
+  "cost": 0.001383,
+  "expected": "",
+  "tokens": {
+    "input": 33,
+    "output": 568
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "translation_enfr",
+  "case": 23,
+  "response": "Les d\u00e9versoirs capables de g\u00e9rer les crues postul\u00e9es sont int\u00e9gr\u00e9s soit aux structures du barrage, soit construits en structures s\u00e9par\u00e9es.",
+  "score": 4,
+  "cost": 0.0005582,
+  "expected": "",
+  "tokens": {
+    "input": 94,
+    "output": 1372
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

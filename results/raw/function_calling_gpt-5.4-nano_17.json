@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.4-nano",
+  "task": "function_calling",
+  "case": 17,
+  "response": "{\"name\":\"generate_qr\",\"arguments\":{\"data\":\"https://example.com/signup\",\"size\":256}}",
+  "score": 5,
+  "cost": 1.91e-05,
+  "expected": "",
+  "tokens": {
+    "input": 95,
+    "output": 24
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

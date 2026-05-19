@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "test_generation_v2",
+  "case": 34,
+  "response": "Below is a pytest-style test file. Replace `your_module` with the actual module name containing `levenshtein`.\n\n```python\n# tests/test_levenshtein.py\n\nimport pytest\n\nfrom your_module import levenshtein\n\n\nclass LenOnly:\n    \"\"\"Has len(), but is not iterable.\"\"\"\n    def __len__(self) -> int:\n        return 1\n\n\n@pytest.mark.parametrize(\n    (\"s1\", \"s2\", \"expected\"),\n    [\n        # Edge cases: empty strings\n        (\"\", \"\", 0),\n        (\"abc\", \"\", 3),\n        (\"\", \"abc\", 3),\n\n        # Happy path: identical strings\n        (\"abc\", \"abc\", 0),\n        (\"kitten\", \"kitten\", 0),\n\n        # Single edit operations\n        (\"abc\", \"axc\", 1),      # substitution\n        (\"abc\", \"abxc\", 1),     # insertion\n        (\"abxc\", \"abc\", 1),     # deletion\n\n        # Multiple edits / standard examples\n        (\"kitten\", \"sitting\", 3),\n        (\"flaw\", \"lawn\", 2),\n        (\"gumbo\", \"gambol\", 2),\n        (\"saturday\", \"sunday\", 3),\n\n        # Levenshtein does not treat transposition as a single edit\n        (\"abc\", \"acb\", 2),\n\n        # Case sensitivity, whitespace, and unicode\n        (\"Case\", \"case\", 1),\n        (\"a b\", \"ab\", 1),\n        (\"caf\u00e9\", \"cafe\", 1),\n        (\"\ud83d\ude00\ud83d\ude03\ud83d\ude04\", \"\ud83d\ude00\ud83d\ude04\", 1),\n    ],\n)\ndef test_levenshtein_known_distances(s1: str, s2: str, expected: int) -> None:\n    assert levenshtein(s1, s2) == expected\n\n\n@pytest.mark.parametrize(\n    (\"s1\", \"s2\"),\n    [\n        (\"kitten\", \"sitting\"),\n        (\"flaw\", \"lawn\"),\n        (\"\", \"abc\"),\n        (\"abc\", \"abxc\"),\n        (\"caf\u00e9\", \"cafe\"),\n    ],\n)\ndef test_levenshtein_is_symmetric(s1: str, s2: str) -> None:\n    assert levenshtein(s1, s2) == levenshtein(s2, s1)\n\n\ndef test_levenshtein_handles_long_repeated_strings() -> None:\n    assert levenshtein(\"a\" * 100, \"a\" * 75) == 25\n\n\ndef test_levenshtein_handles_long_string_with_one_substitution() -> None:\n    s1 = \"a\" * 50 + \"b\" + \"c\" * 50\n    s2 = \"a\" * 50 + \"x\" + \"c\" * 50\n\n    assert levenshtein(s1, s2) == 1\n\n\n@pytest.mark.parametrize(\n    (\"s1\", \"s2\"),\n    [\n        (None, \"abc\"),\n        (\"abc\", None),\n        (123, \"abc\"),\n        (\"abc\", 123),\n        (object(), \"abc\"),\n        (\"abc\", object()),\n        (LenOnly(), \"a\"),\n        (\"a\", LenOnly()),\n    ],\n)\ndef test_levenshtein_invalid_inputs_raise_type_error(s1: object, s2: object) -> None:\n    # The function does not explicitly validate types, but these inputs fail\n    # because they cannot be handled by len() and/or iteration.\n    with pytest.raises(TypeError):\n        levenshtein(s1, s2)  # type: ignore[arg-type]\n```",
+  "score": 4,
+  "cost": 0.42,
+  "expected": "",
+  "tokens": {
+    "input": 170,
+    "output": 5566
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

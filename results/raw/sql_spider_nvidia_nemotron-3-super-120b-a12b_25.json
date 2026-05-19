@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "sql_spider",
+  "case": 25,
+  "response": "We need to write a SQL query: List all cartoon directed by \"Ben Jones\". Database: tvshow. Likely tables: cartoons, directors, maybe a table named cartoons with columns title, director name not needed.",
+  "score": 1,
+  "cost": 1.116e-05,
+  "expected": "",
+  "tokens": {
+    "input": 77,
+    "output": 47
+  },
+  "judge_v2_score": 2,
+  "judge_v2_raw": "2",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "email_summary_v2",
+  "case": 15,
+  "response": "Summary: Legal has approved the updated terms with two modifications: adding an arbitration clause for the enterprise tier and shortening the data retention period to 90 days. The changes must be implemented before the EU launch on May\u202f1, and Legal will finalize the updated version today.",
+  "score": 5,
+  "cost": 0.0026477000000000002,
+  "expected": "",
+  "tokens": {
+    "input": 131,
+    "output": 569
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

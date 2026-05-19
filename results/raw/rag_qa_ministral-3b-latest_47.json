@@ -1,0 +1,18 @@
+{
+  "model": "ministral-3b-latest",
+  "task": "rag_qa",
+  "case": 47,
+  "response": "Urarina",
+  "score": 1,
+  "cost": 6.28e-06,
+  "expected": "Urarina",
+  "tokens": {
+    "input": 153,
+    "output": 4
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

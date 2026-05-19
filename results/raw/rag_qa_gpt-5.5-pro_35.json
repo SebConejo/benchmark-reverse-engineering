@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "rag_qa",
+  "case": 35,
+  "response": "They clap their lobes, expelling a jet of water that drives them backward very quickly.",
+  "score": 5,
+  "cost": 0.010935,
+  "expected": "by clapping their lobes",
+  "tokens": {
+    "input": 269,
+    "output": 92
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "translation_enfr",
+  "case": 32,
+  "response": "Les \u00c9tats membres, les institutions de l'Union et le SEAE peuvent proposer le d\u00e9tachement du personnel au RSUE.",
+  "score": 4,
+  "cost": 0.0008441,
+  "expected": "",
+  "tokens": {
+    "input": 93,
+    "output": 2087
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

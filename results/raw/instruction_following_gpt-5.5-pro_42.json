@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "instruction_following",
+  "case": 42,
+  "response": "A thunderstorm rolls in with dark, heavy clouds that turn the sky nearly black. Lightning flashes bright white across the horizon, followed by thunder that booms and shakes the windows. Rain hammers the roof in a loud, steady roar, and the air smells sharp and earthy, like wet soil and fresh leaves. Cool wind pushes against your skin as the storm sweeps through.",
+  "score": 5,
+  "cost": 0.009915,
+  "expected": "",
+  "tokens": {
+    "input": 21,
+    "output": 128
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

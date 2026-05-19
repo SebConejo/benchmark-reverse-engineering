@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "code_explanation",
+  "case": 47,
+  "response": "This function implements Dijkstra's Shunting-yard algorithm to convert an infix arithmetic expression (given as a list of tokens) into postfix notation by using a stack for operators and an output list, while respecting operator precedence and parentheses.",
+  "score": 5,
+  "cost": 0.000490245,
+  "expected": "",
+  "tokens": {
+    "input": 203,
+    "output": 231
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

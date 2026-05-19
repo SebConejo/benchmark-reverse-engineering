@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "code_generation",
+  "case": 20,
+  "response": "val_map = [(1000, 'm'), (900, 'cm'), (500, 'd'), (400, 'cd'), (100, 'c'), (90, 'xc'), (50, 'l'), (40, 'xl'), (10, 'x'), (9, 'ix'), (5, 'v'), (4, 'iv'), (1, 'i')]\n    res = ''\n    for val, sym in val_map:\n        while number >= val:\n            res += sym\n            number -= val\n    return res",
+  "score": 5,
+  "cost": 0.002912,
+  "expected": "",
+  "tokens": {
+    "input": 152,
+    "output": 2202
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

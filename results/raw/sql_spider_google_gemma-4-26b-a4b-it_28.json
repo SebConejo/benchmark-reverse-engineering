@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "sql_spider",
+  "case": 28,
+  "response": "```sql\nSELECT nationality\nFROM players\nGROUP BY nationality\nHAVING COUNT(*) >= 2;\n```",
+  "score": 5,
+  "cost": 6.359999999999999e-06,
+  "expected": "",
+  "tokens": {
+    "input": 82,
+    "output": 24
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "sql_spider",
+  "case": 34,
+  "response": "SELECT * FROM hires;",
+  "score": 5,
+  "cost": 0.00024514000000000003,
+  "expected": "",
+  "tokens": {
+    "input": 67,
+    "output": 421
+  },
+  "judge_v2_score": 2,
+  "judge_v2_raw": "2",
+  "judge_v2_model": "gpt-4o"
+}

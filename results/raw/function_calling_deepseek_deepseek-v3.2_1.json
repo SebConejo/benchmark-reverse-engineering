@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "task": "function_calling",
+  "case": 1,
+  "response": "{\n    \"name\": \"get_weather\",\n    \"arguments\": {\n        \"city\": \"Paris\"\n    }\n}",
+  "score": 4,
+  "cost": 5.1e-05,
+  "expected": "",
+  "tokens": {
+    "input": 94,
+    "output": 25
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "instruction_following",
+  "case": 15,
+  "response": "hat, mat, bat, rat",
+  "score": 5,
+  "cost": 0.00012859999999999998,
+  "expected": "",
+  "tokens": {
+    "input": 167,
+    "output": 119
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

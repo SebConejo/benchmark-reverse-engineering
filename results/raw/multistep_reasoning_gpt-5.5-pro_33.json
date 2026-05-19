@@ -1,0 +1,15 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "multistep_reasoning",
+  "case": 33,
+  "response": "D",
+  "score": 5,
+  "cost": 0.006525,
+  "expected": "D",
+  "tokens": {
+    "input": 90,
+    "output": 69
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "function_calling",
+  "case": 33,
+  "response": "{\"name\": \"git_create_branch\", \"arguments\": {\"name\": \"feature-payments\", \"from_branch\": \"main\"}}",
+  "score": 5,
+  "cost": 0.00010038,
+  "expected": "",
+  "tokens": {
+    "input": 89,
+    "output": 157
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

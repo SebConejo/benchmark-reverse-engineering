@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "code_generation",
+  "case": 9,
+  "response": "sum_odd = 0\nfor num in lst:\n    if isinstance(num, int) and not isinstance(num, bool):\n        is_integer = True\n    elif isinstance(num, float):\n        is_integer = num.is_integer()\n    else:\n        is_integer = False\n    if is_integer and num >= 0:\n        if int(num) % 2 == 1:\n            sum_odd += num ** 2\nreturn sum_odd",
+  "score": 3,
+  "cost": 0.0013327499999999997,
+  "expected": "",
+  "tokens": {
+    "input": 258,
+    "output": 4378
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

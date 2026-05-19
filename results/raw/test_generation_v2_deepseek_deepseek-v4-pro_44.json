@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "test_generation_v2",
+  "case": 44,
+  "response": "```python\nimport pytest\n\n# The function under test (normally imported from the module)\ndef compose(*fns):\n    def composed(x):\n        for fn in reversed(fns):\n            x = fn(x)\n        return x\n    return composed\n\n\n# Happy path\ndef test_compose_multiple_functions():\n    f = lambda x: x + 1\n    g = lambda x: x * 2\n    h = lambda x: x ** 2\n\n    assert compose(f, g)(3) == 7          # f(g(3)) = f(6) = 7\n    assert compose(f, g, h)(2) == 9       # f(g(h(2))) = f(g(4)) = f(8) = 9\n\n\ndef test_compose_order_is_right_to_left():\n    calls = []\n    def f(x):\n        calls.append('f')\n        return x + 'f'\n    def g(x):\n        calls.append('g')\n        return x + 'g'\n    def h(x):\n        calls.append('h')\n        return x + 'h'\n\n    result = compose(f, g, h)('')\n    assert result == 'hgf'\n    assert calls == ['h', 'g', 'f']\n\n\ndef test_compose_with_builtins():\n    assert compose(len, str, abs)(-123) == 3  # abs(-123)=123 -> '123' -> len=3\n\n\n# Edge cases\ndef test_compose_single_function():\n    f = lambda x: x + 10\n    assert compose(f)(5) == 15\n\n\ndef test_compose_no_functions_returns_identity():\n    assert compose()(42) == 42\n    assert compose()(\"hello\") == \"hello\"\n\n\ndef test_compose_identity_functions():\n    identity = lambda x: x\n    assert compose(identity, identity, identity)(100) == 100\n\n\ndef test_compose_type_changes():\n    f = lambda x: [x]\n    g = lambda x: str(x)\n    h = lambda x: int(x)\n    assert compose(f, g, h)(3.14) == ['3']  # int(3.14)=3 -> '3' -> ['3']\n\n\n# Error cases\ndef test_compose_propagates_exceptions():\n    def fail(x):\n        raise ValueError(\"intentional error\")\n    with pytest.raises(ValueError, match=\"intentional error\"):\n        compose(fail)(1)\n\n\ndef test_compose_with_non_callable_raises_on_call():\n    composed = compose(1, 2)  # no error here\n    with pytest.raises(TypeError):\n        composed(3)  # fails when trying to call 1(3)\n\n\ndef test_composed_function_rejects_wrong_number_of_arguments():\n    f = lambda x: x\n    composed = compose(f)\n    with pytest.raises(TypeError):\n        composed(1, 2)   # too many arguments\n    with pytest.raises(TypeError):\n        composed()       # missing argument\n```",
+  "score": 5,
+  "cost": 0.00394806,
+  "expected": "",
+  "tokens": {
+    "input": 64,
+    "output": 2253
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-lite",
+  "task": "instruction_following",
+  "case": 1,
+  "response": "The CPU, or central processing unit\u2014the core computational \"brain\" of all computing devices\u2014continuously executes the fundamental fetch-decode-execute cycle to retrieve binary instructions from system memory, translate those instructions into actionable commands, carry out the required arithmetic, logical, control, and basic input/output operations to process data, coordinate with all other internal hardware components, and power every device function from basic operating system tasks and simple app navigation to complex workloads like high-resolution gaming, large-scale data analysis, and artificial intelligence model inference, with modern multi-core CPUs able to process multiple independent streams of instructions simultaneously to boost overall speed and multitasking efficiency.",
+  "score": 1,
+  "cost": 0.00064075,
+  "expected": "",
+  "tokens": {
+    "input": 59,
+    "output": 626
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

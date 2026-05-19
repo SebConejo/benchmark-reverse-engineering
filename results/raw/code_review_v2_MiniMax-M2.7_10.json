@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "code_review_v2",
+  "case": 10,
+  "response": "# Code Review: `fetchAll` Function\n\n## Issues Identified\n\n### 1. **No Error Handling (Critical)**\nIf any fetch fails or `res.json()` throws, the entire function rejects with an unhandled error.\n\n```javascript\n// Problem: No try/catch block\n```\n\n### 2. **No HTTP Error Checking (Bug)**\n`fetch()` only throws on network failures\u2014not HTTP errors (404, 500, etc.).\n\n```javascript\n// Problem: A 404 response won't throw; calling .json() will fail silently\n// or return unexpected data\n```\n\n### 3. **Sequential Instead of Parallel Execution (Performance)**\nEach URL is fetched one at a time instead of concurrently.\n\n```javascript\n// Problem: 5 URLs = 5x the total time\n// If each takes 200ms, total = 1000ms (should be ~200ms)\n```\n\n### 4. **No Request Options Support (Limitation)**\nCan't pass headers, credentials, or other configuration.\n\n### 5. **JSON Parsing Failure**\nNo handling for malformed JSON responses.\n\n---\n\n## Improved Version\n\n```javascript\nasync function fetchAll(urls, options = {}, timeout = 10000) {\n  if (!urls || urls.length === 0) return [];\n\n  const controller = new AbortController();\n  const timeoutId = setTimeout(() => controller.abort(), timeout);\n\n  try {\n    const promises = urls.map(async (url) => {\n      const res = await fetch(url, {\n        ...options,\n        signal: controller.signal,\n      });\n\n      if (!res.ok) {\n        const body = await res.text().catch(() => '');\n        throw new Error(`HTTP ${res.status}: ${body || res.statusText}`);\n      }\n\n      return res.json();\n    });\n\n    const results = await Promise.all(promises);\n    clearTimeout(timeoutId);\n    return results;\n\n  } catch (error) {\n    clearTimeout(timeoutId);\n    \n    if (error.name === 'AbortError') {\n      throw new Error(`Request timed out after ${timeout}ms`);\n    }\n    throw error; // Re-throw original error\n  }\n}\n```\n\n---\n\n## Key Improvements\n\n| Issue | Fix |\n|-------|-----|\n| Error handling | `try/catch` wraps entire operation |\n| HTTP errors | Checks `res.ok` before parsing |\n| Sequential fetching | Uses `Promise.all()` for parallel execution |\n| Timeout | `AbortController` + `setTimeout` |\n| JSON failure | Properly caught and propagated |\n| No options | Accepts configurable fetch options |\n\n---\n\n## Usage Example\n\n```javascript\nconst results = await fetchAll([\n  'https://api.example.com/users',\n  'https://api.example.com/posts',\n], {\n  headers: { 'Authorization': 'Bearer token123' }\n});\n```\n\nThe improved version now handles failures gracefully, fetches in parallel, respects timeouts, and provides meaningful error messages.",
+  "score": 5,
+  "cost": 0.0043582,
+  "expected": "",
+  "tokens": {
+    "input": 94,
+    "output": 967
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

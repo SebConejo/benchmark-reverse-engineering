@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "reasoning_gsm8k",
+  "case": 7,
+  "response": "Twenty dozen cups equal 240 cups. Half a dozen plates equal 6 plates, and at $6000 each their total cost is $36,000. The cost of the cups is $1200 less than the plates, so 240 cups cost $36,000 - $1200 = $34,800. Therefore, the cost of each cup is $34,800 \u00f7 240 = $145.\n\nANSWER: 145",
+  "score": 5,
+  "cost": 0.000796485,
+  "expected": "145",
+  "tokens": {
+    "input": 71,
+    "output": 440
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

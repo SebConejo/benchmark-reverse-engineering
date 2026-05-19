@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "translation_enfr",
+  "case": 10,
+  "response": "Peut-\u00eatre g\u00e9n\u00e8re des indices, rapproche-nous de l'animal qui a fait \u00e7a.",
+  "score": 4,
+  "cost": 0.001180155,
+  "expected": "",
+  "tokens": {
+    "input": 37,
+    "output": 669
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

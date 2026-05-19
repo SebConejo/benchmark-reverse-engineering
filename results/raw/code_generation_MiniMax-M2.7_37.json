@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "code_generation",
+  "case": 37,
+  "response": "return 0.5 * a * h",
+  "score": 5,
+  "cost": 0.0012947000000000002,
+  "expected": "",
+  "tokens": {
+    "input": 109,
+    "output": 267
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

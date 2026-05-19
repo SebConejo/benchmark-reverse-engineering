@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-4.20",
+  "task": "function_calling",
+  "case": 43,
+  "response": "{\"name\": \"git_revert\", \"arguments\": {\"commit\": \"develop\"}}",
+  "score": 1,
+  "cost": 0.000558,
+  "expected": "",
+  "tokens": {
+    "input": 211,
+    "output": 17
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

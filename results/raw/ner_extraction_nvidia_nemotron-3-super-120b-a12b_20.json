@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "ner_extraction",
+  "case": 20,
+  "response": "{\"persons\": [\"Sundar Pichai\"], \"organizations\": [\"Google\"], \"locations\": [\"Malaysia\"]}",
+  "score": 5,
+  "cost": 2.052e-05,
+  "expected": "",
+  "tokens": {
+    "input": 87,
+    "output": 141
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "ner_extraction",
+  "case": 10,
+  "response": "{\"persons\": [\"Jennifer Lopez\", \"Ben Affleck\"], \"organizations\": [], \"locations\": [\"Beverly Hills\"]}",
+  "score": 5,
+  "cost": 0.00022420000000000003,
+  "expected": "",
+  "tokens": {
+    "input": 269,
+    "output": 213
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

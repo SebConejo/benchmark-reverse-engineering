@@ -1,0 +1,15 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "intent_clinc150",
+  "case": 33,
+  "response": "direct_deposit",
+  "score": 5,
+  "cost": 0.00045280000000000006,
+  "expected": "direct_deposit",
+  "tokens": {
+    "input": 514,
+    "output": 13
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2
+}

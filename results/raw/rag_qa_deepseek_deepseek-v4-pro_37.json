@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "rag_qa",
+  "case": 37,
+  "response": "Northeast",
+  "score": 5,
+  "cost": 0.00036844500000000007,
+  "expected": "northeast",
+  "tokens": {
+    "input": 211,
+    "output": 159
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

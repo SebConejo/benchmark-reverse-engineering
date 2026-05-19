@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "extraction_hard_v2",
+  "case": 2,
+  "response": "```json\n{\n  \"meeting_title\": \"Product sync\",\n  \"date\": \"2026-04-10\",\n  \"attendees\": [\n    \"Jamie\",\n    \"Priya\",\n    \"Marcus\",\n    \"Lin\"\n  ],\n  \"decisions\": [\n    \"Push the recommendation engine to Q3 since data pipeline won't be ready until June.\",\n    \"Allocate 20% of sprint capacity to tech debt.\"\n  ],\n  \"action_items\": [\n    {\n      \"owner\": \"Marcus\",\n      \"task\": \"Have onboarding mockups ready\",\n      \"deadline\": \"April 18\"\n    },\n    {\n      \"owner\": \"Jamie\",\n      \"task\": \"Send updated roadmap\",\n      \"deadline\": \"Monday\"\n    },\n    {\n      \"owner\": \"Lin\",\n      \"task\": \"Analytics dashboard\",\n      \"deadline\": \"Before May board meeting\"\n    }\n  ]\n}\n```",
+  "score": 4,
+  "cost": 0.008661400000000001,
+  "expected": "",
+  "tokens": {
+    "input": 202,
+    "output": 1918
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

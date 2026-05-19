@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "reasoning_gsm8k",
+  "case": 26,
+  "response": "Mitchell sold 21 lemonades at $4 each, so he made 21 \u00d7 4 = $84. Liam made $63. The difference is 84 - 63 = $21.\n\nANSWER: 21",
+  "score": 5,
+  "cost": 0.00039411000000000003,
+  "expected": "21",
+  "tokens": {
+    "input": 102,
+    "output": 201
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "o4-mini",
+  "task": "test_generation_v2",
+  "case": 34,
+  "response": "Below is an example pytest\u2010style test module for your `levenshtein` function.  It covers\n\n- Happy paths (empty, same, substitutions, insertions, deletions, mixed edits, Unicode, case\u2010sensitivity)  \n- The \u201cswap\u201d recursion when the first string is shorter  \n- Symmetry of the distance  \n- Type\u2010error cases when non\u2010strings are passed  \n\nSave it as `test_levenshtein.py` (adjust the import to wherever you keep `levenshtein`).\n\n```python\nimport pytest\n\n# adjust this import to your code location\nfrom levenshtein import levenshtein\n\n\n@pytest.mark.parametrize(\"s1, s2, expected\", [\n    # both empty\n    (\"\", \"\", 0),\n    # one empty\n    (\"\", \"abc\", 3),\n    (\"abc\", \"\", 3),\n    # identical\n    (\"kitten\", \"kitten\", 0),\n    # substitutions only\n    (\"kitten\", \"sitten\", 1),\n    (\"flaw\", \"lawn\", 2),\n    # insertions/deletions\n    (\"abc\", \"axbc\", 1),\n    (\"axbc\", \"abc\", 1),\n    # mixed edits (classic example)\n    (\"kitten\", \"sitting\", 3),\n    (\"gumbo\", \"gambol\", 2),\n    # unicode\n    (\"caf\u00e9\", \"cafe\", 1),\n    # case sensitivity\n    (\"a\", \"A\", 1),\n])\ndef test_levenshtein_basics(s1, s2, expected):\n    assert levenshtein(s1, s2) == expected\n\n\ndef test_symmetry():\n    # distance should be symmetric\n    pairs = [\n        (\"kitten\", \"sitting\"),\n        (\"flaw\", \"lawn\"),\n        (\"gumbo\", \"gambol\"),\n        (\"caf\u00e9\", \"cafe\"),\n    ]\n    for a, b in pairs:\n        assert levenshtein(a, b) == levenshtein(b, a)\n\n\ndef test_recursive_swap_branch():\n    # when first string is shorter than second, function\n    # swaps arguments internally; result should still be correct\n    assert levenshtein(\"a\", \"bc\") == 2\n    assert levenshtein(\"ab\", \"c\") == 3  # delete 2 + substitute\n\n\n@pytest.mark.parametrize(\"bad1, bad2\", [\n    (None, \"abc\"),\n    (\"abc\", None),\n    (123, \"abc\"),\n    (\"abc\", 456),\n    (object(), \"xyz\"),\n])\ndef test_type_error_on_non_str(bad1, bad2):\n    with pytest.raises(TypeError):\n        levenshtein(bad1, bad2)\n```\n\nExplanation of the tests:\n\n- `test_levenshtein_basics` uses `@pytest.mark.parametrize` to cover:\n  - both strings empty\n  - one empty\n  - identical strings\n  - pure substitutions, insertions, deletions\n  - mixed\u2010operation example (\"kitten\" \u2192 \"sitting\")\n  - a couple of Unicode and case\u2010sensitivity checks\n- `test_symmetry` ensures `levenshtein(a, b) == levenshtein(b, a)`\n- `test_recursive_swap_branch` exercises the `if len(s1) < len(s2): return levenshtein(s2, s1)` path\n- `test_type_error_on_non_str` verifies that non\u2010string inputs raise `TypeError` (as Python\u2019s built\u2010in operations like `len()` or string indexing fail on them)",
+  "score": 5,
+  "cost": 0.0097812,
+  "expected": "",
+  "tokens": {
+    "input": 168,
+    "output": 2181
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

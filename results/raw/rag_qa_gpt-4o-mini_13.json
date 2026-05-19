@@ -1,0 +1,16 @@
+{
+  "model": "gpt-4o-mini",
+  "task": "rag_qa",
+  "case": 13,
+  "response": "The Victorian Government owns V/Line.",
+  "score": 5,
+  "cost": 2.85e-05,
+  "expected": "Victorian Government",
+  "tokens": {
+    "input": 158,
+    "output": 8
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "email_summary_v2",
+  "case": 9,
+  "response": "The nightly ETL job failed due to an upstream schema change in Salesforce, causing dashboards to show stale data. A fix has been deployed and backfill is running, with full recovery expected by 4 PM today.",
+  "score": 5,
+  "cost": 9.548000000000001e-05,
+  "expected": "",
+  "tokens": {
+    "input": 90,
+    "output": 148
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

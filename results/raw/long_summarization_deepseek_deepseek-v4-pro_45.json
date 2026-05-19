@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "long_summarization",
+  "case": 45,
+  "response": "Quantum computing harnesses qubits that, through superposition, entanglement, and interference, can solve specific problems exponentially faster than classical computers. A milestone was Google\u2019s 2019 claim of \u201cquantum supremacy,\u201d completing a task in 200 seconds that would have taken a classical supercomputer an estimated 10,000 years. Today\u2019s machines hold 100\u20131,000 qubits but remain extremely fragile, requiring near-absolute-zero temperatures and massive error correction, with millions of qubits likely needed to unlock practical applications. Despite these hurdles, firms like IBM, Google, and startups are actively developing the technology for promising uses in drug discovery, materials science, cryptography, and optimization.",
+  "score": 5,
+  "cost": 0.000878265,
+  "expected": "",
+  "tokens": {
+    "input": 267,
+    "output": 438
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "sql_spider",
+  "case": 48,
+  "response": "```sql\nSELECT model \nFROM cars \nWHERE weight < (SELECT AVG(weight) FROM cars);\n```",
+  "score": 5,
+  "cost": 2.49e-05,
+  "expected": "",
+  "tokens": {
+    "input": 78,
+    "output": 22
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

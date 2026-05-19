@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "instruction_following",
+  "case": 1,
+  "response": "A CPU is the central component of a computer that continuously fetches, decodes, and executes program instructions to process data and coordinate all system operations.",
+  "score": 5,
+  "cost": 0.000555425,
+  "expected": "",
+  "tokens": {
+    "input": 21,
+    "output": 422
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

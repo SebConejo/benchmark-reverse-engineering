@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "function_calling",
+  "case": 47,
+  "response": "{\"name\": \"create_cron\", \"arguments\": {\"schedule\": \"0 0 * * *\", \"command\": \"cleanup script\", \"name\": \"daily_midnight_cleanup\"}}",
+  "score": 5,
+  "cost": 0.0005077,
+  "expected": "",
+  "tokens": {
+    "input": 137,
+    "output": 1235
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

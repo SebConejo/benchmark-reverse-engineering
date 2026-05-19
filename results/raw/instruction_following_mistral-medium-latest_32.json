@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "instruction_following",
+  "case": 32,
+  "response": "**Restaurant Review: *The Golden Anchor Bistro***\n**Cuisine:** Coastal Fusion (Seafood, Mediterranean, and Modern American)\n**Location:** 12 Harborview Lane, Port Haven\n**Rating:** \u2605\u2605\u2605\u2605\u2606 (4.5/5)\n\n---\n\n**First Impressions:**\nNestled along the waterfront with a view of bobbing sailboats and the golden glow of sunset, *The Golden Anchor Bistro* is the kind of place that makes you sigh with contentment before you\u2019ve even taken a bite. The exterior\u2014weathered wood, twinkling string lights, and a rustic anchor mounted above the door\u2014promises a cozy, maritime charm. Inside, the vibe is warm and inviting: reclaimed wood tables, nautical maps framed on the walls, and the soft hum of jazz blending with the distant clink of glasses. The hostess greeted us with a genuine smile and seated us by a window, where the breeze carried the scent of salt and grilled lemon.\n\n---\n\n**Food & Drinks:**\nThe menu is a love letter to the sea, with a few landlubber-friendly options for good measure. We started with the **Crispy Calamari** (\u2605\u2605\u2605\u2605\u2605), which arrived in a towering pile of golden, tender rings, served with a zesty aioli and a tangy marinara that had just the right kick. The **Lobster Bisque** (\u2605\u2605\u2605\u2605\u2606) was rich and velvety, though I docked half a point for being *slightly* over-salted\u2014still, the chunks of fresh lobster redeemed it.\n\nFor mains, the **Grilled Branzino** (\u2605\u2605\u2605\u2605\u2605) was a masterpiece\u2014flaky, buttery, and topped with a bright herb salsa that cut through the richness. The **Seafood Paella** (\u2605\u2605\u2605\u2605\u2606) was generous with mussels, shrimp, and chorizo, though the rice could\u2019ve been a touch crispier on the bottom (a minor quibble). My dining companion, a self-proclaimed carnivore, devoured the **Harborview Steak** (\u2605\u2605\u2605\u2605\u2606), a perfectly cooked ribeye with a red wine reduction that had him licking the plate.\n\nDessert was a no-brainer: the **Salted Caramel Bread Pudding",
+  "score": 4,
+  "cost": 0.001008,
+  "expected": "",
+  "tokens": {
+    "input": 20,
+    "output": 500
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

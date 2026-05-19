@@ -1,0 +1,16 @@
+{
+  "model": "gpt-4o-mini",
+  "task": "sql_spider",
+  "case": 19,
+  "response": "```sql\nSELECT DISTINCT maker_name\nFROM car\nWHERE production_year = 1970;\n```",
+  "score": 5,
+  "cost": 2.37e-05,
+  "expected": "",
+  "tokens": {
+    "input": 78,
+    "output": 20
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

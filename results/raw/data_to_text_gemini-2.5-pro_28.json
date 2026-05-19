@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-pro",
+  "task": "data_to_text",
+  "case": 28,
+  "response": "Founded in 1861, the Massachusetts Institute of Technology (MIT) is the #1 ranked university, serving approximately 11,500 students with a highly selective 3.9% acceptance rate. The institution is supported by a massive $24.6 billion endowment and a faculty of 1,069, which includes 98 Nobel laureates, with annual tuition costing $57,590.",
+  "score": 5,
+  "cost": 0.00104125,
+  "expected": "",
+  "tokens": {
+    "input": 105,
+    "output": 91
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

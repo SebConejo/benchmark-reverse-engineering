@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.4",
+  "task": "rag_qa",
+  "case": 48,
+  "response": "L is not known to be either **strictly contained in P** or **equal to P**.",
+  "score": 5,
+  "cost": 0.000217,
+  "expected": "strictly contained in P or equal to P",
+  "tokens": {
+    "input": 121,
+    "output": 24
+  },
+  "input_price_per_m": 1.0,
+  "output_price_per_m": 4.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

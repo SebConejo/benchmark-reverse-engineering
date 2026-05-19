@@ -1,0 +1,38 @@
+{
+  "Chinese": {
+    "n": 16,
+    "avg": 4.779,
+    "min": 4.654,
+    "max": 4.836
+  },
+  "American": {
+    "n": 26,
+    "avg": 4.682,
+    "min": 3.394,
+    "max": 4.842
+  },
+  "European": {
+    "n": 5,
+    "avg": 4.691,
+    "min": 4.441,
+    "max": 4.813
+  },
+  "pairwise_tests": {
+    "Chinese_vs_American": {
+      "U": 262,
+      "p": 0.1658
+    },
+    "Chinese_vs_European": {
+      "U": 46,
+      "p": 0.6599
+    },
+    "American_vs_European": {
+      "U": 65,
+      "p": 1.0
+    }
+  },
+  "kruskal_wallis": {
+    "H": 1.83,
+    "p": 0.4002
+  }
+}

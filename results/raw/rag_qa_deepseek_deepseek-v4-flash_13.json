@@ -1,0 +1,18 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "rag_qa",
+  "case": 13,
+  "response": "Victorian Government",
+  "score": 1,
+  "cost": 2.3940000000000005e-05,
+  "expected": "Victorian Government",
+  "tokens": {
+    "input": 155,
+    "output": 4
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

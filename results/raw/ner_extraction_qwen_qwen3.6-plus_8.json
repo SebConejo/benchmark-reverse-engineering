@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "ner_extraction",
+  "case": 8,
+  "response": "{\n  \"persons\": [\"Elon Musk\"],\n  \"organizations\": [\"Tesla\"],\n  \"locations\": [\"Fremont\", \"California\"]\n}",
+  "score": 5,
+  "cost": 0.001260675,
+  "expected": "",
+  "tokens": {
+    "input": 75,
+    "output": 951
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-max-preview",
+  "task": "email_summary_v2",
+  "case": 22,
+  "response": "The International team proposes a May-to-August Japan market launch with a $200K budget covering legal setup, localization, and local hiring. CEO approval is required to proceed with the expansion plan.",
+  "score": 5,
+  "cost": 0.005791500000000001,
+  "expected": "",
+  "tokens": {
+    "input": 107,
+    "output": 1087
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

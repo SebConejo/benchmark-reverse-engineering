@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3-8b",
+  "task": "translation_enfr",
+  "case": 49,
+  "response": "J'ai des g\u00e2teaux \u00e0 la cr\u00e8me, des viandes sucr\u00e9es, du hareng sauvage et des dates confites.",
+  "score": 4,
+  "cost": 0.00010680000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 45,
+    "output": 2091
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

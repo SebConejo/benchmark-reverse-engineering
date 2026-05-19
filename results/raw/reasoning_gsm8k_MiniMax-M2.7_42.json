@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 42,
+  "response": "The drill formation is described as follows:\n\n- Each row has **8 children**.  \n- There are **7 rows** per school.  \n- There are **5 schools** taking part.\n\nFirst compute the number of children in one school:\n\n\\[\n8 \\text{ children per row} \\times 7 \\text{ rows} = 56 \\text{ children per school}\n\\]\n\nNow multiply by the number of schools:\n\n\\[\n56 \\text{ children per school} \\times 5 \\text{ schools} = 280 \\text{ children}\n\\]\n\nThus, the total number of children that can be in the drill is:\n\nANSWER: 280",
+  "score": 5,
+  "cost": 0.0023991000000000004,
+  "expected": "280",
+  "tokens": {
+    "input": 125,
+    "output": 514
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

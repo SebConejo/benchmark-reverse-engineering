@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "rag_qa",
+  "case": 7,
+  "response": "the mass of the system",
+  "score": 5,
+  "cost": 1.062e-05,
+  "expected": "mass of the system",
+  "tokens": {
+    "input": 171,
+    "output": 6
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

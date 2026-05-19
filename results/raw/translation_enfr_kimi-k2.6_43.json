@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "translation_enfr",
+  "case": 43,
+  "response": "L\u2019unit\u00e9 se fixe simplement \u00e0 l\u2019appuie-t\u00eate du si\u00e8ge du conducteur \u00e0 l\u2019aide d\u2019une sangle \u00e9lastique robuste. Dans cette",
+  "score": 4,
+  "cost": 0.0038352,
+  "expected": "",
+  "tokens": {
+    "input": 48,
+    "output": 1586
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.4-nano",
+  "task": "email_summary_v2",
+  "case": 34,
+  "response": "The plan is to migrate from MySQL 5.7 to PostgreSQL 16 using a blue-green deployment with no downtime, scheduled for May (schema conversion and testing), June (dual-write), and July (cutover), with the testing environment already ready. The key action item is rewriting three stored procedures to complete the migration risk mitigation.",
+  "score": 5,
+  "cost": 3.85e-05,
+  "expected": "",
+  "tokens": {
+    "input": 97,
+    "output": 72
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

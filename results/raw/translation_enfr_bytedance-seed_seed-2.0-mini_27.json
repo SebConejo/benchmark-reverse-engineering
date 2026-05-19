@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "translation_enfr",
+  "case": 27,
+  "response": "Les crit\u00e8res du DSM-IV pour l'intoxication alcoolique sont similaires, \u00e0 ceci pr\u00e8s qu'il faut ajouter un ou plusieurs des signes suivants : discours lich\u00e9, manque de coordination, d\u00e9marche instable, nystagmus, troubles de l'attention ou de la m\u00e9moire, stupeur ou coma.",
+  "score": 4,
+  "cost": 0.0007287000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 119,
+    "output": 1792
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

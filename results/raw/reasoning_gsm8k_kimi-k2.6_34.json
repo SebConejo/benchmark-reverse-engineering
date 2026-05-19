@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "reasoning_gsm8k",
+  "case": 34,
+  "response": "Step 1: Find the total cost of the tickets.  \nThe tickets cost $20.25 total.\n\nStep 2: Find the total cost of the food.  \nThey spent $4.50 less on food than on the tickets.  \n$20.25 - $4.50 = $15.75\n\nStep 3: Find the total cost of the rides.  \nThey went on 2 rides, and each ride cost $33.  \n2 \u00d7 $33 = $66.00\n\nStep 4: Find the total amount spent.  \nAdd the costs of tickets, food, and rides.  \n$20.25 + $15.75 + $66.00 = $102.00\n\nStep 5: Split the total cost evenly among the three friends.  \n$102.00 \u00f7 3 = $34.00\n\nANSWER: 34",
+  "score": 5,
+  "cost": 0.0013643999999999998,
+  "expected": "34",
+  "tokens": {
+    "input": 106,
+    "output": 542
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

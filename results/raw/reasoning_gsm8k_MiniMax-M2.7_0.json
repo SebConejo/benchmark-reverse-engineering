@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 0,
+  "response": "Kim raises $320 more than Alexandra:\n\\[\n\\text{Kim}=430+320=750.\n\\]\n\nMaryam raises $400 more than Sarah:\n\\[\n\\text{Maryam}=300+400=700.\n\\]\n\nTotal money raised:\n\\[\n430\\ (\\text{Alexandra})+750\\ (\\text{Kim})+300\\ (\\text{Sarah})+700\\ (\\text{Maryam})=2180.\n\\]\n\nANSWER: 2180",
+  "score": 4,
+  "cost": 0.0017094,
+  "expected": "2280",
+  "tokens": {
+    "input": 126,
+    "output": 357
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

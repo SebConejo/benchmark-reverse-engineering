@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "code_generation",
+  "case": 6,
+  "response": "from collections import Counter\n    counts = Counter(numbers)\n    return [x for x in numbers if counts[x] == 1]",
+  "score": 4,
+  "cost": 2.7269999999999998e-05,
+  "expected": "",
+  "tokens": {
+    "input": 130,
+    "output": 173
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

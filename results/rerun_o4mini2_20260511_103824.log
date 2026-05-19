@@ -1,0 +1,44 @@
+=== o4-mini completion (no skip-azure) at $(date) ===
+>>> Task: code_review_v2 at Mon May 11 10:38:24 CEST 2026
+======================================================================
+TaskBench Batch: code_review_v2
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $123.0931 / $200
+======================================================================
+
+  o4-mini                                    avg=4.8/5  cost=$0.4107  [PASS]
+
+======================================================================
+BATCH COMPLETE: code_review_v2
+Total spend: $123.5089 | Calls: 61498
+
+--- Results ranked by quality ---
+  o4-mini                                    4.8/5  $0.4107  (50 cases)
+======================================================================
+>>> Done: code_review_v2 at Mon May 11 10:50:30 CEST 2026
+>>> Task: test_generation_v2 at Mon May 11 10:50:30 CEST 2026
+======================================================================
+TaskBench Batch: test_generation_v2
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $123.5089 / $200
+======================================================================
+
+  o4-mini                                    avg=4.5/5  cost=$0.5002  [PASS]
+
+======================================================================
+BATCH COMPLETE: test_generation_v2
+Total spend: $124.0140 | Calls: 61548
+
+--- Results ranked by quality ---
+  o4-mini                                    4.5/5  $0.5002  (50 cases)
+======================================================================
+>>> Done: test_generation_v2 at Mon May 11 11:10:20 CEST 2026
+=== o4-mini DONE at $(date) ===
+Raw files scanned: 51697
+Valid rows: 51609
+Skipped (empty response, score 0): 88
+Errors: 0
+After dedup: 51609 (removed 0 duplicates)
+
+Backed up old CSV to results/benchmark_results.csv.bak
+Wrote 51609 rows to results/benchmark_results.csv

@@ -1,0 +1,279 @@
+# TaskBench Limitations
+
+Last updated: 2026-05-12
+
+This document lists every known limitation of the benchmark, with honest
+assessments of impact and mitigations. Written to prepare for reviewer
+questions, audience Q&A, and paper transparency.
+
+## 1. LLM-as-Judge Bias
+
+**The issue:** GPT-4o-mini evaluates all generative task outputs. It may
+systematically favor responses that match GPT-family style (similar phrasing,
+formatting conventions, verbosity level).
+
+**Impact:** Could inflate scores for GPT-4o, GPT-4o-mini, and GPT-5.1 by
+0.1-0.3 points relative to models with different output styles (Claude,
+Mistral, Gemini).
+
+**Mitigations in place:**
+- Dual metric on 4 tasks (accuracy is judge-independent)
+- Judge rubrics are task-specific and style-neutral ("rate correctness" not
+  "rate quality of writing")
+
+**Possible future mitigation:**
+- Add Claude Haiku as second judge on 20% subset (~$1 cost)
+- Report inter-judge agreement (Cohen's kappa)
+
+**Should you worry?** Probably not for tier-level conclusions ("Economy matches
+Premium"). Possibly for within-tier rankings ("GPT-4o-mini vs Gemini Flash").
+
+## 2. Sample Size (50 cases per task)
+
+**The issue:** 50 cases gives a 95% confidence interval of approximately
++/-0.2 points on the 1-5 scale. This is enough to distinguish a 4.0 from
+a 4.5, but not a 4.3 from a 4.5.
+
+**Impact:** Cannot make statistically significant claims about models within
+0.3 points of each other. Fine for tier-level comparisons (Economy at 4.5 vs
+Premium at 4.7), insufficient for individual model rankings within a tier.
+
+**Why we chose 50:** Cost-quality tradeoff. 100 cases would halve the CI to
++/-0.14 for double the cost. 500 would cost 10x more. The structural findings
+(which tier wins) do not change with more cases.
+
+**Should you worry?** Not if you read the results as tier comparisons. Yes if
+you are trying to crown one specific model as "best."
+
+## 3. Price Snapshot
+
+**The issue:** Model prices are recorded at benchmark time (April 2026). LLM
+pricing changes frequently (monthly price cuts, new pricing tiers, volume
+discounts).
+
+**Impact:** Specific cost comparisons ("GPT-4o-mini costs 100x less than Opus")
+may be outdated within months.
+
+**Mitigation:** The paper presents results both by model name AND by price
+tier (Premium/Standard/Economy/Micro). Tier-level findings ("Economy models
+match Premium on classification") are more durable than specific price
+comparisons because relative pricing between tiers rarely inverts completely.
+
+**Should you worry?** Check current prices before making purchasing decisions.
+Use the structural findings (tier-level) as the durable takeaway.
+
+## 4. Reasoning Model Non-Determinism
+
+**The issue:** Several reasoning models (DeepSeek-R1, Kimi-K2.6, Claude
+Opus 4.7) do not support temperature=0. Their outputs vary between runs,
+introducing non-reproducible variance.
+
+**Impact:** Results for these models have higher variance than deterministic
+models. A second run could shift scores by 0.2-0.5 points.
+
+**Mitigation:** The diversity of 50 cases naturally samples the model's
+performance distribution, reducing the impact of per-case variance.
+
+**Should you worry?** For reasoning models specifically, yes. Their scores
+should be read as "approximately 4.5" not "exactly 4.5." For deterministic
+models (temperature=0), results are fully reproducible.
+
+## 5. Limited Retry Logic
+
+**The issue:** Most provider callers have no retry logic. When an API call
+fails (rate limit, timeout, network error), the case is skipped, not retried.
+Some models have fewer than 50 cases on some tasks.
+
+**Exception:** `call_mistral` now has exponential backoff retry (5/10/20/40/80s,
+max 5 retries) after discovering that Mistral 429 responses were silently
+dropped (see LEARNINGS.md section 17). This fix brought mistral-large-latest
+from 5/21 to 21/21 tasks. Other providers still lack retry logic.
+
+**Impact:** Models with partial data have less reliable scores. A model
+with 4 cases could be misleadingly high or low.
+
+**Mitigation:** We mark partial results in the analysis and flag models
+with fewer than 30 cases as "insufficient data."
+
+**Should you worry?** Ignore models with fewer than 20 cases for a given
+task. Their averages are not statistically meaningful.
+
+## 6. No Open-Source Self-Hosted Models
+
+**The issue:** All models are accessed via cloud APIs. No locally-hosted
+models (Ollama, vLLM, llama.cpp) are included.
+
+**Impact:** Misses an important deployment scenario where cost is dominated
+by hardware, not API pricing. A self-hosted Llama-3.3-70B has zero marginal
+API cost but significant hardware cost.
+
+**Why excluded:** Self-hosted model performance depends on hardware (GPU,
+quantization level), making reproducibility difficult. API pricing is
+universal and comparable.
+
+**Should you worry?** If you are comparing cloud API costs, no. If you are
+deciding between cloud and self-hosted, this benchmark only covers the cloud
+side.
+
+## 7. English-Only (Mostly)
+
+**The issue:** All tasks except translation use English prompts and expect
+English outputs. The translation task is EN-FR only.
+
+**Impact:** Does not test multilingual capabilities. Some models (Qwen, Kimi,
+DeepSeek) may perform differently in their native languages (Chinese).
+
+**Should you worry?** If your production use case is non-English, this
+benchmark may not apply directly.
+
+## 8. Single-Turn Only
+
+**The issue:** Every test case is a single prompt-response pair. No multi-turn
+conversations, no context accumulation, no system prompts.
+
+**Impact:** Does not test conversational ability, context window utilization,
+or instruction persistence across turns.
+
+**Why excluded:** Multi-turn evaluation is significantly more complex (need to
+evaluate coherence across turns, not just individual responses). The runner
+architecture would need major changes.
+
+**Should you worry?** If your use case involves extended conversations (chatbots,
+coding assistants with back-and-forth), this benchmark tests the building
+blocks but not the full interaction.
+
+## 9. No Latency Measurement
+
+**The issue:** We measure cost per query but not response time. A model that
+costs $0.001 but takes 30 seconds may not be suitable for real-time
+applications.
+
+**Impact:** Cost-optimal recommendations may not be latency-optimal.
+
+**Why excluded:** Latency depends on server load, geographic location, time
+of day, and provider infrastructure. A benchmark run over hours from one
+location cannot produce reliable latency data.
+
+**Should you worry?** If latency matters for your use case, test it separately.
+Our cost-quality findings still apply; you would just add latency as a third
+axis.
+
+## 10. Judge-Accuracy Divergence
+
+**The issue:** On reasoning tasks (GSM8K), LLM-judge scores and exact-answer
+accuracy diverge. Claude Opus gets 98% correct answers but only 3.5/5 from
+the judge because it answers verbosely.
+
+**Impact:** The judge penalizes correct-but-verbose answers. This
+systematically disadvantages reasoning models that "show their work."
+
+**Mitigation:** We report both metrics on every task where a native metric
+exists. The paper discusses this divergence explicitly as a limitation of
+LLM-as-judge evaluation methodology, and notes that both metrics together
+provide a richer picture than either alone.
+
+**Should you worry?** Use the native metric (accuracy, F1, exact match) for
+correctness. Use the judge score for "usable quality" (format, concision).
+They measure different things.
+
+## 11. OpenAI Responses API Fragmentation
+
+**The issue:** GPT-5.5 Pro requires the /v1/responses API, not /v1/chat/completions.
+This is a different request/response format. Our runner handles both, but it means
+GPT-5.5 Pro is not directly comparable to other models at the API level.
+
+**Impact:** The Responses API may handle prompts differently (input as string vs
+messages array). Output format includes structured items instead of simple content.
+This could affect scoring if the response parsing is not identical.
+
+**Mitigation:** The call_openai_responses function normalizes output to the same
+format as chat completions before scoring. We verified manually that responses are
+correctly extracted.
+
+**Should you worry?** Only if you are comparing API compatibility. For cost-quality
+comparisons, the normalization makes results comparable.
+
+## 12. Micro Tier Format Compliance and Legitimate Exact-Match Failures
+
+**The issue:** Small and cheap models genuinely fail on exact-match classification
+tasks. Out of 728 zero-scored rows in the final dataset, the vast majority are
+exact-match failures with non-empty responses — the model answered, but answered wrong.
+
+**Distribution of legitimate zero scores:**
+
+| Task | Zeros | Nature |
+|------|------:|--------|
+| intent_clinc150 | 294 | Wrong intent label (150-class classification) |
+| moderation_toxigen | 275 | Wrong toxicity judgment (subtle adversarial cases) |
+| multistep_reasoning | 68 | Wrong multiple-choice answer |
+| sentiment_sst2 | 62 | Wrong sentiment polarity |
+| intent_easy/hard | 26 | Wrong intent label |
+
+**Most affected models:**
+
+| Model | Zero count | Pattern |
+|-------|----------:|---------|
+| meta-llama/llama-3.2-1b-instruct | 76 | Wrong labels across all classification tasks |
+| nvidia/nemotron-3-super-120b-a12b | 48 | Prompt echoing instead of answering |
+| meta-llama/llama-3.2-3b-instruct | 45 | Wrong labels (better than 1B but still weak) |
+| ministral-3b-latest | 39 | Wrong labels on fine-grained classification |
+| gpt-5.4-nano | 28 | Wrong labels on hard tasks |
+
+**This is a finding, not a bug.** Small models genuinely fail at fine-grained
+classification (150 intents), adversarial toxicity detection (coded language,
+cultural sarcasm), and multi-step reasoning. This is expected: these tasks test
+capabilities that scale with model size.
+
+Nemotron Super 120B (MoE, 12B active) shows a distinct failure mode: it echoes
+the prompt or wraps answers in explanations instead of following "respond with
+ONLY the label." This is a format compliance failure, not a knowledge failure.
+
+**Impact:** The remaining LLM-judged zeros (out of 51,617 rows) are also
+legitimate: models echoing prompts instead of generating code, or wrong numerical
+answers.
+
+**Should you worry?** These zeros accurately reflect real-world usability. A model
+that cannot classify 150 intents will fail in production routing. A model that echoes
+prompts instead of answering will break automated pipelines. The benchmark captures
+genuine capability boundaries, not scoring artifacts.
+
+## 13. Asymmetric Model Coverage Across Providers
+
+**The issue:** Not all providers have models at every price tier. Anthropic has no
+Micro model. xAI has no Micro. Some providers have only 1-2 models. This means
+cross-provider comparisons are not symmetric at every tier.
+
+**Impact:** We cannot say "Provider X is better than Provider Y across all tiers"
+because some tiers are missing for some providers.
+
+**Mitigation:** We document empty cells as informative (the provider does not
+compete at that price point). Comparisons are made between models that exist, not
+hypothetical ones.
+
+**Should you worry?** No. The benchmark compares models, not providers. If a
+provider does not have a cheap model, that is data about their strategy.
+
+## 14. Reasoning Token Cost Tracking
+
+**The issue:** The spend_tracker significantly underestimates real cost for
+reasoning models (gpt-5.5-pro, o3, o4-mini, gpt-5.5). The tracker recorded
+$28.76 for all OpenAI models; actual OpenAI billing was ~$180+.
+
+**Cause:** Two compounding errors: (a) the hardcoded price for gpt-5.5-pro
+was $20/M output tokens, but the real OpenAI price is $75/M; (b) reasoning
+and thinking tokens are charged by OpenAI but invisible in our
+completion_tokens count. The spend tracker only sees visible output tokens,
+not the reasoning tokens consumed internally.
+
+**Impact:** The cost_usd column in the CSV is 3-10x underestimated for
+reasoning models. gpt-5.5-pro alone cost ~$130+ real vs $14.61 tracked.
+Cost-per-query data for reasoning models is unreliable.
+
+**Mitigation:** The paper should use provider billing data for reasoning
+model costs, not the CSV cost_usd column. Non-reasoning model costs in
+the CSV remain accurate.
+
+**Should you worry?** Yes, for reasoning model cost comparisons. The
+structural finding (reasoning models cost more than economy models) is
+directionally correct but the magnitude is underestimated. For non-reasoning
+models, the CSV costs are reliable.

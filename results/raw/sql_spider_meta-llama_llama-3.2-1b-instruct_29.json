@@ -1,0 +1,16 @@
+{
+  "model": "meta-llama/llama-3.2-1b-instruct",
+  "task": "sql_spider",
+  "case": 29,
+  "response": "```sql\nSELECT DISTINCT COUNT(DISTINCT language) FROM world_1;\n```",
+  "score": 3,
+  "cost": 2.484e-06,
+  "expected": "",
+  "tokens": {
+    "input": 74,
+    "output": 18
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

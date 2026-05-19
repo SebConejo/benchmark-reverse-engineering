@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "function_calling",
+  "case": 24,
+  "response": "{\"name\": \"rotate_api_key\", \"arguments\": {\"service\": \"production\", \"environment\": \"production\"}}",
+  "score": 4,
+  "cost": 0.0001974,
+  "expected": "",
+  "tokens": {
+    "input": 94,
+    "output": 329
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

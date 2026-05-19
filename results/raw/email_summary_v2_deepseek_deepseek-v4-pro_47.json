@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "email_summary_v2",
+  "case": 47,
+  "response": "March onboarding satisfaction dropped to 7.2/10, with confusion over benefits deadlines, delayed tools access, and a missing culture handbook cited as key issues. The priority action is to fix the tools access delay to meet the 1-day target.",
+  "score": 5,
+  "cost": 0.000136155,
+  "expected": "",
+  "tokens": {
+    "input": 109,
+    "output": 51
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

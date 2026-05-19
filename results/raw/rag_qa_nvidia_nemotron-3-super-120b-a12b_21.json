@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "rag_qa",
+  "case": 21,
+  "response": "anaerobic bacteria",
+  "score": 5,
+  "cost": 2.808e-05,
+  "expected": "anaerobic bacteria",
+  "tokens": {
+    "input": 214,
+    "output": 98
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "mistral-large-latest",
+  "task": "code_generation",
+  "case": 10,
+  "response": "```python\n    count = 0\n    for num in arr:\n        n = abs(num)\n        digit_sum = 0\n        if num < 0:\n            first_digit = -(n // (10 ** (len(str(n)) - 1)))\n            digit_sum += first_digit\n            n = n % (10 ** (len(str(n)) - 1))\n        while n > 0:\n            digit_sum += n % 10\n            n = n // 10\n        if digit_sum > 0:\n            count += 1\n    return count\n```",
+  "score": 4,
+  "cost": 0.001092,
+  "expected": "",
+  "tokens": {
+    "input": 162,
+    "output": 128
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

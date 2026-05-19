@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen-turbo",
+  "task": "rag_qa",
+  "case": 34,
+  "response": "Answer: Infinitely many primes.",
+  "score": 5,
+  "cost": 8.580000000000001e-06,
+  "expected": "infinitely many prime numbers",
+  "tokens": {
+    "input": 253,
+    "output": 7
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

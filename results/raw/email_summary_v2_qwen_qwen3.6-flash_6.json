@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "task": "email_summary_v2",
+  "case": 6,
+  "response": "Acme Corp ($450K ARR) is threatening to churn due to recent API latency spikes and unresponsive support. A dedicated engineer has been assigned to resolve the technical issues, but an executive sponsor is required to join a customer call this week.",
+  "score": 5,
+  "cost": 0.00114775,
+  "expected": "",
+  "tokens": {
+    "input": 111,
+    "output": 1120
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

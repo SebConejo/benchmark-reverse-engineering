@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "instruction_following",
+  "case": 17,
+  "response": "| Pros | Cons |\n|------|------|\n| **Increased flexibility** \u2013 Employees can often set their own schedules and more easily manage personal and family responsibilities. | **Social isolation** \u2013 Reduced face-to-face interaction with colleagues can lead to feelings of loneliness and disconnection from the team. |\n| **No commute** \u2013 Eliminating daily travel saves time and money while lowering stress and reducing carbon emissions. | **Communication challenges** \u2013 Reliance on digital tools can lead to misinterpretations, delayed responses, and reduced spontaneous collaboration. |\n| **Cost savings** \u2013 Workers typically spend less on transportation, professional attire, and meals, while employers may save on office space. | **Work-life boundary blur** \u2013 When the home is also the office, it can be harder to \"switch off,\" increasing the risk of overworking and burnout. |",
+  "score": 5,
+  "cost": 0.0011658,
+  "expected": "",
+  "tokens": {
+    "input": 23,
+    "output": 480
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

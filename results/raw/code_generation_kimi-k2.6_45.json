@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "code_generation",
+  "case": 45,
+  "response": "return sorted(set(l1) & set(l2))",
+  "score": 5,
+  "cost": 0.0017675999999999998,
+  "expected": "",
+  "tokens": {
+    "input": 146,
+    "output": 700
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

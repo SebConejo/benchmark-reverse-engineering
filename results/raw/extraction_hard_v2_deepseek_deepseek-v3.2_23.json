@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "task": "extraction_hard_v2",
+  "case": 23,
+  "response": "{\n  \"severity\": \"critical\",\n  \"component\": \"checkout page\",\n  \"summary\": \"Checkout page broken with white screen after payment attempt\",\n  \"steps_to_reproduce\": [\"Add items to cart\", \"Go to checkout\", \"Enter card information\", \"Hit pay button\"],\n  \"expected_behavior\": \"Payment processes successfully and order confirmation is displayed\",\n  \"actual_behavior\": \"Spinner appears for 30 seconds, then white screen with no error message; console shows CORS error and 'undefined is not a function' in checkout.bundle.js:847\",\n  \"environment\": {\"os\": \"windows 11\", \"browser\": \"chrome 121\"}\n}",
+  "score": 5,
+  "cost": 0.0002046,
+  "expected": "",
+  "tokens": {
+    "input": 176,
+    "output": 146
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

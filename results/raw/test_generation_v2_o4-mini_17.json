@@ -1,0 +1,16 @@
+{
+  "model": "o4-mini",
+  "task": "test_generation_v2",
+  "case": 17,
+  "response": "Below is an example pytest\u2010style test module covering\n\n- Happy paths (various correctly balanced strings including nesting and interleaving)  \n- Edge cases (empty string, strings with no parens, strings with only one type, mixed with other characters)  \n- Error cases (non\u2010string inputs)\n\nSave it as e.g. `test_parens.py` next to the module that defines `is_balanced_parens`.\n\n```python\nimport pytest\nfrom your_module import is_balanced_parens  # adjust import as needed\n\n\n# 1) Happy\u2010path / valid balanced cases\n@pytest.mark.parametrize(\"s\", [\n    \"\",            # empty string\n    \"()\",          # single pair\n    \"[]\",\n    \"{}\",\n    \"()[]{}\",      # multiple non\u2010nested\n    \"({[]})\",      # nested\n    \"((()()))\",    # deep nesting same type\n    \"[({})()[]]\",  # mix\n    \"abc\",         # no parens at all\n    \"a(b)c\",       # ignore non\u2010paren characters\n    \"[a(b){c}]\",   # interleaved with other chars\n])\ndef test_balanced_returns_true(s):\n    assert is_balanced_parens(s) is True\n\n\n# 2) Edge / unbalanced cases\n@pytest.mark.parametrize(\"s\", [\n    \"(\",           # single opening\n    \")\",           # single closing\n    \"((\",          # two openings\n    \"))\",          # two closings\n    \"(]\",          # mismatched types\n    \"([)]\",        # wrong nesting order\n    \"{[}]\",        # partial mismatch\n    \"({[]\",        # missing closing\n    \"[])(\",        # wrong order\n    \"]([)]\",       # starts with closing\n    \"a(b]c)\",      # non\u2010paren chars interleaved but mismatch still detected\n])\ndef test_unbalanced_returns_false(s):\n    assert is_balanced_parens(s) is False\n\n\n# 3) Error cases \u2014 invalid input types should raise a TypeError\n#    (iterating over None or a number is not supported)\n@pytest.mark.parametrize(\"bad_input\", [\n    None,\n    123,\n    3.14,\n    object(),\n])\ndef test_non_string_input_raises(bad_input):\n    with pytest.raises(TypeError):\n        is_balanced_parens(bad_input)\n\n\n# 4) Extra sanity checks for very long / weird strings\ndef test_long_balanced_string():\n    # 10,000 nested parentheses\n    n = 10_000\n    s = \"(\" * n + \")\" * n\n    assert is_balanced_parens(s) is True\n\ndef test_long_unbalanced_string():\n    # missing one closing paren at the end\n    n = 5000\n    s = \"(\" * n\n    assert is_balanced_parens(s) is False\n```\n\nExplanation of the test sections:\n\n1. **test_balanced_returns_true** uses a parametrized list of strings that should all return `True`.\n2. **test_unbalanced_returns_false** uses a parametrized list that should return `False`.\n3. **test_non_string_input_raises** ensures that passing a non\u2010string raises a `TypeError`.\n4. Two extra tests ensure the function handles very long inputs without blowing the stack or silently returning the wrong result.\n\nTo run:\n\n```bash\npytest test_parens.py\n```\n\nMake sure to adjust the import line (`from your_module import is_balanced_parens`) to where your function actually lives.",
+  "score": 5,
+  "cost": 0.006261200000000001,
+  "expected": "",
+  "tokens": {
+    "input": 116,
+    "output": 1394
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

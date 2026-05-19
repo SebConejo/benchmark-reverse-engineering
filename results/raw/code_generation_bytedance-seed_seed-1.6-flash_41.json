@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "code_generation",
+  "case": 41,
+  "response": "thirds = l[::3]\n    sorted_thirds = sorted(thirds)\n    new_list = []\n    t = 0\n    for i in range(len(l)):\n        if i % 3 == 0:\n            new_list.append(sorted_thirds[t])\n            t += 1\n        else:\n            new_list.append(l[i])\n    return new_list",
+  "score": 4,
+  "cost": 0.00055905,
+  "expected": "",
+  "tokens": {
+    "input": 270,
+    "output": 1796
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

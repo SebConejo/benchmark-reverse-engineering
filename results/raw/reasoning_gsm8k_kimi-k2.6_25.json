@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "reasoning_gsm8k",
+  "case": 25,
+  "response": "Step 1: Find the total loan amount.  \nThe house is worth $250,000 and the loan is 40% of that value:  \n0.40 \u00d7 250,000 = 100,000.  \nSo John receives $100,000.\n\nStep 2: Find how much he spends to pay off debts.  \nHe uses 60% of the loan for debts:  \n0.60 \u00d7 100,000 = 60,000.\n\nStep 3: Subtract the debt payment from the loan to find the leftover.  \n100,000 \u2212 60,000 = 40,000.\n\nAlternatively, since he used 60%, he has 40% of the loan left:  \n0.40 \u00d7 100,000 = 40,000.\n\nANSWER: 40000",
+  "score": 5,
+  "cost": 0.002025,
+  "expected": "40,000",
+  "tokens": {
+    "input": 103,
+    "output": 818
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

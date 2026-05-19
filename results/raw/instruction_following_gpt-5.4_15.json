@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.4",
+  "task": "instruction_following",
+  "case": 15,
+  "response": "bat, hat, mat, rat",
+  "score": 5,
+  "cost": 5.8e-05,
+  "expected": "",
+  "tokens": {
+    "input": 18,
+    "output": 10
+  },
+  "input_price_per_m": 1.0,
+  "output_price_per_m": 4.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-pro",
+  "task": "code_generation",
+  "case": 11,
+  "response": "```python\n    s = sum(numbers)\n    p = 1\n    for number in numbers:\n        p *= number\n    return (s, p)\n```",
+  "score": 4,
+  "cost": 0.00057125,
+  "expected": "",
+  "tokens": {
+    "input": 153,
+    "output": 38
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

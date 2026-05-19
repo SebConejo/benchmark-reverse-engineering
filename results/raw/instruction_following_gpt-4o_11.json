@@ -1,0 +1,16 @@
+{
+  "model": "gpt-4o",
+  "task": "instruction_following",
+  "case": 11,
+  "response": "Why do you want me to respond only with questions?",
+  "score": 5,
+  "cost": 0.0001475,
+  "expected": "",
+  "tokens": {
+    "input": 15,
+    "output": 11
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

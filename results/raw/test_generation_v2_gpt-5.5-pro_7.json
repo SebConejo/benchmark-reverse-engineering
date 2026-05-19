@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "test_generation_v2",
+  "case": 7,
+  "response": "```python\n# test_remove_duplicates.py\nimport pytest\n\nfrom your_module import remove_duplicates  # Replace with the actual module name\n\n\n@pytest.mark.parametrize(\n    (\"input_list\", \"expected\"),\n    [\n        pytest.param([1, 2, 1, 3, 2, 4], [1, 2, 3, 4], id=\"integers\"),\n        pytest.param([\"a\", \"b\", \"a\", \"c\", \"b\"], [\"a\", \"b\", \"c\"], id=\"strings\"),\n        pytest.param(\n            [1, \"1\", (1, 2), 1, (1, 2), \"1\"],\n            [1, \"1\", (1, 2)],\n            id=\"mixed-hashable-types\",\n        ),\n        pytest.param([3, 1, 2, 3, 2, 1], [3, 1, 2], id=\"preserves-order\"),\n    ],\n)\ndef test_remove_duplicates_happy_path(input_list, expected):\n    assert remove_duplicates(input_list) == expected\n\n\n@pytest.mark.parametrize(\n    (\"input_list\", \"expected\"),\n    [\n        pytest.param([], [], id=\"empty-list\"),\n        pytest.param([42], [42], id=\"single-item\"),\n        pytest.param([7, 7, 7], [7], id=\"all-duplicates\"),\n        pytest.param([1, 2, 3], [1, 2, 3], id=\"already-unique\"),\n        pytest.param([None, None, \"x\", None], [None, \"x\"], id=\"none-values\"),\n        pytest.param([1, True, 0, False], [1, 0], id=\"bools-equal-ints\"),\n    ],\n)\ndef test_remove_duplicates_edge_cases(input_list, expected):\n    assert remove_duplicates(input_list) == expected\n\n\ndef test_remove_duplicates_does_not_mutate_input_list():\n    input_list = [1, 2, 1, 3]\n    original = input_list.copy()\n\n    result = remove_duplicates(input_list)\n\n    assert input_list == original\n    assert result is not input_list\n\n\n@pytest.mark.parametrize(\n    \"input_list\",\n    [\n        pytest.param([[1], [1]], id=\"list-items-are-unhashable\"),\n        pytest.param([{\"a\": 1}], id=\"dict-item-is-unhashable\"),\n        pytest.param([{1, 2}], id=\"set-item-is-unhashable\"),\n        pytest.param([1, [2], 3], id=\"unhashable-item-after-valid-items\"),\n    ],\n)\ndef test_remove_duplicates_raises_type_error_for_unhashable_items(input_list):\n    with pytest.raises(TypeError, match=\"unhashable type\"):\n        remove_duplicates(input_list)\n\n\n@pytest.mark.parametrize(\n    \"bad_input\",\n    [\n        pytest.param(None, id=\"none\"),\n        pytest.param(123, id=\"integer\"),\n        pytest.param(object(), id=\"plain-object\"),\n    ],\n)\ndef test_remove_duplicates_raises_type_error_for_non_iterable_input(bad_input):\n    with pytest.raises(TypeError):\n        remove_duplicates(bad_input)\n```\n\nNote: the function does not explicitly enforce that `lst` is a `list`; it will work with some other iterables like tuples or strings. These tests focus on the behavior of the current implementation.",
+  "score": 5,
+  "cost": 0.35619,
+  "expected": "",
+  "tokens": {
+    "input": 81,
+    "output": 4733
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

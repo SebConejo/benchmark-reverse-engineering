@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "reasoning_gsm8k",
+  "case": 6,
+  "response": "Step 1: Find the brother's current age.  \nSince Ann is 9 years old and her brother is twice her age:  \n2 \u00d7 9 = 18 years old.\n\nStep 2: Find the brother's age in 3 years.  \nAdd 3 years to his current age:  \n18 + 3 = 21.\n\nANSWER: 21",
+  "score": 5,
+  "cost": 0.0005807999999999999,
+  "expected": "21",
+  "tokens": {
+    "input": 68,
+    "output": 225
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

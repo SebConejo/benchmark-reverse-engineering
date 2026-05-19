@@ -1,0 +1,67 @@
+=== Final completion started at $(date) ===
+>>> Task: code_review_v2 at Sun May 10 23:03:25 CEST 2026
+======================================================================
+TaskBench Batch: code_review_v2
+Cases: 50 | Models to run: 1 | Already done: 2
+Skipped providers (unavailable): azure
+Budget: $123.0066 / $200
+======================================================================
+
+  ERROR gpt-5.5-pro case 0: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 1: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 2: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 3: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 4: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 5: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 6: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 7: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 8: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 9: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 10: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 11: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 12: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 13: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 14: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 15: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 16: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 17: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 18: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 19: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 20: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 21: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 22: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 23: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 24: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 25: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 26: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 27: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 28: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 29: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 30: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 31: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 32: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 33: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 34: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 35: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 36: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 37: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 38: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 39: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 40: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 41: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 42: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 43: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 44: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 45: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 46: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 47: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 48: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  ERROR gpt-5.5-pro case 49: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without
+  gpt-5.5-pro                                NO RESULTS
+
+======================================================================
+BATCH COMPLETE: code_review_v2
+Total spend: $123.0066 | Calls: 60905
+======================================================================
+>>> Done: code_review_v2 at Sun May 10 23:33:06 CEST 2026
+>>> Task: test_generation_v2 at Sun May 10 23:33:06 CEST 2026

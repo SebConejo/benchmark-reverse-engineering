@@ -1,0 +1,16 @@
+{
+  "model": "ministral-3b-latest",
+  "task": "function_calling",
+  "case": 46,
+  "response": "```json\n{\n  \"name\": \"restart_service\",\n  \"arguments\": {\n    \"name\": \"Redis cache server\"\n  }\n}\n```",
+  "score": 4,
+  "cost": 4.68e-06,
+  "expected": "",
+  "tokens": {
+    "input": 85,
+    "output": 32
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

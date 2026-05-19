@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "code_generation",
+  "case": 20,
+  "response": "val = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]\n    sym = ['m', 'cm', 'd', 'cd', 'c', 'xc', 'l', 'xl', 'x', 'ix', 'v', 'iv', 'i']\n    roman = ''\n    for i in range(len(val)):\n        while number >= val[i]:\n            roman += sym[i]\n            number -= val[i]\n    return roman",
+  "score": 5,
+  "cost": 0.00089001,
+  "expected": "",
+  "tokens": {
+    "input": 134,
+    "output": 478
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

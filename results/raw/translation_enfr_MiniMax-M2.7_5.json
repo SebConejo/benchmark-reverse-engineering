@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "translation_enfr",
+  "case": 5,
+  "response": "Les flocs provenant de SRT plus \u00e9lev\u00e9s \u00e9taient moins hydrat\u00e9s et pr\u00e9sentaient une couche dense d'EPS qui recouvre une grande partie de la surface.",
+  "score": 5,
+  "cost": 0.0020911000000000003,
+  "expected": "",
+  "tokens": {
+    "input": 65,
+    "output": 459
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

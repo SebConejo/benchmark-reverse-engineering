@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "rag_qa",
+  "case": 2,
+  "response": "Taking physical control of another country.",
+  "score": 5,
+  "cost": 0.000466755,
+  "expected": "taking physical control of another",
+  "tokens": {
+    "input": 305,
+    "output": 192
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

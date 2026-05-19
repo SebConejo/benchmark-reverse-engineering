@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "reasoning_gsm8k",
+  "case": 5,
+  "response": "Katelyn initially saw 50 fairies. One of her friends saw half as many fairies as Katelyn saw, which is 50 / 2 = 25 fairies, join the group. The total then became 50 + 25 = 75 fairies. Later, 30 fairies flew away, leaving 75 - 30 = 45 fairies. \n\nANSWER: 45",
+  "score": 5,
+  "cost": 0.000546795,
+  "expected": "45",
+  "tokens": {
+    "input": 113,
+    "output": 286
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-pro",
+  "task": "code_generation",
+  "case": 28,
+  "response": "```python\n    coords = []\n    for r, row in enumerate(lst):\n        for c, val in enumerate(row):\n            if val == x:\n                coords.append((r, c))\n    \n    # Sort by row ascending, then by column descending\n    coords.sort(key=lambda item: (item[0], -item[1]))\n    \n    return coords\n```",
+  "score": 5,
+  "cost": 0.00127625,
+  "expected": "",
+  "tokens": {
+    "input": 309,
+    "output": 89
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

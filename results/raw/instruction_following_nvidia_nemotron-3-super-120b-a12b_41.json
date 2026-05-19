@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "instruction_following",
+  "case": 41,
+  "response": "```python\ndef sort_list(seq, key=None, reverse=False):\n    \"\"\"Sort a sequence.\n\n    Args:\n        seq (list or iterable):\n            The collection of items to sort. If ``seq`` is a list, the sorting\n            is performed in\u2011place and the function returns ``None``. For any\n            other iterable, a new sorted list is returned and the original is\n            left unchanged.\n        key (callable, optional):\n            A function that takes a single argument and returns a value to be\n            used for sorting comparisons (e.g., ``key=str.lower``). If ``None``\n            (default), the elements themselves are compared.\n        reverse (bool, optional):",
+  "score": 4,
+  "cost": 4.77e-05,
+  "expected": "",
+  "tokens": {
+    "input": 30,
+    "output": 500
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

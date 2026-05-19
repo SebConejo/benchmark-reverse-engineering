@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "translation_enfr",
+  "case": 16,
+  "response": "J\u2019ai l feeling que ma bite n\u2019est pas assez grande pour toi.",
+  "score": 4,
+  "cost": 0.0020141,
+  "expected": "",
+  "tokens": {
+    "input": 67,
+    "output": 441
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

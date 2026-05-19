@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "ner_extraction",
+  "case": 27,
+  "response": "{\"persons\":[\"Cristiano Ronaldo\"],\"organizations\":[\"Al Nassr\",\"Manchester United\"],\"locations\":[\"Riyadh\"]}",
+  "score": 5,
+  "cost": 0.007665,
+  "expected": "",
+  "tokens": {
+    "input": 76,
+    "output": 87
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

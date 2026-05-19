@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-lite",
+  "task": "rag_qa",
+  "case": 45,
+  "response": "The show globe.",
+  "score": 5,
+  "cost": 0.00014375,
+  "expected": "The show globe",
+  "tokens": {
+    "input": 267,
+    "output": 77
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

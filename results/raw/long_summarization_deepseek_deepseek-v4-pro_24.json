@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "long_summarization",
+  "case": 24,
+  "response": "The internet began as a U.S. defense project with ARPANET's first message in 1969, and the 1983 adoption of TCP/IP protocols created the modern network's foundation. Tim Berners-Lee invented the World Wide Web in 1989, and the 1993 Mosaic browser opened it to the public, sparking the dot-com boom and subsequent 2001 crash from which survivors like Amazon and Google emerged as industry titans. The mid-2000s rise of social media, the 2007 iPhone-driven mobile internet, and cloud computing made the web ubiquitous, and today it connects over 5 billion people, underpinning nearly every facet of modern life.",
+  "score": 5,
+  "cost": 0.0013698150000000001,
+  "expected": "",
+  "tokens": {
+    "input": 309,
+    "output": 710
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

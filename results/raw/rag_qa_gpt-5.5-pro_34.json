@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "rag_qa",
+  "case": 34,
+  "response": "Infinitely many primes.",
+  "score": 5,
+  "cost": 0.010335,
+  "expected": "infinitely many prime numbers",
+  "tokens": {
+    "input": 249,
+    "output": 88
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

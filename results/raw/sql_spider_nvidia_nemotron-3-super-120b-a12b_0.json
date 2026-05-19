@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "sql_spider",
+  "case": 0,
+  "response": "SELECT money_rank\nFROM poker_player.players\nWHERE height = (SELECT MAX(height) FROM poker_player.players);",
+  "score": 4,
+  "cost": 2.709e-05,
+  "expected": "",
+  "tokens": {
+    "input": 80,
+    "output": 221
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

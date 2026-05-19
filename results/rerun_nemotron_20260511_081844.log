@@ -1,0 +1,71 @@
+=== Nemotron completion started ===
+>>> Task: intent_clinc150 at Mon May 11 08:18:44 CEST 2026
+======================================================================
+TaskBench Batch: intent_clinc150
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $123.0892 / $200
+======================================================================
+
+  ERROR nvidia/nemotron-3-super-120b-a12b case 8: Response ended prematurely
+  nvidia/nemotron-3-super-120b-a12b          avg=4.4/5  acc=88%  cost=$0.0027  [PASS]
+
+======================================================================
+BATCH COMPLETE: intent_clinc150
+Total spend: $123.0919 | Calls: 61348
+
+--- Results ranked by quality ---
+  nvidia/nemotron-3-super-120b-a12b          4.4/5  acc=88%  $0.0027  (49 cases)
+
+--- Native metric (accuracy) ---
+  nvidia/nemotron-3-super-120b-a12b          88%
+======================================================================
+>>> Done: intent_clinc150 at Mon May 11 08:21:47 CEST 2026
+>>> Task: moderation_toxigen at Mon May 11 08:21:47 CEST 2026
+======================================================================
+TaskBench Batch: moderation_toxigen
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $123.0919 / $200
+======================================================================
+
+  nvidia/nemotron-3-super-120b-a12b          avg=4.7/5  acc=94%  cost=$0.0007  [PASS]
+
+======================================================================
+BATCH COMPLETE: moderation_toxigen
+Total spend: $123.0926 | Calls: 61398
+
+--- Results ranked by quality ---
+  nvidia/nemotron-3-super-120b-a12b          4.7/5  acc=94%  $0.0007  (50 cases)
+
+--- Native metric (accuracy) ---
+  nvidia/nemotron-3-super-120b-a12b          94%
+======================================================================
+>>> Done: moderation_toxigen at Mon May 11 08:24:00 CEST 2026
+>>> Task: sentiment_sst2 at Mon May 11 08:24:00 CEST 2026
+======================================================================
+TaskBench Batch: sentiment_sst2
+Cases: 50 | Models to run: 1 | Already done: 0
+Budget: $123.0926 / $200
+======================================================================
+
+  nvidia/nemotron-3-super-120b-a12b          avg=5.0/5  acc=100%  cost=$0.0005  [PASS]
+
+======================================================================
+BATCH COMPLETE: sentiment_sst2
+Total spend: $123.0931 | Calls: 61448
+
+--- Results ranked by quality ---
+  nvidia/nemotron-3-super-120b-a12b          5.0/5  acc=100%  $0.0005  (50 cases)
+
+--- Native metric (accuracy) ---
+  nvidia/nemotron-3-super-120b-a12b          100%
+======================================================================
+>>> Done: sentiment_sst2 at Mon May 11 08:25:34 CEST 2026
+=== Nemotron DONE ===
+Raw files scanned: 51637
+Valid rows: 51549
+Skipped (empty response, score 0): 88
+Errors: 0
+After dedup: 51549 (removed 0 duplicates)
+
+Backed up old CSV to results/benchmark_results.csv.bak
+Wrote 51549 rows to results/benchmark_results.csv

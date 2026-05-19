@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "code_generation",
+  "case": 47,
+  "response": "```python\nif n < 0:\n    raise ValueError(\"n must be non\u2011negative\")\nreturn \" \".join(str(i) for i in range(n + 1))\n```",
+  "score": 5,
+  "cost": 0.0024629,
+  "expected": "",
+  "tokens": {
+    "input": 131,
+    "output": 527
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

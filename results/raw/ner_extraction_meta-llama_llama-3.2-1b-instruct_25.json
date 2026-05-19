@@ -1,0 +1,16 @@
+{
+  "model": "meta-llama/llama-3.2-1b-instruct",
+  "task": "ner_extraction",
+  "case": 25,
+  "response": "{\n  \"persons\": [\"Mark Zuckerberg\"],\n  \"organizations\": [\"Meta\", \"Menlo Park\"],\n  \"locations\": [\"United States\"]",
+  "score": 2,
+  "cost": 2.916e-06,
+  "expected": "",
+  "tokens": {
+    "input": 78,
+    "output": 30
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

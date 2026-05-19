@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "test_generation_v2",
+  "case": 25,
+  "response": "```python\n# tests/test_deduplicate_sorted.py\nimport pytest\n\n# Adapt the import below to match the real location of the function\nfrom your_module import deduplicate_sorted\n\n\n@pytest.mark.parametrize(\n    \"given, expected\",\n    [\n        # Happy-path examples\n        ([1, 1, 2, 2, 2, 3, 3, 4], [1, 2, 3, 4]),\n        ([\"a\", \"a\", \"b\", \"b\", \"c\"], [\"a\", \"b\", \"c\"]),\n        # Edge cases\n        ([], []),                     # empty list\n        ([42], [42]),                 # single element\n        ([5, 5, 5, 5], [5]),          # all items identical\n        ([1, 2, 3, 4], [1, 2, 3, 4]), # already unique\n    ],\n)\ndef test_deduplicate_general(given, expected):\n    \"\"\"\n    Covers the happy path and several edge-case inputs.\n    \"\"\"\n    assert deduplicate_sorted(given) == expected\n\n\ndef test_unsorted_input_keeps_nonconsecutive_duplicates():\n    \"\"\"\n    The implementation only removes **consecutive** duplicates, so an\n    unsorted list still contains repeated values. This documents (and\n    therefore guards) that behaviour.\n    \"\"\"\n    data = [1, 2, 1, 2]\n    # Because the duplicates are not adjacent, the function cannot\n    # eliminate them.\n    assert deduplicate_sorted(data) == [1, 2, 1, 2]\n\n\ndef test_none_as_input_treated_like_empty():\n    \"\"\"\n    `None` is falsy; the first branch (`if not lst`) is taken, so an empty\n    list is returned.  The function doesn\u2019t raise but silently converts.\n    \"\"\"\n    assert deduplicate_sorted(None) == []\n\n\ndef test_non_sequence_input_raises_type_error():\n    \"\"\"\n    A truthy, non-subscriptable input (e.g. an int) passes the initial\n    truthiness check and fails at `lst[0]`, raising `TypeError`.\n    \"\"\"\n    with pytest.raises(TypeError):\n        deduplicate_sorted(123)\n```\n\nExplanation of test coverage\n\u2022 Happy path \u2013 typical list with duplicates of homogeneous types.  \n\u2022 Edge cases \u2013 empty input, single element, all duplicates, already unique list.  \n\u2022 Behaviour with unsorted input \u2013 confirms duplicates are only removed when consecutive.  \n\u2022 Error cases \u2013  \n  \u2013 `None` (falsy) is accepted and returns `[]`, documenting the implicit design decision.  \n  \u2013 An integer (truthy but not indexable) triggers `TypeError`, showing how the function fails with an invalid type.",
+  "score": 5,
+  "cost": 0.017764,
+  "expected": "",
+  "tokens": {
+    "input": 86,
+    "output": 2199
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

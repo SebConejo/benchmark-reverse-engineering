@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "rag_qa",
+  "case": 1,
+  "response": "1665",
+  "score": 5,
+  "cost": 1.9379999999999997e-05,
+  "expected": "1665",
+  "tokens": {
+    "input": 318,
+    "output": 5
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

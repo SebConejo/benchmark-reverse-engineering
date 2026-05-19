@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "reasoning_gsm8k",
+  "case": 8,
+  "response": "Step 1: Identify last year's enrollment.\nLast year there were 50 students.\n\nStep 2: Calculate the increase.\nA 20% increase means we find 20% of 50.\n20% of 50 = 0.20 \u00d7 50 = 10 students.\n\nStep 3: Add the increase to the original number.\n50 + 10 = 60 students.\n\n(Alternatively: 50 \u00d7 1.20 = 60)\n\nANSWER: 60",
+  "score": 5,
+  "cost": 0.0007643999999999999,
+  "expected": "60",
+  "tokens": {
+    "input": 82,
+    "output": 298
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

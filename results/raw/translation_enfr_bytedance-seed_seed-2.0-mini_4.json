@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "translation_enfr",
+  "case": 4,
+  "response": "### Natural, conversational French translation (casual tone, matching the original's informal questioning intent):\nEst-ce que ton mari avait invit\u00e9 le lieutenant Gilbert chez toi?\n\n### Formal alternative (for addressing someone respectfully):\nEst-ce que votre mari avait invit\u00e9 le lieutenant Gilbert chez vous?\n\nThe casual version is the most widely used natural rendering of the original English question.",
+  "score": 5,
+  "cost": 0.0006117999999999999,
+  "expected": "",
+  "tokens": {
+    "input": 78,
+    "output": 1510
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

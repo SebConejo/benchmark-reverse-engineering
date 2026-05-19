@@ -1,0 +1,16 @@
+{
+  "model": "mistral-small-latest",
+  "task": "rag_qa",
+  "case": 10,
+  "response": "The Saxon Garden was formally a royal garden.",
+  "score": 5,
+  "cost": 4.71e-05,
+  "expected": "The Saxon Garden",
+  "tokens": {
+    "input": 441,
+    "output": 10
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

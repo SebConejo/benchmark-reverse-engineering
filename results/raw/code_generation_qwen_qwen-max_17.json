@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen-max",
+  "task": "code_generation",
+  "case": 17,
+  "response": "if not text:\n        return None\n    import hashlib\n    return hashlib.md5(text.encode()).hexdigest()",
+  "score": 4,
+  "cost": 0.00021944,
+  "expected": "",
+  "tokens": {
+    "input": 119,
+    "output": 23
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

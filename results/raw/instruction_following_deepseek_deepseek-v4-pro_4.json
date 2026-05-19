@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "instruction_following",
+  "case": 4,
+  "response": "1. French: Bonjour le monde  \n2. Spanish: Hola mundo  \n3. German: Hallo Welt",
+  "score": 5,
+  "cost": 0.000246645,
+  "expected": "",
+  "tokens": {
+    "input": 23,
+    "output": 136
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

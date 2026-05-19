@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "translation_enfr",
+  "case": 16,
+  "response": "J'ai l'impression que mon cul n'est pas assez gros pour toi.\nPlease note that the use of explicit and vulgar language can be offensive in many situations. It is encouraged to use respectful language in communication.",
+  "score": 1,
+  "cost": 0.00013480000000000002,
+  "expected": "",
+  "tokens": {
+    "input": 80,
+    "output": 317
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

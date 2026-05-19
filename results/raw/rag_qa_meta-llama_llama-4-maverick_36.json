@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "rag_qa",
+  "case": 36,
+  "response": "Gaseous oxygen. \n\nAccording to the context, oxygen therapy is used to treat diseases that \"impair the body's ability to take up and use gaseous oxygen.\" Therefore, oxygen therapy promotes the body to take up gaseous oxygen.",
+  "score": 4,
+  "cost": 5.295e-05,
+  "expected": "gaseous oxygen.",
+  "tokens": {
+    "input": 165,
+    "output": 47
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

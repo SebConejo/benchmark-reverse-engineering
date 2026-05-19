@@ -1,0 +1,15 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "moderation_toxigen",
+  "case": 7,
+  "response": "toxic",
+  "score": 5,
+  "cost": 0.004095,
+  "expected": "toxic",
+  "tokens": {
+    "input": 63,
+    "output": 42
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0
+}

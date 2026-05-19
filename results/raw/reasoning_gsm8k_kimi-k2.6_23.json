@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "reasoning_gsm8k",
+  "case": 23,
+  "response": "Step 1: Find the original cost per balloon.  \n\\[\n\\frac{900}{20} = 45\n\\]\nThe original cost was \\\\(45 per balloon.\n\nStep 2: Find the new cost per balloon after the increase.  \n\\[\n45 + 20 = 65\n\\]\nThe new cost is \\\\)65 per balloon.\n\nStep 3: Calculate the total cost for 170 balloons at the new price.  \n\\[\n170 \\times 65 = 11{,}050\n\\]\n\nANSWER: 11050",
+  "score": 5,
+  "cost": 0.001578,
+  "expected": "11050",
+  "tokens": {
+    "input": 98,
+    "output": 633
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

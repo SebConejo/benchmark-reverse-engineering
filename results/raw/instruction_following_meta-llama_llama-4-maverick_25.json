@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "instruction_following",
+  "case": 25,
+  "response": "\"You're Invited: Meeting to Discuss Upcoming Project Details\"",
+  "score": 5,
+  "cost": 1.11e-05,
+  "expected": "",
+  "tokens": {
+    "input": 26,
+    "output": 12
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

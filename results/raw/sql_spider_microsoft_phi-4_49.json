@@ -1,0 +1,16 @@
+{
+  "model": "microsoft/phi-4",
+  "task": "sql_spider",
+  "case": 49,
+  "response": "```sql\nSELECT hometown\nFROM course_teach\nGROUP BY hometown\nHAVING COUNT(DISTINCT teacher_id) >= 2;\n```",
+  "score": 5,
+  "cost": 7.15e-06,
+  "expected": "",
+  "tokens": {
+    "input": 79,
+    "output": 31
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "task": "code_generation",
+  "case": 8,
+  "response": "return [x for x in values if type(x) is int]",
+  "score": 5,
+  "cost": 0.00150725,
+  "expected": "",
+  "tokens": {
+    "input": 133,
+    "output": 1474
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

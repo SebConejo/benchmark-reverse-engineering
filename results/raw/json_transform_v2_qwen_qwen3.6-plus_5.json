@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "json_transform_v2",
+  "case": 5,
+  "response": "{\"departments\":{\"eng\":{\"headcount\":2,\"avg_salary\":115000,\"employees\":[\"Alice\",\"Bob\"]},\"sales\":{\"headcount\":2,\"avg_salary\":100000,\"employees\":[\"Carol\",\"Dave\"]}}}",
+  "score": 5,
+  "cost": 0.001835925,
+  "expected": "",
+  "tokens": {
+    "input": 165,
+    "output": 1371
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen-max",
+  "task": "rag_qa",
+  "case": 13,
+  "response": "According to the context, V/Line is now owned by the Victorian Government.",
+  "score": 4,
+  "cost": 0.00023296000000000002,
+  "expected": "Victorian Government",
+  "tokens": {
+    "input": 160,
+    "output": 16
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

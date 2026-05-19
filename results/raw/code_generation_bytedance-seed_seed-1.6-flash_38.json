@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "code_generation",
+  "case": 38,
+  "response": "negatives = []\npositives = []\nfor num in lst:\n    if num < 0:\n        negatives.append(num)\n    elif num > 0:\n        positives.append(num)\na = max(negatives) if negatives else None\nb = min(positives) if positives else None\nreturn (a, b)",
+  "score": 5,
+  "cost": 0.0003258,
+  "expected": "",
+  "tokens": {
+    "input": 260,
+    "output": 1021
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

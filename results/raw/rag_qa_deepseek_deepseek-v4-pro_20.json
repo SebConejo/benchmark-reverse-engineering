@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "rag_qa",
+  "case": 20,
+  "response": "By charging their students tuition fees.",
+  "score": 5,
+  "cost": 0.000190095,
+  "expected": "tuition",
+  "tokens": {
+    "input": 141,
+    "output": 74
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

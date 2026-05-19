@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "extraction_hard_v2",
+  "case": 22,
+  "response": "{\n  \"meeting_title\": \"Product sync\",\n  \"date\": \"2026-04-10\",\n  \"attendees\": [\n    \"Jamie\",\n    \"Priya\",\n    \"Marcus\",\n    \"Lin\"\n  ],\n  \"decisions\": [\n    \"Decided to push the recommendation engine to Q3 since data pipeline won't be ready until June.\",\n    \"Agreed to allocate 20% of sprint capacity to tech debt.\"\n  ],\n  \"action",
+  "score": 3,
+  "cost": 8.937e-05,
+  "expected": "",
+  "tokens": {
+    "input": 193,
+    "output": 800
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "code_generation",
+  "case": 47,
+  "response": "return ' '.join(map(str, range(n + 1)))",
+  "score": 5,
+  "cost": 0.00147,
+  "expected": "",
+  "tokens": {
+    "input": 99,
+    "output": 159
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

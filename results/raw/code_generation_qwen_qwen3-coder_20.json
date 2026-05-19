@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen3-coder",
+  "task": "code_generation",
+  "case": 20,
+  "response": "```python\n    val = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]\n    syms = ['m', 'cm', 'd', 'cd', 'c', 'xc', 'l', 'xl', 'x', 'ix', 'v', 'iv', 'i']\n    roman = ''\n    for i in range(len(val)):\n        count = number // val[i]\n        roman += syms[i] * count\n        number -= val[i] * count\n    return roman\n```",
+  "score": 2,
+  "cost": 0.00016126,
+  "expected": "",
+  "tokens": {
+    "input": 141,
+    "output": 148
+  },
+  "judge_rerun": true,
+  "judge_raw": "2",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

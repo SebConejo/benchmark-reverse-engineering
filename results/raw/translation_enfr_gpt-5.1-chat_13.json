@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "translation_enfr",
+  "case": 13,
+  "response": "Dis simplement \u00e0 Kumagaya que le d\u00e9tective est ici.",
+  "score": 5,
+  "cost": 0.00030720000000000004,
+  "expected": "",
+  "tokens": {
+    "input": 36,
+    "output": 87
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

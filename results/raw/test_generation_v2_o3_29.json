@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "test_generation_v2",
+  "case": 29,
+  "response": "```python\n# test_moving_average.py\nimport math\nimport pytest\n\nfrom your_module import moving_average      # replace  `your_module`  with the real module name\n\n\n# ---------------------------------------------------------------------------\n# Happy-path tests\n# ---------------------------------------------------------------------------\n\n@pytest.mark.parametrize(\n    \"data, window, expected\",\n    [\n        # regular case with integers\n        ([1, 2, 3, 4, 5], 3, [2.0, 3.0, 4.0]),\n        # regular case with floats\n        ([1.0, 2.0, 3.0, 4.0], 2, [1.5, 2.5, 3.5]),\n        # window == 1 \u2192 result equals original data (as floats)\n        ([10, 20, 30], 1, [10.0, 20.0, 30.0]),\n        # window == len(data) \u2192 single element list\n        ([2, 4, 6, 8], 4, [5.0]),\n    ],\n)\ndef test_moving_average_happy_path(data, window, expected):\n    result = moving_average(data, window)\n\n    # Compare element-wise with a tolerance to avoid FP surprises\n    assert len(result) == len(expected)\n    for got, exp in zip(result, expected):\n        assert math.isclose(got, exp, rel_tol=1e-12)\n\n\n# ---------------------------------------------------------------------------\n# Edge-case tests\n# ---------------------------------------------------------------------------\n\n@pytest.mark.parametrize(\n    \"data, window\",\n    [\n        ([1, 2, 3], 0),      # zero window\n        ([1, 2, 3], -1),     # negative window\n        ([1, 2, 3], 10),     # window > len(data)\n        ([], 1),             # empty data, positive window\n    ],\n)\ndef test_moving_average_edge_returns_empty(data, window):\n    assert moving_average(data, window) == []\n\n\n# ---------------------------------------------------------------------------\n# Error-case tests (invalid argument types)\n# ---------------------------------------------------------------------------\n\ndef test_moving_average_non_list_data():\n    # Using a tuple should raise because slicing a tuple returns a tuple, but sum works,\n    # so the function actually \"works\". To force a real type error we pass None.\n    with pytest.raises(TypeError):\n        moving_average(None, 3)\n\n\n@pytest.mark.parametrize(\"bad_window\", [1.5, \"3\", None, [3]])\ndef test_moving_average_non_int_window(bad_window):\n    # len(data) is fine, but comparing non-int window with 0 or with len(data)\n    # triggers a TypeError\n    with pytest.raises(TypeError):\n        moving_average([1, 2, 3], bad_window)\n```",
+  "score": 4,
+  "cost": 0.009146,
+  "expected": "",
+  "tokens": {
+    "input": 97,
+    "output": 1119
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

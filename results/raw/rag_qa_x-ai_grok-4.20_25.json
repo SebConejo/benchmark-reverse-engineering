@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-4.20",
+  "task": "rag_qa",
+  "case": 25,
+  "response": "infrastructure",
+  "score": 1,
+  "cost": 0.000566,
+  "expected": "infrastructure",
+  "tokens": {
+    "input": 275,
+    "output": 2
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "code_generation",
+  "case": 28,
+  "response": "```python\n    coordinates = []\n    for i, row in enumerate(lst):\n        for j, val in enumerate(row):\n            if val == x:\n                coordinates.append((i, j))\n    coordinates.sort(key=lambda t: (t[0], -t[1]))\n    return coordinates\n```",
+  "score": 5,
+  "cost": 0.000887835,
+  "expected": "",
+  "tokens": {
+    "input": 289,
+    "output": 438
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

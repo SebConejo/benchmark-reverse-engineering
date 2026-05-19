@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 48,
+  "response": "Jamaal originally lifts an 8\u2011lb weight.\n\n1. Increase by 50\u202f%  \n\\(8\\text{ lb} \\times 1.5 = 12\\text{ lb}\\).\n\n2. The 12\u2011lb weight is too heavy, so he uses a weight that is 2\u202flb lighter.  \n\\(12\\text{ lb} - 2\\text{ lb} = 10\\text{ lb}\\).\n\nThus the weight he now uses is **10 pounds**.\n\nANSWER: 10",
+  "score": 5,
+  "cost": 0.0019371000000000002,
+  "expected": "10",
+  "tokens": {
+    "input": 133,
+    "output": 407
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

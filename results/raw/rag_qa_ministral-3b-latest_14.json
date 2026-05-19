@@ -1,0 +1,16 @@
+{
+  "model": "ministral-3b-latest",
+  "task": "rag_qa",
+  "case": 14,
+  "response": "Not found in context.",
+  "score": 1,
+  "cost": 1.26e-05,
+  "expected": "marine waters",
+  "tokens": {
+    "input": 309,
+    "output": 6
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

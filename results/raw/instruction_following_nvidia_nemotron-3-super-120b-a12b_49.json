@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "instruction_following",
+  "case": 49,
+  "response": "**Formal:** Good day, how may I assist you today?  \n**Casual:** Hey there! What's up?  \n**Humorous:** Well, look who decided to chat with a bot! How can I make your day a little less boring?",
+  "score": 5,
+  "cost": 7.2e-06,
+  "expected": "",
+  "tokens": {
+    "input": 26,
+    "output": 54
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "function_calling",
+  "case": 15,
+  "response": "{\"name\":\"compress_video\",\"arguments\":{\"path\":\"downloads/presentation.mp4\",\"target_reduction\":0.5}}",
+  "score": 5,
+  "cost": 0.00018960000000000003,
+  "expected": "",
+  "tokens": {
+    "input": 101,
+    "output": 34
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

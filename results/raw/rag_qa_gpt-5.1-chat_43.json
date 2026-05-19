@@ -1,0 +1,20 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "rag_qa",
+  "case": 43,
+  "response": "Amazonia: Man and Culture in a Counterfeit Paradise",
+  "score": 1,
+  "cost": 0.0002448,
+  "expected": "Amazonia: Man and Culture in a Counterfeit Paradise",
+  "tokens": {
+    "input": 246,
+    "output": 15
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

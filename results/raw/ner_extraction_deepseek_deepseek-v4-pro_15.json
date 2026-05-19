@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "ner_extraction",
+  "case": 15,
+  "response": "{\n  \"persons\": [],\n  \"organizations\": [\"SpaceX\", \"Starlink\"],\n  \"locations\": [\"Cape Canaveral\"]\n}",
+  "score": 4,
+  "cost": 0.0005407049999999999,
+  "expected": "",
+  "tokens": {
+    "input": 75,
+    "output": 292
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

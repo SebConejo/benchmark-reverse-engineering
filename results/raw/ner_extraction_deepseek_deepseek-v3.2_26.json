@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "task": "ner_extraction",
+  "case": 26,
+  "response": "{\n  \"persons\": [],\n  \"organizations\": [\"Supreme Court\", \"ACLU\"],\n  \"locations\": [\"Texas\"]\n}",
+  "score": 4,
+  "cost": 4.965000000000001e-05,
+  "expected": "",
+  "tokens": {
+    "input": 71,
+    "output": 29
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

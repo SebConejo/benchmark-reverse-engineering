@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "long_summarization",
+  "case": 20,
+  "response": "The internet began as a U.S. Defense Department project with ARPANET's first message in 1969 and adopted the crucial TCP/IP protocols in 1983. Tim Berners-Lee's 1989 invention of the World Wide Web and the 1993 Mosaic browser sparked explosive growth, leading to the dot-com era where survivors like Amazon and Google became dominant forces, later joined by social media, smartphones, and cloud computing. This evolution has transformed the network into a ubiquitous utility that now connects over 5 billion people and underpins modern commerce, communication, and entertainment.",
+  "score": 5,
+  "cost": 0.001058355,
+  "expected": "",
+  "tokens": {
+    "input": 309,
+    "output": 531
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

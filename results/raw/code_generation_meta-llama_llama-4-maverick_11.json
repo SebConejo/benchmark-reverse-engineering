@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "code_generation",
+  "case": 11,
+  "response": "```python\ntotal_sum = 0\ntotal_product = 1\nfor num in numbers:\n    total_sum += num\n    total_product *= num\nreturn total_sum, total_product\n```",
+  "score": 3,
+  "cost": 4.6349999999999995e-05,
+  "expected": "",
+  "tokens": {
+    "input": 145,
+    "output": 41
+  },
+  "judge_rerun": true,
+  "judge_raw": "3",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

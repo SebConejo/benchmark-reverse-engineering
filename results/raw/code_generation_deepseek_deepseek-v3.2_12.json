@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "task": "code_generation",
+  "case": 12,
+  "response": "return [s for s in strings if substring in s]",
+  "score": 4,
+  "cost": 4.7900000000000006e-05,
+  "expected": "",
+  "tokens": {
+    "input": 130,
+    "output": 14
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

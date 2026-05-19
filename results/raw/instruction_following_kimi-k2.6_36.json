@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "instruction_following",
+  "case": 36,
+  "response": "Here are 4 programming languages:\n\n1. **Java**\n2. **C++**\n3. **Rust**\n4. **Go**",
+  "score": 5,
+  "cost": 0.0005094,
+  "expected": "",
+  "tokens": {
+    "input": 21,
+    "output": 207
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

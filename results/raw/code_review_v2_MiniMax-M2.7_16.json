@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "code_review_v2",
+  "case": 16,
+  "response": "# Code Review: `encrypt_password` Function\n\n## Critical Security Issues\n\n### 1. **MD5 is Cryptographically Broken**\nMD5 is not suitable for password hashing due to known vulnerabilities:\n- Vulnerable to collision and preimage attacks\n- **Too fast** \u2014 allows rapid brute-force attacks (billions of guesses/second)\n- Broken since 2004; prohibited in security-sensitive applications\n\n### 2. **No Salt**\nNo per-password randomization means:\n- Identical passwords produce identical hashes\n- Vulnerable to rainbow table attacks\n- No protection against lookup tables\n\n### 3. **Wrong Approach**\nThis is **hashing**, not encryption (misleading function name). True encryption is reversible; passwords should be one-way.\n\n---\n\n## Suggested Fixes\n\n### Option 1: Use `bcrypt` (Recommended)\n```python\nimport bcrypt\n\ndef hash_password(password: str) -> str:\n    salt = bcrypt.gensalt()\n    hashed = bcrypt.hashpw(password.encode('utf-8'), salt)\n    return hashed.decode('utf-8')\n\ndef verify_password(password: str, hashed: str) -> bool:\n    return bcrypt.checkpw(password.encode('utf-8'), hashed.encode('utf-8'))\n```\n\n### Option 2: Use `argon2` (Industry Standard)\n```python\nfrom argon2 import PasswordHasher\n\nph = PasswordHasher()\n\ndef hash_password(password: str) -> str:\n    return ph.hash(password)\n\ndef verify_password(password: str, hashed: str) -> bool:\n    return ph.verify(hashed, password)\n```\n\n### Option 3: Use `hashlib.pbkdf2_hmac` (Standard Library)\n```python\nimport os\nimport hashlib\n\ndef hash_password(password: str, salt: bytes = None) -> str:\n    if salt is None:\n        salt = os.urandom(32)\n    key = hashlib.pbkdf2_hmac(\n        'sha256',\n        password.encode('utf-8'),\n        salt,\n        600_000  # iterations \u2014 increase over time\n    )\n    return salt.hex() + key.hex()\n\ndef verify_password(password: str, stored_hash: str) -> bool:\n    salt = bytes.fromhex(stored_hash[:64])\n    stored_key = stored_hash[64:]\n    new_key = hashlib.pbkdf2_hmac(\n        'sha256',\n        password.encode('utf-8'),\n        salt,\n        600_000\n    )\n    return hmac.compare_digest(new_key.hex(), stored_key)\n```\n\n---\n\n## Summary\n\n| Issue | Severity | Fix |\n|-------|----------|-----|\n| MD5 usage | **Critical** | Use bcrypt/argon2/PBKDF2 |\n| No salt | **Critical** | Generate random salt per password |\n| Function naming | Medium | Rename to `hash_password` |\n| No work factor | **Critical** | Use configurable iteration/cost parameters |\n| No encoding error handling | Low | Use `utf-8` explicitly |",
+  "score": 5,
+  "cost": 0.004932400000000001,
+  "expected": "",
+  "tokens": {
+    "input": 72,
+    "output": 1103
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

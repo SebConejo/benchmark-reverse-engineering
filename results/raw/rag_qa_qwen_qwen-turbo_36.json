@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen-turbo",
+  "task": "rag_qa",
+  "case": 36,
+  "response": "Answer: Oxygen therapy promotes the body to take up gaseous oxygen.",
+  "score": 5,
+  "cost": 6.204e-06,
+  "expected": "gaseous oxygen.",
+  "tokens": {
+    "input": 173,
+    "output": 15
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

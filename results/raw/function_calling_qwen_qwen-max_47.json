@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen-max",
+  "task": "function_calling",
+  "case": 47,
+  "response": "{\"name\": \"create_cron\", \"arguments\": {\"schedule\": \"0 0 * * *\", \"command\": \"cleanup_script\"}}",
+  "score": 5,
+  "cost": 0.00021528,
+  "expected": "",
+  "tokens": {
+    "input": 91,
+    "output": 29
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

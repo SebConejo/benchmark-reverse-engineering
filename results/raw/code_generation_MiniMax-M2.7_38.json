@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "code_generation",
+  "case": 38,
+  "response": "largest_neg = None\nsmallest_pos = None\nfor num in lst:\n    if num < 0:\n        if largest_neg is None or num > largest_neg:\n            largest_neg = num\n    elif num > 0:\n        if smallest_pos is None or num < smallest_pos:\n            smallest_pos = num\nreturn (largest_neg, smallest_pos)",
+  "score": 5,
+  "cost": 0.0035178,
+  "expected": "",
+  "tokens": {
+    "input": 202,
+    "output": 749
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

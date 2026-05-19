@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "function_calling",
+  "case": 40,
+  "response": "{\"name\":\"search_messages\",\"arguments\":{\"channel\":\"announcements\",\"query\":\"release\"}}",
+  "score": 2,
+  "cost": 0.002004,
+  "expected": "",
+  "tokens": {
+    "input": 94,
+    "output": 227
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

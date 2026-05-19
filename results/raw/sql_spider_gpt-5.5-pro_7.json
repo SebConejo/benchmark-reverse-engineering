@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "sql_spider",
+  "case": 7,
+  "response": "SELECT COUNT(*) FROM cars_data WHERE \"Year\" = 1980;",
+  "score": 4,
+  "cost": 0.066555,
+  "expected": "",
+  "tokens": {
+    "input": 72,
+    "output": 873
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

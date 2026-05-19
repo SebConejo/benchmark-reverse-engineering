@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "email_summary_v2",
+  "case": 32,
+  "response": "The SSL certificate for api.company.com expires in 7 days because auto-renewal failed after a DNS migration removed a required CNAME record. The DevOps team will re-add the CNAME record today to resolve the issue.",
+  "score": 5,
+  "cost": 3.9340000000000006e-05,
+  "expected": "",
+  "tokens": {
+    "input": 101,
+    "output": 45
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "rag_qa",
+  "case": 10,
+  "response": "The Saxon Garden.",
+  "score": 5,
+  "cost": 2.6280000000000002e-05,
+  "expected": "The Saxon Garden",
+  "tokens": {
+    "input": 433,
+    "output": 5
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

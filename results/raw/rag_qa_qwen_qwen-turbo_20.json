@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen-turbo",
+  "task": "rag_qa",
+  "case": 20,
+  "response": "Answer: Erg\u00e4nzungsschulen are funded in whole by charging their students tuition fees.",
+  "score": 5,
+  "cost": 5.676e-06,
+  "expected": "tuition",
+  "tokens": {
+    "input": 153,
+    "output": 19
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

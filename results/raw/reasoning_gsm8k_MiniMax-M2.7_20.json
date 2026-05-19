@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 20,
+  "response": "Step\u2011by\u2011step reasoning:\n\n1. **Number of fish**: Jen has 3 fish.  \n2. **Food cost per fish per day**: Each fish needs $1 worth of food, so per day the total cost for the fish is  \n   \\(3 \\times \\$1 = \\$3\\).  \n3. **Number of days in May**: May has 31 days.  \n4. **Total cost for the month**: Multiply the daily cost by the number of days:  \n   \\(\\$3 \\times 31 = \\$93\\).\n\nTherefore, Jen spends **$93** on fish food in May.\n\nANSWER: 93",
+  "score": 5,
+  "cost": 0.0013947999999999999,
+  "expected": "93",
+  "tokens": {
+    "input": 88,
+    "output": 295
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.4-mini",
+  "task": "rag_qa",
+  "case": 45,
+  "response": "The show globe.",
+  "score": 5,
+  "cost": 7.5e-05,
+  "expected": "The show globe",
+  "tokens": {
+    "input": 222,
+    "output": 7
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

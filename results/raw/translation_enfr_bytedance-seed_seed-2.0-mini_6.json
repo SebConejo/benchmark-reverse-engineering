@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "translation_enfr",
+  "case": 6,
+  "response": "Juste maintenant, c'est ce diable qui roule sur Wangan.",
+  "score": 4,
+  "cost": 0.000559,
+  "expected": "",
+  "tokens": {
+    "input": 78,
+    "output": 1378
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

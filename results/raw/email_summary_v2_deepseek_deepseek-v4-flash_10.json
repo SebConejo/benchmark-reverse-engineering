@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "email_summary_v2",
+  "case": 10,
+  "response": "The CEO shared the Q1 board deck draft with key metrics (revenue at 127% of target, NRR at 115%, but CAC up 22%) and requested the product roadmap section by Wednesday. The board meeting is scheduled for next Tuesday, making the Wednesday deadline critical.",
+  "score": 5,
+  "cost": 0.00011522000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 83,
+    "output": 185
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

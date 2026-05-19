@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "instruction_following",
+  "case": 44,
+  "response": "- [ ] Mixed greens or lettuce (romaine, iceberg, or spinach)\n- [ ] Cherry tomatoes or sliced tomato\n- [ ] Cucumber, sliced or diced\n- [ ] Red onion, thinly sliced\n- [ ] Carrot, shredded or julienned\n- [ ] Bell pepper, diced\n- [ ] Croutons\n- [ ] Salad dressing of choice (vinaigrette, ranch, etc.)",
+  "score": 5,
+  "cost": 0.00040019999999999997,
+  "expected": "",
+  "tokens": {
+    "input": 19,
+    "output": 162
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

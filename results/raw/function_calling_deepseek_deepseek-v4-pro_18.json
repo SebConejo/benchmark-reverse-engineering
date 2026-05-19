@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "function_calling",
+  "case": 18,
+  "response": "{\"name\": \"check_domain\", \"arguments\": {\"domain\": \"coolstartup.com\"}}",
+  "score": 5,
+  "cost": 0.00022054500000000002,
+  "expected": "",
+  "tokens": {
+    "input": 91,
+    "output": 104
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

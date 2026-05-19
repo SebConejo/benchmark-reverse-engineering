@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "function_calling",
+  "case": 21,
+  "response": "{\"name\": \"deploy\", \"arguments\": {\"version\": \"2.3.1\", \"environment\": \"staging\"}}",
+  "score": 5,
+  "cost": 0.0001688,
+  "expected": "",
+  "tokens": {
+    "input": 280,
+    "output": 141
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

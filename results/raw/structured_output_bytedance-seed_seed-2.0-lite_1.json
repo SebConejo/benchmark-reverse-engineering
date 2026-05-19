@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-lite",
+  "task": "structured_output",
+  "case": 1,
+  "response": "{\"title\": \"Q4 Planning\", \"date\": \"Dec 15 2024\", \"time\": \"2pm\", \"attendees\": [\"Alice\", \"Bob\", \"Charlie\"], \"room\": \"301B\"}",
+  "score": 5,
+  "cost": 0.0003365,
+  "expected": "",
+  "tokens": {
+    "input": 134,
+    "output": 303
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

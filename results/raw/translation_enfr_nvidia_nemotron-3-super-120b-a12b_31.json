@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "translation_enfr",
+  "case": 31,
+  "response": "We need to French? No, just a? Actually just answer.",
+  "score": 1,
+  "cost": 5.22e-06,
+  "expected": "",
+  "tokens": {
+    "input": 43,
+    "output": 15
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

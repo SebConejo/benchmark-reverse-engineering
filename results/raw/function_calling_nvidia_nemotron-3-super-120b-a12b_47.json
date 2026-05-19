@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "function_calling",
+  "case": 47,
+  "response": "{\"name\": \"create_cron\", \"arguments\": {\"schedule\": \"0 0 * * *\", \"command\": \"cleanup script\"}}",
+  "score": 4,
+  "cost": 1.0799999999999998e-05,
+  "expected": "",
+  "tokens": {
+    "input": 90,
+    "output": 30
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "rag_qa",
+  "case": 9,
+  "response": "70s",
+  "score": 5,
+  "cost": 0.008235,
+  "expected": "70",
+  "tokens": {
+    "input": 144,
+    "output": 81
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

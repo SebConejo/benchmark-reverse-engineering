@@ -1,0 +1,16 @@
+{
+  "model": "o4-mini",
+  "task": "test_generation_v2",
+  "case": 12,
+  "response": "Here\u2019s a complete pytest\u2010style test module covering normal use, boundaries and error conditions. Save it as, for example, `test_chunk_list.py` (and make sure that the real `chunk_list` lives in a file named `chunk_list.py` on your PYTHONPATH):\n\n```python\nimport pytest\nfrom chunk_list import chunk_list\n\n\ndef test_happy_path_exact_division():\n    # list length 6, chunk size 2 \u2192 3 chunks of length 2\n    data = [1, 2, 3, 4, 5, 6]\n    expected = [[1, 2], [3, 4], [5, 6]]\n    assert chunk_list(data, 2) == expected\n\n\ndef test_happy_path_non_divisible():\n    # list length 7, chunk size 3 \u2192 last chunk shorter\n    data = ['a', 'b', 'c', 'd', 'e', 'f', 'g']\n    expected = [['a', 'b', 'c'], ['d', 'e', 'f'], ['g']]\n    assert chunk_list(data, 3) == expected\n\n\ndef test_size_one_returns_singletons():\n    data = [10, 20, 30]\n    assert chunk_list(data, 1) == [[10], [20], [30]]\n\n\ndef test_size_larger_than_list_returns_whole_list():\n    data = [1, 2, 3]\n    # size > len(data), we get one chunk containing the entire list\n    assert chunk_list(data, 10) == [[1, 2, 3]]\n\n\ndef test_empty_list_returns_empty_list():\n    # even for any positive size, an empty input list \u2192 no chunks\n    assert chunk_list([], 5) == []\n\n\n@pytest.mark.parametrize(\"bad_size\", [0, -1, -100])\ndef test_non_positive_size_raises_value_error(bad_size):\n    with pytest.raises(ValueError) as excinfo:\n        chunk_list([1, 2, 3], bad_size)\n    assert \"size must be positive\" in str(excinfo.value)\n\n\ndef test_non_integer_size_raises_type_error():\n    # size must be an integer, floats lead to TypeError internally\n    with pytest.raises(TypeError):\n        chunk_list([1, 2, 3], 2.5)\n\n\ndef test_non_list_input_raises_type_error():\n    # passing a non-list for lst should cause a TypeError at len() or slicing\n    with pytest.raises(TypeError):\n        chunk_list(\"not a list\", 2)\n```\n\nExplanation of the cases covered:\n\n  * Happy paths with exact division and non-exact division  \n  * Edge conditions: size = 1, size > len(lst), empty list  \n  * Error conditions: zero or negative sizes (ValueError), wrong type for `size` or `lst` (TypeError)  \n\nTo run:\n\n    pytest test_chunk_list.py\n\nMake sure `chunk_list.py` is in the same directory or otherwise importable.",
+  "score": 5,
+  "cost": 0.006904700000000001,
+  "expected": "",
+  "tokens": {
+    "input": 85,
+    "output": 1548
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

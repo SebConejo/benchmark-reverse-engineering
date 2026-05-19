@@ -1,0 +1,18 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "sql_spider",
+  "case": 9,
+  "response": "SELECT country\nFROM (\n    SELECT country, COUNT(*) AS maker_count\n    FROM car_makers\n    GROUP BY country\n) AS country_counts\nWHERE maker_count = (\n    SELECT MAX(maker_count)\n    FROM (\n        SELECT COUNT(*) AS maker_count\n        FROM car_makers\n        GROUP BY country\n    ) AS max_counts\n);",
+  "score": 4,
+  "cost": 0.000547,
+  "expected": "",
+  "tokens": {
+    "input": 118,
+    "output": 1338
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

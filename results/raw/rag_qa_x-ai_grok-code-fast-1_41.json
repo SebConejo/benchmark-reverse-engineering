@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "rag_qa",
+  "case": 41,
+  "response": "500",
+  "score": 1,
+  "cost": 0.000474,
+  "expected": "Contrec\u0153ur led 500 men south from Fort Venango on April 5, 1754",
+  "tokens": {
+    "input": 382,
+    "output": 497
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

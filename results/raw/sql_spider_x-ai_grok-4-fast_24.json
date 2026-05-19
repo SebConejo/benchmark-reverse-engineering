@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "sql_spider",
+  "case": 24,
+  "response": "```sql\nSELECT year\nFROM (\n  SELECT year, COUNT(*) AS concert_count\n  FROM concerts\n  GROUP BY year\n) AS subquery\nWHERE concert_count = (\n  SELECT MAX(concert_count)\n  FROM (\n    SELECT COUNT(*) AS concert_count\n    FROM concerts\n    GROUP BY year\n  ) AS max_subquery\n);\n```",
+  "score": 4,
+  "cost": 0.0009022,
+  "expected": "",
+  "tokens": {
+    "input": 219,
+    "output": 1073
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

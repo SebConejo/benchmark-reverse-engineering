@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "reasoning_gsm8k",
+  "case": 49,
+  "response": "The family has 3 sisters who are all 16 years old, so their combined age is \\(3 \\times 16 = 48\\). There are 2 brothers. One brother is 12 years old, and his age is half the age of the older brother, meaning the older brother is \\(12 \\times 2 = 24\\) years old. The combined age of the brothers is \\(12 + 24 = 36\\). The total age of all siblings is \\(48 + 36 = 84\\).\n\nANSWER: 84",
+  "score": 5,
+  "cost": 0.00053679,
+  "expected": "84",
+  "tokens": {
+    "input": 94,
+    "output": 285
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

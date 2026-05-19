@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "ner_extraction",
+  "case": 37,
+  "response": "{\"persons\": [], \"organizations\": [\"University of Cambridge\", \"AstraZeneca\"], \"locations\": [\"Oxford\"]}",
+  "score": 4,
+  "cost": 0.0002402,
+  "expected": "",
+  "tokens": {
+    "input": 269,
+    "output": 233
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

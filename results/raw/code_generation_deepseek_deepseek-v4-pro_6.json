@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "code_generation",
+  "case": 6,
+  "response": "freq = {}\n    for num in numbers:\n        freq[num] = freq.get(num, 0) + 1\n    return [num for num in numbers if freq[num] == 1]",
+  "score": 5,
+  "cost": 0.0011314349999999999,
+  "expected": "",
+  "tokens": {
+    "input": 117,
+    "output": 621
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

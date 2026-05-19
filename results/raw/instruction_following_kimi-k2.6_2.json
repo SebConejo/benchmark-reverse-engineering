@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "instruction_following",
+  "case": 2,
+  "response": "Coffee turns to code  \nDebugging through the midnight  \nCompiling my dreams",
+  "score": 5,
+  "cost": 0.006034799999999999,
+  "expected": "",
+  "tokens": {
+    "input": 14,
+    "output": 2511
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "code_generation",
+  "case": 6,
+  "response": "```python\n    counts = {}\n    for num in numbers:\n        counts[num] = counts.get(num, 0) + 1\n    return [num for num in numbers if counts[num] == 1]\n```",
+  "score": 5,
+  "cost": 1.122e-05,
+  "expected": "",
+  "tokens": {
+    "input": 133,
+    "output": 54
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

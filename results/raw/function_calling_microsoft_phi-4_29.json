@@ -1,0 +1,16 @@
+{
+  "model": "microsoft/phi-4",
+  "task": "function_calling",
+  "case": 29,
+  "response": "```json\n{\n  \"name\": \"ocr_document\",\n  \"arguments\": {\n    \"path\": \"uploads/contract.pdf\"\n  }\n}\n```",
+  "score": 5,
+  "cost": 8.645e-06,
+  "expected": "",
+  "tokens": {
+    "input": 101,
+    "output": 32
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

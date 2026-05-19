@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.5",
+  "task": "test_generation_v2",
+  "case": 22,
+  "response": "```python\n# test_group_by.py\nimport pytest\n\nfrom your_module import group_by  # replace \"your_module\" with the actual module name\n\n\ndef test_group_by_happy_path():\n    items = [\"apple\", \"apricot\", \"banana\", \"blueberry\", \"cherry\"]\n\n    result = group_by(items, key_fn=lambda x: x[0])\n\n    assert result == {\n        \"a\": [\"apple\", \"apricot\"],\n        \"b\": [\"banana\", \"blueberry\"],\n        \"c\": [\"cherry\"],\n    }\n\n\ndef test_group_by_preserves_item_order_within_groups():\n    items = [1, 3, 2, 5, 4, 6]\n\n    result = group_by(items, key_fn=lambda x: x % 2)\n\n    assert result == {\n        1: [1, 3, 5],\n        0: [2, 4, 6],\n    }\n\n\ndef test_group_by_empty_list_returns_empty_dict():\n    assert group_by([], key_fn=lambda x: x) == {}\n\n\ndef test_group_by_all_items_same_group():\n    items = [\"a\", \"b\", \"c\"]\n\n    result = group_by(items, key_fn=lambda _: \"same\")\n\n    assert result == {\n        \"same\": [\"a\", \"b\", \"c\"],\n    }\n\n\ndef test_group_by_each_item_own_group():\n    items = [1, 2, 3]\n\n    result = group_by(items, key_fn=lambda x: x)\n\n    assert result == {\n        1: [1],\n        2: [2],\n        3: [3],\n    }\n\n\ndef test_group_by_with_none_as_key():\n    items = [\"a\", \"b\"]\n\n    result = group_by(items, key_fn=lambda _: None)\n\n    assert result == {\n        None: [\"a\", \"b\"],\n    }\n\n\ndef test_group_by_with_tuple_keys():\n    items = [\n        {\"name\": \"Alice\", \"role\": \"admin\", \"active\": True},\n        {\"name\": \"Bob\", \"role\": \"admin\", \"active\": False},\n        {\"name\": \"Carol\", \"role\": \"user\", \"active\": True},\n    ]\n\n    result = group_by(items, key_fn=lambda x: (x[\"role\"], x[\"active\"]))\n\n    assert result == {\n        (\"admin\", True): [{\"name\": \"Alice\", \"role\": \"admin\", \"active\": True}],\n        (\"admin\", False): [{\"name\": \"Bob\", \"role\": \"admin\", \"active\": False}],\n        (\"user\", True): [{\"name\": \"Carol\", \"role\": \"user\", \"active\": True}],\n    }\n\n\ndef test_group_by_key_function_called_once_per_item():\n    items = [1, 2, 3]\n    calls = []\n\n    def key_fn(item):\n        calls.append(item)\n        return item % 2\n\n    group_by(items, key_fn)\n\n    assert calls == [1, 2, 3]\n\n\ndef test_group_by_raises_when_key_function_raises():\n    items = [1, 2, 0, 3]\n\n    def key_fn(item):\n        if item == 0:\n            raise ValueError(\"zero is not allowed\")\n        return 10 / item\n\n    with pytest.raises(ValueError, match=\"zero is not allowed\"):\n        group_by(items, key_fn)\n\n\ndef test_group_by_raises_when_key_is_unhashable():\n    items = [1, 2, 3]\n\n    with pytest.raises(TypeError):\n        group_by(items, key_fn=lambda x: [x])\n\n\ndef test_group_by_raises_when_key_fn_is_not_callable():\n    items = [1, 2, 3]\n\n    with pytest.raises(TypeError):\n        group_by(items, key_fn=None)\n\n\ndef test_group_by_raises_when_items_is_none():\n    with pytest.raises(TypeError):\n        group_by(None, key_fn=lambda x: x)\n```",
+  "score": 4,
+  "cost": 0.012972,
+  "expected": "",
+  "tokens": {
+    "input": 76,
+    "output": 1062
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

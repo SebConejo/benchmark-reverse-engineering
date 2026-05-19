@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 31,
+  "response": "**Step\u2011by\u2011step reasoning**\n\n1. Let the number of boys be \\(B\\).\n   - We are told the classroom has \\(30\\) boys, so \\(B = 30\\).\n\n2. The number of girls is \u201c3 times as many as they do boys\u201d.\n   - Girls \\(= 3 \\times B = 3 \\times 30 = 90\\).\n\n3. The number of non\u2011gendered children is \u201c\\(1/10\\) as many as they do boys\u201d.\n   - Non\u2011gendered children \\(= \\frac{1}{10} \\times B = \\frac{1}{10} \\times 30 = 3\\).\n\n4. Total children = boys + girls + non\u2011gendered children  \n   \\[\n   \\text{Total} = B + (\\text{girls}) + (\\text{non\u2011gendered}) = 30 + 90 + 3 = 123.\n   \\]\n\n**Final answer**\n\nANSWER: 123",
+  "score": 2,
+  "cost": 0.0027907,
+  "expected": "123",
+  "tokens": {
+    "input": 121,
+    "output": 604
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

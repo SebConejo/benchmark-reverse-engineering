@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "test_generation_v2",
+  "case": 18,
+  "response": "```python\n# tests/test_title_case.py\nimport pytest\n\nfrom your_module import title_case  # Replace \"your_module\" with the actual module name\n\n\n@pytest.mark.parametrize(\n    (\"s\", \"expected\"),\n    [\n        (\"hello world\", \"Hello World\"),\n        (\"hello\", \"Hello\"),\n        (\"hELLO wORLD\", \"Hello World\"),\n        (\"already Title Case\", \"Already Title Case\"),\n        (\"hello, world!\", \"Hello, World!\"),\n        (\"foo-bar baz_qux\", \"Foo-bar Baz_qux\"),\n        (\"o'NEILL is HERE\", \"O'neill Is Here\"),\n        (\"123ABC abc123\", \"123abc Abc123\"),\n    ],\n)\ndef test_title_case_happy_path(s, expected):\n    assert title_case(s) == expected\n\n\n@pytest.mark.parametrize(\n    (\"s\", \"expected\"),\n    [\n        (\"\", \"\"),\n        (\"   \", \"\"),\n        (\"\\t\\n\\r\", \"\"),\n        (\"  hello   world  \", \"Hello World\"),\n        (\"hello\\tworld\\npython\", \"Hello World Python\"),\n        (\"one\\r\\ntwo\\vthree\\ffour\", \"One Two Three Four\"),\n    ],\n)\ndef test_title_case_edge_cases(s, expected):\n    assert title_case(s) == expected\n\n\n@pytest.mark.parametrize(\"bad_input\", [None, 123, 3.14, [], {}, object()])\ndef test_title_case_invalid_inputs_without_split_raise_attribute_error(bad_input):\n    with pytest.raises(AttributeError, match=\"split\"):\n        title_case(bad_input)  # type: ignore[arg-type]\n\n\ndef test_title_case_bytes_input_raises_type_error():\n    with pytest.raises(TypeError):\n        title_case(b\"hello world\")  # type: ignore[arg-type]\n```\n\nThese tests reflect the current implementation, including the fact that it collapses whitespace via `split()` and lowercases the rest of each word via `capitalize()`.",
+  "score": 5,
+  "cost": 0.291885,
+  "expected": "",
+  "tokens": {
+    "input": 59,
+    "output": 3880
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

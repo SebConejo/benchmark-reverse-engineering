@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen3-coder",
+  "task": "instruction_following",
+  "case": 2,
+  "response": "Here's a haiku about programming:\n\nCode flows like water,\nSilicon dreams take their shape\u2014\nDebugging at dawn.",
+  "score": 5,
+  "cost": 2.618e-05,
+  "expected": "",
+  "tokens": {
+    "input": 15,
+    "output": 26
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

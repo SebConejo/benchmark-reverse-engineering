@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "email_summary_v2",
+  "case": 24,
+  "response": "Design System v3 is ready for adoption, with new dark mode color tokens, a revised 4px base spacing scale, updated Button and Modal components, and a migration tool available. The team is recommended to roll out the system team-by-team, starting with the Settings page.",
+  "score": 5,
+  "cost": 8.969999999999998e-05,
+  "expected": "",
+  "tokens": {
+    "input": 164,
+    "output": 258
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.5",
+  "task": "test_generation_v2",
+  "case": 35,
+  "response": "```python\n# test_lru_cache.py\nimport pytest\n\n# Replace \"your_module\" with the module where lru_cache is defined.\nfrom your_module import lru_cache\n\n\ndef test_get_missing_key_returns_minus_one():\n    get, put = lru_cache(2)\n\n    assert get(\"missing\") == -1\n\n\ndef test_put_and_get_happy_path():\n    get, put = lru_cache(2)\n\n    put(\"a\", 1)\n    put(\"b\", 2)\n\n    assert get(\"a\") == 1\n    assert get(\"b\") == 2\n\n\ndef test_evicts_least_recently_used_item_when_capacity_exceeded():\n    get, put = lru_cache(2)\n\n    put(\"a\", 1)\n    put(\"b\", 2)\n    put(\"c\", 3)\n\n    assert get(\"a\") == -1\n    assert get(\"b\") == 2\n    assert get(\"c\") == 3\n\n\ndef test_get_updates_recently_used_order():\n    get, put = lru_cache(2)\n\n    put(\"a\", 1)\n    put(\"b\", 2)\n\n    assert get(\"a\") == 1\n\n    put(\"c\", 3)\n\n    assert get(\"a\") == 1\n    assert get(\"b\") == -1\n    assert get(\"c\") == 3\n\n\ndef test_put_existing_key_updates_value_and_recently_used_order():\n    get, put = lru_cache(2)\n\n    put(\"a\", 1)\n    put(\"b\", 2)\n    put(\"a\", 10)\n    put(\"c\", 3)\n\n    assert get(\"a\") == 10\n    assert get(\"b\") == -1\n    assert get(\"c\") == 3\n\n\ndef test_capacity_one_only_keeps_most_recent_item():\n    get, put = lru_cache(1)\n\n    put(\"a\", 1)\n    assert get(\"a\") == 1\n\n    put(\"b\", 2)\n\n    assert get(\"a\") == -1\n    assert get(\"b\") == 2\n\n\ndef test_capacity_zero_does_not_store_items():\n    get, put = lru_cache(0)\n\n    put(\"a\", 1)\n\n    assert get(\"a\") == -1\n\n\ndef test_negative_capacity_does_not_store_items():\n    get, put = lru_cache(-1)\n\n    put(\"a\", 1)\n    put(\"b\", 2)\n\n    assert get(\"a\") == -1\n    assert get(\"b\") == -1\n\n\ndef test_independent_cache_instances_do_not_share_state():\n    get1, put1 = lru_cache(2)\n    get2, put2 = lru_cache(2)\n\n    put1(\"a\", 1)\n    put2(\"a\", 100)\n\n    assert get1(\"a\") == 1\n    assert get2(\"a\") == 100\n\n\ndef test_supports_none_as_key_and_value():\n    get, put = lru_cache(2)\n\n    put(None, None)\n\n    assert get(None) is None\n\n\ndef test_supports_minus_one_as_stored_value():\n    get, put = lru_cache(2)\n\n    put(\"a\", -1)\n\n    assert get(\"a\") == -1\n\n\ndef test_get_with_unhashable_key_raises_type_error():\n    get, put = lru_cache(2)\n\n    with pytest.raises(TypeError):\n        get([\"unhashable\"])\n\n\ndef test_put_with_unhashable_key_raises_type_error():\n    get, put = lru_cache(2)\n\n    with pytest.raises(TypeError):\n        put([\"unhashable\"], \"value\")\n\n\n@pytest.mark.parametrize(\"invalid_capacity\", [None, \"2\", object()])\ndef test_invalid_capacity_type_raises_type_error_on_put(invalid_capacity):\n    get, put = lru_cache(invalid_capacity)\n\n    with pytest.raises(TypeError):\n        put(\"a\", 1)\n```",
+  "score": 5,
+  "cost": 0.016593,
+  "expected": "",
+  "tokens": {
+    "input": 131,
+    "output": 1350
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

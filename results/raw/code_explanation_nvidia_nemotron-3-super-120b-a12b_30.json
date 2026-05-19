@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "code_explanation",
+  "case": 30,
+  "response": "The code implements a Bloom filter: it stores a bit array of length\u202f`size` and, for each item, computes `num_hashes` independent hash values (by hashing the item concatenated with an index) to set or check bits. Adding an item sets all those bits to\u202f`True`; testing membership returns\u202f`True` only if every corresponding bit is set, giving a probabilistic set\u2011membership test with possible false positives but no false negatives.",
+  "score": 5,
+  "cost": 2.259e-05,
+  "expected": "",
+  "tokens": {
+    "input": 155,
+    "output": 96
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

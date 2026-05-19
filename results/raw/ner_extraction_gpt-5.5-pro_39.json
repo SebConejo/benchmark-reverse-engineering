@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "ner_extraction",
+  "case": 39,
+  "response": "{\"persons\":[\"Dario Amodei\"],\"organizations\":[\"Anthropic\",\"Aspen Ideas Festival\"],\"locations\":[\"Colorado\"]}",
+  "score": 5,
+  "cost": 0.019995,
+  "expected": "",
+  "tokens": {
+    "input": 78,
+    "output": 251
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

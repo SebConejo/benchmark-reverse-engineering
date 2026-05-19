@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen3-coder",
+  "task": "rag_qa",
+  "case": 42,
+  "response": "Based on the provided context, the Moselle is identified as contributing an average discharge of more than 300 m\u00b3/s (11,000 cu ft/s), which is specifically quantified among the mentioned tributaries. While other tributaries like the Neckar and Main are mentioned, their contributions are not quantified in the text. Therefore, based on the available data in the context, the Moselle contributes the most among the tributaries mentioned.\n\nAnswer: The Moselle contributes the most, with an average discharge of more than 300 m\u00b3/s.",
+  "score": 5,
+  "cost": 0.00015664,
+  "expected": "Moselle",
+  "tokens": {
+    "input": 224,
+    "output": 122
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

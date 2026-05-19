@@ -1,0 +1,632 @@
+# TaskBench Methodology
+
+Last updated: 2026-05-12
+
+This document records every methodological decision made during the TaskBench benchmark.
+It serves three purposes: (1) reproducibility for the arXiv paper, (2) continuity
+across work sessions so the methodology stays consistent even with different operators,
+and (3) answering "why" questions about any decision made during the project. If you
+are a future session agent, read this document to answer methodology questions.
+
+## 1. Objective
+
+Produce a cost-quality Pareto frontier for LLM production tasks. For each (model, task)
+pair, measure quality and cost per query. The paper answers: "For task X, which model
+gives the best cost-to-quality ratio?"
+
+## 1b. Design Rationale (the "why" behind every choice)
+
+This section answers the questions a reviewer or collaborator would ask. It captures
+the reasoning that led to each decision, not just the decision itself.
+
+### Why this benchmark exists
+
+No published benchmark systematically answers "which model is cheapest for which
+production task." Existing benchmarks measure general capability (MMLU, LMSYS Arena),
+router quality (RouterArena), or infrastructure efficiency (CEBench). They don't produce
+a practitioner-facing matrix of "cheapest model per task at acceptable quality." Every
+developer using LLM APIs faces this decision daily. We wanted to give them data instead
+of opinions.
+
+### Why score on 1-5 and not 1-100 or 1-10
+
+Three reasons:
+1. **LLM-judge reliability**: When asked to score on a 100-point scale, LLMs cluster
+   around round numbers (70, 80, 90) making the extra precision illusory. A 1-5 scale
+   with clear qualitative anchors (1=fail, 2=poor, 3=acceptable, 4=good, 5=perfect)
+   produces more consistent inter-rater agreement.
+2. **Alignment with the question we're answering**: We don't need to rank model A at
+   87.3 vs model B at 87.1. We need to know if a $0.15/M model is "good enough" (>=4/5)
+   compared to a $15/M model. A coarse scale serves this better.
+3. **Precedent**: RouterArena, LMSYS, and the Cost-Aware Model Selection paper all
+   use small ordinal scales for LLM-judged evaluations.
+
+We validate the 1-5 scale against native metrics (accuracy, F1, exact match) on
+tasks where both are available. The correlation confirms the scale works.
+
+### Why these specific models
+
+Model selection was driven by three constraints:
+1. **API availability**: We included every model we could actually call. This meant
+   models accessible via Anthropic, OpenAI, Google, Mistral, MiniMax, Moonshot, and
+   OpenRouter APIs. We didn't cherry-pick models to tell a particular story.
+2. **Price tier coverage**: We deliberately ensured at least 2 models per price tier
+   (Premium >$5, Standard $1-5, Economy $0.10-1, Micro <$0.10) to test whether
+   price predicts quality.
+3. **Provider diversity**: The benchmark covers 7+ providers and 4+ model families
+   (GPT, Claude, Gemini, Mistral, DeepSeek, Llama, Qwen, Kimi, MiniMax, ByteDance
+   Seed, Grok). This avoids the bias of benchmarking only OpenAI vs Anthropic.
+
+Models that are missing (e.g., Cohere Command-R, AI21 Jamba) are missing because we
+didn't have API access or ran out of time, not because of a selection bias.
+
+### Why these specific tasks
+
+The 8 production tasks (with 50 cases each) were chosen to cover the most common LLM
+use cases in production:
+
+| Task | Why included |
+|------|-------------|
+| Sentiment (SST-2) | Simplest classification. Baseline task. If a model fails here, something is wrong. |
+| Intent (CLINC-150) | 150-class classification. Tests instruction following at scale. |
+| Reasoning (GSM8K) | Math word problems. Tests whether expensive reasoning models justify their cost. |
+| NER extraction | Structured output from unstructured text. Common in data pipelines. |
+| Translation (OPUS-100) | Language generation quality. Tests multilingual capability. |
+| SQL generation (Spider) | Code generation for non-code tasks. Common in analytics tools. |
+| Content moderation (ToxiGen) | Safety classification with adversarial inputs. Tests robustness. |
+| Function calling | Tool use / structured API calls. Core capability for AI agents. |
+
+*This was the initial selection. The benchmark grew to 21 v2 tasks during execution. See section 5 for the complete list.*
+
+Tasks we didn't include at 50 cases yet (code review, test generation, email summary,
+JSON transform, extraction hard) are available at 5 cases from the v1 exploratory run.
+They can be scaled up in a future iteration.
+
+### Why exact match for classification instead of LLM-judge
+
+For sentiment, intent, and moderation: the "correct" answer is a single label from a
+fixed set. Using an LLM judge to evaluate "is positive the right answer for this
+positive text" adds cost and noise without improving accuracy. Exact match is faster,
+cheaper, and deterministic.
+
+The challenge with exact match is reasoning models that wrap answers in explanations.
+We solved this with `strip_thinking()` and `effective_max_tokens()` rather than
+switching to LLM-judge.
+
+### Why gpt-4o-mini as the judge and not a stronger model
+
+Cost. At $0.15/M input tokens, gpt-4o-mini costs ~$0.0001 per judge call. With ~4000+
+judge calls across all tasks, a stronger judge (GPT-4o at $2.50/M) would cost 16x more
+for marginal quality improvement. The dual-metric validation on 4 tasks shows gpt-4o-mini
+judgments correlate well with native metrics.
+
+Limitation: gpt-4o-mini may have a slight bias toward GPT-family output style. We
+document this in the paper.
+
+### Why 50 cases per task and not 100 or 500
+
+Statistical power vs. cost tradeoff. With 50 cases:
+- 95% confidence interval is approximately +/-0.2 on the 1-5 scale
+- This is sufficient to distinguish clusters (economy models at 4.5 vs premium at 4.7)
+  but not individual model differences within 0.1 points
+- Cost per task is ~$1-2 across 20 models (affordable)
+
+With 100 cases, CI drops to +/-0.14 (diminishing returns). With 500 cases, the cost
+would multiply 10x without changing the structural findings.
+
+### Why temperature=0
+
+Reproducibility. With temperature=0, the same prompt produces the same output. This
+means our results are deterministic and reproducible without multiple runs.
+
+Exception: reasoning models that don't support temperature=0 (DeepSeek-R1, Kimi-K2.6,
+Claude Opus 4.7). These models have inherent run-to-run variance. We document this as
+a limitation rather than running 3x repetitions (which would triple cost for a subset
+of models).
+
+### Why batch execution and not all models in parallel
+
+Safety and debuggability:
+1. **Budget control**: Sequential execution lets us check spend after each model and
+   stop before hitting the cap.
+2. **Error isolation**: When a model fails (wrong endpoint, rate limit, auth error),
+   we can diagnose and fix before running the remaining 19 models.
+3. **Resume**: The resume logic checks CSV state at startup. Parallel writes to the
+   same CSV would cause corruption.
+
+### Why we switched from Azure to direct APIs
+
+Azure AI was our initial provider for 10+ models (DeepSeek, Grok, Kimi, Llama, Mistral,
+GPT-5.x, o4-mini). It went down mid-benchmark (HTTP 500 on all models) and didn't come
+back. Rather than wait, we added direct API integrations for each provider:
+- Mistral: api.mistral.ai (free tier, rate-limited on large models)
+- Moonshot/Kimi: api.moonshot.ai (required endpoint discovery, temperature quirks)
+- OpenRouter: openrouter.ai (fallback for ByteDance Seed, Qwen, DeepSeek, Grok)
+
+This made the benchmark more resilient but also more complex (7 provider-specific callers
+instead of 1 Azure caller). The tradeoff was worth it for coverage.
+
+## 2. Tooling Decisions
+
+### Why not promptfoo
+
+We started with [promptfoo](https://github.com/promptfoo/promptfoo) (open-source LLM
+eval framework) but switched to a custom Python runner (`scripts/run_full_benchmark.py`,
+then `scripts/run_batch.py`) after discovering that:
+
+- promptfoo has no native support for Azure AI, Gemini, MiniMax, Moonshot, or OpenRouter endpoints
+- promptfoo cannot strip `<think>` tags from reasoning model output before evaluation
+- promptfoo has no built-in budget tracking or resume-after-crash logic
+- We needed dual metrics (LLM-judge score + native dataset accuracy) which promptfoo doesn't support natively
+
+The custom runner handles all of this in ~500 lines of Python with zero dependencies
+beyond `requests`.
+
+### Runner architecture
+
+Two runners exist:
+- `run_full_benchmark.py` (v1): Tasks hardcoded in the script. Used for the initial
+  exploratory run (14 tasks, 5-10 cases each). Kept for reference.
+- `run_batch.py` (v2): Tasks loaded from JSONL dataset files. Supports per-task
+  execution, resume, and provider auto-detection. Used for all production runs.
+
+### Why custom API callers instead of LiteLLM
+
+Each provider has quirks that a unified library obscures:
+- Anthropic: `temperature` deprecated on reasoning models (Opus 4.7), needs separate handling
+- Gemini: `max_completion_tokens` instead of `max_tokens`, thinking tokens count against the budget
+- MiniMax: `<think>` tags in visible content
+- Moonshot/Kimi: `temperature` must be exactly 1 (not 0) for kimi-k2.6
+- OpenRouter: model IDs contain slashes that break filesystem paths
+
+Having explicit per-provider callers makes these quirks visible and debuggable.
+
+### Tools and dependencies
+
+**What we built ourselves:**
+- `run_batch.py` (~500 lines Python): The benchmark runner. Handles multi-provider
+  API calls, budget tracking, resume, reasoning model quirks, and dual metrics.
+  Zero external dependencies beyond Python stdlib + `requests`.
+- `analyze_costs.py` (~300 lines Python): Analysis and visualization. Generates Pareto
+  frontiers, heatmaps, cost-efficiency scatter plots, and the analysis report.
+- All prompt templates and evaluation rubrics (embedded in the runner).
+- The NER and function calling datasets (hand-curated, 50 cases each).
+
+**Open-source tools and libraries used:**
+- [Python 3.14](https://python.org) - Runtime
+- [requests](https://pypi.org/project/requests/) - HTTP client for API calls (only external dependency of the runner)
+- [matplotlib](https://matplotlib.org) + [numpy](https://numpy.org) - Chart generation for Pareto plots and heatmaps
+- [HuggingFace Datasets](https://github.com/huggingface/datasets) - Download and sample standard datasets (SST-2, CLINC-150, GSM8K, ToxiGen, Spider, OPUS-100). Used only for data preparation, not at runtime.
+
+**Open-source datasets used:**
+- [SST-2](https://huggingface.co/datasets/nyu-mll/glue) (Stanford Sentiment Treebank, part of GLUE) - MIT license
+- [CLINC-150](https://huggingface.co/datasets/clinc_oos) (150-intent classification) - CC-BY license
+- [GSM8K](https://huggingface.co/datasets/openai/gsm8k) (Grade School Math) - MIT license
+- [ToxiGen](https://huggingface.co/datasets/toxigen/toxigen-data) (Adversarial toxicity) - Apache 2.0 license
+- [Spider](https://huggingface.co/datasets/xlangai/spider) (SQL generation) - CC-BY-SA license
+- [OPUS-100](https://huggingface.co/datasets/Helsinki-NLP/opus-100) (EN-FR translation) - CC-BY license
+
+**Tools we evaluated but did not use:**
+- [promptfoo](https://github.com/promptfoo/promptfoo) - Evaluated as the initial runner. Abandoned due to lack of multi-provider support and reasoning model handling (see above).
+- [LiteLLM](https://github.com/BerriAI/litellm) - Evaluated as a unified API client. Not used because it abstracts away provider-specific quirks that we needed to handle explicitly.
+- [sacrebleu](https://github.com/mjpost/sacrebleu) - Considered for BLEU scoring on translation. Not yet integrated (LLM-judge used instead; sacrebleu planned for the native metric column).
+
+**Infrastructure:**
+- All API calls made from a single MacBook (macOS, Apple Silicon). No cloud compute.
+- API keys managed via a local `.env` file (gitignored). No secrets in the repository.
+- Results stored as flat files (CSV + JSON) in the git repository. No database.
+- Git + GitHub for version control and backup (branch `taskbench-data`).
+
+## 3. Evaluation Methodology
+
+### Scoring: 1-5 LLM-judge scale
+
+For generative tasks (email summary, SQL generation, code review, translation,
+entity extraction, function calling, test generation, reasoning):
+
+- **Judge model**: gpt-4o-mini (chosen for cost, ~$0.0001/call)
+- **Scale**: 1-5 integer (5=perfect, 1=fail)
+- **Protocol**: Single-turn judge call with task-specific rubric
+- **Temperature**: 0 (deterministic)
+
+Rubric template (varies per task):
+```
+Rate this [output type] on a 1-5 scale.
+5=[criteria for perfect]. 4=[good with minor issues].
+3=[acceptable]. 2=[poor]. 1=[fail].
+Respond with ONLY a number 1-5.
+```
+
+### Scoring: exact match
+
+For classification tasks (sentiment, intent, content moderation):
+- Score 5 if expected label appears in model response (case-insensitive)
+- Score 0 otherwise
+- Reasoning model output is pre-processed with `strip_thinking()` to remove
+  `<think>...</think>` tags before matching
+
+### Native metrics (dual scoring)
+
+For tasks with standard datasets, we compute both the LLM-judge score AND the
+dataset's native metric:
+
+| Task | Dataset | Native Metric |
+|------|---------|---------------|
+| sentiment_sst2 | SST-2 validation | Accuracy (% exact match) |
+| intent_clinc150 | CLINC-150 test | Accuracy (% exact match) |
+| reasoning_gsm8k | GSM8K test | Exact answer match (extract number after "ANSWER:") |
+| moderation_toxigen | ToxiGen test | Accuracy (% exact match) |
+
+This enables us to (a) validate that LLM-judge scores correlate with standard metrics,
+and (b) compare our results to published benchmarks.
+
+### Reasoning model handling
+
+Models identified as "reasoning models" (those that consume thinking tokens internally):
+```
+DeepSeek-R1, o4-mini, grok-4-20-reasoning, gpt-5.1-chat,
+Kimi-K2.6, kimi-k2.6, gemini-2.5-pro, MiniMax-M2.7,
+claude-opus-4-7, Phi-4-reasoning, qwen3-32b,
+deepseek/deepseek-v4-pro, nvidia/nemotron-3-super-120b-a12b
+```
+
+Special handling:
+1. **Token budget**: `effective_max_tokens()` bumps requested max to at least 8192
+   (reasoning models need headroom for invisible thinking tokens; originally 2000,
+   increased to 8192 after discovering it was insufficient for complex generative tasks)
+2. **Temperature**: Omitted for models that reject `temperature=0`
+3. **Think tag stripping**: `strip_thinking()` removes `<think>...</think>` from
+   visible output before evaluation
+4. **Gemini 2.5 Pro**: Uses `max_completion_tokens: 8192` because thinking tokens
+   count against this limit (500 tokens of thinking = 0 visible output if limit is 500)
+
+## 4. Cost Measurement
+
+Cost per query = `(input_tokens * input_price + output_tokens * output_price) / 1,000,000`
+
+Prices are hardcoded per model in the runner at benchmark time. We record the exact
+price used in every CSV row (`input_price_per_m`, `output_price_per_m`) for
+reproducibility.
+
+**Judge costs**: Each LLM-judge call adds ~$0.0001 to spend tracking. Judge calls are
+NOT included in per-model cost calculations (they're infrastructure cost, not model cost).
+
+**Budget**: Hard cap at $200 in the runner (total cap $250, $50 margin). Spend tracker
+at `results/spend_tracker.json` persists across runs.
+
+## 5. Dataset Selection
+
+### Standard datasets (7 tasks)
+
+| Task | Dataset | Split | Sample Size | Sampling |
+|------|---------|-------|-------------|----------|
+| sentiment_sst2 | SST-2 (GLUE) | validation | 50 | 25 positive + 25 negative, seed=42 |
+| intent_clinc150 | CLINC-150 (OOS) | test | 50 | 1 sample from 50 random intents, seed=42 |
+| reasoning_gsm8k | GSM8K | test | 50 | Random 50, seed=42 |
+| moderation_toxigen | ToxiGen | test | 50 | 25 toxic (score>=4) + 25 safe (score<=2), seed=42 |
+| sql_spider | Spider | validation | 50 | Random 50 from len>20 and query<300, seed=42 |
+| translation_enfr | OPUS-100 EN-FR | test | 50 | Random 50 from len 30-400, seed=42 |
+| ner_extraction | Hand-curated | - | 50 | 50 news-style sentences with known entities |
+
+### Hand-curated datasets (1 task)
+
+| Task | Cases | Method |
+|------|-------|--------|
+| function_calling | 50 | Hand-written tool-use scenarios covering dev ops, productivity, finance, smart home |
+
+### V1 datasets (5 tasks, 5-10 cases each, not yet scaled to 50)
+
+| Task | Cases | Status |
+|------|-------|--------|
+| test_generation | 5 | Needs HumanEval sampling or synthetic generation |
+| email_summary | 5 | Needs synthetic generation from Enron-like themes |
+| json_transform | 5 | Needs synthetic generation |
+| code_review | 5 | Needs PR diffs from OSS repos |
+| extraction_hard | 5 | Needs synthetic semi-structured documents |
+
+### Additional v2 datasets (added during benchmark expansion)
+
+These 14 tasks were scaled to 50 cases each during benchmark execution, bringing the total to 21 v2 tasks:
+
+| Task | Source | Cases |
+|------|--------|-------|
+| code_generation | HumanEval | 50 |
+| code_explanation | Hand-curated | 48 |
+| rag_qa | SQuAD v2 | 50 |
+| instruction_following | Hand-curated | 50 |
+| structured_output | Hand-curated | 50 |
+| json_transform_v2 | Hand-curated | 50 |
+| long_summarization | Hand-curated | 50 |
+| data_to_text | Hand-curated | 50 |
+| multistep_reasoning | ARC-Challenge | 50 |
+| extraction_hard_v2 | Hand-curated | 50 |
+| test_generation_v2 | Hand-curated | 50 |
+| code_review_v2 | Hand-curated | 50 |
+| email_summary_v2 | Hand-curated | 50 |
+| function_calling | Hand-curated | 50 |
+
+## 6. Model Selection
+
+### Provider integration
+
+| API Provider | Endpoint | Models |
+|--------------|----------|--------|
+| Anthropic | api.anthropic.com | Opus 4.7, Sonnet 4, Haiku 4.5 |
+| OpenAI | api.openai.com (/v1 + /v1/responses for Pro models) | GPT-5.x, GPT-4o, GPT-4o-mini |
+| Google | generativelanguage.googleapis.com | Gemini 2.5 Pro/Flash, 2.0 Flash |
+| Mistral | api.mistral.ai | Large, Medium, Small, Ministral-3B |
+| MiniMax | api.minimaxi.chat | MiniMax-M2.7 |
+| Moonshot | api.moonshot.ai | Kimi-K2.6 |
+| BytePlus | ark.ap-southeast.bytepluses.com | Seed 2.0 Pro, Seed 2.0 Code |
+| OpenRouter | openrouter.ai | ByteDance Seed, Qwen, DeepSeek, xAI Grok, Meta Llama, NVIDIA Nemotron, Microsoft Phi, Google Gemma |
+| Azure | sebas-mo9p8fr3-eastus2.services.ai.azure.com | Legacy doublons (8 models at 2/21 tasks, not primary) |
+
+### Price tiers
+
+| Tier | Input price/M tokens | Models |
+|------|---------------------|--------|
+| Premium | >$5 | Claude Opus 4.7 ($15) |
+| Standard | $1-5 | GPT-5.1, GPT-4o, Sonnet 4, Gemini 2.5 Pro, Grok-4, MiniMax M2.7, Mistral Large, Qwen Max |
+| Economy | $0.10-1 | GPT-4o-mini, Haiku 4.5, Gemini Flash, Mistral Medium/Small, DeepSeek, Kimi, Llama, ByteDance Seed, Qwen Flash |
+| Micro | <$0.10 | Ministral-3B ($0.04), Seed 1.6 Flash ($0.075) |
+
+## 7. Execution Protocol
+
+### Batch execution
+
+Tasks run sequentially via `run_batch.py --task <task_id> --skip-azure`.
+Each task processes all available models before moving to the next.
+
+### Resume logic
+
+The runner loads existing (task, model) pairs from `benchmark_results.csv` at startup.
+A pair is considered "complete" if it has rows >= number of cases in the dataset.
+Complete pairs are skipped. This enables:
+- Resume after crashes (power outages, process kills)
+- Incremental model addition (add new models, re-run, only new models execute)
+
+### Temperature
+
+`temperature=0` for all models that support it. Models that reject temperature=0
+(reasoning models) use default temperature. This is documented in the paper as a
+limitation: reasoning model outputs are non-deterministic.
+
+### Rate limiting
+
+- 0.5s delay between models (not between cases)
+- OpenRouter and Gemini free tier hit rate limits frequently
+- Mistral free tier limits mistral-large to ~4-8 cases per run
+- Limited retry logic (Mistral has exponential backoff; other providers skip failed cases)
+
+## 8. Data Storage
+
+```
+benchmark/
+  datasets/           # Input data (JSONL, one file per task)
+  results/
+    benchmark_results.csv    # All results, append-only
+    spend_tracker.json       # Cumulative spend
+    raw/                     # Per-case JSON with full response text
+    figures/                 # Generated plots (Pareto, heatmap, etc.)
+    analysis_report.md       # Generated analysis summary
+  scripts/
+    run_batch.py             # V2 runner (production)
+    run_full_benchmark.py    # V1 runner (legacy)
+    analyze_costs.py         # Pareto plots, heatmaps, report generation
+```
+
+### CSV schema
+
+```
+timestamp, task, case_idx, model, provider, input_price_per_m,
+output_price_per_m, input_tokens, output_tokens, cost_usd,
+score, eval_type, response_preview
+```
+
+## 9. Known Limitations
+
+For the complete limitations analysis, see LIMITATIONS.md. Summary below:
+
+1. **LLM-as-judge bias**: GPT-4o-mini as judge may favor GPT-family outputs.
+   Mitigation: dual metrics on 4 tasks show judge/accuracy correlation.
+2. **Judge-accuracy divergence on reasoning**: Opus scores 98% exact answer but
+   3.5/5 from judge on GSM8K. The judge penalizes verbose format, not correctness.
+3. **Small sample sizes**: 50 cases per task. Confidence intervals ~+/-0.2 points
+   at 95% CI. Sufficient for 1+ point gaps, marginal for 0.3-point differences.
+4. **Price snapshot**: Prices recorded at benchmark time (April 2026). Model pricing
+   changes frequently. Structural findings (tier-level) are more durable than
+   model-specific price comparisons.
+5. **Limited retry logic**: Mistral has exponential backoff retry; other providers
+   skip failed cases. Some models have fewer than 50 cases on some tasks.
+6. **Reasoning model non-determinism**: temperature cannot be set to 0 for some
+   reasoning models, introducing run-to-run variance.
+
+## 10. Key Findings (see FINDINGS.md for complete list)
+
+1. **Economy models match premium on most tasks**: GPT-4o-mini ($0.15/M) and
+   Mistral Small ($0.10/M) achieve 90-100% of premium quality for 15-100x less cost.
+2. **Premium models worst on moderation**: Claude Opus (86%) and GPT-4o (86%)
+   score below economy models on ToxiGen adversarial content moderation.
+3. **Reasoning models fail exact-match without preprocessing**: Without `strip_thinking()`
+   and `effective_max_tokens()`, reasoning models score 0% on classification tasks.
+4. **Ministral-3B defies expectations**: At $0.04/M (cheapest model), it scores 94%
+   on GSM8K (matching GPT-4o) and 4.5/5 on function calling.
+5. **Judge/accuracy divergence**: LLM-judge scores and native metrics diverge on
+   reasoning tasks. Report both.
+
+## 11. Reproducibility Checklist
+
+To reproduce the exact benchmark:
+1. Use `random.seed(42)` for all dataset sampling
+2. Use `temperature=0` for all models that support it
+3. Use the exact model IDs listed in `run_batch.py` MODELS dict
+4. Use the exact prompt templates in TASK_DEFS
+5. Use gpt-4o-mini as the LLM judge with the exact rubric prompts
+6. Run with `--skip-azure` if Azure is unavailable (Azure models are supplementary)
+
+## 11b. Methodology Changes Log
+
+Changes made during the benchmark execution:
+
+1. **Judge max_tokens: 5 → 20** (2026-04-30). The judge was truncating its own
+   response on long evaluations. Increasing to 20 fixed extraction_hard_v2 scoring
+   (0/5 → 4.3-4.5/5 for all models).
+
+2. **Judge context window: 500 → 2000 chars** (2026-04-30). The judge was receiving
+   truncated prompts for tasks with long inputs (extraction_hard_v2 schemas).
+
+3. **Added call_openai_responses()** (2026-05-01). GPT-5.5 Pro and GPT-5 Pro use
+   OpenAI's /v1/responses API instead of /chat/completions. New caller normalizes
+   output to the same format for consistent scoring.
+
+4. **Tier classification principle** (2026-05-01). Models are classified by their
+   actual price and declared capabilities, not assigned to tiers to fill a symmetric
+   grid. Empty cells in the tier grid are informative data about provider strategy,
+   not gaps to fill.
+
+5. **Added --delay flag** (2026-05-01). Configurable delay between model runs for
+   gentle usage of rate-limited providers (Azure).
+
+6. **Cost-per-correct-answer metric** (2026-05-02). For exact-match tasks, "correct"
+   means the model's response contains the expected label. For LLM-judged tasks,
+   "correct" means score >= 4 out of 5. Cost-per-correct = total cost / number correct.
+
+7. **Scale: 55 models, 13 providers** (2026-05-02). Expanded from initial 17 models
+   and 4 providers. Added GPT-5.x family, Claude Sonnet 4.6, Gemini 3.1 Pro, Devstral,
+   Llama 3.2 1B/3B, Qwen-Turbo/3-8B/Max/Plus/Coder, Gemma-4, Phi-4, Nemotron Super,
+   DeepSeek V4 Pro/Flash, Llama-4-Maverick, Grok-4-fast/Code, Seed 2.0 Mini.
+
+8. **BytePlus direct API** (2026-05-07). Added Seed 2.0 Pro (reasoning) and Seed 2.0
+   Code (coding specialist) via BytePlus ARK API at
+   `ark.ap-southeast.bytepluses.com/api/v3`. OpenAI-compatible format. $500 free credits.
+
+9. **Final scale: 56 models (47 complete at ≥40 cases/task, 9 partial), 9 providers** (2026-05-12). 51,617 valid rows (51,705 raw files). $143.81 tracked spend of $250 budget (61,594 API calls). Real OpenAI spend ~$180+ due to reasoning tokens not tracked. *(Previous counts: 51,403/43/$123.01, 50,978/42/$122.37, 50,351/35/$99.29, 50,949/49 initial.)*
+
+10. **Mistral retry with exponential backoff** (2026-05-10). `call_mistral` was silently dropping cases when Mistral returned 429. The error format `{"object": "error", "message": "Rate limit exceeded"}` has no `"error"` key at top level, so the runner's `if "error" in response` check missed it. Fix: check `resp.status_code == 429` and `data.get("object") == "error"`, retry with exponential backoff (5/10/20/40/80s, max 5 retries). Result: mistral-large-latest went from 5/21 to 21/21 in ~50 minutes.
+
+11. **Nemotron added to REASONING_MODELS** (2026-05-11). `nvidia/nemotron-3-super-120b-a12b` consumes reasoning tokens invisibly. With `max_tokens=20` on classification tasks, all 20 tokens were consumed by reasoning, leaving 0 for visible output. Adding to REASONING_MODELS triggered the `effective_max_tokens` boost to 8192, fixing all 3 failed classification tasks.
+
+12. **gpt-5.5-pro price correction** (2026-05-12). Hardcoded input price was $5/M (correct is $15/M), output price was $20/M (correct is $75/M). The wrong prices caused the spend tracker to underestimate gpt-5.5-pro cost by ~9x. Real cost ~$130+ vs $14.61 tracked. Corrected in the runner but historical CSV cost_usd values for gpt-5.5-pro remain underestimated.
+
+## 12. Decisions We Made and Why (FAQ)
+
+This section captures the reasoning behind every major decision, written so a future
+session or collaborator can answer "why did you do X?" without access to the original
+conversation.
+
+### Q: Why not score on 1-100 instead of 1-5?
+
+LLMs are unreliable scorers on fine-grained scales. On 1-100, they cluster around
+round numbers (70, 80, 90) giving fake precision. The 1-5 scale has clear qualitative
+anchors (1=fail, 2=poor, 3=acceptable, 4=good, 5=perfect) that the judge can
+distinguish reliably. Our question is "is $0.15/M good enough vs $15/M?" not "is
+model A 87.3 vs 87.1?" The coarse scale answers our question better.
+
+If rescoring is ever needed: all 50,000+ raw responses are saved in `results/raw/`.
+We can re-score with any scale without re-calling any API. The $98 of API calls is
+a one-time cost, the scoring is free to redo.
+
+### Q: Why GPT-4o-mini as judge and not something stronger?
+
+Cost. ~$0.0001/call vs $0.0016 for GPT-4o. With 14,000+ judge calls that would be
+$22 vs $1.40. The dual metric validation shows GPT-4o-mini judgments correlate with
+native accuracy on the 4 tasks where both are available. Potential bias: may favor
+GPT-family output style. Documented as a limitation.
+
+### Q: Is the judge-accuracy divergence a problem?
+
+No, it is a finding. On GSM8K, Claude Opus 4.7 gets 98% exact answers but 3.5/5 from
+the judge. The judge evaluates "usable quality" (format, concision, clarity) while
+accuracy evaluates "pure correctness." A model that gives the right answer buried in
+1000 words of reasoning is correct but not usable. Both metrics together tell a richer
+story than either alone. The paper reports both.
+
+### Q: Why these specific tasks and not others?
+
+Selection criterion: "tasks that real people connect to LLM APIs and put in production
+today." Not academic benchmarks, not theoretical tasks. Sentiment = classifying
+customer reviews (marketing, support). Intent = chatbot routing. SQL = analytics tools.
+Function calling = AI agents. Content moderation = UGC sites. Translation = i18n.
+Email summary = everyone with an inbox. RAG QA = knowledge bases.
+
+The tasks are cross-functional, not dev-only. Only 6 of 16+ tasks are developer-specific
+(code gen, code review, test gen, code explanation, SQL, function calling). The rest
+serve marketing, ops, support, legal, and general business users.
+
+### Q: What tasks were considered but excluded, and why?
+
+| Excluded | Reason |
+|----------|--------|
+| Paraphrase / rewriting | Too subjective to evaluate automatically |
+| Multi-turn dialogue | Runner only supports single-turn; would need architecture change |
+| Multi-label classification | Already have 3 classification tasks (sentiment, intent, moderation) |
+| Vision tasks (VQA, OCR) | Many models don't support image input; would reduce comparable set from 30 to ~10 |
+| Audio / speech | No models in our set support audio |
+
+### Q: Why 50 cases per task?
+
+Statistical power vs cost. 50 cases gives 95% CI of +/-0.2 on the 1-5 scale. Enough
+to confirm "Economy tier (4.5/5) matches Premium tier (4.7/5)" but not to rank two
+models 0.1 apart. 100 cases would halve the CI to +/-0.14 for double the cost
+(diminishing returns). 500 cases would 10x the cost without changing structural findings.
+
+### Q: Why temperature=0?
+
+Reproducibility. Same prompt, same output, no run-to-run variance. Exception: reasoning
+models that reject temperature=0 (DeepSeek-R1, Kimi-K2.6, Claude Opus 4.7). Their
+outputs are non-deterministic. We document this as a limitation rather than running
+3x repetitions (which would triple cost for a subset of models).
+
+### Q: Why not use promptfoo or LiteLLM?
+
+Promptfoo: no native support for Azure AI, Gemini, MiniMax, Moonshot, or OpenRouter.
+Cannot strip `<think>` tags. No budget tracking. No resume after crash.
+
+LiteLLM: abstracts away provider-specific quirks that we NEED to handle explicitly.
+Gemini needs `max_completion_tokens: 8192` (thinking tokens). Kimi needs no temperature.
+MiniMax embeds `<think>` tags in content. OpenRouter model IDs have slashes.
+
+A custom 500-line Python runner handles all of this with zero dependencies beyond
+`requests`.
+
+### Q: Why did the benchmark switch from Azure to direct APIs?
+
+Azure AI went down (HTTP 500 on all models) mid-benchmark and never recovered during
+the session. Rather than wait, we added direct integrations for each provider. This
+made the benchmark more resilient (7 independent API endpoints vs 1 Azure endpoint)
+but added complexity (7 provider-specific callers).
+
+### Q: Who are the benchmark users? Just developers?
+
+No. The tasks cover business functions beyond development: marketing (sentiment),
+support (intent, RAG QA), international teams (translation), trust & safety
+(moderation), ops/data (structured output, NER), and everyone (email summary,
+instruction following). The paper should frame this as "production LLM tasks across
+business functions."
+
+### Q: Can we rescore everything if we change our mind?
+
+Yes. All raw model responses (the actual text each model returned) are saved as JSON
+files in `results/raw/`. The API call cost ($98) is sunk. Rescoring with a different
+judge, scale, or rubric costs only the judge calls (~$1-2) and can be done in minutes.
+
+## 13. Glossary
+
+- **Data point**: One row in the CSV. One prompt sent to one model, scored once.
+- **Case**: One test example in a task. A specific prompt with (optionally) an expected
+  answer. Each case is tested on every model.
+- **Task**: A category of work (e.g., "sentiment classification"). Has a prompt
+  template, a dataset of cases, and an evaluation method.
+- **V1 / V2**: V1 = exploratory run (5-10 cases, hardcoded). V2 = production run
+  (50 cases from JSONL datasets). Only V2 data goes in the paper.
+- **Lot**: A batch execution of one task across all models. "Lot 7" = running
+  moderation_toxigen on all 20 models.
+- **LLM-judge**: Using GPT-4o-mini to score a model's output on a 1-5 scale.
+- **Native metric**: The standard evaluation metric for a public dataset (accuracy
+  for SST-2, exact match for GSM8K, etc.).
+- **Dual metric**: Reporting both the LLM-judge score and the native metric for the
+  same data point.
+- **Adversarial cases**: Test inputs designed to be tricky (subtle sarcasm, coded
+  language) rather than obvious (ALL CAPS HATE). More discriminative.
+- **Pareto frontier**: The set of models where no other model is both cheaper AND
+  higher quality. The optimal cost-quality tradeoff line.

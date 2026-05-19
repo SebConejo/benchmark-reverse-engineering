@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "email_summary_v2",
+  "case": 9,
+  "response": "A nightly ETL job failed at 3\u202fAM because an upstream Salesforce schema change broke our connector, causing dashboards to display stale data since yesterday. A fix has been deployed, a backfill is now running, and full recovery is expected by 4\u202fPM today.",
+  "score": 5,
+  "cost": 0.0024299,
+  "expected": "",
+  "tokens": {
+    "input": 121,
+    "output": 522
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

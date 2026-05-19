@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-max-preview",
+  "task": "email_summary_v2",
+  "case": 36,
+  "response": "The /api/v2/search endpoint experienced a P99 latency spike from 200ms to 800ms after Thursday\u2019s deployment due to an unindexed full-text search query. The backend team will resolve this by adding a GIN index to the content column and deploying the fix during tonight's maintenance window.",
+  "score": 5,
+  "cost": 0.0062049,
+  "expected": "",
+  "tokens": {
+    "input": 105,
+    "output": 1167
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

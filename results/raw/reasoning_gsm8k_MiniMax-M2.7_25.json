@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 25,
+  "response": "First, determine the size of the loan:\n\n- House value = $250,000  \n- Loan = 40% of $250,000  \n\\[\n\\text{Loan} = 0.40 \\times 250{,}000 = \\$100{,}000\n\\]\n\nNext, find how much of the loan is used to pay off debts:\n\n- Debt payment = 60% of the loan  \n\\[\n\\text{Debt payment} = 0.60 \\times 100{,}000 = \\$60{,}000\n\\]\n\nFinally, subtract the debt payment from the loan amount to get the leftover money:\n\n\\[\n\\text{Leftover} = \\$100{,}000 - \\$60{,}000 = \\$40{,}000\n\\]\n\n**Answer:**  \nANSWER: 40000",
+  "score": 5,
+  "cost": 0.0022682,
+  "expected": "40,000",
+  "tokens": {
+    "input": 134,
+    "output": 482
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

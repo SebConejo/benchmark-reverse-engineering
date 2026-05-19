@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "sql_spider",
+  "case": 9,
+  "response": "SELECT country\nFROM makers\nGROUP BY country\nORDER BY COUNT(*) DESC\nLIMIT 1;",
+  "score": 5,
+  "cost": 0.0002948,
+  "expected": "",
+  "tokens": {
+    "input": 270,
+    "output": 301
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

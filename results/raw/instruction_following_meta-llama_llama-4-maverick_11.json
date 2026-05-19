@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "instruction_following",
+  "case": 11,
+  "response": "Are you ready for a response that is entirely inquisitive?",
+  "score": 4,
+  "cost": 1.11e-05,
+  "expected": "",
+  "tokens": {
+    "input": 18,
+    "output": 14
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

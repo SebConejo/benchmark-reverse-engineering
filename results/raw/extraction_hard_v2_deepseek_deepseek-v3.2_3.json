@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "task": "extraction_hard_v2",
+  "case": 3,
+  "response": "```json\n{\n    \"severity\": \"critical\",\n    \"component\": \"checkout page\",\n    \"summary\": \"Checkout page fails with CORS error and JavaScript exception after payment attempt\",\n    \"steps_to_reproduce\": [\"Add items to cart\", \"Navigate to checkout page\", \"Enter payment card information\", \"Click pay button\"],\n    \"expected_behavior\": \"Payment should process successfully or show appropriate error message\",\n    \"actual_behavior\": \"Spinner appears for 30 seconds followed by white screen with no error message\",\n    \"environment\": {\n        \"os\": \"windows 11\",\n        \"browser\": \"chrome 121\"\n    }\n}\n```",
+  "score": 5,
+  "cost": 0.00019760000000000003,
+  "expected": "",
+  "tokens": {
+    "input": 170,
+    "output": 141
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

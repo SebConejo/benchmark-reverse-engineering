@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "instruction_following",
+  "case": 26,
+  "response": "The water cycle, also known as the hydrologic cycle, describes the continuous movement of water on, above, and below the Earth's surface. It is driven primarily by solar energy, which powers the processes that change water from one state to another and transport it across the planet. This cycle ensures the distribution of fresh water, supports ecosystems, and regulates climate.\n\nEvaporation occurs when heat from the sun turns water from oceans, lakes, and rivers into water vapor that rises into the atmosphere. Plants also contribute through transpiration, releasing water vapor from their leaves. Together, evaporation and transpiration are often termed evapotranspiration and represent the primary way water enters the atmospheric phase of the cycle.\n\nAs water vapor ascends, it cools and condenses into tiny droplets that form clouds. When these droplets combine and grow large enough, they fall back to Earth as precipitation\u2014rain, snow, sleet, or hail. The precipitated water then collects in bodies of water, infiltrates the soil to become groundwater, or flows overland as runoff, eventually returning to oceans and lakes to begin the cycle anew.\n\nThe water cycle is essential for sustaining life, shaping landscapes, and influencing weather patterns. Human activities such as deforestation, urbanization, and greenhouse\u2011gas emissions can alter evaporation rates, precipitation patterns, and water storage,",
+  "score": 5,
+  "cost": 4.7520000000000006e-05,
+  "expected": "",
+  "tokens": {
+    "input": 28,
+    "output": 500
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

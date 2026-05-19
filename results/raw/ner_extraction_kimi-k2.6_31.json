@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "ner_extraction",
+  "case": 31,
+  "response": "{\"persons\": [], \"organizations\": [\"Samsung Electronics\"], \"locations\": [\"South Korea\"]}",
+  "score": 5,
+  "cost": 0.0008466,
+  "expected": "",
+  "tokens": {
+    "input": 71,
+    "output": 335
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 43,
+  "response": "Step 1: Find Martha\u2019s age.  \nMartha is 4 years younger than Mike, and Mike is 24.  \n\\( \\text{Martha} = 24 - 4 = 20 \\) years old.\n\nStep 2: Find Jeff\u2019s age.  \nJeff is 10 years older than Martha.  \n\\( \\text{Jeff} = 20 + 10 = 30 \\) years old.\n\nThus, Jeff is 30 years old.  \n\nANSWER: 30",
+  "score": 5,
+  "cost": 0.0024332000000000004,
+  "expected": "30",
+  "tokens": {
+    "input": 120,
+    "output": 523
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

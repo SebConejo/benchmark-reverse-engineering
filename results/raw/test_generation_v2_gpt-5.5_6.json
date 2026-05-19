@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.5",
+  "task": "test_generation_v2",
+  "case": 6,
+  "response": "```python\n# test_reverse_words.py\nimport pytest\n\n# Replace `your_module` with the module where reverse_words is defined\nfrom your_module import reverse_words\n\n\n@pytest.mark.parametrize(\n    \"input_s, expected\",\n    [\n        (\"hello world\", \"world hello\"),\n        (\"the quick brown fox\", \"fox brown quick the\"),\n        (\"single\", \"single\"),\n        (\"\", \"\"),\n        (\"   \", \"\"),\n        (\"  hello   world  \", \"world hello\"),\n        (\"hello\\tworld\\npython\", \"python world hello\"),\n        (\"hello, world!\", \"world! hello,\"),\n        (\"caf\u00e9 au lait\", \"lait au caf\u00e9\"),\n        (\"123 456 789\", \"789 456 123\"),\n    ],\n)\ndef test_reverse_words(input_s, expected):\n    assert reverse_words(input_s) == expected\n\n\ndef test_reverse_words_normalizes_multiple_spaces():\n    assert reverse_words(\"a    b     c\") == \"c b a\"\n\n\ndef test_reverse_words_mixed_whitespace():\n    assert reverse_words(\"a\\tb\\nc\\rd\") == \"d c b a\"\n\n\ndef test_reverse_words_leading_and_trailing_whitespace_removed():\n    assert reverse_words(\"   hello world   \") == \"world hello\"\n\n\ndef test_reverse_words_none_raises_attribute_error():\n    with pytest.raises(AttributeError):\n        reverse_words(None)\n\n\ndef test_reverse_words_int_raises_attribute_error():\n    with pytest.raises(AttributeError):\n        reverse_words(123)\n\n\ndef test_reverse_words_bytes_raises_type_error():\n    with pytest.raises(TypeError):\n        reverse_words(b\"hello world\")\n```",
+  "score": 5,
+  "cost": 0.005682,
+  "expected": "",
+  "tokens": {
+    "input": 54,
+    "output": 460
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

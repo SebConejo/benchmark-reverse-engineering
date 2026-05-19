@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "function_calling",
+  "case": 2,
+  "response": "{\"name\": \"search_files\", \"arguments\": {\"directory\": \"src\", \"pattern\": \"*.py\", \"modified_within_days\": 7}}",
+  "score": 5,
+  "cost": 3.2760000000000005e-05,
+  "expected": "",
+  "tokens": {
+    "input": 98,
+    "output": 34
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

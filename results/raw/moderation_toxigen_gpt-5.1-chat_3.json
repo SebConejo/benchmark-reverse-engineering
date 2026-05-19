@@ -1,0 +1,15 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "moderation_toxigen",
+  "case": 3,
+  "response": "toxic",
+  "score": 5,
+  "cost": 0.000128,
+  "expected": "toxic",
+  "tokens": {
+    "input": 112,
+    "output": 12
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2
+}

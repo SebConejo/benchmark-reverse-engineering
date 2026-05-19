@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "rag_qa",
+  "case": 35,
+  "response": "Clapping their lobes.",
+  "score": 5,
+  "cost": 0.000253605,
+  "expected": "by clapping their lobes",
+  "tokens": {
+    "input": 267,
+    "output": 79
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "function_calling",
+  "case": 32,
+  "response": "```json\n{\"name\": \"run_security_scan\", \"arguments\": {\"target\": \"10.0.0.1\"}}\n```",
+  "score": 5,
+  "cost": 9.239999999999998e-06,
+  "expected": "",
+  "tokens": {
+    "input": 122,
+    "output": 32
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-max-preview",
+  "task": "email_summary_v2",
+  "case": 17,
+  "response": "Release v4.2 is being rolled back due to a data corruption bug in the new sync engine that affected 23 accounts. The team will restore pre-release backups, re-run affected transactions, notify impacted customers, and utilize the newly created hotfix branch to resolve the issue.",
+  "score": 5,
+  "cost": 0.0060125,
+  "expected": "",
+  "tokens": {
+    "input": 109,
+    "output": 1129
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

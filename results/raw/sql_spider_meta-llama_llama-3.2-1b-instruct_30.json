@@ -1,0 +1,16 @@
+{
+  "model": "meta-llama/llama-3.2-1b-instruct",
+  "task": "sql_spider",
+  "case": 30,
+  "response": "```sql\nSELECT AVG(rank) FROM wta_1.wta_matches WHERE winner = 'Winner';\n```",
+  "score": 2,
+  "cost": 2.673e-06,
+  "expected": "",
+  "tokens": {
+    "input": 76,
+    "output": 23
+  },
+  "judge_v2_score": 2,
+  "judge_v2_raw": "2",
+  "judge_v2_model": "gpt-4o"
+}

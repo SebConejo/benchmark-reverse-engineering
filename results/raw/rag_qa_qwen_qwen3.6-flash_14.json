@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "task": "rag_qa",
+  "case": 14,
+  "response": "Marine waters worldwide.",
+  "score": 5,
+  "cost": 0.00067675,
+  "expected": "marine waters",
+  "tokens": {
+    "input": 323,
+    "output": 596
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

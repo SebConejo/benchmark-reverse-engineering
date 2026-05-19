@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "test_generation_v2",
+  "case": 2,
+  "response": "Here are comprehensive unit tests for the `factorial` function using pytest style, covering happy path, edge cases, and error cases:\n\n```python\nimport pytest\nfrom your_module import factorial  # Replace 'your_module' with the actual module name\n\ndef test_factorial_happy_path():\n    \"\"\"Test factorial with typical positive integers.\"\"\"\n    assert factorial(0) == 1\n    assert factorial(1) == 1\n    assert factorial(2) == 2\n    assert factorial(3) == 6\n    assert factorial(5) == 120\n    assert factorial(10) == 3628800\n\ndef test_factorial_large_number():\n    \"\"\"Test factorial with a large number (though be careful with recursion depth).\"\"\"\n    assert factorial(20) == 2432902008176640000\n\ndef test_factorial_negative_input():\n    \"\"\"Test that factorial raises ValueError for negative input.\"\"\"\n    with pytest.raises(ValueError, match=\"n must be non-negative\"):\n        factorial(-1)\n    with pytest.raises(ValueError, match=\"n must be non-negative\"):\n        factorial(-10)\n\ndef test_factorial_non_integer_input():\n    \"\"\"Test that factorial raises TypeError for non-integer input.\"\"\"\n    with pytest.raises(TypeError):\n        factorial(3.5)\n    with pytest.raises(TypeError):\n        factorial(\"5\")\n    with pytest.raises(TypeError):\n        factorial([1])\n    with pytest.raises(TypeError):\n        factorial(None)\n\ndef test_factorial_recursion_depth():\n    \"\"\"Test that factorial handles maximum recursion depth gracefully.\n    Note: This test might fail with RecursionError depending on system settings.\n    \"\"\"\n    import sys\n    # Calculate a safe depth that won't hit recursion limit\n    safe_depth = min(1000, sys.getrecursionlimit() - 10)\n    result = factorial(safe_depth)\n    assert result > 0  # Just verify it returns a positive number\n```\n\n### Notes about the tests:\n\n1. **Happy Path**: Tests normal cases where the function should work correctly (0, 1, 2, 3, 5, 10).\n\n2. **Edge Cases**:\n   - Large number (20) - tests the function with a larger input\n   - Maximum recursion depth - tests the function near system limits (though this might fail on some systems)\n\n3. **Error Cases**:\n   - Negative input - tests the ValueError is raised\n   - Non-integer input - tests TypeError is raised for various invalid types\n\n4. **Additional Considerations**:\n   - The recursion depth test is included but might fail on some systems due to Python's recursion limit. You might want to skip it or adjust the depth based on your environment.\n   - For production code, you might want to add more edge cases or property-based tests.\n   - The type hints in the function suggest it expects an int, so we test that non-int inputs raise TypeError.\n\nTo run these tests, save them in a file named `test_factorial.py` and run `pytest` in your terminal. Make sure the file containing the `factorial` function is in your Python path or in the same directory.",
+  "score": 5,
+  "cost": 0.0014315999999999999,
+  "expected": "",
+  "tokens": {
+    "input": 79,
+    "output": 700
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

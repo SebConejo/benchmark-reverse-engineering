@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "rag_qa",
+  "case": 31,
+  "response": "Sharia",
+  "score": 1,
+  "cost": 0.0001466,
+  "expected": "Sharia",
+  "tokens": {
+    "input": 321,
+    "output": 103
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

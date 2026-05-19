@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "rag_qa",
+  "case": 29,
+  "response": "Istanbul",
+  "score": 5,
+  "cost": 7.52e-05,
+  "expected": "Istanbul",
+  "tokens": {
+    "input": 173,
+    "output": 3
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

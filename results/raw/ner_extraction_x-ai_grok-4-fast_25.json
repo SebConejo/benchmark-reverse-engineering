@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "ner_extraction",
+  "case": 25,
+  "response": "{\"persons\": [\"Mark Zuckerberg\"], \"organizations\": [\"Meta\"], \"locations\": [\"Menlo Park\"]}",
+  "score": 5,
+  "cost": 0.000151,
+  "expected": "",
+  "tokens": {
+    "input": 223,
+    "output": 133
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

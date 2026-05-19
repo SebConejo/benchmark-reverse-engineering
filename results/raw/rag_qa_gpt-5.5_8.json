@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.5",
+  "task": "rag_qa",
+  "case": 8,
+  "response": "36% of households.",
+  "score": 5,
+  "cost": 0.001164,
+  "expected": "36%",
+  "tokens": {
+    "input": 172,
+    "output": 54
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

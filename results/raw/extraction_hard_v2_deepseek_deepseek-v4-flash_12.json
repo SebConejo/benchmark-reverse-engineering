@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "extraction_hard_v2",
+  "case": 12,
+  "response": "{\n  \"tracking_number\": \"1Z999AA10123456784\",\n  \"carrier\": \"UPS\",\n  \"service\": \"Ground\",\n  \"origin\": \"Memphis TN\",\n  \"weight_lbs\": 4.2,\n  \"dimensions\": \"12x8x6 in\",\n  \"events\": [\n    {\n      \"timestamp\": \"2026-04-25T18:30:00\",\n      \"status\": \"Picked up\",\n      \"location\": \"Memphis TN\"",
+  "score": 4,
+  "cost": 0.0004876200000000001,
+  "expected": "",
+  "tokens": {
+    "input": 283,
+    "output": 800
+  },
+  "judge_v2_score": 2,
+  "judge_v2_raw": "2",
+  "judge_v2_model": "gpt-4o"
+}

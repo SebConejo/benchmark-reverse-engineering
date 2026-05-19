@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "structured_output",
+  "case": 0,
+  "response": "{\"name\": \"John Smith\", \"age\": 32, \"job_title\": \"software engineer\", \"company\": \"Google\", \"location\": {\"city\": \"Mountain View\", \"state\": \"CA\"}}",
+  "score": 5,
+  "cost": 0.00018260000000000002,
+  "expected": "",
+  "tokens": {
+    "input": 229,
+    "output": 171
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

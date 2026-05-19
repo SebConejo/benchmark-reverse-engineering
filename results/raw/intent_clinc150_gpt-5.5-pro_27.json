@@ -1,0 +1,15 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "intent_clinc150",
+  "case": 27,
+  "response": "apr",
+  "score": 5,
+  "cost": 0.0102,
+  "expected": "apr",
+  "tokens": {
+    "input": 520,
+    "output": 32
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0
+}

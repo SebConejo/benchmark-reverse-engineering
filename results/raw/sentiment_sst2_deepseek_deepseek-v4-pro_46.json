@@ -1,0 +1,13 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "sentiment_sst2",
+  "case": 46,
+  "response": "positive",
+  "score": 5,
+  "cost": 0.00025056,
+  "expected": "positive",
+  "tokens": {
+    "input": 64,
+    "output": 128
+  }
+}

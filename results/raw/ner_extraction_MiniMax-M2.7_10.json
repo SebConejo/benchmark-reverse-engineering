@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "ner_extraction",
+  "case": 10,
+  "response": "{\n  \"persons\": [\"Jennifer Lopez\", \"Ben Affleck\"],\n  \"organizations\": [],\n  \"locations\": [\"Beverly Hills\"]\n}",
+  "score": 5,
+  "cost": 0.000605,
+  "expected": "",
+  "tokens": {
+    "input": 86,
+    "output": 116
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

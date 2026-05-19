@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "code_generation",
+  "case": 49,
+  "response": "if not string:\n    return ''\nn = len(string)\nfor l in range(n, 0, -1):\n    if string[-l:] == string[-l:][::-1]:\n        return string + string[:-l][::-1]\nreturn string",
+  "score": 5,
+  "cost": 0.00065115,
+  "expected": "",
+  "tokens": {
+    "input": 282,
+    "output": 2100
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

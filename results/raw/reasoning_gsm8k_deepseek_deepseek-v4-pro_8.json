@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "reasoning_gsm8k",
+  "case": 8,
+  "response": "Last year's enrollment: 50 students.  \nA 20% increase means the number of additional students is \\(0.20 \\times 50 = 10\\).  \nTotal this year: \\(50 + 10 = 60\\).\n\nANSWER: 60",
+  "score": 5,
+  "cost": 0.00030188999999999997,
+  "expected": "60",
+  "tokens": {
+    "input": 78,
+    "output": 154
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

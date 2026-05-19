@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "instruction_following",
+  "case": 26,
+  "response": "The water cycle, also known as the hydrologic cycle, is the continuous movement of water on, above, and below Earth's surface. Driven primarily by solar energy and gravity, this essential process circulates water through various reservoirs, including oceans, atmosphere, land, and living organisms. Without the water cycle, life as we know it would be impossible, as it distributes fresh water across the planet, regulates climate, and replenishes natural resources. The cycle consists of several key stages: evaporation, transpiration, condensation, precipitation, and collection.\n\nThe process begins when the sun heats water in oceans, rivers, and lakes, causing it to change from liquid to vapor through evaporation. Plants also contribute significantly through transpiration, releasing water vapor from their leaves into the atmosphere. Together, these processes add vast amounts of water vapor to the air. As warm vapor rises into the atmosphere, it carries heat energy away from Earth's surface and begins its journey toward cooler upper regions.\n\nOnce in the atmosphere, the water vapor rises to higher altitudes where temperatures are colder, causing it to cool and change back into tiny liquid droplets or ice crystals through condensation. These microscopic particles cluster together to form clouds. When these droplets or crystals combine and grow heavy enough, they fall back to Earth as precipitation in various forms, including rain, snow, sleet, or hail, depending on atmospheric temperature and conditions.\n\nAfter precipitation reaches the ground, the water follows various pathways to complete the cycle. Some water flows across the land as runoff, collecting in rivers, lakes, and eventually returning to the oceans. Other water seeps into the soil through infiltration, replenishing underground aquifers and groundwater supplies. From these reservoirs, water may eventually evaporate again or be drawn up by plants, continuously restarting the endless journey that sustains ecosystems and civilizations worldwide.",
+  "score": 5,
+  "cost": 0.0022812,
+  "expected": "",
+  "tokens": {
+    "input": 18,
+    "output": 946
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

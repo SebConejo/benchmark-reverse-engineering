@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "reasoning_gsm8k",
+  "case": 12,
+  "response": "Let\u2019s break it down step by step.  \n\n**Step 1: Time spent per day**  \n- Watching TV: 2 hours  \n- Reading: half of 2 hours = 1 hour  \n- Total per day: 2 + 1 = 3 hours  \n\n**Step 2: Time spent per week**  \n- He does this 3 times a week: 3 \u00d7 3 = 9 hours per week  \n\n**Step 3: Time spent in 4 weeks**  \n- 9 hours \u00d7 4 weeks = 36 hours  \n\nANSWER: 36",
+  "score": 4,
+  "cost": 0.000249255,
+  "expected": "36",
+  "tokens": {
+    "input": 85,
+    "output": 122
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

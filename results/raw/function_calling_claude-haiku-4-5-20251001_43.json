@@ -1,0 +1,16 @@
+{
+  "model": "claude-haiku-4-5-20251001",
+  "task": "function_calling",
+  "case": 43,
+  "response": "```json\n{\n  \"name\": \"git_revert\",\n  \"arguments\": {\n    \"commit\": \"HEAD\"\n  }\n}\n```",
+  "score": 4,
+  "cost": 0.000244,
+  "expected": "",
+  "tokens": {
+    "input": 110,
+    "output": 39
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

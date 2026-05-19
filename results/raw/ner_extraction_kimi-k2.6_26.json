@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "ner_extraction",
+  "case": 26,
+  "response": "```json\n{\n  \"persons\": [],\n  \"organizations\": [\n    \"The Supreme Court\",\n    \"the ACLU\"\n  ],\n  \"locations\": [\n    \"the State of Texas\"\n  ]\n}\n```",
+  "score": 3,
+  "cost": 0.002679,
+  "expected": "",
+  "tokens": {
+    "input": 73,
+    "output": 1098
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

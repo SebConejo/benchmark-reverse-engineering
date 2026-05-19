@@ -1,0 +1,16 @@
+{
+  "model": "o4-mini",
+  "task": "test_generation_v2",
+  "case": 16,
+  "response": "Here\u2019s a single pytest test file that covers\n\n- a variety of \u201chappy\u2010path\u201d inputs, including commutativity  \n- edge cases around zero  \n- negative arguments  \n- a couple of error\u2010triggering inputs (non\u2010integers)  \n\nSave it as `test_gcd.py` (assuming your implementation lives in `gcd_module.py`).\n\n```python\nimport pytest\nfrom gcd_module import gcd\n\n@pytest.mark.parametrize(\"a, b, expected\", [\n    # simple cases\n    (48, 18, 6),\n    (18, 48, 6),          # commutativity\n    (7, 3, 1),            # primes\n    (100, 10, 10),\n    (13, 13, 13),         # identical\n    (270, 192, 6),\n])\ndef test_gcd_happy_path(a, b, expected):\n    assert gcd(a, b) == expected\n\n\n@pytest.mark.parametrize(\"a, b, expected\", [\n    (0, 0, 0),            # both zero\n    (0, 5, 5),            # one zero\n    (5, 0, 5),\n])\ndef test_gcd_with_zero(a, b, expected):\n    assert gcd(a, b) == expected\n\n\n@pytest.mark.parametrize(\"a, b, expected\", [\n    (-8, 12, 4),          # negative & positive\n    (8, -12, 4),\n    (-8, -12, 4),         # both negative\n    (-7, 7, 7),\n])\ndef test_gcd_with_negatives(a, b, expected):\n    assert gcd(a, b) == expected\n\n\ndef test_commutativity_random():\n    # random-ish check that gcd(a, b) == gcd(b, a)\n    import random\n    for _ in range(10):\n        a = random.randint(-1000, 1000)\n        b = random.randint(-1000, 1000)\n        # skip trivial both zero since that's tested above\n        if a == 0 and b == 0:\n            continue\n        assert gcd(a, b) == gcd(b, a)\n\n\n@pytest.mark.parametrize(\"bad_a, bad_b\", [\n    (\"not an int\", 5),\n    (5, \"nope\"),\n    (None, 10),\n])\ndef test_gcd_type_errors(bad_a, bad_b):\n    with pytest.raises(TypeError):\n        gcd(bad_a, bad_b)\n```\n\nExplanation of what each test group covers:\n\n1. `test_gcd_happy_path`: several known pairs and checks commutativity in\u2010line.  \n2. `test_gcd_with_zero`: behavior when one or both arguments are zero (including the corner case `gcd(0,0)`).  \n3. `test_gcd_with_negatives`: ensures negatives are handled via `abs`.  \n4. `test_commutativity_random`: fuzz\u2010ish check that swapping the arguments doesn\u2019t change the result.  \n5. `test_gcd_type_errors`: you\u2019ll get a `TypeError` anytime you try to do integer-mod operations on non\u2010integers, so we assert that.  \n\nRun them with:\n\n    pytest -q",
+  "score": 5,
+  "cost": 0.007372200000000001,
+  "expected": "",
+  "tokens": {
+    "input": 66,
+    "output": 1659
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

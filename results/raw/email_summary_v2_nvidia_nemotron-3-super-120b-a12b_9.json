@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "email_summary_v2",
+  "case": 9,
+  "response": "The nightly ETL job failed at 3\u202fAM due to a Sales",
+  "score": 3,
+  "cost": 2.745e-05,
+  "expected": "",
+  "tokens": {
+    "input": 105,
+    "output": 200
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

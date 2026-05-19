@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "sql_spider",
+  "case": 33,
+  "response": "SELECT episode_name, rating\nFROM episodes\nORDER BY rating DESC\nLIMIT 3;",
+  "score": 5,
+  "cost": 0.007659599999999999,
+  "expected": "",
+  "tokens": {
+    "input": 78,
+    "output": 3172
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

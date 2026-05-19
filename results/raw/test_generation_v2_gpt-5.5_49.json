@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.5",
+  "task": "test_generation_v2",
+  "case": 49,
+  "response": "```python\n# test_intersection.py\nimport pytest\n\n# Replace \"your_module\" with the actual module name where intersection is defined.\nfrom your_module import intersection\n\n\ndef test_intersection_happy_path_preserves_lst1_order_and_removes_duplicates():\n    lst1 = [3, 1, 2, 3, 4, 2, 5]\n    lst2 = [2, 3, 6]\n\n    assert intersection(lst1, lst2) == [3, 2]\n\n\ndef test_intersection_with_all_common_elements_returns_unique_items_in_lst1_order():\n    lst1 = [\"b\", \"a\", \"b\", \"c\", \"a\"]\n    lst2 = [\"a\", \"b\", \"c\"]\n\n    assert intersection(lst1, lst2) == [\"b\", \"a\", \"c\"]\n\n\ndef test_intersection_with_no_common_elements_returns_empty_list():\n    assert intersection([1, 2, 3], [4, 5, 6]) == []\n\n\n@pytest.mark.parametrize(\n    \"lst1, lst2, expected\",\n    [\n        ([], [], []),\n        ([1, 2, 3], [], []),\n        ([], [1, 2, 3], []),\n    ],\n)\ndef test_intersection_empty_list_cases(lst1, lst2, expected):\n    assert intersection(lst1, lst2) == expected\n\n\ndef test_intersection_ignores_duplicates_in_second_list():\n    lst1 = [1, 2, 3, 2, 4]\n    lst2 = [2, 2, 2, 3]\n\n    assert intersection(lst1, lst2) == [2, 3]\n\n\ndef test_intersection_handles_mixed_hashable_types():\n    lst1 = [1, \"1\", None, (2, 3), \"missing\"]\n    lst2 = [(2, 3), None, \"1\", 99]\n\n    assert intersection(lst1, lst2) == [\"1\", None, (2, 3)]\n\n\ndef test_intersection_does_not_mutate_inputs():\n    lst1 = [1, 2, 2, 3]\n    lst2 = [2, 3]\n\n    original_lst1 = lst1.copy()\n    original_lst2 = lst2.copy()\n\n    result = intersection(lst1, lst2)\n\n    assert result == [2, 3]\n    assert lst1 == original_lst1\n    assert lst2 == original_lst2\n\n\ndef test_intersection_raises_type_error_when_second_list_contains_unhashable_item():\n    with pytest.raises(TypeError):\n        intersection([1, 2, 3], [[2], 3])\n\n\ndef test_intersection_raises_type_error_when_first_list_contains_unhashable_item():\n    with pytest.raises(TypeError):\n        intersection([[1], 2, 3], [2, 3])\n\n\ndef test_intersection_raises_type_error_when_first_argument_is_not_iterable():\n    with pytest.raises(TypeError):\n        intersection(123, [1, 2, 3])\n\n\ndef test_intersection_raises_type_error_when_second_argument_is_not_iterable():\n    with pytest.raises(TypeError):\n        intersection([1, 2, 3], 123)\n```",
+  "score": 4,
+  "cost": 0.020838,
+  "expected": "",
+  "tokens": {
+    "input": 98,
+    "output": 1712
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

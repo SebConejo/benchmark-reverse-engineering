@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "task": "email_summary_v2",
+  "case": 37,
+  "response": "BigCo has offered $15M to acquire our five-person ML team, but the CEO considers this undervalued and recommends either countering or politely declining. Before responding, we must discuss the proposal internally and notify the board.",
+  "score": 5,
+  "cost": 0.00082225,
+  "expected": "",
+  "tokens": {
+    "input": 109,
+    "output": 795
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

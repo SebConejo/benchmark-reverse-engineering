@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "reasoning_gsm8k",
+  "case": 23,
+  "response": "The original cost per balloon is $900 \u00f7 20 = $45. After the price increase of $20, the new cost per balloon is $45 + $20 = $65. Bentley fills 170 balloons, so the total cost is 170 \u00d7 $65 = $11,050.\n\nANSWER: 11050",
+  "score": 5,
+  "cost": 0.00050199,
+  "expected": "11050",
+  "tokens": {
+    "input": 94,
+    "output": 265
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

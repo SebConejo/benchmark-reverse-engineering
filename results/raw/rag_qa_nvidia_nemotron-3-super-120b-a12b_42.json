@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "rag_qa",
+  "case": 42,
+  "response": "Moselle",
+  "score": 4,
+  "cost": 2.691e-05,
+  "expected": "Moselle",
+  "tokens": {
+    "input": 225,
+    "output": 74
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

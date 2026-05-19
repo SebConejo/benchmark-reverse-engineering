@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "instruction_following",
+  "case": 49,
+  "response": "**Formal:**  \nGood day. Welcome to our service. I am your virtual assistant, and I am here to help. How may I assist you today?\n\n**Casual:**  \nHey there! \ud83d\udc4b Nice to see you. What can I help you with today?\n\n**Humorous:**  \nGreetings, human! I\u2019ve been staring at this chat window for 0.04 seconds waiting for you. What\u2019s the mission?",
+  "score": 5,
+  "cost": 0.0006276000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 26,
+    "output": 255
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

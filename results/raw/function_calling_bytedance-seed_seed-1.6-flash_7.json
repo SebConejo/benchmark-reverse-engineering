@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "function_calling",
+  "case": 7,
+  "response": "{\n  \"name\": \"set_alarm\",\n  \"arguments\": {\n    \"time\": \"6:30 AM tomorrow\",\n    \"label\": \"Morning Workout\"\n  }\n}",
+  "score": 4,
+  "cost": 0.00011452499999999999,
+  "expected": "",
+  "tokens": {
+    "input": 183,
+    "output": 336
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

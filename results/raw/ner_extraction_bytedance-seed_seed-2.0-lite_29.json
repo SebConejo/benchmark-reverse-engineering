@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-lite",
+  "task": "ner_extraction",
+  "case": 29,
+  "response": "{\"persons\": [], \"organizations\": [\"Tokyo Stock Exchange\"], \"locations\": [\"Tokyo\"]}",
+  "score": 4,
+  "cost": 0.00053425,
+  "expected": "",
+  "tokens": {
+    "input": 117,
+    "output": 505
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "rag_qa",
+  "case": 45,
+  "response": "The show globe was also used until the early 20th century.",
+  "score": 5,
+  "cost": 1.4759999999999998e-05,
+  "expected": "The show globe",
+  "tokens": {
+    "input": 230,
+    "output": 16
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

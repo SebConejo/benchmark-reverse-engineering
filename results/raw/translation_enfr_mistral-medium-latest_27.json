@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "translation_enfr",
+  "case": 27,
+  "response": "Les crit\u00e8res du **DSM-IV** pour l'**ivresse alcoolique** sont similaires, avec l'ajout d'**un ou plusieurs** des signes suivants : **parole tra\u00eenante**, **manque de coordination**, **d\u00e9marche instable**, **nystagmus**, **alt\u00e9ration de l'attention ou de la m\u00e9moire**, **stupreur** ou **coma**.",
+  "score": 5,
+  "cost": 0.0001976,
+  "expected": "",
+  "tokens": {
+    "input": 74,
+    "output": 84
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

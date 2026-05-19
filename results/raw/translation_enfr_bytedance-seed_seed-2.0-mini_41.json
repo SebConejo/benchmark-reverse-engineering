@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "translation_enfr",
+  "case": 41,
+  "response": "T'es pas dans la DGA. Juste zoome et ta gueule.",
+  "score": 4,
+  "cost": 0.0004485,
+  "expected": "",
+  "tokens": {
+    "input": 85,
+    "output": 1100
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

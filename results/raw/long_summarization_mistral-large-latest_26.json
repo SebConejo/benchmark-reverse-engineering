@@ -1,0 +1,16 @@
+{
+  "model": "mistral-large-latest",
+  "task": "long_summarization",
+  "case": 26,
+  "response": "The global food system faces severe strain, with the world population expected to reach **9.7 billion by 2050**, demanding a **60% increase in food production** amid climate change-induced yield losses, water scarcity, and **soil degradation affecting 33% of arable land**. Agriculture itself drives **25% of greenhouse gas emissions**, while **one-third of food is wasted**, worsening shortages. Solutions like **precision agriculture, vertical farming, alternative proteins, and regenerative practices** are being explored, but scaling them requires policy reforms and affordability for low-income populations. The key challenge is balancing sustainability with equitable access to food.",
+  "score": 5,
+  "cost": 0.00141,
+  "expected": "",
+  "tokens": {
+    "input": 300,
+    "output": 135
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

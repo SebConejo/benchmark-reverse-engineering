@@ -1,0 +1,15 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "intent_clinc150",
+  "case": 43,
+  "response": "book_flight",
+  "score": 5,
+  "cost": 0.014415,
+  "expected": "book_flight",
+  "tokens": {
+    "input": 521,
+    "output": 88
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0
+}

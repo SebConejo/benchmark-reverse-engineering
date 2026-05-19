@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "code_generation",
+  "case": 15,
+  "response": "factor = 2\nwhile factor * factor <= n:\n    if n % factor == 0:\n        n //= factor\n    else:\n        factor += 1\nreturn n if n > 1 else factor",
+  "score": 4,
+  "cost": 0.007078825,
+  "expected": "",
+  "tokens": {
+    "input": 109,
+    "output": 5418
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

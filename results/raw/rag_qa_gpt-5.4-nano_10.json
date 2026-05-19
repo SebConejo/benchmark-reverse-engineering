@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.4-nano",
+  "task": "rag_qa",
+  "case": 10,
+  "response": "The Saxon Garden was formally only for royalty.",
+  "score": 5,
+  "cost": 4.7300000000000005e-05,
+  "expected": "The Saxon Garden",
+  "tokens": {
+    "input": 421,
+    "output": 13
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,581 @@
+=== Category A Re-run started at Sat May  9 00:00:34 CEST 2026 ===
+
+>>> Task: code_explanation at Sat May  9 00:00:34 CEST 2026
+======================================================================
+TaskBench Batch: code_explanation
+Cases: 48 | Models to run: 1 | Already done: 5
+Skipped providers (unavailable): azure
+Budget: $99.2906 / $200
+======================================================================
+
+  deepseek/deepseek-v4-pro                   avg=5.0/5  cost=$0.0233  [PASS]
+
+======================================================================
+BATCH COMPLETE: code_explanation
+Total spend: $99.3186 | Calls: 55508
+
+--- Results ranked by quality ---
+  deepseek/deepseek-v4-pro                   5.0/5  $0.0233  (48 cases)
+======================================================================
+>>> Done: code_explanation at Sat May  9 00:08:09 CEST 2026
+
+>>> Task: code_generation at Sat May  9 00:08:10 CEST 2026
+======================================================================
+TaskBench Batch: code_generation
+Cases: 50 | Models to run: 5 | Already done: 1
+Skipped providers (unavailable): azure
+Budget: $99.3186 / $200
+======================================================================
+
+  ERROR kimi-k2.6 case 16: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  kimi-k2.6                                  avg=4.3/5  cost=$0.2135  [PASS]
+  deepseek/deepseek-v4-pro                   avg=4.2/5  cost=$0.0643  [PASS]
+  nvidia/nemotron-3-super-120b-a12b          avg=2.6/5  cost=$0.0017  [MIXED]
+  MiniMax-M2.7                               avg=4.5/5  cost=$0.3364  [PASS]
+  o3                                         avg=4.5/5  cost=$0.2380  [PASS]
+
+======================================================================
+BATCH COMPLETE: code_generation
+Total spend: $100.1974 | Calls: 55757
+
+--- Results ranked by quality ---
+  MiniMax-M2.7                               4.5/5  $0.3364  (50 cases)
+  o3                                         4.5/5  $0.2380  (50 cases)
+  kimi-k2.6                                  4.3/5  $0.2135  (49 cases)
+  deepseek/deepseek-v4-pro                   4.2/5  $0.0643  (50 cases)
+  nvidia/nemotron-3-super-120b-a12b          2.6/5  $0.0017  (50 cases)
+======================================================================
+>>> Done: code_generation at Sat May  9 01:29:29 CEST 2026
+
+>>> Task: code_review_v2 at Sat May  9 01:29:29 CEST 2026
+======================================================================
+TaskBench Batch: code_review_v2
+Cases: 50 | Models to run: 5 | Already done: 1
+Skipped providers (unavailable): azure
+Budget: $100.1974 / $200
+======================================================================
+
+  ERROR gpt-5.5-pro case 1: Expecting value: line 1 column 1 (char 0)
+  ERROR gpt-5.5-pro case 10: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 15: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 17: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 22: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 24: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 28: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 41: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 42: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 44: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 45: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 49: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  gpt-5.5-pro                                avg=4.9/5  cost=$4.4454  [PASS]
+  ERROR kimi-k2.6 case 8: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 15: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 18: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 20: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 28: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 30: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 41: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 49: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  kimi-k2.6                                  avg=4.8/5  cost=$0.3406  [PASS]
+  deepseek/deepseek-v4-pro                   avg=4.7/5  cost=$0.1677  [PASS]
+  MiniMax-M2.7                               avg=4.8/5  cost=$0.3207  [PASS]
+  o3                                         avg=4.9/5  cost=$0.6533  [PASS]
+
+======================================================================
+BATCH COMPLETE: code_review_v2
+Total spend: $106.1481 | Calls: 55987
+
+--- Results ranked by quality ---
+  gpt-5.5-pro                                4.9/5  $4.4454  (38 cases)
+  o3                                         4.9/5  $0.6533  (50 cases)
+  MiniMax-M2.7                               4.8/5  $0.3207  (50 cases)
+  kimi-k2.6                                  4.8/5  $0.3406  (42 cases)
+  deepseek/deepseek-v4-pro                   4.7/5  $0.1677  (50 cases)
+======================================================================
+>>> Done: code_review_v2 at Sat May  9 07:26:15 CEST 2026
+
+>>> Task: data_to_text at Sat May  9 07:26:16 CEST 2026
+======================================================================
+TaskBench Batch: data_to_text
+Cases: 50 | Models to run: 2 | Already done: 4
+Skipped providers (unavailable): azure
+Budget: $106.1481 / $200
+======================================================================
+
+  gpt-5.5-pro                                avg=5.0/5  cost=$0.1946  [PASS]
+  deepseek/deepseek-v4-pro                   avg=5.0/5  cost=$0.0233  [PASS]
+
+======================================================================
+BATCH COMPLETE: data_to_text
+Total spend: $106.3760 | Calls: 56087
+
+--- Results ranked by quality ---
+  gpt-5.5-pro                                5.0/5  $0.1946  (50 cases)
+  deepseek/deepseek-v4-pro                   5.0/5  $0.0233  (50 cases)
+======================================================================
+>>> Done: data_to_text at Sat May  9 07:49:20 CEST 2026
+
+>>> Task: email_summary_v2 at Sat May  9 07:49:21 CEST 2026
+======================================================================
+TaskBench Batch: email_summary_v2
+Cases: 50 | Models to run: 2 | Already done: 4
+Skipped providers (unavailable): azure
+Budget: $106.3760 / $200
+======================================================================
+
+  deepseek/deepseek-v4-pro                   avg=5.0/5  cost=$0.0278  [PASS]
+  nvidia/nemotron-3-super-120b-a12b          avg=3.8/5  cost=$0.0013  [MIXED]
+
+======================================================================
+BATCH COMPLETE: email_summary_v2
+Total spend: $106.4151 | Calls: 56187
+
+--- Results ranked by quality ---
+  deepseek/deepseek-v4-pro                   5.0/5  $0.0278  (50 cases)
+  nvidia/nemotron-3-super-120b-a12b          3.8/5  $0.0013  (50 cases)
+======================================================================
+>>> Done: email_summary_v2 at Sat May  9 08:01:30 CEST 2026
+
+>>> Task: extraction_hard_v2 at Sat May  9 08:01:31 CEST 2026
+======================================================================
+TaskBench Batch: extraction_hard_v2
+Cases: 50 | Models to run: 4 | Already done: 2
+Skipped providers (unavailable): azure
+Budget: $106.4151 / $200
+======================================================================
+
+  gpt-5.5-pro                                avg=4.5/5  cost=$0.4229  [PASS]
+  ERROR kimi-k2.6 case 2: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 22: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 25: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 32: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 39: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 42: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  kimi-k2.6                                  avg=4.5/5  cost=$0.1726  [PASS]
+  deepseek/deepseek-v4-pro                   avg=4.5/5  cost=$0.0853  [PASS]
+  nvidia/nemotron-3-super-120b-a12b          avg=3.3/5  cost=$0.0042  [MIXED]
+
+======================================================================
+BATCH COMPLETE: extraction_hard_v2
+Total spend: $107.1195 | Calls: 56381
+
+--- Results ranked by quality ---
+  kimi-k2.6                                  4.5/5  $0.1726  (44 cases)
+  gpt-5.5-pro                                4.5/5  $0.4229  (50 cases)
+  deepseek/deepseek-v4-pro                   4.5/5  $0.0853  (50 cases)
+  nvidia/nemotron-3-super-120b-a12b          3.3/5  $0.0042  (50 cases)
+======================================================================
+>>> Done: extraction_hard_v2 at Sat May  9 10:22:44 CEST 2026
+
+>>> Task: function_calling at Sat May  9 10:22:44 CEST 2026
+======================================================================
+TaskBench Batch: function_calling
+Cases: 50 | Models to run: 4 | Already done: 2
+Skipped providers (unavailable): azure
+Budget: $107.1195 / $200
+======================================================================
+
+  ERROR kimi-k2.6 case 24: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 40: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  kimi-k2.6                                  avg=4.5/5  cost=$0.0731  [PASS]
+  deepseek/deepseek-v4-pro                   avg=4.5/5  cost=$0.0265  [PASS]
+  nvidia/nemotron-3-super-120b-a12b          avg=3.8/5  cost=$0.0008  [MIXED]
+  o3                                         avg=4.5/5  cost=$0.0957  [PASS]
+
+======================================================================
+BATCH COMPLETE: function_calling
+Total spend: $107.3355 | Calls: 56579
+
+--- Results ranked by quality ---
+  kimi-k2.6                                  4.5/5  $0.0731  (48 cases)
+  deepseek/deepseek-v4-pro                   4.5/5  $0.0265  (50 cases)
+  o3                                         4.5/5  $0.0957  (50 cases)
+  nvidia/nemotron-3-super-120b-a12b          3.8/5  $0.0008  (50 cases)
+======================================================================
+>>> Done: function_calling at Sat May  9 11:03:52 CEST 2026
+
+>>> Task: instruction_following at Sat May  9 11:03:53 CEST 2026
+======================================================================
+TaskBench Batch: instruction_following
+Cases: 50 | Models to run: 3 | Already done: 3
+Skipped providers (unavailable): azure
+Budget: $107.3355 / $200
+======================================================================
+
+  kimi-k2.6                                  avg=4.5/5  cost=$0.0956  [PASS]
+  deepseek/deepseek-v4-pro                   avg=4.4/5  cost=$0.0401  [PASS]
+  nvidia/nemotron-3-super-120b-a12b          avg=3.5/5  cost=$0.0012  [MIXED]
+
+======================================================================
+BATCH COMPLETE: instruction_following
+Total spend: $107.4874 | Calls: 56729
+
+--- Results ranked by quality ---
+  kimi-k2.6                                  4.5/5  $0.0956  (50 cases)
+  deepseek/deepseek-v4-pro                   4.4/5  $0.0401  (50 cases)
+  nvidia/nemotron-3-super-120b-a12b          3.5/5  $0.0012  (50 cases)
+======================================================================
+>>> Done: instruction_following at Sat May  9 11:55:20 CEST 2026
+
+>>> Task: intent_clinc150 at Sat May  9 11:55:21 CEST 2026
+======================================================================
+TaskBench Batch: intent_clinc150
+Cases: 50 | Models to run: 3 | Already done: 3
+Skipped providers (unavailable): azure
+Budget: $107.4874 / $200
+======================================================================
+
+  kimi-k2.6                                  avg=4.7/5  acc=94%  cost=$0.0572  [PASS]
+  deepseek/deepseek-v4-pro                   avg=4.6/5  acc=92%  cost=$0.0224  [PASS]
+  nvidia/nemotron-3-super-120b-a12b          avg=0.1/5  acc=2%  cost=$0.0027  [FAIL]
+
+======================================================================
+BATCH COMPLETE: intent_clinc150
+Total spend: $107.5697 | Calls: 56879
+
+--- Results ranked by quality ---
+  kimi-k2.6                                  4.7/5  acc=94%  $0.0572  (50 cases)
+  deepseek/deepseek-v4-pro                   4.6/5  acc=92%  $0.0224  (50 cases)
+  nvidia/nemotron-3-super-120b-a12b          0.1/5  acc=2%  $0.0027  (50 cases)
+
+--- Native metric (accuracy) ---
+  kimi-k2.6                                  94%
+  deepseek/deepseek-v4-pro                   92%
+  nvidia/nemotron-3-super-120b-a12b          2%
+======================================================================
+>>> Done: intent_clinc150 at Sat May  9 12:16:55 CEST 2026
+
+>>> Task: json_transform_v2 at Sat May  9 12:16:56 CEST 2026
+======================================================================
+TaskBench Batch: json_transform_v2
+Cases: 50 | Models to run: 4 | Already done: 2
+Skipped providers (unavailable): azure
+Budget: $107.5697 / $200
+======================================================================
+
+  ERROR kimi-k2.6 case 6: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 7: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 8: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 11: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 26: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 41: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  ERROR kimi-k2.6 case 44: HTTPSConnectionPool(host='api.moonshot.ai', port=443): Read timed out. (read timeout=180)
+  kimi-k2.6                                  avg=4.6/5  cost=$0.1641  [PASS]
+  deepseek/deepseek-v4-pro                   avg=4.4/5  cost=$0.0598  [PASS]
+  nvidia/nemotron-3-super-120b-a12b          avg=4.1/5  cost=$0.0019  [PASS]
+  ERROR MiniMax-M2.7 case 19: HTTPSConnectionPool(host='api.minimaxi.chat', port=443): Read timed out. (read timeout=180)
+  MiniMax-M2.7                               avg=4.3/5  cost=$0.1864  [PASS]
+
+======================================================================
+BATCH COMPLETE: json_transform_v2
+Total spend: $108.0011 | Calls: 57071
+
+--- Results ranked by quality ---
+  kimi-k2.6                                  4.6/5  $0.1641  (43 cases)
+  deepseek/deepseek-v4-pro                   4.4/5  $0.0598  (50 cases)
+  MiniMax-M2.7                               4.3/5  $0.1864  (49 cases)
+  nvidia/nemotron-3-super-120b-a12b          4.1/5  $0.0019  (50 cases)
+======================================================================
+>>> Done: json_transform_v2 at Sat May  9 15:08:47 CEST 2026
+
+>>> Task: long_summarization at Sat May  9 15:08:48 CEST 2026
+======================================================================
+TaskBench Batch: long_summarization
+Cases: 50 | Models to run: 2 | Already done: 4
+Skipped providers (unavailable): azure
+Budget: $108.0011 / $200
+======================================================================
+
+  deepseek/deepseek-v4-pro                   avg=5.0/5  cost=$0.0499  [PASS]
+  MiniMax-M2.7                               avg=5.0/5  cost=$0.1085  [PASS]
+
+======================================================================
+BATCH COMPLETE: long_summarization
+Total spend: $108.1695 | Calls: 57171
+
+--- Results ranked by quality ---
+  deepseek/deepseek-v4-pro                   5.0/5  $0.0499  (50 cases)
+  MiniMax-M2.7                               5.0/5  $0.1085  (50 cases)
+======================================================================
+>>> Done: long_summarization at Sat May  9 15:34:23 CEST 2026
+
+>>> Task: moderation_toxigen at Sat May  9 15:34:24 CEST 2026
+======================================================================
+TaskBench Batch: moderation_toxigen
+Cases: 50 | Models to run: 2 | Already done: 4
+Skipped providers (unavailable): azure
+Budget: $108.1695 / $200
+======================================================================
+
+  deepseek/deepseek-v4-pro                   avg=4.8/5  acc=96%  cost=$0.0091  [PASS]
+  nvidia/nemotron-3-super-120b-a12b          avg=0.8/5  acc=16%  cost=$0.0004  [FAIL]
+
+======================================================================
+BATCH COMPLETE: moderation_toxigen
+Total spend: $108.1790 | Calls: 57271
+
+--- Results ranked by quality ---
+  deepseek/deepseek-v4-pro                   4.8/5  acc=96%  $0.0091  (50 cases)
+  nvidia/nemotron-3-super-120b-a12b          0.8/5  acc=16%  $0.0004  (50 cases)
+
+--- Native metric (accuracy) ---
+  deepseek/deepseek-v4-pro                   96%
+  nvidia/nemotron-3-super-120b-a12b          16%
+======================================================================
+>>> Done: moderation_toxigen at Sat May  9 15:40:18 CEST 2026
+
+>>> Task: multistep_reasoning at Sat May  9 15:40:19 CEST 2026
+======================================================================
+TaskBench Batch: multistep_reasoning
+Cases: 50 | Models to run: 3 | Already done: 3
+Skipped providers (unavailable): azure
+Budget: $108.1790 / $200
+======================================================================
+
+  gpt-5.5-pro                                avg=4.6/5  acc=92%  cost=$0.1166  [PASS]
+  kimi-k2.6                                  avg=4.8/5  acc=96%  cost=$0.0903  [PASS]
+  nvidia/nemotron-3-super-120b-a12b          avg=4.0/5  acc=80%  cost=$0.0012  [PASS]
+
+======================================================================
+BATCH COMPLETE: multistep_reasoning
+Total spend: $108.3872 | Calls: 57421
+
+--- Results ranked by quality ---
+  kimi-k2.6                                  4.8/5  acc=96%  $0.0903  (50 cases)
+  gpt-5.5-pro                                4.6/5  acc=92%  $0.1166  (50 cases)
+  nvidia/nemotron-3-super-120b-a12b          4.0/5  acc=80%  $0.0012  (50 cases)
+
+--- Native metric (accuracy) ---
+  kimi-k2.6                                  96%
+  gpt-5.5-pro                                92%
+  nvidia/nemotron-3-super-120b-a12b          80%
+======================================================================
+>>> Done: multistep_reasoning at Sat May  9 16:10:39 CEST 2026
+
+>>> Task: ner_extraction at Sat May  9 16:10:39 CEST 2026
+======================================================================
+TaskBench Batch: ner_extraction
+Cases: 50 | Models to run: 2 | Already done: 4
+Skipped providers (unavailable): azure
+Budget: $108.3872 / $200
+======================================================================
+
+  kimi-k2.6                                  avg=4.5/5  cost=$0.1077  [PASS]
+  deepseek/deepseek-v4-pro                   avg=4.5/5  cost=$0.0188  [PASS]
+
+======================================================================
+BATCH COMPLETE: ner_extraction
+Total spend: $108.5236 | Calls: 57521
+
+--- Results ranked by quality ---
+  deepseek/deepseek-v4-pro                   4.5/5  $0.0188  (50 cases)
+  kimi-k2.6                                  4.5/5  $0.1077  (50 cases)
+======================================================================
+>>> Done: ner_extraction at Sat May  9 16:40:44 CEST 2026
+
+>>> Task: rag_qa at Sat May  9 16:40:44 CEST 2026
+======================================================================
+TaskBench Batch: rag_qa
+Cases: 50 | Models to run: 2 | Already done: 4
+Skipped providers (unavailable): azure
+Budget: $108.5236 / $200
+======================================================================
+
+  kimi-k2.6                                  avg=4.9/5  cost=$0.0474  [PASS]
+  deepseek/deepseek-v4-pro                   avg=4.9/5  cost=$0.0143  [PASS]
+
+======================================================================
+BATCH COMPLETE: rag_qa
+Total spend: $108.5953 | Calls: 57621
+
+--- Results ranked by quality ---
+  kimi-k2.6                                  4.9/5  $0.0474  (50 cases)
+  deepseek/deepseek-v4-pro                   4.9/5  $0.0143  (50 cases)
+======================================================================
+>>> Done: rag_qa at Sat May  9 16:54:06 CEST 2026
+
+>>> Task: reasoning_gsm8k at Sat May  9 16:54:06 CEST 2026
+======================================================================
+TaskBench Batch: reasoning_gsm8k
+Cases: 50 | Models to run: 5 | Already done: 1
+Skipped providers (unavailable): azure
+Budget: $108.5953 / $200
+======================================================================
+
+  gpt-5.5-pro                                avg=4.6/5  acc=94%  cost=$0.2322  [PASS]
+  kimi-k2.6                                  avg=4.8/5  acc=96%  cost=$0.0863  [PASS]
+  deepseek/deepseek-v4-pro                   avg=4.6/5  acc=94%  cost=$0.0432  [PASS]
+  nvidia/nemotron-3-super-120b-a12b          avg=1.8/5  acc=90%  cost=$0.0013  [FAIL]
+  MiniMax-M2.7                               avg=4.8/5  acc=94%  cost=$0.1547  [PASS]
+
+======================================================================
+BATCH COMPLETE: reasoning_gsm8k
+Total spend: $109.1380 | Calls: 57871
+
+--- Results ranked by quality ---
+  kimi-k2.6                                  4.8/5  acc=96%  $0.0863  (50 cases)
+  MiniMax-M2.7                               4.8/5  acc=94%  $0.1547  (50 cases)
+  deepseek/deepseek-v4-pro                   4.6/5  acc=94%  $0.0432  (50 cases)
+  gpt-5.5-pro                                4.6/5  acc=94%  $0.2322  (50 cases)
+  nvidia/nemotron-3-super-120b-a12b          1.8/5  acc=90%  $0.0013  (50 cases)
+
+--- Native metric (accuracy) ---
+  kimi-k2.6                                  96%
+  gpt-5.5-pro                                94%
+  deepseek/deepseek-v4-pro                   94%
+  MiniMax-M2.7                               94%
+  nvidia/nemotron-3-super-120b-a12b          90%
+======================================================================
+>>> Done: reasoning_gsm8k at Sat May  9 18:02:01 CEST 2026
+
+>>> Task: sentiment_sst2 at Sat May  9 18:02:01 CEST 2026
+======================================================================
+TaskBench Batch: sentiment_sst2
+Cases: 50 | Models to run: 3 | Already done: 3
+Skipped providers (unavailable): azure
+Budget: $109.1380 / $200
+======================================================================
+
+  gpt-5.5-pro                                avg=4.9/5  acc=98%  cost=$0.0622  [PASS]
+  deepseek/deepseek-v4-pro                   avg=5.0/5  acc=100%  cost=$0.0075  [PASS]
+  nvidia/nemotron-3-super-120b-a12b          avg=0.7/5  acc=14%  cost=$0.0004  [FAIL]
+
+======================================================================
+BATCH COMPLETE: sentiment_sst2
+Total spend: $109.2080 | Calls: 58021
+
+--- Results ranked by quality ---
+  deepseek/deepseek-v4-pro                   5.0/5  acc=100%  $0.0075  (50 cases)
+  gpt-5.5-pro                                4.9/5  acc=98%  $0.0622  (50 cases)
+  nvidia/nemotron-3-super-120b-a12b          0.7/5  acc=14%  $0.0004  (50 cases)
+
+--- Native metric (accuracy) ---
+  deepseek/deepseek-v4-pro                   100%
+  gpt-5.5-pro                                98%
+  nvidia/nemotron-3-super-120b-a12b          14%
+======================================================================
+>>> Done: sentiment_sst2 at Sat May  9 18:14:23 CEST 2026
+
+>>> Task: sql_spider at Sat May  9 18:14:23 CEST 2026
+======================================================================
+TaskBench Batch: sql_spider
+Cases: 50 | Models to run: 4 | Already done: 2
+Skipped providers (unavailable): azure
+Budget: $109.2080 / $200
+======================================================================
+
+  ERROR gpt-5.5-pro case 14: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 19: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  gpt-5.5-pro                                avg=4.5/5  cost=$1.0821  [PASS]
+  kimi-k2.6                                  avg=4.3/5  cost=$0.2521  [PASS]
+  deepseek/deepseek-v4-pro                   avg=4.6/5  cost=$0.0323  [PASS]
+  nvidia/nemotron-3-super-120b-a12b          avg=3.4/5  cost=$0.0012  [MIXED]
+
+======================================================================
+BATCH COMPLETE: sql_spider
+Total spend: $110.5955 | Calls: 58219
+
+--- Results ranked by quality ---
+  deepseek/deepseek-v4-pro                   4.6/5  $0.0323  (50 cases)
+  gpt-5.5-pro                                4.5/5  $1.0821  (48 cases)
+  kimi-k2.6                                  4.3/5  $0.2521  (50 cases)
+  nvidia/nemotron-3-super-120b-a12b          3.4/5  $0.0012  (50 cases)
+======================================================================
+>>> Done: sql_spider at Sat May  9 20:19:47 CEST 2026
+
+>>> Task: structured_output at Sat May  9 20:19:47 CEST 2026
+======================================================================
+TaskBench Batch: structured_output
+Cases: 41 | Models to run: 2 | Already done: 4
+Skipped providers (unavailable): azure
+Budget: $110.5955 / $200
+======================================================================
+
+  kimi-k2.6                                  avg=4.9/5  cost=$0.0741  [PASS]
+  deepseek/deepseek-v4-pro                   avg=4.9/5  cost=$0.0245  [PASS]
+
+======================================================================
+BATCH COMPLETE: structured_output
+Total spend: $110.7023 | Calls: 58301
+
+--- Results ranked by quality ---
+  kimi-k2.6                                  4.9/5  $0.0741  (41 cases)
+  deepseek/deepseek-v4-pro                   4.9/5  $0.0245  (41 cases)
+======================================================================
+>>> Done: structured_output at Sat May  9 20:41:22 CEST 2026
+
+>>> Task: test_generation_v2 at Sat May  9 20:41:22 CEST 2026
+======================================================================
+TaskBench Batch: test_generation_v2
+Cases: 50 | Models to run: 5 | Already done: 1
+Skipped providers (unavailable): azure
+Budget: $110.7023 / $200
+======================================================================
+
+  ERROR gpt-5.5-pro case 1: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 15: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 16: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 20: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 21: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 24: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 28: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 35: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 42: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 45: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 46: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  ERROR gpt-5.5-pro case 48: HTTPSConnectionPool(host='api.openai.com', port=443): Read timed out. (read time
+  gpt-5.5-pro                                avg=4.6/5  cost=$4.0144  [PASS]
+  kimi-k2.6                                  avg=4.2/5  cost=$0.5843  [PASS]
+  deepseek/deepseek-v4-pro                   avg=4.3/5  cost=$0.1959  [PASS]
+  MiniMax-M2.7                               avg=4.3/5  cost=$0.7992  [PASS]
+  o3                                         avg=4.3/5  cost=$0.6432  [PASS]
+
+======================================================================
+BATCH COMPLETE: test_generation_v2
+Total spend: $116.9630 | Calls: 58539
+
+--- Results ranked by quality ---
+  gpt-5.5-pro                                4.6/5  $4.0144  (38 cases)
+  deepseek/deepseek-v4-pro                   4.3/5  $0.1959  (50 cases)
+  MiniMax-M2.7                               4.3/5  $0.7992  (50 cases)
+  o3                                         4.3/5  $0.6432  (50 cases)
+  kimi-k2.6                                  4.2/5  $0.5843  (50 cases)
+======================================================================
+>>> Done: test_generation_v2 at Sun May 10 02:58:16 CEST 2026
+
+>>> Task: translation_enfr at Sun May 10 02:58:17 CEST 2026
+======================================================================
+TaskBench Batch: translation_enfr
+Cases: 50 | Models to run: 4 | Already done: 2
+Skipped providers (unavailable): azure
+Budget: $116.9630 / $200
+======================================================================
+
+  kimi-k2.6                                  avg=4.7/5  cost=$0.2042  [PASS]
+  deepseek/deepseek-v4-pro                   avg=4.5/5  cost=$0.0473  [PASS]
+  nvidia/nemotron-3-super-120b-a12b          avg=3.5/5  cost=$0.0008  [MIXED]
+  MiniMax-M2.7                               avg=4.5/5  cost=$0.1537  [PASS]
+
+======================================================================
+BATCH COMPLETE: translation_enfr
+Total spend: $117.3891 | Calls: 58739
+
+--- Results ranked by quality ---
+  kimi-k2.6                                  4.7/5  $0.2042  (50 cases)
+  deepseek/deepseek-v4-pro                   4.5/5  $0.0473  (50 cases)
+  MiniMax-M2.7                               4.5/5  $0.1537  (50 cases)
+  nvidia/nemotron-3-super-120b-a12b          3.5/5  $0.0008  (50 cases)
+======================================================================
+>>> Done: translation_enfr at Sun May 10 03:54:58 CEST 2026
+
+=== Category A Re-run COMPLETE at Sun May 10 03:54:58 CEST 2026 ===
+Rebuilding CSV...
+Raw files scanned: 50788
+Valid rows: 50673
+Skipped (empty response, score 0): 115
+Errors: 0
+After dedup: 50673 (removed 0 duplicates)
+
+Backed up old CSV to results/benchmark_results.csv.bak
+Wrote 50673 rows to results/benchmark_results.csv
+DONE.

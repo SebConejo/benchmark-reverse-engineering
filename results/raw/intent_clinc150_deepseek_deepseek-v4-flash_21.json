@@ -1,0 +1,13 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "intent_clinc150",
+  "case": 21,
+  "response": "recipe",
+  "score": 0,
+  "cost": 9.408000000000001e-05,
+  "expected": "ingredient_substitution",
+  "tokens": {
+    "input": 568,
+    "output": 26
+  }
+}

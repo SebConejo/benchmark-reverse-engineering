@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "email_summary_v2",
+  "case": 4,
+  "response": "DataSync is proposing a revenue-share partnership where they provide data sync infrastructure and the recipient integrates their SDK, which could reduce customer latency by 60% and generate an estimated $2M in additional annual revenue for each party. Maria Chen is requesting availability for a technical discussion next week.",
+  "score": 5,
+  "cost": 0.0008492,
+  "expected": "",
+  "tokens": {
+    "input": 104,
+    "output": 167
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

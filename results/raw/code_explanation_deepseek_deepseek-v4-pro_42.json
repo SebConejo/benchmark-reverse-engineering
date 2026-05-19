@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "code_explanation",
+  "case": 42,
+  "response": "This code implements a bounded asynchronous queue using the producer-consumer pattern, where `put` and `get` coroutines suspend on asyncio Futures when the queue is full or empty, respectively, and resume when an item is added or space becomes available.",
+  "score": 5,
+  "cost": 0.0008430299999999999,
+  "expected": "",
+  "tokens": {
+    "input": 222,
+    "output": 429
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

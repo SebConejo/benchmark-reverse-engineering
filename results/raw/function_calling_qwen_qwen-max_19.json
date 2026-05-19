@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen-max",
+  "task": "function_calling",
+  "case": 19,
+  "response": "{\"name\": \"run_tests\", \"arguments\": {\"module\": \"backend\", \"verbose\": true}}",
+  "score": 5,
+  "cost": 0.00018512000000000002,
+  "expected": "",
+  "tokens": {
+    "input": 94,
+    "output": 21
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

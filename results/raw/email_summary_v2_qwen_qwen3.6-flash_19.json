@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "task": "email_summary_v2",
+  "case": 19,
+  "response": "The Datadog contract expires June 30, presenting a choice between a discounted three-year renewal at $155,000 annually or a switch to Grafana Cloud at $95,000 annually, which requires a three-month migration. Finance must evaluate these options and issue a final decision by May 15.",
+  "score": 5,
+  "cost": 0.0012635,
+  "expected": "",
+  "tokens": {
+    "input": 114,
+    "output": 1235
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

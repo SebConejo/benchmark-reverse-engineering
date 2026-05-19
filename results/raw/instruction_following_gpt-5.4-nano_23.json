@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.4-nano",
+  "task": "instruction_following",
+  "case": 23,
+  "response": "Apple; Apricot; Banana; Blueberry; Cherry",
+  "score": 3,
+  "cost": 7.600000000000001e-06,
+  "expected": "",
+  "tokens": {
+    "input": 20,
+    "output": 14
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

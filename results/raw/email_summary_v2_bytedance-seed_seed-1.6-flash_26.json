@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "email_summary_v2",
+  "case": 26,
+  "response": "The Privacy Team received a GDPR data export request from user ID 45892, with a 30-day deadline (by May 25), requiring all personal data across services, processing purposes documentation, and a third-party data sharing log. Additionally, legal mandates including analytics data in the response.",
+  "score": 5,
+  "cost": 0.000173625,
+  "expected": "",
+  "tokens": {
+    "input": 183,
+    "output": 533
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

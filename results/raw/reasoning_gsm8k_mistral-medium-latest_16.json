@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "reasoning_gsm8k",
+  "case": 16,
+  "response": "Let's solve the problem step by step.\n\n1. **Determine the total number of books Sarah bought:**\n   - Total amount spent: $300\n   - Cost per book: $15\n   - Number of books = Total amount spent / Cost per book\n   - Number of books = $300 / $15 = 20 books\n\n2. **Calculate the number of books each child received:**\n   - Number of kids: 4\n   - Books per child = Total number of books / Number of kids\n   - Books per child = 20 books / 4 = 5 books\n\nANSWER: 5",
+  "score": 5,
+  "cost": 0.0003108,
+  "expected": "5",
+  "tokens": {
+    "input": 87,
+    "output": 138
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "code_generation",
+  "case": 31,
+  "response": "even_words = [word for word in lst if len(word) % 2 == 0]\n    return sorted(even_words, key=lambda w: (len(w), w))",
+  "score": 4,
+  "cost": 0.002932,
+  "expected": "",
+  "tokens": {
+    "input": 218,
+    "output": 312
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

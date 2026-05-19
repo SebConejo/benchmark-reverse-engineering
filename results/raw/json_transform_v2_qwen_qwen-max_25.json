@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen-max",
+  "task": "json_transform_v2",
+  "case": 25,
+  "response": "{\n  \"items\": 4,\n  \"subtotal\": 1186,\n  \"discount_code\": \"SAVE20\",\n  \"member_discount\": true,\n  \"estimated_total\": 1186\n}",
+  "score": 4,
+  "cost": 0.00034216000000000004,
+  "expected": "",
+  "tokens": {
+    "input": 141,
+    "output": 47
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.4",
+  "task": "instruction_following",
+  "case": 1,
+  "response": "A CPU executes instructions, performs calculations, and coordinates the operations of a computer\u2019s hardware and software.",
+  "score": 2,
+  "cost": 0.000108,
+  "expected": "",
+  "tokens": {
+    "input": 16,
+    "output": 23
+  },
+  "input_price_per_m": 1.0,
+  "output_price_per_m": 4.0,
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

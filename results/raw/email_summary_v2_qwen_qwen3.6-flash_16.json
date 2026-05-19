@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "task": "email_summary_v2",
+  "case": 16,
+  "response": "The April campaign generated 187 signups at a $64 CAC, featuring a strong 5.1% click-through rate but a slight conversion dip compared to March. To optimize performance, the marketing team recommends A/B testing the landing page call-to-action.",
+  "score": 5,
+  "cost": 0.0011435,
+  "expected": "",
+  "tokens": {
+    "input": 130,
+    "output": 1111
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

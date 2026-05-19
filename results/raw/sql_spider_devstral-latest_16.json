@@ -1,0 +1,16 @@
+{
+  "model": "devstral-latest",
+  "task": "sql_spider",
+  "case": 16,
+  "response": "```sql\nSELECT COUNT(DISTINCT country_code) AS number_of_distinct_country_codes\nFROM players;\n```",
+  "score": 5,
+  "cost": 1.4e-05,
+  "expected": "",
+  "tokens": {
+    "input": 68,
+    "output": 24
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

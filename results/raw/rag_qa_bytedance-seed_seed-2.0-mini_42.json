@@ -1,0 +1,18 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "rag_qa",
+  "case": 42,
+  "response": "Moselle",
+  "score": 1,
+  "cost": 0.00035270000000000006,
+  "expected": "Moselle",
+  "tokens": {
+    "input": 263,
+    "output": 816
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

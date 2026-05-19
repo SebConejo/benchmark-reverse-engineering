@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "function_calling",
+  "case": 14,
+  "response": "{\"name\": \"create_reminder\", \"arguments\": {\"message\": \"call the dentist\", \"time\": \"3pm\", \"date\": \"Wednesday\"}}",
+  "score": 4,
+  "cost": 0.0007608000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 92,
+    "output": 294
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

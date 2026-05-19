@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "rag_qa",
+  "case": 8,
+  "response": "36%",
+  "score": 1,
+  "cost": 0.0003468,
+  "expected": "36%",
+  "tokens": {
+    "input": 370,
+    "output": 341
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

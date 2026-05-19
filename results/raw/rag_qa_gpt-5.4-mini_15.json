@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.4-mini",
+  "task": "rag_qa",
+  "case": 15,
+  "response": "Prussia",
+  "score": 5,
+  "cost": 7.02e-05,
+  "expected": "Prussia",
+  "tokens": {
+    "input": 214,
+    "output": 5
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

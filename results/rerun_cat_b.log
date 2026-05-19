@@ -1,0 +1,876 @@
+>>> Task: code_explanation
+======================================================================
+TaskBench Batch: code_explanation
+Cases: 48 | Models to run: 1 | Already done: 7
+Budget: $117.3891 / $200
+======================================================================
+
+  deepseek/deepseek-v4-flash                 avg=4.9/5  cost=$0.0049  [PASS]
+
+======================================================================
+BATCH COMPLETE: code_explanation
+Total spend: $117.3988 | Calls: 58787
+
+--- Results ranked by quality ---
+  deepseek/deepseek-v4-flash                 4.9/5  $0.0049  (48 cases)
+======================================================================
+>>> Done: code_explanation
+>>> Task: code_generation
+======================================================================
+TaskBench Batch: code_generation
+Cases: 50 | Models to run: 3 | Already done: 5
+Budget: $117.3988 / $200
+======================================================================
+
+  deepseek/deepseek-v4-flash                 avg=4.4/5  cost=$0.0084  [PASS]
+  qwen/qwen3.6-plus                          avg=4.3/5  cost=$0.5064  [PASS]
+  gemini-2.5-pro                             avg=4.1/5  cost=$0.0416  [PASS]
+
+======================================================================
+BATCH COMPLETE: code_generation
+Total spend: $117.9702 | Calls: 58937
+
+--- Results ranked by quality ---
+  deepseek/deepseek-v4-flash                 4.4/5  $0.0084  (50 cases)
+  qwen/qwen3.6-plus                          4.3/5  $0.5064  (50 cases)
+  gemini-2.5-pro                             4.1/5  $0.0416  (50 cases)
+======================================================================
+>>> Done: code_generation
+>>> Task: code_review_v2
+======================================================================
+TaskBench Batch: code_review_v2
+Cases: 50 | Models to run: 6 | Already done: 2
+Budget: $117.9702 / $200
+======================================================================
+
+  gpt-5.4                                    avg=4.6/5  cost=$0.5860  [PASS]
+  gpt-5.4-mini                               avg=4.7/5  cost=$0.0664  [PASS]
+  gpt-5.4-nano                               avg=4.8/5  cost=$0.0171  [PASS]
+  qwen/qwen3.6-plus                          avg=4.8/5  cost=$0.2127  [PASS]
+  gemini-2.5-pro                             avg=4.4/5  cost=$1.0042  [PASS]
+  gpt-5.5                                    avg=4.8/5  cost=$0.9795  [PASS]
+
+======================================================================
+BATCH COMPLETE: code_review_v2
+Total spend: $120.8661 | Calls: 59237
+
+--- Results ranked by quality ---
+  gpt-5.4-nano                               4.8/5  $0.0171  (50 cases)
+  gpt-5.5                                    4.8/5  $0.9795  (50 cases)
+  qwen/qwen3.6-plus                          4.8/5  $0.2127  (50 cases)
+  gpt-5.4-mini                               4.7/5  $0.0664  (50 cases)
+  gpt-5.4                                    4.6/5  $0.5860  (50 cases)
+  gemini-2.5-pro                             4.4/5  $1.0042  (50 cases)
+======================================================================
+>>> Done: code_review_v2
+>>> Task: data_to_text
+======================================================================
+TaskBench Batch: data_to_text
+Cases: 50 | Models to run: 4 | Already done: 4
+Budget: $120.8661 / $200
+======================================================================
+
+  gpt-5.4                                    avg=5.0/5  cost=$0.0411  [PASS]
+  gpt-5.4-mini                               avg=5.0/5  cost=$0.0062  [PASS]
+  gpt-5.4-nano                               avg=5.0/5  cost=$0.0020  [PASS]
+  gemini-2.5-pro                             avg=5.0/5  cost=$0.0494  [PASS]
+
+======================================================================
+BATCH COMPLETE: data_to_text
+Total spend: $120.9847 | Calls: 59437
+
+--- Results ranked by quality ---
+  gpt-5.4                                    5.0/5  $0.0411  (50 cases)
+  gemini-2.5-pro                             5.0/5  $0.0494  (50 cases)
+  gpt-5.4-mini                               5.0/5  $0.0062  (50 cases)
+  gpt-5.4-nano                               5.0/5  $0.0020  (50 cases)
+======================================================================
+>>> Done: data_to_text
+>>> Task: email_summary_v2
+======================================================================
+TaskBench Batch: email_summary_v2
+Cases: 50 | Models to run: 2 | Already done: 6
+Budget: $120.9847 / $200
+======================================================================
+
+  gpt-5.4                                    avg=5.0/5  cost=$0.0381  [PASS]
+  deepseek/deepseek-v4-flash                 avg=4.9/5  cost=$0.0038  [PASS]
+
+======================================================================
+BATCH COMPLETE: email_summary_v2
+Total spend: $121.0366 | Calls: 59537
+
+--- Results ranked by quality ---
+  gpt-5.4                                    5.0/5  $0.0381  (50 cases)
+  deepseek/deepseek-v4-flash                 4.9/5  $0.0038  (50 cases)
+======================================================================
+>>> Done: email_summary_v2
+>>> Task: extraction_hard_v2
+======================================================================
+TaskBench Batch: extraction_hard_v2
+Cases: 50 | Models to run: 2 | Already done: 6
+Budget: $121.0366 / $200
+======================================================================
+
+  deepseek/deepseek-v4-flash                 avg=4.4/5  cost=$0.0153  [PASS]
+  gemini-2.5-pro                             avg=4.4/5  cost=$0.1721  [PASS]
+
+======================================================================
+BATCH COMPLETE: extraction_hard_v2
+Total spend: $121.2339 | Calls: 59637
+
+--- Results ranked by quality ---
+  gemini-2.5-pro                             4.4/5  $0.1721  (50 cases)
+  deepseek/deepseek-v4-flash                 4.4/5  $0.0153  (50 cases)
+======================================================================
+>>> Done: extraction_hard_v2
+>>> Task: function_calling
+======================================================================
+TaskBench Batch: function_calling
+Cases: 50 | Models to run: 1 | Already done: 7
+Budget: $121.2339 / $200
+======================================================================
+
+  deepseek/deepseek-v4-flash                 avg=4.5/5  cost=$0.0047  [PASS]
+
+======================================================================
+BATCH COMPLETE: function_calling
+Total spend: $121.2437 | Calls: 59687
+
+--- Results ranked by quality ---
+  deepseek/deepseek-v4-flash                 4.5/5  $0.0047  (50 cases)
+======================================================================
+>>> Done: function_calling
+>>> Task: instruction_following
+======================================================================
+TaskBench Batch: instruction_following
+Cases: 50 | Models to run: 0 | Already done: 8
+Budget: $121.2437 / $200
+======================================================================
+
+
+======================================================================
+BATCH COMPLETE: instruction_following
+Total spend: $121.2437 | Calls: 59687
+======================================================================
+>>> Done: instruction_following
+>>> Task: intent_clinc150
+======================================================================
+TaskBench Batch: intent_clinc150
+Cases: 50 | Models to run: 1 | Already done: 7
+Budget: $121.2437 / $200
+======================================================================
+
+  deepseek/deepseek-v4-flash                 avg=4.5/5  acc=90%  cost=$0.0050  [PASS]
+
+======================================================================
+BATCH COMPLETE: intent_clinc150
+Total spend: $121.2486 | Calls: 59737
+
+--- Results ranked by quality ---
+  deepseek/deepseek-v4-flash                 4.5/5  acc=90%  $0.0050  (50 cases)
+
+--- Native metric (accuracy) ---
+  deepseek/deepseek-v4-flash                 90%
+======================================================================
+>>> Done: intent_clinc150
+>>> Task: json_transform_v2
+======================================================================
+TaskBench Batch: json_transform_v2
+Cases: 50 | Models to run: 2 | Already done: 6
+Budget: $121.2486 / $200
+======================================================================
+
+  deepseek/deepseek-v4-flash                 avg=4.6/5  cost=$0.0078  [PASS]
+  ERROR qwen/qwen3.6-plus case 39: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 40: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 41: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 42: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 43: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 44: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 45: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 46: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 47: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 48: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 49: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  qwen/qwen3.6-plus                          avg=4.5/5  cost=$0.1115  [PASS]
+
+======================================================================
+BATCH COMPLETE: json_transform_v2
+Total spend: $121.3769 | Calls: 59826
+
+--- Results ranked by quality ---
+  deepseek/deepseek-v4-flash                 4.6/5  $0.0078  (50 cases)
+  qwen/qwen3.6-plus                          4.5/5  $0.1115  (39 cases)
+======================================================================
+>>> Done: json_transform_v2
+>>> Task: long_summarization
+======================================================================
+TaskBench Batch: long_summarization
+Cases: 50 | Models to run: 0 | Already done: 8
+Budget: $121.3769 / $200
+======================================================================
+
+
+======================================================================
+BATCH COMPLETE: long_summarization
+Total spend: $121.3769 | Calls: 59826
+======================================================================
+>>> Done: long_summarization
+>>> Task: moderation_toxigen
+======================================================================
+TaskBench Batch: moderation_toxigen
+Cases: 50 | Models to run: 2 | Already done: 6
+Budget: $121.3769 / $200
+======================================================================
+
+  ERROR deepseek/deepseek-v4-flash case 0: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 1: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 2: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 3: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 4: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 5: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 6: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 7: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 8: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 9: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 10: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 11: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 12: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 13: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 14: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 15: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 16: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 17: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 18: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 19: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 20: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 21: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 22: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 23: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 24: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 25: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 26: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 27: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 28: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 29: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 30: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 31: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 32: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 33: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 34: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 35: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 36: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 37: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 38: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 39: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 40: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 41: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 42: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 43: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 44: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 45: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 46: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 47: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 48: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 49: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  deepseek/deepseek-v4-flash                 NO RESULTS
+  gemini-2.5-pro                             avg=4.7/5  acc=94%  cost=$0.0037  [PASS]
+
+======================================================================
+BATCH COMPLETE: moderation_toxigen
+Total spend: $121.3806 | Calls: 59876
+
+--- Results ranked by quality ---
+  gemini-2.5-pro                             4.7/5  acc=94%  $0.0037  (50 cases)
+
+--- Native metric (accuracy) ---
+  gemini-2.5-pro                             94%
+======================================================================
+>>> Done: moderation_toxigen
+>>> Task: multistep_reasoning
+======================================================================
+TaskBench Batch: multistep_reasoning
+Cases: 50 | Models to run: 2 | Already done: 6
+Budget: $121.3806 / $200
+======================================================================
+
+  ERROR qwen/qwen3.6-plus case 0: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 1: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 2: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 3: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 4: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 5: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 6: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 7: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 8: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 9: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 10: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 11: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 12: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 13: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 14: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 15: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 16: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 17: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 18: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 19: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 20: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 21: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 22: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 23: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 24: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 25: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 26: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 27: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 28: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 29: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 30: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 31: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 32: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 33: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 34: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 35: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 36: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 37: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 38: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 39: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 40: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 41: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 42: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 43: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 44: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 45: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 46: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 47: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 48: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 49: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  qwen/qwen3.6-plus                          NO RESULTS
+  gemini-2.5-pro                             avg=5.0/5  acc=100%  cost=$0.1167  [PASS]
+
+======================================================================
+BATCH COMPLETE: multistep_reasoning
+Total spend: $121.4973 | Calls: 59926
+
+--- Results ranked by quality ---
+  gemini-2.5-pro                             5.0/5  acc=100%  $0.1167  (50 cases)
+
+--- Native metric (accuracy) ---
+  gemini-2.5-pro                             100%
+======================================================================
+>>> Done: multistep_reasoning
+>>> Task: ner_extraction
+======================================================================
+TaskBench Batch: ner_extraction
+Cases: 50 | Models to run: 0 | Already done: 8
+Budget: $121.4973 / $200
+======================================================================
+
+
+======================================================================
+BATCH COMPLETE: ner_extraction
+Total spend: $121.4973 | Calls: 59926
+======================================================================
+>>> Done: ner_extraction
+>>> Task: rag_qa
+======================================================================
+TaskBench Batch: rag_qa
+Cases: 50 | Models to run: 1 | Already done: 7
+Budget: $121.4973 / $200
+======================================================================
+
+  ERROR deepseek/deepseek-v4-flash case 0: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 1: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 2: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 3: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 4: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 5: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 6: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 7: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 8: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 9: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 10: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 11: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 12: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 13: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 14: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 15: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 16: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 17: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 18: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 19: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 20: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 21: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 22: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 23: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 24: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 25: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 26: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 27: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 28: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 29: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 30: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 31: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 32: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 33: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 34: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 35: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 36: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 37: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 38: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 39: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 40: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 41: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 42: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 43: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 44: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 45: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 46: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 47: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 48: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 49: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  deepseek/deepseek-v4-flash                 NO RESULTS
+
+======================================================================
+BATCH COMPLETE: rag_qa
+Total spend: $121.4973 | Calls: 59926
+======================================================================
+>>> Done: rag_qa
+>>> Task: reasoning_gsm8k
+======================================================================
+TaskBench Batch: reasoning_gsm8k
+Cases: 50 | Models to run: 1 | Already done: 7
+Budget: $121.4973 / $200
+======================================================================
+
+  ERROR deepseek/deepseek-v4-flash case 0: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 1: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 2: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 3: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 4: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 5: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 6: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 7: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 8: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 9: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 10: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 11: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 12: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 13: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 14: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 15: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 16: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 17: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 18: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 19: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 20: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 21: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 22: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 23: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 24: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 25: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 26: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 27: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 28: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 29: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 30: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 31: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 32: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 33: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 34: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 35: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 36: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 37: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 38: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 39: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 40: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 41: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 42: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 43: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 44: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 45: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 46: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 47: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 48: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 49: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  deepseek/deepseek-v4-flash                 NO RESULTS
+
+======================================================================
+BATCH COMPLETE: reasoning_gsm8k
+Total spend: $121.4973 | Calls: 59926
+======================================================================
+>>> Done: reasoning_gsm8k
+>>> Task: sentiment_sst2
+======================================================================
+TaskBench Batch: sentiment_sst2
+Cases: 50 | Models to run: 1 | Already done: 7
+Budget: $121.4973 / $200
+======================================================================
+
+  ERROR deepseek/deepseek-v4-flash case 0: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 1: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 2: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 3: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 4: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 5: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 6: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 7: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 8: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 9: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 10: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 11: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 12: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 13: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 14: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 15: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 16: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 17: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 18: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 19: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 20: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 21: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 22: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 23: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 24: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 25: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 26: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 27: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 28: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 29: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 30: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 31: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 32: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 33: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 34: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 35: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 36: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 37: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 38: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 39: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 40: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 41: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 42: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 43: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 44: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 45: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 46: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 47: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 48: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 49: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  deepseek/deepseek-v4-flash                 NO RESULTS
+
+======================================================================
+BATCH COMPLETE: sentiment_sst2
+Total spend: $121.4973 | Calls: 59926
+======================================================================
+>>> Done: sentiment_sst2
+>>> Task: sql_spider
+======================================================================
+TaskBench Batch: sql_spider
+Cases: 50 | Models to run: 1 | Already done: 7
+Budget: $121.4973 / $200
+======================================================================
+
+  ERROR deepseek/deepseek-v4-flash case 0: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 1: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 2: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 3: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 4: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 5: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 6: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 7: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 8: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 9: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 10: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 11: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 12: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 13: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 14: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 15: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 16: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 17: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 18: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 19: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 20: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 21: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 22: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 23: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 24: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 25: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 26: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 27: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 28: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 29: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 30: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 31: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 32: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 33: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 34: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 35: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 36: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 37: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 38: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 39: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 40: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 41: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 42: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 43: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 44: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 45: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 46: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 47: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 48: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 49: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  deepseek/deepseek-v4-flash                 NO RESULTS
+
+======================================================================
+BATCH COMPLETE: sql_spider
+Total spend: $121.4973 | Calls: 59926
+======================================================================
+>>> Done: sql_spider
+>>> Task: structured_output
+======================================================================
+TaskBench Batch: structured_output
+Cases: 41 | Models to run: 2 | Already done: 6
+Budget: $121.4973 / $200
+======================================================================
+
+  ERROR qwen/qwen3.6-plus case 0: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 1: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 2: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 3: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 4: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 5: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 6: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 7: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 8: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 9: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 10: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 11: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 12: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 13: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 14: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 15: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 16: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 17: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 18: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 19: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 20: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 21: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 22: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 23: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 24: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 25: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 26: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 27: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 28: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 29: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 30: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 31: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 32: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 33: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 34: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 35: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 36: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 37: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 38: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 39: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 40: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  qwen/qwen3.6-plus                          NO RESULTS
+  gpt-5.5                                    avg=4.9/5  cost=$0.0663  [PASS]
+
+======================================================================
+BATCH COMPLETE: structured_output
+Total spend: $121.5677 | Calls: 59967
+
+--- Results ranked by quality ---
+  gpt-5.5                                    4.9/5  $0.0663  (41 cases)
+======================================================================
+>>> Done: structured_output
+>>> Task: test_generation_v2
+======================================================================
+TaskBench Batch: test_generation_v2
+Cases: 50 | Models to run: 4 | Already done: 4
+Budget: $121.5677 / $200
+======================================================================
+
+  ERROR deepseek/deepseek-v4-flash case 0: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 1: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 2: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 3: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 4: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 5: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 6: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 7: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 8: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 9: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 10: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 11: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 12: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 13: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 14: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 15: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 16: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 17: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 18: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 19: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 20: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 21: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 22: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 23: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 24: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 25: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 26: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 27: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 28: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 29: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 30: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 31: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 32: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 33: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 34: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 35: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 36: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 37: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 38: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 39: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 40: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 41: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 42: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 43: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 44: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 45: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 46: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 47: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 48: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 49: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  deepseek/deepseek-v4-flash                 NO RESULTS
+  ERROR qwen/qwen3.6-plus case 0: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 1: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 2: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 3: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 4: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 5: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 6: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 7: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 8: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 9: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 10: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 11: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 12: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 13: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 14: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 15: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 16: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 17: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 18: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 19: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 20: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 21: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 22: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 23: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 24: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 25: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 26: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 27: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 28: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 29: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 30: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 31: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 32: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 33: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 34: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 35: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 36: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 37: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 38: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 39: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 40: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 41: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 42: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 43: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 44: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 45: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 46: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 47: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 48: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR qwen/qwen3.6-plus case 49: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  qwen/qwen3.6-plus                          NO RESULTS
+  mistral-medium-latest                      avg=4.2/5  cost=$0.0967  [PASS]
+  ERROR gpt-5.5 case 39: Expecting value: line 1 column 1 (char 0)
+  gpt-5.5                                    avg=4.6/5  cost=$0.7006  [PASS]
+
+======================================================================
+BATCH COMPLETE: test_generation_v2
+Total spend: $122.3749 | Calls: 60066
+
+--- Results ranked by quality ---
+  gpt-5.5                                    4.6/5  $0.7006  (49 cases)
+  mistral-medium-latest                      4.2/5  $0.0967  (50 cases)
+======================================================================
+>>> Done: test_generation_v2
+>>> Task: translation_enfr
+======================================================================
+TaskBench Batch: translation_enfr
+Cases: 50 | Models to run: 1 | Already done: 7
+Budget: $122.3749 / $200
+======================================================================
+
+  ERROR deepseek/deepseek-v4-flash case 0: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 1: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 2: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 3: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 4: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 5: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 6: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 7: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 8: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 9: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 10: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 11: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 12: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 13: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 14: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 15: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 16: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 17: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 18: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 19: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 20: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 21: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 22: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 23: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 24: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 25: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 26: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 27: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 28: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 29: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 30: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 31: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 32: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 33: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 34: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 35: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 36: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 37: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 38: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 39: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 40: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 41: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 42: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 43: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 44: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 45: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 46: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 47: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 48: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  ERROR deepseek/deepseek-v4-flash case 49: Insufficient credits. Add more using https://openrouter.ai/settings/credits
+  deepseek/deepseek-v4-flash                 NO RESULTS
+
+======================================================================
+BATCH COMPLETE: translation_enfr
+Total spend: $122.3749 | Calls: 60066
+======================================================================
+>>> Done: translation_enfr
+=== Category B COMPLETE ===

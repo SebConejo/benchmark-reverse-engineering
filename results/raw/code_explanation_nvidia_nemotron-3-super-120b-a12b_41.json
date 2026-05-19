@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "code_explanation",
+  "case": 41,
+  "response": "The function computes a CRC\u201132 checksum by initializing a 32\u2011bit register to all\u2011ones, then for each input byte it XORs the byte into the register and iterates over the 8 bits: if the least\u2011significant bit is set, the register is right\u2011shifted and XORed with the reversed CRC\u201132 polynomial\u202f0xEDB88320; otherwise it is just shifted. After all bytes are processed, the register is complemented (XOR\u202f0xFFFFFFFF) to yield the final CRC\u201132 value. This is the classic bit",
+  "score": 5,
+  "cost": 2.997e-05,
+  "expected": "",
+  "tokens": {
+    "input": 133,
+    "output": 200
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

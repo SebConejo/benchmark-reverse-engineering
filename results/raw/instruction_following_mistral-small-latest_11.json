@@ -1,0 +1,16 @@
+{
+  "model": "mistral-small-latest",
+  "task": "instruction_following",
+  "case": 11,
+  "response": "Got it! How can I assist you with your message?",
+  "score": 2,
+  "cost": 6.300000000000001e-06,
+  "expected": "",
+  "tokens": {
+    "input": 24,
+    "output": 13
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

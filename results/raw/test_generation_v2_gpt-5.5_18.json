@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.5",
+  "task": "test_generation_v2",
+  "case": 18,
+  "response": "```python\n# test_title_case.py\nimport pytest\n\nfrom your_module import title_case  # Replace \"your_module\" with the actual module name\n\n\n@pytest.mark.parametrize(\n    \"input_text, expected\",\n    [\n        (\"hello world\", \"Hello World\"),\n        (\"the quick brown fox\", \"The Quick Brown Fox\"),\n        (\"PYTHON IS FUN\", \"Python Is Fun\"),\n        (\"mIxEd CaSe WoRdS\", \"Mixed Case Words\"),\n        (\"already Title Case\", \"Already Title Case\"),\n    ],\n)\ndef test_title_case_happy_path(input_text, expected):\n    assert title_case(input_text) == expected\n\n\n@pytest.mark.parametrize(\n    \"input_text, expected\",\n    [\n        (\"\", \"\"),\n        (\"   \", \"\"),\n        (\" hello \", \"Hello\"),\n        (\"hello   world\", \"Hello World\"),\n        (\"\\thello\\tworld\\t\", \"Hello World\"),\n        (\"hello\\nworld\", \"Hello World\"),\n        (\"hello\\r\\nworld\", \"Hello World\"),\n    ],\n)\ndef test_title_case_whitespace_edge_cases(input_text, expected):\n    assert title_case(input_text) == expected\n\n\n@pytest.mark.parametrize(\n    \"input_text, expected\",\n    [\n        (\"123 abc\", \"123 Abc\"),\n        (\"hello-world\", \"Hello-world\"),\n        (\"o'CONNOR\", \"O'connor\"),\n        (\"\u00e9LAN vital\", \"\u00c9lan Vital\"),\n        (\"hello, world!\", \"Hello, World!\"),\n    ],\n)\ndef test_title_case_special_characters(input_text, expected):\n    assert title_case(input_text) == expected\n\n\n@pytest.mark.parametrize(\n    \"invalid_input\",\n    [\n        None,\n        123,\n        [\"hello\", \"world\"],\n        {\"text\": \"hello world\"},\n    ],\n)\ndef test_title_case_invalid_non_string_inputs_raise_attribute_error(invalid_input):\n    with pytest.raises(AttributeError):\n        title_case(invalid_input)\n\n\ndef test_title_case_bytes_input_raises_type_error():\n    with pytest.raises(TypeError):\n        title_case(b\"hello world\")\n```",
+  "score": 5,
+  "cost": 0.008811,
+  "expected": "",
+  "tokens": {
+    "input": 57,
+    "output": 720
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

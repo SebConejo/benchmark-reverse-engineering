@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.4",
+  "task": "code_generation",
+  "case": 23,
+  "response": "min_ending = nums[0]\nmin_so_far = nums[0]\n\nfor num in nums[1:]:\n    min_ending = min(num, min_ending + num)\n    min_so_far = min(min_so_far, min_ending)\n\nreturn min_so_far",
+  "score": 5,
+  "cost": 0.000355,
+  "expected": "",
+  "tokens": {
+    "input": 119,
+    "output": 59
+  },
+  "input_price_per_m": 1.0,
+  "output_price_per_m": 4.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

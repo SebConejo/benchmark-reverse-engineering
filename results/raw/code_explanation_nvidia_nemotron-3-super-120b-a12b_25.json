@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "code_explanation",
+  "case": 25,
+  "response": "The class implements the **observer (publish\u2011subscribe) pattern**: it stores a dictionary (`_events`) that maps each event name to a list of callback functions, `on` appends a function to that list, `emit` iterates over the list and invokes each stored function with the supplied arguments, and `off` removes a previously registered function from the list. This allows multiple listeners to be registered for an event and notified when the event is emitted.",
+  "score": 5,
+  "cost": 1.899e-05,
+  "expected": "",
+  "tokens": {
+    "input": 117,
+    "output": 94
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

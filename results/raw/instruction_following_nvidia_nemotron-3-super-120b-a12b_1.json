@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "instruction_following",
+  "case": 1,
+  "response": "The CPU (central processing unit) executes program instructions by performing arithmetic, logic, and control operations to process data and coordinate the computer's components.",
+  "score": 2,
+  "cost": 4.319999999999999e-06,
+  "expected": "",
+  "tokens": {
+    "input": 18,
+    "output": 30
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

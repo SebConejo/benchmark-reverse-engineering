@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "email_summary_v2",
+  "case": 30,
+  "response": "Competitor X recently launched AI-driven auto-categorization at double our pricing, though market reaction has been neutral, while our strengths remain superior API and integrations. The product team recommends **accelerating our AI roadmap** to address this gap.",
+  "score": 5,
+  "cost": 0.000144,
+  "expected": "",
+  "tokens": {
+    "input": 95,
+    "output": 53
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

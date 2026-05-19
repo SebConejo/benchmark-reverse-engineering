@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-max-preview",
+  "task": "email_summary_v2",
+  "case": 28,
+  "response": "The annual disaster recovery test missed its 4-hour recovery target, taking over six hours due to an unexpectedly slow database restore caused by dataset growth. To address this gap, the team must increase backup frequency and pre-provision a standby database before the next scheduled test in October.",
+  "score": 5,
+  "cost": 0.002899,
+  "expected": "",
+  "tokens": {
+    "input": 114,
+    "output": 529
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

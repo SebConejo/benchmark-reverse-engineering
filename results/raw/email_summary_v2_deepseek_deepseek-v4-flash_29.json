@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "email_summary_v2",
+  "case": 29,
+  "response": "The mobile app's crash rate spiked to 2.3% due to a null pointer error in the Android notification handler, exceeding the 0.5% threshold. A fix has been merged and an emergency release submitted to the Play Store, with no action required for iOS.",
+  "score": 5,
+  "cost": 4.550000000000001e-05,
+  "expected": "",
+  "tokens": {
+    "input": 93,
+    "output": 58
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

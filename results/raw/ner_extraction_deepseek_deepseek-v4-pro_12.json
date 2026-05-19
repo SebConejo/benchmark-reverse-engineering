@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "ner_extraction",
+  "case": 12,
+  "response": "{\"persons\": [\"Jensen Huang\"], \"organizations\": [\"Nvidia\"], \"locations\": [\"San Jose\"]}",
+  "score": 5,
+  "cost": 0.000590295,
+  "expected": "",
+  "tokens": {
+    "input": 73,
+    "output": 321
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

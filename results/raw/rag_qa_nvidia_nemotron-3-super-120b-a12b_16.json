@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "rag_qa",
+  "case": 16,
+  "response": "Approximately fifty percent more land.",
+  "score": 5,
+  "cost": 2.691e-05,
+  "expected": "approximately fifty percent",
+  "tokens": {
+    "input": 227,
+    "output": 72
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

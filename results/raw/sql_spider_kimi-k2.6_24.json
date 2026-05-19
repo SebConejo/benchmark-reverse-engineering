@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "sql_spider",
+  "case": 24,
+  "response": "SELECT Year FROM concert GROUP BY Year ORDER BY COUNT(*) DESC LIMIT 1;",
+  "score": 4,
+  "cost": 0.0022668,
+  "expected": "",
+  "tokens": {
+    "input": 70,
+    "output": 927
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-max-preview",
+  "task": "ner_extraction",
+  "case": 17,
+  "response": "{\"persons\": [], \"organizations\": [\"Toyota\"], \"locations\": [\"Greensboro\", \"North Carolina\"]}",
+  "score": 5,
+  "cost": 0.005344300000000001,
+  "expected": "",
+  "tokens": {
+    "input": 75,
+    "output": 1009
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

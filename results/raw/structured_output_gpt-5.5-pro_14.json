@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "structured_output",
+  "case": 14,
+  "response": "{\"title\":\"The Great Gatsby\",\"author\":\"F. Scott Fitzgerald\",\"year\":1925,\"genre\":\"literary fiction\",\"pages\":180,\"isbn\":\"978-0743273565\",\"rating\":4.2}",
+  "score": 5,
+  "cost": 0.010395,
+  "expected": "",
+  "tokens": {
+    "input": 108,
+    "output": 117
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

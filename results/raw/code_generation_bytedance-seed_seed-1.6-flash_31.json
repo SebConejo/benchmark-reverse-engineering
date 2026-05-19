@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "code_generation",
+  "case": 31,
+  "response": "filtered = [word for word in lst if len(word) % 2 == 0]\n    return sorted(filtered, key=lambda x: (len(x), x))",
+  "score": 4,
+  "cost": 0.000229725,
+  "expected": "",
+  "tokens": {
+    "input": 311,
+    "output": 688
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

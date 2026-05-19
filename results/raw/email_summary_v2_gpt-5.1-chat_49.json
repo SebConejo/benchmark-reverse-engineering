@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "email_summary_v2",
+  "case": 49,
+  "response": "The payment integration failed PCI compliance and will require an additional two weeks, so the team must choose between launching without payments (with updated T&Cs) or delaying the full launch to May 15. A meeting is scheduled for tomorrow at 10am to decide next steps.",
+  "score": 5,
+  "cost": 0.000268,
+  "expected": "",
+  "tokens": {
+    "input": 99,
+    "output": 59
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

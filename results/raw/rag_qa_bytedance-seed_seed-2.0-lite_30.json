@@ -1,0 +1,18 @@
+{
+  "model": "bytedance-seed/seed-2.0-lite",
+  "task": "rag_qa",
+  "case": 30,
+  "response": "Melbourne",
+  "score": 1,
+  "cost": 0.00013575,
+  "expected": "Melbourne",
+  "tokens": {
+    "input": 303,
+    "output": 60
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

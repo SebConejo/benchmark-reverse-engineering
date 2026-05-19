@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "rag_qa",
+  "case": 45,
+  "response": "The show globe.",
+  "score": 5,
+  "cost": 0.0008249999999999999,
+  "expected": "The show globe",
+  "tokens": {
+    "input": 223,
+    "output": 288
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "reasoning_gsm8k",
+  "case": 46,
+  "response": "Let\u2019s break this down step by step.  \n\n**Anakin\u2019s catch:**  \n- Starfish: 10  \n- Sea horses: 6  \n- Clownfish: 3  \nTotal for Anakin: \\( 10 + 6 + 3 = 19 \\)\n\n**Locsin\u2019s catch:**  \n- Starfish: \\( 10 - 5 = 5 \\)  \n- Sea horses: \\( 6 - 3 = 3 \\)  \n- Clownfish: \\( 3 + 2 = 5 \\)  \nTotal for Locsin: \\( 5 + 3 + 5 = 13 \\)\n\n**Combined total:**  \n\\( 19 + 13 = 32 \\)\n\nANSWER: 32",
+  "score": 5,
+  "cost": 0.00031711500000000003,
+  "expected": "32",
+  "tokens": {
+    "input": 109,
+    "output": 155
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

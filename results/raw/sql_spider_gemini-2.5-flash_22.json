@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-flash",
+  "task": "sql_spider",
+  "case": 22,
+  "response": "```sql\nSELECT name FROM sections ORDER BY name DESC;\n```",
+  "score": 5,
+  "cost": 1.9350000000000003e-05,
+  "expected": "",
+  "tokens": {
+    "input": 73,
+    "output": 14
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

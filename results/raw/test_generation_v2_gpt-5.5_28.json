@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.5",
+  "task": "test_generation_v2",
+  "case": 28,
+  "response": "```python\n# test_memoize.py\nimport pytest\n\nfrom your_module import memoize  # Replace \"your_module\" with the actual module name\n\n\ndef test_memoize_caches_result_for_same_arguments():\n    calls = 0\n\n    @memoize\n    def add_one(x):\n        nonlocal calls\n        calls += 1\n        return x + 1\n\n    assert add_one(1) == 2\n    assert add_one(1) == 2\n    assert add_one(1) == 2\n\n    assert calls == 1\n\n\ndef test_memoize_calls_function_again_for_different_arguments():\n    calls = 0\n\n    @memoize\n    def double(x):\n        nonlocal calls\n        calls += 1\n        return x * 2\n\n    assert double(2) == 4\n    assert double(3) == 6\n    assert double(2) == 4\n    assert double(3) == 6\n\n    assert calls == 2\n\n\ndef test_memoize_supports_multiple_positional_arguments():\n    calls = 0\n\n    @memoize\n    def add(a, b):\n        nonlocal calls\n        calls += 1\n        return a + b\n\n    assert add(1, 2) == 3\n    assert add(1, 2) == 3\n    assert add(2, 1) == 3\n\n    assert calls == 2\n\n\ndef test_memoize_supports_no_arguments():\n    calls = 0\n\n    @memoize\n    def get_value():\n        nonlocal calls\n        calls += 1\n        return \"cached\"\n\n    assert get_value() == \"cached\"\n    assert get_value() == \"cached\"\n\n    assert calls == 1\n\n\ndef test_memoize_caches_falsy_return_values():\n    calls = 0\n\n    @memoize\n    def returns_zero(x):\n        nonlocal calls\n        calls += 1\n        return 0\n\n    assert returns_zero(\"a\") == 0\n    assert returns_zero(\"a\") == 0\n\n    assert calls == 1\n\n\ndef test_memoize_returns_same_cached_object():\n    calls = 0\n\n    @memoize\n    def make_list(x):\n        nonlocal calls\n        calls += 1\n        return [x]\n\n    first = make_list(1)\n    second = make_list(1)\n\n    assert first is second\n    assert first == [1]\n    assert calls == 1\n\n\ndef test_memoize_raises_type_error_for_unhashable_arguments():\n    called = False\n\n    @memoize\n    def identity(x):\n        nonlocal called\n        called = True\n        return x\n\n    with pytest.raises(TypeError):\n        identity([])\n\n    assert called is False\n\n\ndef test_memoize_does_not_cache_exceptions():\n    calls = 0\n\n    @memoize\n    def flaky(x):\n        nonlocal calls\n        calls += 1\n\n        if calls == 1:\n            raise ValueError(\"temporary failure\")\n\n        return x * 2\n\n    with pytest.raises(ValueError, match=\"temporary failure\"):\n        flaky(3)\n\n    assert calls == 1\n\n    assert flaky(3) == 6\n    assert calls == 2\n\n    assert flaky(3) == 6\n    assert calls == 2\n\n\ndef test_memoize_does_not_support_keyword_arguments():\n    @memoize\n    def add(a, b):\n        return a + b\n\n    with pytest.raises(TypeError):\n        add(a=1, b=2)\n```",
+  "score": 4,
+  "cost": 0.015525,
+  "expected": "",
+  "tokens": {
+    "input": 75,
+    "output": 1275
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

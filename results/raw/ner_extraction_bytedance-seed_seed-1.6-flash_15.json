@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "ner_extraction",
+  "case": 15,
+  "response": "{\n  \"persons\": [],\n  \"organizations\": [\"SpaceX\"],\n  \"locations\": [\"Cape Canaveral\"]\n}",
+  "score": 4,
+  "cost": 8.6025e-05,
+  "expected": "",
+  "tokens": {
+    "input": 151,
+    "output": 249
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "code_generation",
+  "case": 2,
+  "response": "sorted_lst = sorted(lst)\nresult = []\nleft, right = 0, len(sorted_lst) - 1\nwhile left <= right:\n    result.append(sorted_lst[left])\n    if left != right:\n        result.append(sorted_lst[right])\n    left += 1\n    right -= 1\nreturn result",
+  "score": 5,
+  "cost": 0.007524000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 188,
+    "output": 1663
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

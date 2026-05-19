@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "code_generation",
+  "case": 41,
+  "response": "indices = [i for i in range(len(l)) if i % 3 == 0]\n    sorted_vals = sorted(l[i] for i in indices)\n    result = list(l)\n    for i, idx in enumerate(indices):\n        result[idx] = sorted_vals[i]\n    return result",
+  "score": 4,
+  "cost": 0.0106436,
+  "expected": "",
+  "tokens": {
+    "input": 216,
+    "output": 2365
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

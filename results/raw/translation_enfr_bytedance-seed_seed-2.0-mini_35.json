@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "translation_enfr",
+  "case": 35,
+  "response": "[Premier journaliste masculin \u00e0 la t\u00e9l\u00e9vision] Un accident est survenu juste apr\u00e8s 10 heures du matin.",
+  "score": 5,
+  "cost": 0.0003209,
+  "expected": "",
+  "tokens": {
+    "input": 89,
+    "output": 780
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

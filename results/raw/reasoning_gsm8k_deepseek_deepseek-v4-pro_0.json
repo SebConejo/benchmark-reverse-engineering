@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "reasoning_gsm8k",
+  "case": 0,
+  "response": "The total amount raised is the sum of the amounts raised by Kim, Alexandra, Maryam, and Sarah.  \nAlexandra raised $430. Kim raised $320 more than Alexandra:  \nKim = 430 + 320 = 750 dollars.  \nSarah raised $300. Maryam raised $400 more than Sarah:  \nMaryam = 300 + 400 = 700 dollars.  \nTotal = 750 + 430 + 700 + 300 = 2180 dollars.\n\nANSWER: 2180",
+  "score": 3,
+  "cost": 0.000565065,
+  "expected": "2280",
+  "tokens": {
+    "input": 91,
+    "output": 302
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

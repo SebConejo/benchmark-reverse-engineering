@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "extraction_hard_v2",
+  "case": 24,
+  "response": "{\n  \"title\": \"Senior Backend Engineer\",\n  \"company\": \"CloudMatrix (Series B)\",\n  \"location\": {\n    \"city\": \"Austin\",\n    \"remote\": true\n  },\n  \"salary\": {\n    \"min\": 165000,\n    \"max\": 195000\n  },\n  \"requirements\": {\n    \"min_years\": 5,\n    \"skills\": [\n      \"Go\",\n      \"Rust\",\n      \"Kubernetes\",\n      \"event-driven architectures\"\n    ]\n  },\n  \"benefits\": [\n    \"unlimited P",
+  "score": 4,
+  "cost": 8.847e-05,
+  "expected": "",
+  "tokens": {
+    "input": 183,
+    "output": 800
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

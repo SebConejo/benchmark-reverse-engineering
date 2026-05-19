@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "email_summary_v2",
+  "case": 24,
+  "response": "Design System v3 is ready for adoption with new dark mode color tokens, a revised 4px-based spacing scale, updated Button and Modal components, and an available migration tool. The Design Team recommends a team-by-team rollout, starting with the Settings page.",
+  "score": 5,
+  "cost": 0.00063075,
+  "expected": "",
+  "tokens": {
+    "input": 82,
+    "output": 342
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

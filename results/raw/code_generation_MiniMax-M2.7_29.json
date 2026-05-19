@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "code_generation",
+  "case": 29,
+  "response": "```python\n    def digit_sum(n):\n        n = abs(n)\n        total = 0\n        while n:\n            total += n % 10\n            n //= 10\n        return total\n\n    indexed = [(digit_sum(num), -i, num) for i, num in enumerate(nums)]\n    indexed.sort()\n    return [num for _, _, num in indexed]\n```",
+  "score": 5,
+  "cost": 0.012643399999999999,
+  "expected": "",
+  "tokens": {
+    "input": 178,
+    "output": 2829
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

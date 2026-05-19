@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "rag_qa",
+  "case": 38,
+  "response": "along or near the Charles River",
+  "score": 5,
+  "cost": 1.56e-05,
+  "expected": "Charles River",
+  "tokens": {
+    "input": 254,
+    "output": 6
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

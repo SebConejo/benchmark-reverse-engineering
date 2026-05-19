@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "task": "rag_qa",
+  "case": 45,
+  "response": "The show globe.",
+  "score": 5,
+  "cost": 0.0007535,
+  "expected": "The show globe",
+  "tokens": {
+    "input": 230,
+    "output": 696
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

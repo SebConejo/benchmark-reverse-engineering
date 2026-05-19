@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-pro",
+  "task": "data_to_text",
+  "case": 42,
+  "response": "This recipe for Pad Thai, a classic Thai dish with a medium difficulty rating, requires 15 minutes of prep and 10 minutes of cooking time. The recipe makes four servings, with each 380-calorie portion containing 22g of protein, 45g of carbs, and 12g of fat.",
+  "score": 5,
+  "cost": 0.00081875,
+  "expected": "",
+  "tokens": {
+    "input": 95,
+    "output": 70
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

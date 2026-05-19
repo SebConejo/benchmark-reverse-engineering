@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "task": "code_generation",
+  "case": 16,
+  "response": "```python\n    n = len(grid)\n    # Flatten grid to get all values with positions\n    cells = []\n    for i in range(n):\n        for j in range(n):\n            cells.append((grid[i][j], i, j))\n    cells.sort()  # sort by value\n\n    # Precompute neighbors for each cell\n    neighbors = {}\n    for i in range(n):\n        for j in range(n):\n            nb = []\n            for di, dj in [(0,1),(0,-1),(1,0),(-1,0)]:\n                ni, nj = i+di, j+dj\n                if 0 <= ni < n and 0 <= nj < n:\n                    nb.append((ni, nj))\n            neighbors[(i,j)] = nb\n\n    # Start from each cell as first element\n    best_path = None\n    for val, si, sj in cells:\n        # BFS/DFS for paths of length k\n        stack = [([val], si, sj)]\n        while stack:\n            path, ci, cj = stack.pop()\n            if len(path) == k:\n                if best_path is None or path < best_path:\n                    best_path = path\n                continue\n            # Prune: if current path is already worse than best, stop\n            if best_path is not None:\n                # Compare prefixes\n                pref = best_path[:len(path)]\n                if path > pref:\n                    continue\n            for ni, nj in neighbors[(ci, cj)]:\n                new_path = path + [grid[ni][nj]]\n                stack.append((new_path, ni, nj))\n        # Early stop if we found a path starting with smallest possible value\n        # and we have a candidate (since cells are sorted by value)\n        if best_path is not None and best_path[0] == cells[0][0]:\n            # Further pruning: if we have a path starting with smallest value,\n            # only need to explore other starts with same first value\n            if val > cells[0][0]:\n                break\n    return best_path\n```",
+  "score": 3,
+  "cost": 0.00059175,
+  "expected": "",
+  "tokens": {
+    "input": 431,
+    "output": 440
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

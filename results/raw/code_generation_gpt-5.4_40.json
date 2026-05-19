@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.4",
+  "task": "code_generation",
+  "case": 40,
+  "response": "if a == 0:\n    return True\nn = round(abs(a) ** (1 / 3))\nreturn n ** 3 == abs(a)",
+  "score": 4,
+  "cost": 0.000281,
+  "expected": "",
+  "tokens": {
+    "input": 141,
+    "output": 35
+  },
+  "input_price_per_m": 1.0,
+  "output_price_per_m": 4.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

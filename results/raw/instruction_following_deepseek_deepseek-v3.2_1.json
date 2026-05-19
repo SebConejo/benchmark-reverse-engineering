@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "task": "instruction_following",
+  "case": 1,
+  "response": "A CPU executes instructions from software by performing basic arithmetic, logical, control, and input/output operations, acting as the primary component that processes data and manages the flow of information within a computer system.",
+  "score": 2,
+  "cost": 4.9e-05,
+  "expected": "",
+  "tokens": {
+    "input": 20,
+    "output": 40
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

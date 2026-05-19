@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "translation_enfr",
+  "case": 23,
+  "response": "Les \u00e9vacuateurs de crues, con\u00e7us pour g\u00e9rer les crues hypoth\u00e9tiques, sont int\u00e9gr\u00e9s soit dans la structure du barrage, soit construits comme des ouvrages distincts.",
+  "score": 4,
+  "cost": 9.279999999999999e-05,
+  "expected": "",
+  "tokens": {
+    "input": 47,
+    "output": 37
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen-turbo",
+  "task": "rag_qa",
+  "case": 47,
+  "response": "Answer: The Urarina.",
+  "score": 5,
+  "cost": 5.6100000000000005e-06,
+  "expected": "Urarina",
+  "tokens": {
+    "input": 163,
+    "output": 7
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

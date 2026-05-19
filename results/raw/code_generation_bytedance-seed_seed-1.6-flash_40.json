@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "code_generation",
+  "case": 40,
+  "response": "if a == 0:\n        return True\n    elif a > 0:\n        low, high = 1, a\n    else:\n        low, high = 1, -a\n    while low <= high:\n        mid = (low + high) // 2\n        cube = mid ** 3\n        if cube == abs(a):\n            return True\n        elif cube < abs(a):\n            low = mid + 1\n        else:\n            high = mid - 1\n    return False",
+  "score": 4,
+  "cost": 0.000872175,
+  "expected": "",
+  "tokens": {
+    "input": 233,
+    "output": 2849
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

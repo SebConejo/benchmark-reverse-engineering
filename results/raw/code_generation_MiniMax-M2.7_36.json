@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "code_generation",
+  "case": 36,
+  "response": "if n <= 1:\n    return 0\nlimit = int(n**0.5)\nfor i in range(2, limit + 1):\n    if n % i == 0:\n        return n // i\nreturn 1",
+  "score": 3,
+  "cost": 0.0052085,
+  "expected": "",
+  "tokens": {
+    "input": 115,
+    "output": 1155
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

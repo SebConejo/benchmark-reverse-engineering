@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "code_explanation",
+  "case": 30,
+  "response": "This code implements a Bloom filter, a probabilistic set data structure that uses a bit array and multiple hash functions to test membership. The `add` method sets bits at hashed positions, and `__contains__` checks if all those bits are set, guaranteeing no false negatives but allowing false positives.",
+  "score": 5,
+  "cost": 0.00053679,
+  "expected": "",
+  "tokens": {
+    "input": 162,
+    "output": 268
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "test_generation_v2",
+  "case": 1,
+  "response": "```python\n# test_is_palindrome.py\nimport pytest\n\nfrom your_module import is_palindrome  # Replace with the actual module name\n\n\n@pytest.mark.parametrize(\n    (\"s\", \"expected\"),\n    [\n        (\"racecar\", True),\n        (\"RaceCar\", True),\n        (\"nurses run\", True),\n        (\"No lemon no melon\", True),\n        (\"hello\", False),\n        (\"python\", False),\n        (\"ab\", False),\n    ],\n)\ndef test_is_palindrome_happy_path(s, expected):\n    assert is_palindrome(s) is expected\n\n\n@pytest.mark.parametrize(\n    (\"s\", \"expected\"),\n    [\n        (\"\", True),\n        (\" \", True),\n        (\"      \", True),\n        (\"x\", True),\n        (\"Aa\", True),\n        (\"  A b a  \", True),\n        (\"a b c b a\", True),\n        (\"a b c\", False),\n    ],\n)\ndef test_is_palindrome_edge_cases(s, expected):\n    assert is_palindrome(s) is expected\n\n\n@pytest.mark.parametrize(\n    (\"s\", \"expected\"),\n    [\n        (\"Madam, I'm Adam\", False),  # punctuation is not removed\n        (\"a!a\", True),              # punctuation can be part of the palindrome\n        (\"a\\tb a\", False),          # tabs are not removed, only literal spaces\n    ],\n)\ndef test_is_palindrome_preserves_non_space_characters(s, expected):\n    assert is_palindrome(s) is expected\n\n\n@pytest.mark.parametrize(\n    \"bad_value\",\n    [\n        None,\n        123,\n        12.34,\n        [],\n        {},\n        object(),\n    ],\n)\ndef test_is_palindrome_non_string_inputs_raise_attribute_error(bad_value):\n    with pytest.raises(AttributeError):\n        is_palindrome(bad_value)\n\n\ndef test_is_palindrome_bytes_input_raises_type_error():\n    with pytest.raises(TypeError):\n        is_palindrome(b\"racecar\")\n```",
+  "score": 5,
+  "cost": 0.240285,
+  "expected": "",
+  "tokens": {
+    "input": 64,
+    "output": 3191
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

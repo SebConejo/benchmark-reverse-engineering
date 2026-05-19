@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "function_calling",
+  "case": 14,
+  "response": "```json\n{\"name\": \"create_reminder\", \"arguments\": {\"message\": \"call the dentist\", \"time\": \"3pm\", \"date\": \"Wednesday\"}}\n```",
+  "score": 5,
+  "cost": 8.7e-06,
+  "expected": "",
+  "tokens": {
+    "input": 107,
+    "output": 38
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

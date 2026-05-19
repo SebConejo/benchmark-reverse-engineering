@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "rag_qa",
+  "case": 7,
+  "response": "The mass of the system.",
+  "score": 5,
+  "cost": 0.0012138,
+  "expected": "mass of the system",
+  "tokens": {
+    "input": 163,
+    "output": 465
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

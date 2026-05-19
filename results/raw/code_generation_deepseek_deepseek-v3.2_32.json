@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "task": "code_generation",
+  "case": 32,
+  "response": "```python\n    words = s.split(' ')\n    ordered_words = []\n    for word in words:\n        sorted_chars = sorted(word)\n        ordered_word = ''.join(sorted_chars)\n        ordered_words.append(ordered_word)\n    return ' '.join(ordered_words)\n```",
+  "score": 5,
+  "cost": 0.00010455000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 163,
+    "output": 58
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

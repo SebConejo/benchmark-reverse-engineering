@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "sql_spider",
+  "case": 21,
+  "response": "```sql\nSELECT f.flight_number\nFROM flights f\nJOIN airlines a ON f.airline_id = a.airline_id\nWHERE a.airline_name = 'United Airlines';\n```",
+  "score": 5,
+  "cost": 0.00059247,
+  "expected": "",
+  "tokens": {
+    "input": 66,
+    "output": 324
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

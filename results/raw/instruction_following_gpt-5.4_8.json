@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.4",
+  "task": "instruction_following",
+  "case": 8,
+  "response": "A blockchain is like a magic notebook that lots of people share, and every time someone writes in it, everyone gets the same new page. Once a page is full, it gets locked in place like a block in a long tower, so it\u2019s very hard for anyone to secretly change it.",
+  "score": 5,
+  "cost": 0.000269,
+  "expected": "",
+  "tokens": {
+    "input": 21,
+    "output": 62
+  },
+  "input_price_per_m": 1.0,
+  "output_price_per_m": 4.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

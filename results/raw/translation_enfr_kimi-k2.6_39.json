@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "translation_enfr",
+  "case": 39,
+  "response": "Tu sais d'o\u00f9 vient l'argent ?\n\n*(Or, formal: Savez-vous d'o\u00f9 vient l'argent ?)*",
+  "score": 5,
+  "cost": 0.0016164,
+  "expected": "",
+  "tokens": {
+    "input": 34,
+    "output": 665
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

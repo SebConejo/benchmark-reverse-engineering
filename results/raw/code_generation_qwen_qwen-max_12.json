@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen-max",
+  "task": "code_generation",
+  "case": 12,
+  "response": "return [s for s in strings if substring in s]",
+  "score": 4,
+  "cost": 0.00018512000000000002,
+  "expected": "",
+  "tokens": {
+    "input": 126,
+    "output": 13
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

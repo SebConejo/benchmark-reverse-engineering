@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "reasoning_gsm8k",
+  "case": 16,
+  "response": "Step 1: Find the total number of books Sarah bought.  \nDivide the total amount spent by the cost of each book:  \n$300 \u00f7 $15 = 20 books.\n\nStep 2: Divide the total books equally among her 4 kids.  \n20 books \u00f7 4 kids = 5 books per child.\n\nSo each child received 5 books.\n\nANSWER: 5",
+  "score": 5,
+  "cost": 0.000918,
+  "expected": "5",
+  "tokens": {
+    "input": 86,
+    "output": 361
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

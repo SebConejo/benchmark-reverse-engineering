@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "code_generation",
+  "case": 5,
+  "response": "return max(l)",
+  "score": 2,
+  "cost": 0.0001542,
+  "expected": "",
+  "tokens": {
+    "input": 263,
+    "output": 127
+  },
+  "judge_rerun": true,
+  "judge_raw": "2",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

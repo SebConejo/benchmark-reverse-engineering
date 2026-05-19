@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "instruction_following",
+  "case": 9,
+  "response": "April, June, September, November",
+  "score": 5,
+  "cost": 0.00013224000000000002,
+  "expected": "",
+  "tokens": {
+    "input": 20,
+    "output": 71
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

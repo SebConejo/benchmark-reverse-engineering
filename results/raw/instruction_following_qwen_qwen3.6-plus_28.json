@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "instruction_following",
+  "case": 28,
+  "response": "Every small victory today builds the extraordinary life you will live tomorrow.",
+  "score": 3,
+  "cost": 0.0030017,
+  "expected": "",
+  "tokens": {
+    "input": 28,
+    "output": 2302
+  },
+  "judge_rerun": true,
+  "judge_raw": "3",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

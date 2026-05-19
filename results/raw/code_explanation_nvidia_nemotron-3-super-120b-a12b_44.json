@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "code_explanation",
+  "case": 44,
+  "response": "The function performs a breadth\u2011first search (BFS) from each unvisited node, gathering all nodes reachable from that start into one list, and repeats this for every node to produce a list of all connected components of the graph. In other words, it uses the BFS traversal pattern to partition the graph into its maximal connected subgraphs.",
+  "score": 5,
+  "cost": 1.8e-05,
+  "expected": "",
+  "tokens": {
+    "input": 131,
+    "output": 69
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

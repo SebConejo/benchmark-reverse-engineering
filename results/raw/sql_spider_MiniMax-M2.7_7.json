@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "sql_spider",
+  "case": 7,
+  "response": "```sql\nSELECT COUNT(*) FROM cars WHERE year = 1980;\n```",
+  "score": 5,
+  "cost": 0.0015983000000000002,
+  "expected": "",
+  "tokens": {
+    "input": 85,
+    "output": 342
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

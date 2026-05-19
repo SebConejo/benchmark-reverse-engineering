@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "translation_enfr",
+  "case": 15,
+  "response": "**Sector Source** est un site ressource con\u00e7u pour aider les responsables d\u2019organismes de bienfaisance et d\u2019organisations \u00e0 but non lucratif \u00e0 **rester inform\u00e9s** sur...\n\n*(Alternative plus fluide si le contexte le permet :)*\n**Sector Source** est une plateforme d\u00e9di\u00e9e aux professionnels des organismes caritatifs et des associations, leur offrant les outils et informations n\u00e9cessaires pour **se tenir \u00e0 jour** sur...\n\n---\n**Notes :**\n- *\"Dedicated to help\"* \u2192 *\"con\u00e7u pour aider\"* ou *\"d\u00e9di\u00e9(e) \u00e0\"* (plus naturel en fran\u00e7ais).\n- *\"Run charities\"* \u2192 *\"responsables d\u2019organismes de bienfaisance\"* (\u00e9vite la lourdeur de *\"dirigent\"*).\n- *\"Stay informed on\"* \u2192 *\"rester inform\u00e9s sur\"* (litt\u00e9ral) ou *\"se tenir \u00e0 jour\"* (plus courant \u00e0 l\u2019oral).\n- *\"Nonprofits\"* \u2192 *\"organisations \u00e0 but non lucratif\"* (terme officiel) ou *\"associations\"* (si contexte fran\u00e7ais/m\u00e9tropolitain).\n\nAdaptez selon le public cible (Canada/France) et le ton souhait\u00e9 (formel ou accessible).",
+  "score": 4,
+  "cost": 0.0005216,
+  "expected": "",
+  "tokens": {
+    "input": 44,
+    "output": 252
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "ner_extraction",
+  "case": 47,
+  "response": "```json\n{\n  \"persons\": [\n    \"Alain Aspect\"\n  ],\n  \"organizations\": [\n    \"Universite Paris-Saclay\"\n  ],\n  \"locations\": [\n    \"Stockholm\"\n  ]\n}\n```",
+  "score": 5,
+  "cost": 7.379999999999999e-06,
+  "expected": "",
+  "tokens": {
+    "input": 76,
+    "output": 47
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

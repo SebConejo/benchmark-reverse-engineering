@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "function_calling",
+  "case": 48,
+  "response": "{\"name\": \"git_tag\", \"arguments\": {\"name\": \"v3.0.0\"}}",
+  "score": 4,
+  "cost": 0.001077495,
+  "expected": "",
+  "tokens": {
+    "input": 101,
+    "output": 594
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

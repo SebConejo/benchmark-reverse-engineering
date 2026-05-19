@@ -1,0 +1,16 @@
+{
+  "model": "gpt-4o-mini",
+  "task": "translation_enfr",
+  "case": 17,
+  "response": "Source : examplereferenceletter.com",
+  "score": 5,
+  "cost": 9.899999999999998e-06,
+  "expected": "",
+  "tokens": {
+    "input": 34,
+    "output": 8
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

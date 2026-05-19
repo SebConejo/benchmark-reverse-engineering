@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "long_summarization",
+  "case": 6,
+  "response": "Before 2020 fewer than\u202f5\u202f% of workers were fully remote, but the pandemic turned the world into a giant, unplanned experiment that proved large\u2011scale remote work could be achieved with tools such as Zoom, Slack, and cloud infrastructure. Stanford economist Nick Bloom\u2019s research shows mixed productivity outcomes, prompting many companies to adopt hybrid schedules while others faced a return\u2011to\u2011office backlash. The rapid shift has depressed demand for urban office space, triggered geographic arbitrage as employees relocate to cheaper regions, altered company culture and junior\u2011employee development, and sparked the creation of digital\u2011nomad visas by dozens of countries seeking to attract remote talent.",
+  "score": 5,
+  "cost": 0.0031284,
+  "expected": "",
+  "tokens": {
+    "input": 172,
+    "output": 668
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

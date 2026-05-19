@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "code_explanation",
+  "case": 31,
+  "response": "This function implements the A* search algorithm, using a priority queue to efficiently find the lowest\u2011cost path from `start` to `goal` in a weighted graph by expanding nodes in order of `cost + heuristic`, where `heuristic` estimates the remaining distance to the goal.",
+  "score": 5,
+  "cost": 0.00053679,
+  "expected": "",
+  "tokens": {
+    "input": 170,
+    "output": 266
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

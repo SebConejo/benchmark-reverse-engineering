@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "test_generation_v2",
+  "case": 13,
+  "response": "Assuming the function is in `fizzbuzz.py`, create `test_fizzbuzz.py`:\n\n```python\nimport pytest\n\nfrom fizzbuzz import fizzbuzz  # Adjust this import if your module name differs\n\n\nLARGE = 10**12\n\n\n@pytest.mark.parametrize(\n    (\"n\", \"expected\"),\n    [\n        pytest.param(1, \"1\", id=\"not-divisible-by-3-or-5\"),\n        pytest.param(3, \"Fizz\", id=\"divisible-by-3\"),\n        pytest.param(6, \"Fizz\", id=\"another-divisible-by-3\"),\n        pytest.param(5, \"Buzz\", id=\"divisible-by-5\"),\n        pytest.param(10, \"Buzz\", id=\"another-divisible-by-5\"),\n        pytest.param(15, \"FizzBuzz\", id=\"divisible-by-3-and-5\"),\n        pytest.param(30, \"FizzBuzz\", id=\"another-divisible-by-3-and-5\"),\n    ],\n)\ndef test_fizzbuzz_happy_path(n, expected):\n    assert fizzbuzz(n) == expected\n\n\n@pytest.mark.parametrize(\n    (\"n\", \"expected\"),\n    [\n        pytest.param(0, \"FizzBuzz\", id=\"zero\"),\n        pytest.param(-1, \"-1\", id=\"negative-not-divisible\"),\n        pytest.param(-3, \"Fizz\", id=\"negative-divisible-by-3\"),\n        pytest.param(-5, \"Buzz\", id=\"negative-divisible-by-5\"),\n        pytest.param(-15, \"FizzBuzz\", id=\"negative-divisible-by-3-and-5\"),\n        pytest.param(LARGE, \"Buzz\", id=\"large-divisible-by-5\"),\n        pytest.param(15 * LARGE, \"FizzBuzz\", id=\"large-divisible-by-3-and-5\"),\n        pytest.param(LARGE + 1, str(LARGE + 1), id=\"large-not-divisible\"),\n    ],\n)\ndef test_fizzbuzz_edge_cases(n, expected):\n    assert fizzbuzz(n) == expected\n\n\n@pytest.mark.parametrize(\n    \"bad_value\",\n    [\n        None,\n        \"15\",\n        [15],\n        {\"n\": 15},\n        object(),\n    ],\n    ids=[\"none\", \"string\", \"list\", \"dict\", \"object\"],\n)\ndef test_fizzbuzz_raises_type_error_for_unsupported_inputs(bad_value):\n    with pytest.raises(TypeError):\n        fizzbuzz(bad_value)\n```\n\nRun with:\n\n```bash\npytest\n```\n\nThese tests match the current implementation, which does not explicitly validate `int` inputs; it only raises when `%` is unsupported for the provided value.",
+  "score": 5,
+  "cost": 0.54054,
+  "expected": "",
+  "tokens": {
+    "input": 96,
+    "output": 7188
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

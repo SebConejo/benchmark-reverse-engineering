@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "rag_qa",
+  "case": 18,
+  "response": "Allan Bloom",
+  "score": 5,
+  "cost": 1.092e-05,
+  "expected": "Allan Bloom",
+  "tokens": {
+    "input": 179,
+    "output": 3
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

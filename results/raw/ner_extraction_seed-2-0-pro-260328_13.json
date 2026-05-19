@@ -1,0 +1,16 @@
+{
+  "model": "seed-2-0-pro-260328",
+  "task": "ner_extraction",
+  "case": 13,
+  "response": "{\n  \"persons\": [],\n  \"organizations\": [\"Oxford University\", \"Pfizer\"],\n  \"locations\": []\n}",
+  "score": 4,
+  "cost": 0.000372,
+  "expected": "",
+  "tokens": {
+    "input": 112,
+    "output": 127
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "task": "email_summary_v2",
+  "case": 38,
+  "response": "The first-month bug bounty program successfully identified and rapidly patched three critical vulnerabilities, resulting in $15K in payouts and a strong return on investment. Based on these results, the security team recommends continuing the program to sustain ongoing security improvements.",
+  "score": 5,
+  "cost": 0.00185275,
+  "expected": "",
+  "tokens": {
+    "input": 119,
+    "output": 1823
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

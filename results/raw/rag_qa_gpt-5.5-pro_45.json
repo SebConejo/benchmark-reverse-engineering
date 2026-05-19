@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "rag_qa",
+  "case": 45,
+  "response": "The show globe.",
+  "score": 5,
+  "cost": 0.008235,
+  "expected": "The show globe",
+  "tokens": {
+    "input": 224,
+    "output": 65
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

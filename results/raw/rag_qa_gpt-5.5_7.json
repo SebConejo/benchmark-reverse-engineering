@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.5",
+  "task": "rag_qa",
+  "case": 7,
+  "response": "the mass of the system",
+  "score": 5,
+  "cost": 0.001182,
+  "expected": "mass of the system",
+  "tokens": {
+    "input": 162,
+    "output": 58
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "seed-2-0-pro-260328",
+  "task": "ner_extraction",
+  "case": 23,
+  "response": "{\n  \"persons\": [\"Taylor Swift\"],\n  \"organizations\": [],\n  \"locations\": [\"Wembley Stadium\", \"London\"]\n}",
+  "score": 4,
+  "cost": 0.000819,
+  "expected": "",
+  "tokens": {
+    "input": 117,
+    "output": 312
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

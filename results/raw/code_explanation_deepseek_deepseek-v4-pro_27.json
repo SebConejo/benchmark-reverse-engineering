@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "code_explanation",
+  "case": 27,
+  "response": "This code computes the sliding window maximum for an array `nums` with window size `k`, returning a list of the maximum value in each window. It uses a **monotonic deque** pattern, storing indices in decreasing order of their values to efficiently retrieve the maximum in O(n) time.",
+  "score": 5,
+  "cost": 0.00032364,
+  "expected": "",
+  "tokens": {
+    "input": 128,
+    "output": 154
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

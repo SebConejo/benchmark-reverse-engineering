@@ -1,0 +1,16 @@
+{
+  "model": "o4-mini",
+  "task": "test_generation_v2",
+  "case": 4,
+  "response": "Here\u2019s an example pytest\u2010style test module. You will need to adjust the import line at the top to match wherever your function actually lives (in my example it\u2019s in a file called `temperature.py`):\n\n```python\n# test_temperature.py\n\nimport math\nimport pytest\n\nfrom temperature import celsius_to_fahrenheit  # <-- adjust this to your module name\n\n\n@pytest.mark.parametrize(\"c, expected\", [\n    (0, 32),\n    (100, 212),\n    (-40, -40),\n    (36.6, 97.88),       # typical floating\u2010point example\n    (37,   98.6),        # another floating\u2010point\n])\ndef test_happy_paths(c, expected):\n    \"\"\"\n    Test the most common conversions, using pytest.approx for floats.\n    \"\"\"\n    result = celsius_to_fahrenheit(c)\n    assert result == pytest.approx(expected, rel=1e-6)\n\n\ndef test_nan_input():\n    \"\"\"\n    math.nan in \u2192 math.nan out\n    \"\"\"\n    result = celsius_to_fahrenheit(math.nan)\n    assert math.isnan(result)\n\n\ndef test_infinite_input():\n    \"\"\"\n    +/- infinity in \u2192 same infinity out\n    \"\"\"\n    assert celsius_to_fahrenheit(math.inf) == math.inf\n    assert celsius_to_fahrenheit(-math.inf) == -math.inf\n\n\ndef test_overflow_large_input():\n    \"\"\"\n    Very large finite input will overflow to infinity in IEEE arithmetic\n    \"\"\"\n    very_large = 1e308\n    result = celsius_to_fahrenheit(very_large)\n    assert math.isinf(result) and result > 0\n\n\n@pytest.mark.parametrize(\"bad\", [\n    None,\n    \"100\",\n    [],\n    {},\n])\ndef test_invalid_types_raise_type_error(bad):\n    \"\"\"\n    Non\u2010numeric inputs should produce a TypeError in the multiplication/addition.\n    \"\"\"\n    with pytest.raises(TypeError):\n        celsius_to_fahrenheit(bad)\n```\n\nExplanation of what\u2019s covered:\n\n* Happy paths with integer and floating inputs, checked by `pytest.approx`\n* `math.nan` propagation\n* `math.inf` and `-math.inf`\n* Overflow of a very large finite float\n* Error cases: passing things like `None`, strings, lists, dicts, all of which raise `TypeError` in Python when you try to do `* 9/5` or `+ 32` on them.",
+  "score": 5,
+  "cost": 0.0065758000000000014,
+  "expected": "",
+  "tokens": {
+    "input": 58,
+    "output": 1480
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

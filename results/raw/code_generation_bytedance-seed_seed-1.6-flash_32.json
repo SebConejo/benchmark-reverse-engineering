@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "code_generation",
+  "case": 32,
+  "response": "import re\n\ndef anti_shuffle(s):\n    tokens = re.findall(r'\\s+|\\S+', s)\n    return ''.join([''.join(sorted(token)) if token[0] != ' ' else token for token in tokens])",
+  "score": 3,
+  "cost": 0.0006867749999999999,
+  "expected": "",
+  "tokens": {
+    "input": 253,
+    "output": 2226
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-4.20",
+  "task": "rag_qa",
+  "case": 13,
+  "response": "Victorian Government",
+  "score": 5,
+  "cost": 0.000568,
+  "expected": "Victorian Government",
+  "tokens": {
+    "input": 272,
+    "output": 3
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "code_generation",
+  "case": 41,
+  "response": "```\nres = l[:]\nidxs = [i for i in range(len(l)) if i % 3 == 0]\nvals = sorted(l[i] for i in idxs)\nfor i, v in zip(idxs, vals):\n    res[i] = v\nreturn res\n```",
+  "score": 4,
+  "cost": 0.0003776,
+  "expected": "",
+  "tokens": {
+    "input": 184,
+    "output": 72
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

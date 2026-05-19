@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "reasoning_gsm8k",
+  "case": 8,
+  "response": "ANSWER: 60",
+  "score": 2,
+  "cost": 8.01e-06,
+  "expected": "60",
+  "tokens": {
+    "input": 83,
+    "output": 6
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

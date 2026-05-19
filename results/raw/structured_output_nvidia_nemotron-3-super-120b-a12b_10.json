@@ -1,0 +1,18 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "structured_output",
+  "case": 10,
+  "response": "{\n  \"invoice_number\": \"2024-0847\",\n  \"vendor\": \"Acme Corp\",\n  \"date\": \"Jan 15 2024\",\n  \"items\": [\n    {\n      \"name\": \"Widget A\",\n      \"quantity\": 3,\n      \"unit_price\": 29.99\n    },\n    {",
+  "score": 2,
+  "cost": 6.048e-05,
+  "expected": "",
+  "tokens": {
+    "input": 172,
+    "output": 500
+  },
+  "judge_rerun": true,
+  "judge_raw": "2",
+  "judge_v2_score": 2,
+  "judge_v2_raw": "2",
+  "judge_v2_model": "gpt-4o"
+}

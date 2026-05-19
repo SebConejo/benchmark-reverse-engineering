@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "sql_spider",
+  "case": 29,
+  "response": "```sql\nSELECT COUNT(DISTINCT language) \nFROM countrylanguage;\n```",
+  "score": 5,
+  "cost": 2.07e-05,
+  "expected": "",
+  "tokens": {
+    "input": 74,
+    "output": 16
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

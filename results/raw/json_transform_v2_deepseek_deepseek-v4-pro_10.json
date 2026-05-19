@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "json_transform_v2",
+  "case": 10,
+  "response": "{\"items\": 3, \"subtotal\": 1136, \"discount_code\": \"SAVE20\", \"member_discount\": true, \"estimated_total\": 908.8}",
+  "score": 4,
+  "cost": 0.00013311,
+  "expected": "",
+  "tokens": {
+    "input": 142,
+    "output": 41
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

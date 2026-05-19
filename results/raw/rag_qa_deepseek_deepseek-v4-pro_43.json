@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "rag_qa",
+  "case": 43,
+  "response": "The book is *Amazonia: Man and Culture in a Counterfeit Paradise*.",
+  "score": 5,
+  "cost": 0.00031058999999999997,
+  "expected": "Amazonia: Man and Culture in a Counterfeit Paradise",
+  "tokens": {
+    "input": 242,
+    "output": 118
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

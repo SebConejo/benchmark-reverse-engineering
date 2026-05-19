@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "code_generation",
+  "case": 8,
+  "response": "return [x for x in values if type(x) is int]",
+  "score": 5,
+  "cost": 9.48e-06,
+  "expected": "",
+  "tokens": {
+    "input": 142,
+    "output": 16
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

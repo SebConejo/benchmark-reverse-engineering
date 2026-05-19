@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "test_generation_v2",
+  "case": 13,
+  "response": "Below is a self-contained pytest test-suite that exercises the `fizzbuzz` function\u2019s normal behaviour, edge conditions, and error handling.  \nSave it as e.g. `test_fizzbuzz.py` (and adapt the import to where your function lives).\n\n```python\nimport pytest\n\n# Adapt the import to your package / module layout\nfrom your_module import fizzbuzz\n\n\n# ---------------------------------------------------------------------------\n# Happy-path tests\n# ---------------------------------------------------------------------------\n\n@pytest.mark.parametrize(\"n\", [15, 30, 45, 75])\ndef test_divisible_by_15_returns_fizzbuzz(n):\n    assert fizzbuzz(n) == \"FizzBuzz\"\n\n\n@pytest.mark.parametrize(\"n\", [3, 6, 9, -3, 333])\ndef test_divisible_by_3_only_returns_fizz(n):\n    assert fizzbuzz(n) == \"Fizz\"\n\n\n@pytest.mark.parametrize(\"n\", [5, 10, 20, -5, 505])\ndef test_divisible_by_5_only_returns_buzz(n):\n    assert fizzbuzz(n) == \"Buzz\"\n\n\n@pytest.mark.parametrize(\"n\", [1, 2, 4, 7, 14, -1])\ndef test_not_divisible_by_3_or_5_returns_number_as_string(n):\n    assert fizzbuzz(n) == str(n)\n\n\n# ---------------------------------------------------------------------------\n# Edge-case tests\n# ---------------------------------------------------------------------------\n\ndef test_zero_is_treated_as_fizzbuzz():\n    # 0 is divisible by every non-zero integer, hence should yield 'FizzBuzz'\n    assert fizzbuzz(0) == \"FizzBuzz\"\n\n\n@pytest.mark.parametrize(\"n, expected\", [\n    (-15, \"FizzBuzz\"),   # negative multiple of both\n    (-30, \"FizzBuzz\"),\n    (2**63 - 1, str(2**63 - 1)),  # very large non-multiple\n    (15 * 10**9, \"FizzBuzz\"),     # very large multiple of 15\n])\ndef test_misc_edge_values(n, expected):\n    assert fizzbuzz(n) == expected\n\n\n# ---------------------------------------------------------------------------\n# Error-case tests\n# ---------------------------------------------------------------------------\n\n@pytest.mark.parametrize(\"bad_input\", [\n    \"15\",          # string\n    None,          # NoneType\n    3 + 4j,        # complex number\n    [15],          # list\n])\ndef test_non_int_input_raises_type_error(bad_input):\n    with pytest.raises(TypeError):\n        fizzbuzz(bad_input)\n```\n\nWhat\u2019s covered?\n\u2022 Happy path \u2013 every logical branch (Fizz, Buzz, FizzBuzz, plain number).  \n\u2022 Edge cases \u2013 zero, negatives, very large numbers, and boundary-like values.  \n\u2022 Error cases \u2013 several incompatible types that should trigger a `TypeError` because the `%` operator is unsupported for them.",
+  "score": 4,
+  "cost": 0.01678,
+  "expected": "",
+  "tokens": {
+    "input": 94,
+    "output": 2074
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

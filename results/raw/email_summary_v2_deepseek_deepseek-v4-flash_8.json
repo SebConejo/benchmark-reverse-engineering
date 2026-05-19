@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "email_summary_v2",
+  "case": 8,
+  "response": "The annual performance review cycle begins May 1, with self-reviews due May 15, manager reviews May 22, calibration May 28, and delivery June 5, using a new competency framework. Managers must attend a training session on April 30.",
+  "score": 5,
+  "cost": 9.506000000000001e-05,
+  "expected": "",
+  "tokens": {
+    "input": 87,
+    "output": 148
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

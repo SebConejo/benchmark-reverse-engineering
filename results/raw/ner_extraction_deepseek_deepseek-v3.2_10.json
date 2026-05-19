@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "task": "ner_extraction",
+  "case": 10,
+  "response": "{\n  \"persons\": [\"Jennifer Lopez\", \"Ben Affleck\"],\n  \"organizations\": [],\n  \"locations\": [\"Beverly Hills\"]\n}",
+  "score": 5,
+  "cost": 5.295e-05,
+  "expected": "",
+  "tokens": {
+    "input": 71,
+    "output": 32
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "code_explanation",
+  "case": 16,
+  "response": "This function runs multiple async coroutines concurrently while capping the maximum number of simultaneous executions to `limit` by wrapping each coroutine with an `asyncio.Semaphore` guard, then collects all results via `asyncio.gather`. It implements the **semaphore-based concurrency limiting** pattern.",
+  "score": 5,
+  "cost": 0.0006772950000000001,
+  "expected": "",
+  "tokens": {
+    "input": 89,
+    "output": 367
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 37,
+  "response": "**Step\u2011by\u2011step reasoning**\n\n1. **Total number of voters:** 100.  \n2. **Candidate\u202fA\u2019s votes:**  \n   \\(20\\% \\text{ of } 100 = 0.20 \\times 100 = 20\\) votes.  \n\n3. **Candidate\u202fB\u2019s votes:**  \n   \u201c50\u202f% more than candidate\u202fA\u2019s votes\u201d means \\(1.5\\) times A\u2019s votes.  \n   \\(1.5 \\times 20 = 30\\) votes.  \n\n4. **Candidate\u202fC\u2019s votes:**  \n   The remaining votes after A and B are taken away:  \n   \\(100 - 20 - 30 = 50\\) votes.  \n\n**Final answer**\n\nANSWER: 50",
+  "score": 5,
+  "cost": 0.0020196000000000003,
+  "expected": "50",
+  "tokens": {
+    "input": 128,
+    "output": 427
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "meta-llama/llama-3.2-3b-instruct",
+  "task": "rag_qa",
+  "case": 26,
+  "response": "KMJ-TV",
+  "score": 5,
+  "cost": 1.0965e-05,
+  "expected": "KMJ-TV",
+  "tokens": {
+    "input": 211,
+    "output": 4
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

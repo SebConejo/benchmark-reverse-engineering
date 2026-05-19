@@ -1,0 +1,16 @@
+{
+  "model": "claude-sonnet-4-6",
+  "task": "rag_qa",
+  "case": 34,
+  "response": "Based on the provided context, if q = 9 and a = 1, 2, 4, 5, 7, or 8, there would be **infinitely many primes** in each of those progressions.",
+  "score": 5,
+  "cost": 0.001629,
+  "expected": "infinitely many prime numbers",
+  "tokens": {
+    "input": 273,
+    "output": 54
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

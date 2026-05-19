@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "code_generation",
+  "case": 14,
+  "response": "if n <=  renturn 0\n    elif n == 1:\n        return 1\n    else:\n        a, b = 0, 1\n        for _ in range(2, n + 1):\n            a, b = b, a + b\n        return b",
+  "score": 2,
+  "cost": 4.6200000000000005e-05,
+  "expected": "",
+  "tokens": {
+    "input": 78,
+    "output": 63
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

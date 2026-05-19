@@ -1,0 +1,16 @@
+{
+  "model": "mistral-large-latest",
+  "task": "translation_enfr",
+  "case": 47,
+  "response": "Voici la traduction en fran\u00e7ais, en conservant le ton et le sens du texte original :\n\n**Fran\u00e7ais :**\n*La r\u00e9pression de ce type, ainsi que les arrestations survenues ces derni\u00e8res semaines de repr\u00e9sentants d\u2019institutions humanitaires, de syndicats et de journalistes accus\u00e9s de propager de pr\u00e9tendues fausses informations, ont \u00e0 juste titre suscit\u00e9 l\u2019inqui\u00e9tude de la communaut\u00e9 internationale.*\n\n*(Variante alternative, l\u00e9g\u00e8rement plus formelle :)*\n*Ce type de r\u00e9pression, de m\u00eame que les arrestations r\u00e9centes de repr\u00e9sentants d\u2019organisations humanitaires, de syndicats et de journalistes accus\u00e9s de diffuser de pr\u00e9tendues fausses informations, ont l\u00e9gitimement \u00e9veill\u00e9 les pr\u00e9occupations de la communaut\u00e9 internationale.*\n\nLes deux versions respectent le registre soutenu du texte original tout en adaptant les tournures pour un naturel en fran\u00e7ais.",
+  "score": 5,
+  "cost": 0.00117,
+  "expected": "",
+  "tokens": {
+    "input": 63,
+    "output": 174
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

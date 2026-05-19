@@ -1,0 +1,13 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "multistep_reasoning",
+  "case": 18,
+  "response": "Tadpoles are aquatic larvae that require water to survive. Metamorphosis is the developmental process that transforms them into terrestrial or semi-terrestrial adults. In environments where water is limited or temporary (such as seasonal ponds that dry up quickly), tadpoles face a high risk of dying from desiccation if they remain in the larval stage too long. A shortened metamorphosis period allows them to rapidly develop into frogs and leave the drying water, greatly increasing their chances of survival. The other options do not create a selective pressure that would favor faster development.\n\nB",
+  "score": 5,
+  "cost": 0.001750125,
+  "expected": "B",
+  "tokens": {
+    "input": 121,
+    "output": 1316
+  }
+}

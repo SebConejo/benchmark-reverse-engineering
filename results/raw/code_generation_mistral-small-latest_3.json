@@ -1,0 +1,16 @@
+{
+  "model": "mistral-small-latest",
+  "task": "code_generation",
+  "case": 3,
+  "response": "```python\n    if not xs:\n        return []\n    return [i * xs[i] for i in range(1, len(xs))]\n```",
+  "score": 4,
+  "cost": 2.4700000000000004e-05,
+  "expected": "",
+  "tokens": {
+    "input": 151,
+    "output": 32
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

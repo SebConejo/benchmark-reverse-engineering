@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "code_generation",
+  "case": 2,
+  "response": "if not lst:\n        return []\n    sorted_lst = sorted(lst)\n    i, j = 0, len(sorted_lst) - 1\n    result = []\n    while i <= j:\n        result.append(sorted_lst[i])\n        i += 1\n        if i <= j:\n            result.append(sorted_lst[j])\n            j -= 1\n    return result",
+  "score": 5,
+  "cost": 0.00311,
+  "expected": "",
+  "tokens": {
+    "input": 155,
+    "output": 350
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

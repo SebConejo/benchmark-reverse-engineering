@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "sql_spider",
+  "case": 37,
+  "response": "```sql\nSELECT s.name, s.release_year\nFROM song s\nJOIN singer si ON s.singer_id = si.singer_id\nWHERE si.birth_date = (SELECT MAX(birth_date) FROM singer);\n```",
+  "score": 4,
+  "cost": 0.0010979399999999997,
+  "expected": "",
+  "tokens": {
+    "input": 72,
+    "output": 613
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

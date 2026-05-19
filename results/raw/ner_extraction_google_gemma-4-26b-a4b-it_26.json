@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "ner_extraction",
+  "case": 26,
+  "response": "```json\n{\n  \"persons\": [],\n  \"organizations\": [\n    \"Supreme Court\",\n    \"ACLU\"\n  ],\n  \"locations\": [\n    \"Texas\"\n  ]\n}\n```",
+  "score": 4,
+  "cost": 6.66e-06,
+  "expected": "",
+  "tokens": {
+    "input": 71,
+    "output": 40
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "instruction_following",
+  "case": 20,
+  "response": "Sure! Here\u2019s photosynthesis explained using only **S** and **P** words:\n\n---\n**Sun** shines **strong**, sending **sunlight** **speeding** **straight** **past** **space**, **striking** **plants**.\n**Plants** **possess** **pigments** (**special** **parts**), **soaking** **sun\u2019s** **power**.\n**Process** **starts**: **sun\u2019s** **power** **splits** **water** (**sipping** **slowly**).\n**Parts** **pull** **pieces**\u2014**protons**, **split**, **pushing** **pathways**.\n**Power** **packs** **plants\u2019** **parts**, **producing** **sugar** (**sweet** **substance**).\n**Plants** **pump** **pure** **oxygen** **sideways**, **spreading** **support** **so** **species** **survive**.\n**Perfect** **system** **sustains** **planet\u2019s** **pulse**!\n\n---\n**Simple**, **smooth**, **science**! \ud83c\udf31\u2600\ufe0f",
+  "score": 5,
+  "cost": 0.0005092,
+  "expected": "",
+  "tokens": {
+    "input": 18,
+    "output": 251
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

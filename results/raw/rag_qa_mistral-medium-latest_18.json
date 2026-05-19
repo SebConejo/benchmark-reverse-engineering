@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "rag_qa",
+  "case": 18,
+  "response": "Allan Bloom wrote *\"The Closing of the American Mind.\"*",
+  "score": 5,
+  "cost": 9.6e-05,
+  "expected": "Allan Bloom",
+  "tokens": {
+    "input": 170,
+    "output": 14
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

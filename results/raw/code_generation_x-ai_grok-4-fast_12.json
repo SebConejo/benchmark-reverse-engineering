@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "code_generation",
+  "case": 12,
+  "response": "return [s for s in strings if substring in s]",
+  "score": 4,
+  "cost": 0.0001746,
+  "expected": "",
+  "tokens": {
+    "input": 273,
+    "output": 150
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

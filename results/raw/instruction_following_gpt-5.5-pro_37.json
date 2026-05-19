@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "instruction_following",
+  "case": 37,
+  "response": "Chocolate tastes rich, creamy, and slightly bittersweet, with a deep roasted sweetness that melts across your tongue like a warm velvet curtain slowly falling over your senses.",
+  "score": 5,
+  "cost": 0.005415,
+  "expected": "",
+  "tokens": {
+    "input": 21,
+    "output": 68
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

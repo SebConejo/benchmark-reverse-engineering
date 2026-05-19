@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-lite",
+  "task": "extraction_hard_v2",
+  "case": 42,
+  "response": "{\"meeting_title\":\"Product sync\",\"date\":\"2026-04-10\",\"attendees\":[\"Jamie (PM)\",\"Priya (eng lead)\",\"Marcus (design)\",\"Lin (data)\"],\"decisions\":[\"Push the recommendation engine to Q3 as the data pipeline will not be ready until June\",\"Allocate 20% of sprint capacity to tech debt\"],\"action_items\":[{\"owner\":\"Marcus\",\"task\":\"Complete onboarding mockups\",\"deadline\":\"2026-04-18\"},{\"owner\":\"Jamie\",\"task\":\"Send updated product roadmap\",\"deadline\":\"2026-04-14\"},{\"owner\":\"Lin\",\"task\":\"Deliver analytics dashboard\",\"deadline\":\"2026-04-30\"}]}",
+  "score": 4,
+  "cost": 0.00144975,
+  "expected": "",
+  "tokens": {
+    "input": 223,
+    "output": 1394
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

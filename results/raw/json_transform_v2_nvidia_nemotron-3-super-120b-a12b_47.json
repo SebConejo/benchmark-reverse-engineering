@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "json_transform_v2",
+  "case": 47,
+  "response": "We need to output: \"admins\": [{\"text:",
+  "score": 1,
+  "cost": 1.386e-05,
+  "expected": "",
+  "tokens": {
+    "input": 140,
+    "output": 14
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

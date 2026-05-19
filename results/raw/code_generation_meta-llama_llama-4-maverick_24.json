@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "code_generation",
+  "case": 24,
+  "response": "```python\nif a + b <= c or a + c <= b or b + c <= a:\n    return -1\ns = (a + b + c) / 2\narea = (s * (s - a) * (s - b) * (s - c)) ** 0.5\nreturn round(area, 2)\n```",
+  "score": 4,
+  "cost": 6.96e-05,
+  "expected": "",
+  "tokens": {
+    "input": 156,
+    "output": 77
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.4-mini",
+  "task": "rag_qa",
+  "case": 48,
+  "response": "Not found in context.",
+  "score": 5,
+  "cost": 4.59e-05,
+  "expected": "strictly contained in P or equal to P",
+  "tokens": {
+    "input": 121,
+    "output": 8
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

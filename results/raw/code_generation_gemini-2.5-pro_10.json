@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-pro",
+  "task": "code_generation",
+  "case": 10,
+  "response": "```python\n    count = 0\n    for num in arr:\n        s = str(num)\n        if num >= 0:\n            digit_sum = sum(int(digit) for digit in s)\n        else:\n            # For a negative number like -123, the digits are -1, 2, 3.\n            # s[0] is '-', s[1] is '1', s[2:] is '23'.\n            digit_sum = -int(s[1]) + sum(int(digit) for digit in s[2:])\n        \n        if digit_sum > 0:\n            count += 1\n            \n    return count\n```",
+  "score": 4,
+  "cost": 0.00176875,
+  "expected": "",
+  "tokens": {
+    "input": 167,
+    "output": 156
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

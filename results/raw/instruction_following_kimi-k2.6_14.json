@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "instruction_following",
+  "case": 14,
+  "response": "Keep your drinks ice-cold for 24 hours or steaming hot for 12 with this double-wall vacuum insulated stainless steel bottle, featuring a leak-proof lid and sweat-free design that fits perfectly in any cup holder. Built from BPA-free, food-grade materials with a durable powder-coat finish, it withstands daily drops and dings while keeping every sip pure and flavorful. From morning commutes to mountain trails, this sleek, eco-friendly bottle is the only hydration partner you'll ever need.",
+  "score": 3,
+  "cost": 0.0007806,
+  "expected": "",
+  "tokens": {
+    "input": 21,
+    "output": 320
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

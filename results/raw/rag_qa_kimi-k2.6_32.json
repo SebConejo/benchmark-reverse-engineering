@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "rag_qa",
+  "case": 32,
+  "response": "The world's economy grew significantly and became much more interconnected.",
+  "score": 5,
+  "cost": 0.0005694,
+  "expected": "the world's economy",
+  "tokens": {
+    "input": 225,
+    "output": 181
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

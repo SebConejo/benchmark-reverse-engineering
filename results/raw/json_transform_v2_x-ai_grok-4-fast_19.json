@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "json_transform_v2",
+  "case": 19,
+  "response": "{\"event_type\": \"signup\", \"date\": \"2024-03-15\", \"time\": \"14:30\", \"user_id\": \"u_123\", \"attribution\": {\"source\": \"google_ads\", \"platform\": \"mobile\"}}",
+  "score": 5,
+  "cost": 0.00035420000000000004,
+  "expected": "",
+  "tokens": {
+    "input": 283,
+    "output": 372
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

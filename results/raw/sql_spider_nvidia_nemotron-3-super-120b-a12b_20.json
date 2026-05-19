@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "sql_spider",
+  "case": 20,
+  "response": "SELECT a.abbreviation, a.country\nFROM airlines a\nJOIN flights f ON a.airline_id = f.airline_id\nGROUP BY a.airline_id, a.abbreviation, a.country\nORDER BY COUNT(*) ASC\nLIMIT 1;",
+  "score": 4,
+  "cost": 1.1429999999999999e-05,
+  "expected": "",
+  "tokens": {
+    "input": 76,
+    "output": 51
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

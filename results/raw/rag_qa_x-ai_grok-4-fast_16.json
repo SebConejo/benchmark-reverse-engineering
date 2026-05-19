@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "rag_qa",
+  "case": 16,
+  "response": "Approximately 50% more land in Allston than in Cambridge.",
+  "score": 4,
+  "cost": 0.00015820000000000002,
+  "expected": "approximately fifty percent",
+  "tokens": {
+    "input": 363,
+    "output": 107
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

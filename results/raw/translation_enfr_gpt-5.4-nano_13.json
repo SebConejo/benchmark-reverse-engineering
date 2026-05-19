@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.4-nano",
+  "task": "translation_enfr",
+  "case": 13,
+  "response": "Dis juste \u00e0 Kumagaya que le d\u00e9tective est ici.",
+  "score": 5,
+  "cost": 1e-05,
+  "expected": "",
+  "tokens": {
+    "input": 36,
+    "output": 16
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

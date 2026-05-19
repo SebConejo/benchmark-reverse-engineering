@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "long_summarization",
+  "case": 11,
+  "response": "The EU's General Data Protection Regulation (GDPR), effective since May 2018, imposes strict rules on any company handling EU residents' data, including mandatory breach reporting within 72 hours and fines up to 4% of global revenue or \u20ac20 million\u2014leading to penalties like Meta's \u20ac1.2 billion fine. It grants individuals rights such as data access, erasure, and portability, while requiring explicit consent and Data Protection Officers for large-scale processing. Despite inspiring global laws like California's CCPA and facing criticism for compliance burdens on small businesses, inconsistent enforcement, and user frustration with cookie banners, the GDPR has established data privacy as a fundamental right and the worldwide benchmark for data protection.",
+  "score": 5,
+  "cost": 0.0009382950000000001,
+  "expected": "",
+  "tokens": {
+    "input": 305,
+    "output": 463
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

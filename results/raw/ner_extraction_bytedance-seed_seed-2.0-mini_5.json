@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "ner_extraction",
+  "case": 5,
+  "response": "{\"persons\": [\"Dr. James Wilson\"], \"organizations\": [\"Stanford University\", \"IEEE\"], \"locations\": [\"Tokyo\"]}",
+  "score": 5,
+  "cost": 5.94e-05,
+  "expected": "",
+  "tokens": {
+    "input": 114,
+    "output": 120
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

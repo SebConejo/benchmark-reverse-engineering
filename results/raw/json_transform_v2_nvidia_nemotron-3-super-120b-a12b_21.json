@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "json_transform_v2",
+  "case": 21,
+  "response": "{\"order_id\":\"ORD-001\",\"subtotal\":109.97",
+  "score": 2,
+  "cost": 5.931e-05,
+  "expected": "",
+  "tokens": {
+    "input": 159,
+    "output": 500
+  },
+  "judge_v2_score": 2,
+  "judge_v2_raw": "2",
+  "judge_v2_model": "gpt-4o"
+}

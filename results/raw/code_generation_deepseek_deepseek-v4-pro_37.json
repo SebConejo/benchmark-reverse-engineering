@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "code_generation",
+  "case": 37,
+  "response": "return a * h / 2",
+  "score": 5,
+  "cost": 0.0009052349999999999,
+  "expected": "",
+  "tokens": {
+    "input": 153,
+    "output": 482
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "instruction_following",
+  "case": 28,
+  "response": "Every sunrise offers a fresh start; seize it with passion and determination.",
+  "score": 4,
+  "cost": 0.006156700000000001,
+  "expected": "",
+  "tokens": {
+    "input": 37,
+    "output": 1390
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

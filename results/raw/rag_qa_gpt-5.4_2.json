@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.4",
+  "task": "rag_qa",
+  "case": 2,
+  "response": "taking physical control of another country or area and ruling over it",
+  "score": 5,
+  "cost": 0.000375,
+  "expected": "taking physical control of another",
+  "tokens": {
+    "input": 315,
+    "output": 15
+  },
+  "input_price_per_m": 1.0,
+  "output_price_per_m": 4.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

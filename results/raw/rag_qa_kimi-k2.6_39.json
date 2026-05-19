@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "rag_qa",
+  "case": 39,
+  "response": "circuit switching",
+  "score": 5,
+  "cost": 0.000423,
+  "expected": "circuit switching",
+  "tokens": {
+    "input": 145,
+    "output": 140
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

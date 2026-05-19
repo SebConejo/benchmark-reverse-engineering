@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "reasoning_gsm8k",
+  "case": 20,
+  "response": "First, find the total daily cost for all the fish.  \n3 fish \u00d7 $1 per fish per day = $3 per day.\n\nNext, determine how many days are in May.  \nMay has 31 days.\n\nFinally, multiply the daily cost by the number of days in May.  \n$3 per day \u00d7 31 days = $93.\n\nANSWER: 93",
+  "score": 5,
+  "cost": 0.0007524,
+  "expected": "93",
+  "tokens": {
+    "input": 74,
+    "output": 295
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

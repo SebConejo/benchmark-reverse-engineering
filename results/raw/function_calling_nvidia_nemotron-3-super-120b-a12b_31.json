@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "function_calling",
+  "case": 31,
+  "response": "{\"name\": \"archive_emails\", \"arguments\": {\"folder\": \"inbox\", \"older_than_days\": 180}}",
+  "score": 5,
+  "cost": 1.0529999999999999e-05,
+  "expected": "",
+  "tokens": {
+    "input": 92,
+    "output": 25
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

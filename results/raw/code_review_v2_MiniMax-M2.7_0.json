@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "code_review_v2",
+  "case": 0,
+  "response": "# Code Review: Critical Security Issues Found\n\n## \ud83d\udea8 Critical Security Issues\n\n### 1. SQL Injection Vulnerability (CRITICAL)\n**What's wrong:**\n```python\nquery = f\"SELECT * FROM users WHERE username='{username}' AND password='{password}'\"\n```\n\nUser input is directly concatenated into the SQL query. An attacker could input:\n```\nusername: ' OR '1'='1\npassword: ' OR '1'='1\n```\n\nThis would produce:\n```sql\nSELECT * FROM users WHERE username='' OR '1'='1' AND password='' OR '1'='1'\n```\nThis bypasses authentication entirely.\n\n**Fix:** Use parameterized queries:\n```python\ndef login(username, password):\n    query = \"SELECT * FROM users WHERE username = ? AND password = ?\"\n    result = db.execute(query, (username, password))\n```\n\n---\n\n### 2. Plaintext Password Storage (CRITICAL)\n**What's wrong:**\nPasswords are being stored and compared as plaintext. This is a major breach if the database is compromised.\n\n**Fix:** Store hashed passwords and use proper verification:\n```python\nfrom bcrypt import checkpw\n\ndef login(username, password):\n    query = \"SELECT password_hash FROM users WHERE username = ?\"\n    row = db.execute(query, (username,))\n    if row and checkpw(password.encode(), row['password_hash']):\n        session['user'] = username\n        return redirect('/dashboard')\n```\n\n---\n\n## \ud83d\udc1b Additional Bugs\n\n| Issue | Problem | Fix |\n|-------|---------|-----|\n| No input validation | Empty strings or special characters may cause errors | Add `if not username or not password: return 'Invalid input', 400` |\n| Case sensitivity | \"John\" vs \"john\" treated as different users | Normalize with `LOWER()` or enforce consistent registration |\n| No user existence check | Wrong username might cause unexpected behavior | Ensure query checks both username existence and password match |\n\n---\n\n## \ud83d\udccb Recommended Secure Implementation\n\n```python\nfrom bcrypt import checkpw\nfrom flask import request, abort\n\ndef login(username, password):\n    # Input validation\n    if not username or not password:\n        abort(400)\n    \n    # Parameterized query\n    query = \"SELECT id, password_hash FROM users WHERE LOWER(username) = LOWER(?)\"\n    user = db.execute(query, (username,)).fetchone()\n    \n    # Secure password verification\n    if user and checkpw(password.encode(), user['password_hash']):\n        session['user_id'] = user['id']\n        return redirect('/dashboard')\n    \n    # Use constant-time response to prevent timing attacks\n    return 'Invalid credentials', 401\n```\n\n---\n\n## Summary\n\n| Issue | Severity | Type |\n|-------|----------|------|\n| SQL Injection | \ud83d\udd34 CRITICAL | Security |\n| Plaintext Passwords | \ud83d\udd34 CRITICAL | Security |\n| No Input Validation | \ud83d\udfe1 MEDIUM | Bug/UX |\n| Case Sensitivity | \ud83d\udfe2 LOW | Bug |\n\n**Immediate action:** Never deploy this code. Use parameterized queries and bcrypt for password hashing.",
+  "score": 5,
+  "cost": 0.005077600000000001,
+  "expected": "",
+  "tokens": {
+    "input": 112,
+    "output": 1126
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

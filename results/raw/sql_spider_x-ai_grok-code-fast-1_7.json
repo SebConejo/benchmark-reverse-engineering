@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "sql_spider",
+  "case": 7,
+  "response": "SELECT COUNT(*) FROM car_1 WHERE year = 1980;",
+  "score": 5,
+  "cost": 0.00028,
+  "expected": "",
+  "tokens": {
+    "input": 268,
+    "output": 283
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 2,
+  "judge_v2_raw": "2",
+  "judge_v2_model": "gpt-4o"
+}

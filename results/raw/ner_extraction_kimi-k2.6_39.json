@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "ner_extraction",
+  "case": 39,
+  "response": "{\"persons\": [\"Dario Amodei\"], \"organizations\": [\"Anthropic\", \"Aspen Ideas Festival\"], \"locations\": [\"Colorado\"]}",
+  "score": 5,
+  "cost": 0.004722,
+  "expected": "",
+  "tokens": {
+    "input": 78,
+    "output": 1948
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "json_transform_v2",
+  "case": 8,
+  "response": "{\"rankings\":[{\"name\":\"Ben\",\"average\":91.0,\"rank\":1},{\"name\":\"Ali\",\"average\":85.0,\"rank\":2},{\"name\":\"Cat\",\"average\":73.33333333333333,\"rank\":3}],\"class_average\":83.11111111111111}",
+  "score": 4,
+  "cost": 0.0028644,
+  "expected": "",
+  "tokens": {
+    "input": 152,
+    "output": 613
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

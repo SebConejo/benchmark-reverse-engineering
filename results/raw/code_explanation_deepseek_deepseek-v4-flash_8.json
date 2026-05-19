@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "code_explanation",
+  "case": 8,
+  "response": "This code implements a **debounce** pattern using a decorator. It wraps a function so that when called, it cancels any pending execution and schedules a new one after a `wait`-second delay using `threading.Timer`; the wrapped function only actually runs once the calls stop for the specified interval.",
+  "score": 5,
+  "cost": 9.226e-05,
+  "expected": "",
+  "tokens": {
+    "input": 107,
+    "output": 138
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

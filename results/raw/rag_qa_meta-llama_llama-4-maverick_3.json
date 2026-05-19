@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "rag_qa",
+  "case": 3,
+  "response": "Hassan al-Turabi.",
+  "score": 1,
+  "cost": 2.805e-05,
+  "expected": "Hassan al-Turabi",
+  "tokens": {
+    "input": 155,
+    "output": 8
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

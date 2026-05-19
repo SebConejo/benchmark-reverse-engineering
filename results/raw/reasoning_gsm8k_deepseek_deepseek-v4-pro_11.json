@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "reasoning_gsm8k",
+  "case": 11,
+  "response": "Let\u2019s go step by step.  \n\n**Step 1: Total burritos ordered**  \nGeorge ordered **600 burritos**.  \n\n**Step 2: Burritos given to students**  \nThere are 50 students, and each gets 10 burritos:  \n\\( 50 \\times 10 = 500 \\) burritos.  \n\n**Step 3: Burritos eaten by Mr. George**  \nMr. George eats 20 burritos.  \n\n**Step 4: Total burritos eaten**  \n\\( 500 + 20 = 520 \\) burritos eaten.  \n\n**Step 5: Leftover burritos**  \n\\( 600 - 520 = 80 \\) burritos left.  \n\nANSWER: 80",
+  "score": 5,
+  "cost": 0.00030537,
+  "expected": "80",
+  "tokens": {
+    "input": 98,
+    "output": 151
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

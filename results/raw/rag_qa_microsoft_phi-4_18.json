@@ -1,0 +1,16 @@
+{
+  "model": "microsoft/phi-4",
+  "task": "rag_qa",
+  "case": 18,
+  "response": "Allan Bloom wrote \"The Closing of the American Mind.\"",
+  "score": 5,
+  "cost": 1.2610000000000001e-05,
+  "expected": "Allan Bloom",
+  "tokens": {
+    "input": 181,
+    "output": 13
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

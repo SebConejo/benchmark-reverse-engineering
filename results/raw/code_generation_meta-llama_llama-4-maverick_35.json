@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "code_generation",
+  "case": 35,
+  "response": "```python\nreturn (abs(a) % 10) * (abs(b) % 10)\n```",
+  "score": 2,
+  "cost": 4.395e-05,
+  "expected": "",
+  "tokens": {
+    "input": 201,
+    "output": 23
+  },
+  "judge_rerun": true,
+  "judge_raw": "2",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "test_generation_v2",
+  "case": 31,
+  "response": "```python\nimport pytest\nfrom your_module import camel_to_snake  # replace with actual module name\n\n\nclass TestCamelToSnakeHappyPath:\n    @pytest.mark.parametrize(\n        \"input_str, expected\",\n        [\n            (\"camelCase\", \"camel_case\"),\n            (\"CamelCase\", \"camel_case\"),          # PascalCase\n            (\"camelCamelCase\", \"camel_camel_case\"),\n            (\"camelCaseXML\", \"camel_case_xml\"),   # acronym at end\n            (\"camelCase123\", \"camel_case123\"),    # numbers after letters\n            (\"camelCase123Case\", \"camel_case123_case\"),  # numbers between words\n            (\"aB\", \"a_b\"),\n            (\"AB\", \"ab\"),                         # all caps short\n            (\"already_snake\", \"already_snake\"),   # already snake_case\n            (\"camel_Case\", \"camel_case\"),         # mixed with underscore\n            (\"camel__Case\", \"camel__case\"),       # double underscore\n            (\"camel Case\", \"camel case\"),         # space (treated as non-letter)\n        ],\n    )\n    def test_happy_path(self, input_str, expected):\n        assert camel_to_snake(input_str) == expected\n\n\nclass TestCamelToSnakeEdgeCases:\n    @pytest.mark.parametrize(\n        \"input_str, expected\",\n        [\n            (\"\", \"\"),                     # empty string\n            (\"c\", \"c\"),                   # single lowercase\n            (\"C\", \"c\"),                   # single uppercase\n            (\"123\", \"123\"),               # only digits\n            (\"camel123case\", \"camel123case\"),  # no uppercase\n            (\"ALLCAPS\", \"allcaps\"),       # all uppercase\n            (\"HTTPServer\", \"httpserver\"), # acronym at start (no lowercase before)\n            (\"XMLParser\", \"xmlparser\"),   # acronym at start\n            (\"camelCaseXMLParser\", \"camel_case_xml_parser\"),  # multiple acronyms\n            (\"camelCaseXML\", \"camel_case_xml\"),\n            (\"camelCaseXMLParser\", \"camel_case_xml_parser\"),\n            (\"camelCase123\", \"camel_case123\"),\n            (\"camel123Case\", \"camel123case\"),  # digit before uppercase -> no split\n        ],\n    )\n    def test_edge_cases(self, input_str, expected):\n        assert camel_to_snake(input_str) == expected\n\n\nclass TestCamelToSnakeErrorCases:\n    @pytest.mark.parametrize(\n        \"invalid_input\",\n        [\n            None,\n            123,\n            3.14,\n            [],\n            {},\n            set(),\n        ],\n    )\n    def test_type_error(self, invalid_input):\n        with pytest.raises(TypeError):\n            camel_to_snake(invalid_input)\n```",
+  "score": 4,
+  "cost": 0.0031146000000000004,
+  "expected": "",
+  "tokens": {
+    "input": 72,
+    "output": 1772
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

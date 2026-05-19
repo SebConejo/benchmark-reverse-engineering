@@ -1,0 +1,16 @@
+{
+  "model": "claude-opus-4-7",
+  "task": "rag_qa",
+  "case": 39,
+  "response": "Packet switching contrasts with circuit switching.",
+  "score": 5,
+  "cost": 0.00492,
+  "expected": "circuit switching",
+  "tokens": {
+    "input": 228,
+    "output": 20
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

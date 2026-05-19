@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "ner_extraction",
+  "case": 9,
+  "response": "```json\n{\n  \"persons\": [],\n  \"organizations\": [\n    \"World Health Organization\"\n  ],\n  \"locations\": [\n    \"sub-Saharan Africa\",\n    \"Geneva\"\n  ]\n}\n```",
+  "score": 4,
+  "cost": 8.04e-06,
+  "expected": "",
+  "tokens": {
+    "input": 80,
+    "output": 54
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

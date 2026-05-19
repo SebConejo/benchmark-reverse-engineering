@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "sql_spider",
+  "case": 48,
+  "response": "```sql\nSELECT model\nFROM cars\nWHERE weight < (SELECT AVG(weight) FROM cars);\n```",
+  "score": 5,
+  "cost": 7.64e-05,
+  "expected": "",
+  "tokens": {
+    "input": 71,
+    "output": 24
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

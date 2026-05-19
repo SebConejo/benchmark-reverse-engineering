@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.4-mini",
+  "task": "data_to_text",
+  "case": 14,
+  "response": "Team Alpha\u2019s Sprint #23 ran from January 15 to 26, with 42 points planned and 38 points completed. The team\u2019s average velocity was 36, and they finished 8 stories and fixed 5 bugs while encountering 2 blockers. Overall satisfaction for the sprint was rated at 4.1 out of 5.",
+  "score": 5,
+  "cost": 0.00011489999999999999,
+  "expected": "",
+  "tokens": {
+    "input": 95,
+    "output": 72
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

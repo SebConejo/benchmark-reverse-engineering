@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen-turbo",
+  "task": "sql_spider",
+  "case": 19,
+  "response": "SELECT DISTINCT maker \nFROM cars \nWHERE year = 1970;",
+  "score": 4,
+  "cost": 3.333e-06,
+  "expected": "",
+  "tokens": {
+    "input": 85,
+    "output": 16
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "rag_qa",
+  "case": 7,
+  "response": "the mass of the system.",
+  "score": 1,
+  "cost": 0.0011823500000000002,
+  "expected": "mass of the system",
+  "tokens": {
+    "input": 170,
+    "output": 867
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

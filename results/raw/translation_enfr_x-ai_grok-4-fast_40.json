@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "translation_enfr",
+  "case": 40,
+  "response": "Nous avons juste besoin d'obtenir plus d'informations.",
+  "score": 5,
+  "cost": 0.0001588,
+  "expected": "",
+  "tokens": {
+    "input": 182,
+    "output": 153
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

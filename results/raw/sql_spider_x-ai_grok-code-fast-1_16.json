@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "sql_spider",
+  "case": 16,
+  "response": "SELECT COUNT(DISTINCT country_code) FROM players;",
+  "score": 5,
+  "cost": 0.0001922,
+  "expected": "",
+  "tokens": {
+    "input": 269,
+    "output": 173
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

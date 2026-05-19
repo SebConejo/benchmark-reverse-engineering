@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "test_generation_v2",
+  "case": 46,
+  "response": "```python\n# test_unique_permutations.py\nimport pytest\nfrom itertools import permutations\nfrom math import factorial\n\nfrom your_module import unique_permutations   # adjust the import path\n\n\n# ---------- Happy-path tests ----------\n\ndef test_distinct_elements():\n    \"\"\"\n    A list with all-distinct, hashable elements should produce n! permutations,\n    none of which are duplicated.\n    \"\"\"\n    data = [1, 2, 3]\n    perms = unique_permutations(data)\n\n    # 1) correct number of permutations\n    assert len(perms) == factorial(len(data))\n\n    # 2) every permutation should be present\n    expected = [list(p) for p in permutations(data)]\n    assert sorted(perms) == sorted(expected)\n\n    # 3) no duplicates in the result\n    assert len(perms) == len({tuple(p) for p in perms})\n\n    # 4) original list must stay untouched\n    assert data == [1, 2, 3]\n\n\ndef test_with_duplicates():\n    \"\"\"\n    When the input contains duplicate values, the function should\n    return only unique permutations.\n    \"\"\"\n    data = [1, 1, 2]\n    perms = unique_permutations(data)\n\n    expected = [[1, 1, 2],\n                [1, 2, 1],\n                [2, 1, 1]]\n\n    # Order is not guaranteed; compare as sets of tuples\n    assert {tuple(p) for p in perms} == {tuple(p) for p in expected}\n    # Exactly three unique permutations\n    assert len(perms) == 3\n\n\n# ---------- Edge cases ----------\n\ndef test_empty_list():\n    assert unique_permutations([]) == [[]]\n\n\ndef test_single_element():\n    assert unique_permutations([42]) == [[42]]\n\n\n# ---------- Error cases ----------\n\ndef test_unhashable_items_raise_type_error():\n    \"\"\"\n    Elements must be hashable because they are placed in a set.\n    A list inside the input list is unhashable and should trigger TypeError.\n    \"\"\"\n    with pytest.raises(TypeError):\n        unique_permutations([[1], [1]])\n\n\ndef test_input_is_modified_if_exception_occurs():\n    \"\"\"\n    If an exception is raised, the caller\u2019s list should remain unchanged.\n    This also indirectly checks that the function does not mutate the input\n    before the failure.\n    \"\"\"\n    original = [[1], [1]]\n    copy = original.copy()\n    with pytest.raises(TypeError):\n        unique_permutations(original)\n    assert original == copy\n```",
+  "score": 4,
+  "cost": 0.011838,
+  "expected": "",
+  "tokens": {
+    "input": 123,
+    "output": 1449
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

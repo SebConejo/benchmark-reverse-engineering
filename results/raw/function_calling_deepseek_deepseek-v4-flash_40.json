@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "function_calling",
+  "case": 40,
+  "response": "{\"name\": \"pin_message\", \"arguments\": {\"channel\": \"announcements\", \"message_id\": \"the release\"}}",
+  "score": 4,
+  "cost": 2.9120000000000006e-05,
+  "expected": "",
+  "tokens": {
+    "input": 96,
+    "output": 28
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

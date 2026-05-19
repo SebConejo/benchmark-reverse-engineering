@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "task": "email_summary_v2",
+  "case": 8,
+  "response": "The annual performance review cycle begins May 1 and concludes June 5, introducing a new competency framework for all evaluations. Managers must attend training on April 30, and all participants are required to meet strict deadlines for self-reviews (May 15), manager reviews (May 22), and final delivery (June 5).",
+  "score": 4,
+  "cost": 0.00183,
+  "expected": "",
+  "tokens": {
+    "input": 100,
+    "output": 1805
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

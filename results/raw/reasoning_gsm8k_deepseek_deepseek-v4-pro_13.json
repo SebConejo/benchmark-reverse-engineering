@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "reasoning_gsm8k",
+  "case": 13,
+  "response": "Janet's total payment is the sum of the material cost, the jeweler's fee, and the insurance cost.\n\nMaterial cost: $500  \nJeweler's fee: $800  \nTotal before insurance: $500 + $800 = $1300  \nInsurance (10% of $1300): 0.10 \u00d7 $1300 = $130  \nTotal paid: $1300 + $130 = $1430  \n\nANSWER: 1430",
+  "score": 5,
+  "cost": 0.00044979,
+  "expected": "1430",
+  "tokens": {
+    "input": 94,
+    "output": 235
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

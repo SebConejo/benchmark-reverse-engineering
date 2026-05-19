@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "ner_extraction",
+  "case": 9,
+  "response": "{\"persons\": [], \"organizations\": [\"World Health Organization\"], \"locations\": [\"sub-Saharan Africa\", \"Geneva\"]}",
+  "score": 4,
+  "cost": 0.0001728,
+  "expected": "",
+  "tokens": {
+    "input": 72,
+    "output": 36
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

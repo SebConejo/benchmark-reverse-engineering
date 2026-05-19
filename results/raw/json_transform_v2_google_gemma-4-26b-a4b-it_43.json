@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "json_transform_v2",
+  "case": 43,
+  "response": "{\"total_credits\": 8000, \"total_debits\": 4500, \"net\": 3500, \"transaction_count\": 5}",
+  "score": 5,
+  "cost": 1.17e-05,
+  "expected": "",
+  "tokens": {
+    "input": 154,
+    "output": 41
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-lite",
+  "task": "sql_spider",
+  "case": 34,
+  "response": "SELECT * FROM hiring;",
+  "score": 1,
+  "cost": 0.00121175,
+  "expected": "",
+  "tokens": {
+    "input": 115,
+    "output": 1183
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "code_generation",
+  "case": 30,
+  "response": "if n <= 0:\n        raise ValueError(\"n must be a positive integer\")\n\n    def is_prime(num: int) -> bool:\n        if num < 2:\n            return False\n        if num == 2:\n            return True\n        if num % 2 == 0:\n            return False\n        limit = int(num ** 0.5) + 1\n        for div in range(3, limit, 2):\n            if num % div == 0:\n                return False\n        return True\n\n    count = 0\n    a, b = 0, 1  # Fibonacci starters F0=0, F1=1\n    while True:\n        a, b = b, a + b  # advance to next Fibonacci number\n        if is_prime(a):\n            count += 1\n            if count == n:\n                return a",
+  "score": 5,
+  "cost": 0.006486,
+  "expected": "",
+  "tokens": {
+    "input": 127,
+    "output": 779
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

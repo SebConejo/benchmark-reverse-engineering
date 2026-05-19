@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "code_explanation",
+  "case": 31,
+  "response": "This implements the A* search algorithm on a weighted graph, using a min-heap priority queue ordered by `cost_so_far + heuristic(neighbor, goal)`. It expands the most promising node first, tracks visited nodes and paths, and returns the path from `start` to `goal` or `None` if no path is found.",
+  "score": 5,
+  "cost": 0.01575,
+  "expected": "",
+  "tokens": {
+    "input": 170,
+    "output": 176
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

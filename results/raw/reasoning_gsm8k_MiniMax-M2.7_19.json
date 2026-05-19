@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 19,
+  "response": "The adopted kittens:\u202f7  \nPatchy\u2019s kittens = thrice the adopted kittens = 3\u202f\u00d7\u202f7 = 21  \nTrixie\u2019s kittens = 12  \n\nTotal kittens now = 7 + 21 + 12 = 40  \n\nANSWER: 40",
+  "score": 5,
+  "cost": 0.0035101000000000004,
+  "expected": "40",
+  "tokens": {
+    "input": 151,
+    "output": 760
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

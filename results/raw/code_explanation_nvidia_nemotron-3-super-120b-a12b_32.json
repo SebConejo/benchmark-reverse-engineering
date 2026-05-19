@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "code_explanation",
+  "case": 32,
+  "response": "The code implements a Disjoint\u2011Set Union (Union\u2011Find) data structure with path compression in `find` and union\u2011by\u2011rank in `union`; it returns two callable functions that can be used to test whether two elements belong to the same set and to merge sets efficiently.",
+  "score": 5,
+  "cost": 1.9709999999999996e-05,
+  "expected": "",
+  "tokens": {
+    "input": 160,
+    "output": 59
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

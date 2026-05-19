@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3-coder",
+  "task": "function_calling",
+  "case": 16,
+  "response": "{\"name\": \"search_nearby\", \"arguments\": {\"category\": \"gas station\", \"open_now\": true}}",
+  "score": 4,
+  "cost": 4.224e-05,
+  "expected": "",
+  "tokens": {
+    "input": 96,
+    "output": 24
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

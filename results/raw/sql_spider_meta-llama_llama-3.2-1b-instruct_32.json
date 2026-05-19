@@ -1,0 +1,16 @@
+{
+  "model": "meta-llama/llama-3.2-1b-instruct",
+  "task": "sql_spider",
+  "case": 32,
+  "response": "SELECT first_name FROM players ORDER BY ranking",
+  "score": 2,
+  "cost": 2.3759999999999998e-06,
+  "expected": "",
+  "tokens": {
+    "input": 79,
+    "output": 9
+  },
+  "judge_v2_score": 2,
+  "judge_v2_raw": "2",
+  "judge_v2_model": "gpt-4o"
+}

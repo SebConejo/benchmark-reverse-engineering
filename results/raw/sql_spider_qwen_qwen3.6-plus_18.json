@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "sql_spider",
+  "case": 18,
+  "response": "SELECT Country FROM singer WHERE Age > 40 INTERSECT SELECT Country FROM singer WHERE Age < 30",
+  "score": 2,
+  "cost": 0.001588275,
+  "expected": "",
+  "tokens": {
+    "input": 87,
+    "output": 1200
+  },
+  "judge_rerun": true,
+  "judge_raw": "2",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

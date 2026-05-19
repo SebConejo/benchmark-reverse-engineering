@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-flash",
+  "task": "code_explanation",
+  "case": 41,
+  "response": "This code calculates a 32-bit Cyclic Redundancy Check (CRC-32) value for the input `data`. It implements a bit-wise, reflected CRC-32 algorithm, processing each byte by XORing it into a CRC register and then performing 8 shifts, XORing with the standard polynomial `0xEDB88320` when the least significant bit is set.",
+  "score": 5,
+  "cost": 6.615e-05,
+  "expected": "",
+  "tokens": {
+    "input": 109,
+    "output": 83
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "function_calling",
+  "case": 46,
+  "response": "{\"name\": \"restart_service\", \"arguments\": {\"name\": \"redis\"}}",
+  "score": 5,
+  "cost": 0.0005422000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 283,
+    "output": 607
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

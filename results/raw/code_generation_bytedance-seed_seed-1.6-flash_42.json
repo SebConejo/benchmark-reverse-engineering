@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "code_generation",
+  "case": 42,
+  "response": "if n > m:\n        return -1\n    avg = (n + m) / 2\n    rounded = round(avg)\n    return bin(rounded)",
+  "score": 4,
+  "cost": 0.0006940500000000001,
+  "expected": "",
+  "tokens": {
+    "input": 266,
+    "output": 2247
+  },
+  "judge_v2_score": 2,
+  "judge_v2_raw": "2",
+  "judge_v2_model": "gpt-4o"
+}

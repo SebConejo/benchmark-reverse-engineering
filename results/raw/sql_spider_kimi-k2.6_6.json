@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "sql_spider",
+  "case": 6,
+  "response": "```sql\nSELECT DISTINCT a.name\nFROM airlines a\nJOIN flights f ON a.airline_id = f.airline_id\nWHERE f.destination = 'AHD';\n```",
+  "score": 5,
+  "cost": 0.006741,
+  "expected": "",
+  "tokens": {
+    "input": 71,
+    "output": 2791
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

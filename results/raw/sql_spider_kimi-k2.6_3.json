@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "sql_spider",
+  "case": 3,
+  "response": "```sql\nSELECT Name\nFROM country\nWHERE Continent = 'Africa'\n  AND Population < (\n      SELECT MIN(Population)\n      FROM country\n      WHERE Continent = 'Asia'\n  );\n```",
+  "score": 5,
+  "cost": 0.0038177999999999997,
+  "expected": "",
+  "tokens": {
+    "input": 75,
+    "output": 1572
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

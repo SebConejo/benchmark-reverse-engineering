@@ -1,0 +1,16 @@
+{
+  "model": "meta-llama/llama-3.2-1b-instruct",
+  "task": "rag_qa",
+  "case": 41,
+  "response": "500",
+  "score": 5,
+  "cost": 5.265e-06,
+  "expected": "Contrec\u0153ur led 500 men south from Fort Venango on April 5, 1754",
+  "tokens": {
+    "input": 193,
+    "output": 2
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

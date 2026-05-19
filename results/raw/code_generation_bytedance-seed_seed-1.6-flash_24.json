@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-1.6-flash",
+  "task": "code_generation",
+  "case": 24,
+  "response": "if a + b <= c or a + c <= b or b + c <= a:\n        return -1\n    s = (a + b + c) / 2\n    area = math.sqrt(s * (s - a) * (s - b) * (s - c))\n    return round(area, 2)\nimport math",
+  "score": 4,
+  "cost": 0.0006975,
+  "expected": "",
+  "tokens": {
+    "input": 236,
+    "output": 2266
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

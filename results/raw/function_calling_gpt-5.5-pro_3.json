@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "function_calling",
+  "case": 3,
+  "response": "{\"name\":\"create_task\",\"arguments\":{\"title\":\"Review PR 42\",\"priority\":\"high\",\"assignee\":\"alice\",\"due_date\":\"2026-05-08\"}}",
+  "score": 4,
+  "cost": 0.02535,
+  "expected": "",
+  "tokens": {
+    "input": 115,
+    "output": 315
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

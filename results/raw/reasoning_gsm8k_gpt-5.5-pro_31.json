@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "reasoning_gsm8k",
+  "case": 31,
+  "response": "Boys: 30\n\nGirls: \\(3 \\times 30 = 90\\)\n\nNongendered children: \\(\\frac{1}{10} \\times 30 = 3\\)\n\nTotal children: \\(30 + 90 + 3 = 123\\)\n\nANSWER: 123",
+  "score": 1,
+  "cost": 0.010575,
+  "expected": "123",
+  "tokens": {
+    "input": 90,
+    "output": 123
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "rag_qa",
+  "case": 25,
+  "response": "Infrastructure in Warsaw suffered considerably during its time as an Eastern Bloc economy.",
+  "score": 5,
+  "cost": 0.000549,
+  "expected": "infrastructure",
+  "tokens": {
+    "input": 163,
+    "output": 188
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

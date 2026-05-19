@@ -1,0 +1,16 @@
+{
+  "model": "claude-opus-4-7",
+  "task": "reasoning_gsm8k",
+  "case": 5,
+  "response": "50 + 25 - 30 = 45\n\nANSWER: 45",
+  "score": 4,
+  "cost": 0.00459,
+  "expected": "45",
+  "tokens": {
+    "input": 171,
+    "output": 27
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

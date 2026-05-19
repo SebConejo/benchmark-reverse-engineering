@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "reasoning_gsm8k",
+  "case": 24,
+  "response": "First, find the total number of lollipops sold.  \nThere are 30 students and each student sold an average of 10 lollipops:  \n\\(30 \\times 10 = 300\\) lollipops.\n\nNext, determine the profit made on each lollipop.  \nThe selling price is $0.8 and the cost price is $0.5:  \n\\(\\$0.8 - \\$0.5 = \\$0.3\\) profit per lollipop.\n\nNow, multiply the profit per lollipop by the total number of lollipops sold to get the total profit:  \n\\(300 \\times \\$0.3 = \\$90\\).\n\nANSWER: 90",
+  "score": 5,
+  "cost": 0.0009755999999999999,
+  "expected": "90",
+  "tokens": {
+    "input": 118,
+    "output": 377
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

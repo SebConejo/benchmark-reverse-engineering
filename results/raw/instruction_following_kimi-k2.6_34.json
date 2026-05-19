@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "instruction_following",
+  "case": 34,
+  "response": "A database index is a data structure that improves the speed of data retrieval by allowing the database to locate rows quickly without scanning every record in a table, similar to an index in a book. While it significantly accelerates read queries, it requires additional storage and can slow down write operations because the index must be updated whenever underlying data is modified.",
+  "score": 2,
+  "cost": 0.0008201999999999999,
+  "expected": "",
+  "tokens": {
+    "input": 19,
+    "output": 337
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

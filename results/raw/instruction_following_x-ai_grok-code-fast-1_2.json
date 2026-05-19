@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "instruction_following",
+  "case": 2,
+  "response": "Code flows like a stream  \nAlgorithms solve life's puzzles  \nBugs vanish at dawn",
+  "score": 5,
+  "cost": 0.0008222,
+  "expected": "",
+  "tokens": {
+    "input": 211,
+    "output": 975
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

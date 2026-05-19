@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "rag_qa",
+  "case": 18,
+  "response": "Allan Bloom",
+  "score": 1,
+  "cost": 0.00018920000000000002,
+  "expected": "Allan Bloom",
+  "tokens": {
+    "input": 318,
+    "output": 157
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

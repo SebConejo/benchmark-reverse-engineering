@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "email_summary_v2",
+  "case": 3,
+  "response": "The March onboarding cohort\u2019s satisfaction fell to 7.2/10, with issues including confusion about the benefits deadline, tools\u2011access delays of 3\u20135\u202fdays (target\u202f1\u202fday), and the lack of a culture handbook, despite high marks for the buddy system and timely IT support. The priority action is to fix the tools\u2011access problem, and the team should also clarify the benefits deadline and distribute the culture handbook.",
+  "score": 5,
+  "cost": 0.0021714,
+  "expected": "",
+  "tokens": {
+    "input": 146,
+    "output": 457
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

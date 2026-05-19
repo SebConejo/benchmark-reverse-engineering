@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "function_calling",
+  "case": 17,
+  "response": "{\"name\": \"generate_qr\", \"arguments\": {\"data\": \"https://example.com/signup\"}}",
+  "score": 5,
+  "cost": 2.7300000000000003e-05,
+  "expected": "",
+  "tokens": {
+    "input": 95,
+    "output": 25
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

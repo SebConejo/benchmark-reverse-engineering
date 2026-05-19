@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "email_summary_v2",
+  "case": 30,
+  "response": "Competitor X launched AI features with auto-categorization, but the market response was neutral and our lower pricing with better API and integrations remains an advantage.  \nWe should fast-track our AI roadmap item.",
+  "score": 5,
+  "cost": 0.000495465,
+  "expected": "",
+  "tokens": {
+    "input": 91,
+    "output": 262
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

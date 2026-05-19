@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "rag_qa",
+  "case": 13,
+  "response": "The Victorian Government.",
+  "score": 5,
+  "cost": 0.000168345,
+  "expected": "Victorian Government",
+  "tokens": {
+    "input": 155,
+    "output": 58
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

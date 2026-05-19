@@ -1,0 +1,16 @@
+{
+  "model": "mistral-large-latest",
+  "task": "translation_enfr",
+  "case": 30,
+  "response": "Voici la traduction en fran\u00e7ais, en conservant le ton et le sens du texte original :\n\n**\"Premi\u00e8re ligne de cr\u00e9dit en Italie pour les apprentissages des jeunes dans les PME, les ETI et les collectivit\u00e9s locales.\"**\n\n*Variante alternative (selon le contexte) :*\n**\"Premi\u00e8re facilit\u00e9 de cr\u00e9dit en Italie d\u00e9di\u00e9e aux apprentissages des jeunes au sein des PME, des entreprises de taille interm\u00e9diaire et des collectivit\u00e9s territoriales.\"**\n\n*Explications :*\n- **\"Ligne de cr\u00e9dit\"** \u2192 *\"Ligne de cr\u00e9dit\"* ou *\"facilit\u00e9 de cr\u00e9dit\"* (selon le registre).\n- **\"Youth apprenticeships\"** \u2192 *\"Apprentissages des jeunes\"* (terme courant en France pour les contrats d'apprentissage).\n- **\"SMEs\"** \u2192 *\"PME\"* (Petites et Moyennes Entreprises).\n- **\"Midcaps\"** \u2192 *\"ETI\"* (Entreprises de Taille Interm\u00e9diaire) ou *\"entreprises de taille moyenne\"* (selon le public cible).\n- **\"Local authorities\"** \u2192 *\"Collectivit\u00e9s locales\"* ou *\"collectivit\u00e9s territoriales\"* (terme officiel en France).\n\nSi le texte s'adresse \u00e0 un public sp\u00e9cifique (banques, institutions, etc.), ajustez le vocabulaire en cons\u00e9quence. \ud83d\ude0a",
+  "score": 5,
+  "cost": 0.001694,
+  "expected": "",
+  "tokens": {
+    "input": 43,
+    "output": 268
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

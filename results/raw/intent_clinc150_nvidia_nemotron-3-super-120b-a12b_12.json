@@ -1,0 +1,13 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "intent_clinc150",
+  "case": 12,
+  "response": "oil_change_how",
+  "score": 5,
+  "cost": 4.563e-05,
+  "expected": "oil_change_how",
+  "tokens": {
+    "input": 502,
+    "output": 5
+  }
+}

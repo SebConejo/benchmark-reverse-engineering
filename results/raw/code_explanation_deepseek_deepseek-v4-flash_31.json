@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "code_explanation",
+  "case": 31,
+  "response": "This code implements the **A* search algorithm** to find the shortest path from a `start` node to a `goal` node in a weighted graph. It uses a priority queue (min-heap) ordered by `f(n) = g(n) + h(n)`, where `g(n)` is the actual cost from the start and `h(n)` is the heuristic estimate to the goal, and it avoids revisiting nodes by tracking a `visited` set.",
+  "score": 5,
+  "cost": 7.812e-05,
+  "expected": "",
+  "tokens": {
+    "input": 170,
+    "output": 97
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

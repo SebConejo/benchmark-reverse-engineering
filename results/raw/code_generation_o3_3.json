@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "code_generation",
+  "case": 3,
+  "response": "if len(xs) < 2:\n        return []\n    return [i * xs[i] for i in range(1, len(xs))]",
+  "score": 4,
+  "cost": 0.002716,
+  "expected": "",
+  "tokens": {
+    "input": 138,
+    "output": 305
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "instruction_following",
+  "case": 8,
+  "response": "Okay, the user wants me to explain blockchain to a 5-year-old in just 2-3 sentences. That's a fun challenge.",
+  "score": 1,
+  "cost": 5.58e-06,
+  "expected": "",
+  "tokens": {
+    "input": 32,
+    "output": 30
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

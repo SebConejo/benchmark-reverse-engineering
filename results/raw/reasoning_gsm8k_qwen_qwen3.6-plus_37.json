@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "reasoning_gsm8k",
+  "case": 37,
+  "response": "Here is the step-by-step solution:\n\n**Step 1: Calculate the number of votes for candidate A.**\nCandidate A received 20% of the total 100 votes.\n$0.20 \\times 100 = 20$ votes.\n\n**Step 2: Calculate the number of votes for candidate B.**\nCandidate B received 50% more votes than candidate A. First, find 50% of A's votes:\n$0.50 \\times 20 = 10$ votes.\nAdd this to A's total to get B's votes:\n$20 + 10 = 30$ votes.\n\n**Step 3: Calculate the number of votes for candidate C.**\nThe total number of votes is 100. Subtract the votes for A and B to find the remaining votes for C:\n$100 - (20 + 30) = 100 - 50 = 50$ votes.\n\nANSWER: 50",
+  "score": 5,
+  "cost": 0.0018521750000000002,
+  "expected": "50",
+  "tokens": {
+    "input": 107,
+    "output": 1398
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

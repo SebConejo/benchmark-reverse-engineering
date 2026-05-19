@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "rag_qa",
+  "case": 45,
+  "response": "The show globe was employed until the early 20th century.",
+  "score": 5,
+  "cost": 2.6369999999999997e-05,
+  "expected": "The show globe",
+  "tokens": {
+    "input": 234,
+    "output": 59
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

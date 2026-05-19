@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "reasoning_gsm8k",
+  "case": 33,
+  "response": "Manolo bought 5 lollipops and 4 candies for $3.20. Each lollipop costs $0.40.\nFirst, find the cost of one candy:\n5 lollipops cost 5 \u00d7 $0.40 = $2.00.\nSo, 4 candies cost $3.20 \u2212 $2.00 = $1.20.\nOne candy costs $1.20 \u00f7 4 = $0.30.\nNow, 10 lollipops cost 10 \u00d7 $0.40 = $4.00, and 10 candies cost 10 \u00d7 $0.30 = $3.00.\nTotal cost = $4.00 + $3.00 = $7.00.\n\nANSWER: 7",
+  "score": 5,
+  "cost": 0.0008099699999999999,
+  "expected": "7",
+  "tokens": {
+    "input": 86,
+    "output": 444
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-lite",
+  "task": "instruction_following",
+  "case": 12,
+  "response": "Think of an API as a universal waiter that connects two separate groups that can\u2019t (or shouldn\u2019t) interact directly.\n\nTo use a restaurant analogy: You\u2019re the customer, sitting at your table with your menu (that\u2019s the app you use on your phone, like your weather app or ride-share app). The kitchen, in the back of the restaurant, holds all the food and information you need\u2014like the current temperature in your city, or the locations of all nearby drivers\u2014but you can\u2019t just wander back into the kitchen to grab what you want yourself. You don\u2019t have access to the private kitchen space, you don\u2019t know where everything is stored back there, and letting every customer roam the kitchen would cause chaos.\n\nInstead, you tell the waiter (the API) exactly what you need: \u201cI want the 7-day forecast for my town.\u201d The waiter carries that request to the kitchen, the kitchen staff pulls together what you asked for, and the waiter brings it right back to your table. That\u2019s all an API does: it\u2019s a standardized middleman that lets two separate programs share exactly what they need to share, without either side having to access or understand all the private inner workings of the other.\n\nYou\u2019ve used APIs hundreds of times without noticing. For example, when you log into a food delivery app using your Google account instead of creating a brand new account, that\u2019s an API at work. The delivery app sends a message to Google\u2019s system via the API to confirm you are who you say you are. Google never gives the delivery app access to all of your private Google data, and the delivery app never has to figure out how to tap into Google\u2019s private systems on its own\u2014the API only passes exactly what both sides need to complete the task.",
+  "score": 5,
+  "cost": 0.00112075,
+  "expected": "",
+  "tokens": {
+    "input": 63,
+    "output": 1105
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

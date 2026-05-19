@@ -1,0 +1,16 @@
+{
+  "model": "seed-2-0-code-preview-260328",
+  "task": "rag_qa",
+  "case": 34,
+  "response": "Infinitely many",
+  "score": 5,
+  "cost": 0.0005187000000000001,
+  "expected": "infinitely many prime numbers",
+  "tokens": {
+    "input": 273,
+    "output": 364
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

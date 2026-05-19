@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.4-mini",
+  "task": "rag_qa",
+  "case": 19,
+  "response": "Along with advancements in communication.",
+  "score": 4,
+  "cost": 5.73e-05,
+  "expected": "communication",
+  "tokens": {
+    "input": 155,
+    "output": 9
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

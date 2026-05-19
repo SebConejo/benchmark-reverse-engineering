@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-4.20",
+  "task": "rag_qa",
+  "case": 36,
+  "response": "Not found in context.",
+  "score": 5,
+  "cost": 0.000584,
+  "expected": "gaseous oxygen.",
+  "tokens": {
+    "input": 272,
+    "output": 5
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "rag_qa",
+  "case": 9,
+  "response": "70's",
+  "score": 4,
+  "cost": 0.00043151999999999996,
+  "expected": "70",
+  "tokens": {
+    "input": 140,
+    "output": 213
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

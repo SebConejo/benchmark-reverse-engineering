@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "instruction_following",
+  "case": 45,
+  "response": "TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) are both core transport layer protocols, but they are designed for different purposes. **TCP prioritizes reliability and order**, while **UDP prioritizes speed and efficiency**.\n\n### Comparison Table\n\n| Feature | TCP (Transmission Control Protocol) | UDP (User Datagram Protocol) |\n|---------|-------------------------------------|------------------------------|\n| **Connection** | Connection-oriented (establishes a connection before sending data) | Connectionless (sends data immediately without setup) |\n| **Reliability** | High\u2014guarantees delivery via acknowledgments and retransmissions | Low\u2014\"best-effort\" delivery; no guarantee packets arrive |\n| **Ordering** | Packets arrive in order (uses sequencing numbers) | No ordering; packets may arrive out of sequence |\n| **Speed** | Slower due to overhead (handshakes, checks, acknowledgments) | Faster with minimal overhead |\n| **Header Size** | 20\u201360 bytes | 8 bytes |\n| **Error Checking** | Yes, and it recovers from errors (retransmits lost/corrupt packets) | Yes, but only detects errors; corrupt packets are discarded without retry |\n| **Flow Control** | Yes (prevents sender from overwhelming receiver) | No |\n| **Congestion Control** | Yes (reduces rate when network is busy) | No |\n| **Handshake** | Requires a 3-way handshake (SYN, SYN-ACK, ACK) | None |\n| **Overhead** | High | Very low |\n| **Use Cases** | Web browsing (HTTP/HTTPS), email (SMTP/POP3/IMAP), file transfers (FTP), SSH | Video/audio streaming, online gaming, DNS queries, VoIP, live broadcasts |\n| **Analogy** | A certified phone call: you dial, confirm the connection, speak in order, and confirm receipt | A megaphone announcement: you shout into the ether quickly; no confirmation, but very fast |\n\n### Key Takeaways\n\n- **Use TCP** when data integrity and order matter more than speed. You don't want a corrupted file download or a missing webpage element.\n- **Use UDP** when speed and low latency matter more than perfect reliability. A missing pixel in a livestream or a dropped packet in a video game is less important than maintaining real-time performance.\n\nIn short: **TCP is like a certified letter**, and **UDP is like a postcard**.",
+  "score": 5,
+  "cost": 0.0022686,
+  "expected": "",
+  "tokens": {
+    "input": 17,
+    "output": 941
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

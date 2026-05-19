@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-flash",
+  "task": "rag_qa",
+  "case": 7,
+  "response": "the mass of the system.",
+  "score": 1,
+  "cost": 2.7449999999999996e-05,
+  "expected": "mass of the system",
+  "tokens": {
+    "input": 159,
+    "output": 6
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

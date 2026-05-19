@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "function_calling",
+  "case": 41,
+  "response": "{\"name\": \"add_comment\", \"arguments\": {\"pr_id\": 789, \"body\": \"LGTM approved\"}}",
+  "score": 5,
+  "cost": 0.00033451499999999996,
+  "expected": "",
+  "tokens": {
+    "input": 101,
+    "output": 167
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

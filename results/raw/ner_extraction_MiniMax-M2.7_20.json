@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "ner_extraction",
+  "case": 20,
+  "response": "{\"persons\":[\"Sundar Pichai\"], \"organizations\":[\"Google\"], \"locations\":[\"Malaysia\"]}",
+  "score": 5,
+  "cost": 0.0010978,
+  "expected": "",
+  "tokens": {
+    "input": 106,
+    "output": 223
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

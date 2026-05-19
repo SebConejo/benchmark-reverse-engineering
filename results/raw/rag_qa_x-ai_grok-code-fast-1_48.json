@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "rag_qa",
+  "case": 48,
+  "response": "Not found in context.",
+  "score": 1,
+  "cost": 0.00047780000000000007,
+  "expected": "strictly contained in P or equal to P",
+  "tokens": {
+    "input": 317,
+    "output": 518
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

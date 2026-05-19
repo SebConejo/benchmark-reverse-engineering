@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen-max",
+  "task": "instruction_following",
+  "case": 20,
+  "response": "Sunshine, sugar, substance, synthesis, spectrum, spreading, sprouting, splendid.",
+  "score": 5,
+  "cost": 9.984e-05,
+  "expected": "",
+  "tokens": {
+    "input": 24,
+    "output": 18
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

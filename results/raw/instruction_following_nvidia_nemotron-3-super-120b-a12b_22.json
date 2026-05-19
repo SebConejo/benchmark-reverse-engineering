@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "instruction_following",
+  "case": 22,
+  "response": "Dogs are known for being loyal friends who stand by their owners through thick and thin. Their loyal nature makes them excellent protectors, always alert to any danger. Even when faced with adversity, a loyal dog will wag its tail and offer comfort. Training a loyal dog reinforces the bond, turning obedience into a shared language of trust. In every wag and bark, the loyal spirit of a dog shines, reminding us of unconditional love.",
+  "score": 5,
+  "cost": 9.990000000000001e-06,
+  "expected": "",
+  "tokens": {
+    "input": 23,
+    "output": 88
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

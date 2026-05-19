@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "test_generation_v2",
+  "case": 30,
+  "response": "Assuming the function is in `your_module.py`, save this as `test_snake_to_camel.py`:\n\n```python\nimport pytest\n\nfrom your_module import snake_to_camel\n\n\n@pytest.mark.parametrize(\n    (\"value\", \"expected\"),\n    [\n        (\"hello_world\", \"helloWorld\"),\n        (\"convert_snake_case\", \"convertSnakeCase\"),\n        (\"user_id\", \"userId\"),\n        (\"a_b_c\", \"aBC\"),\n        (\"long_snake_case_string\", \"longSnakeCaseString\"),\n    ],\n)\ndef test_snake_to_camel_happy_path(value, expected):\n    assert snake_to_camel(value) == expected\n\n\n@pytest.mark.parametrize(\n    (\"value\", \"expected\"),\n    [\n        (\"\", \"\"),\n        (\"alreadycamel\", \"alreadycamel\"),\n        (\"alreadyCamel\", \"alreadyCamel\"),\n        (\"_\", \"\"),\n        (\"__\", \"\"),\n        (\"_leading\", \"Leading\"),\n        (\"trailing_\", \"trailing\"),\n        (\"multiple__underscores\", \"multipleUnderscores\"),\n        (\"multiple___underscores\", \"multipleUnderscores\"),\n        (\"version_2_id\", \"version2Id\"),\n        (\"foo_123_bar\", \"foo123Bar\"),\n    ],\n)\ndef test_snake_to_camel_edge_cases(value, expected):\n    assert snake_to_camel(value) == expected\n\n\n@pytest.mark.parametrize(\n    (\"value\", \"expected\"),\n    [\n        (\"foo_BAR\", \"fooBar\"),\n        (\"FOO_bar\", \"FOOBar\"),\n        (\"foo_bAR_baz\", \"fooBarBaz\"),\n        (\"FOO_BAR_BAZ\", \"FOOBarBaz\"),\n    ],\n)\ndef test_snake_to_camel_preserves_first_part_but_capitalizes_later_parts(value, expected):\n    assert snake_to_camel(value) == expected\n\n\n@pytest.mark.parametrize(\n    \"value\",\n    [\n        None,\n        123,\n        12.5,\n        [\"hello_world\"],\n        {\"hello\": \"world\"},\n    ],\n)\ndef test_snake_to_camel_non_string_inputs_without_split_raise_attribute_error(value):\n    with pytest.raises(AttributeError):\n        snake_to_camel(value)  # type: ignore[arg-type]\n\n\ndef test_snake_to_camel_bytes_input_raises_type_error():\n    with pytest.raises(TypeError):\n        snake_to_camel(b\"hello_world\")  # type: ignore[arg-type]\n```",
+  "score": 5,
+  "cost": 0.19812,
+  "expected": "",
+  "tokens": {
+    "input": 73,
+    "output": 2627
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

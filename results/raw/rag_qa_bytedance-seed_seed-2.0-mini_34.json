@@ -1,0 +1,18 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "rag_qa",
+  "case": 34,
+  "response": "Infinitely many prime numbers.",
+  "score": 1,
+  "cost": 0.0001375,
+  "expected": "infinitely many prime numbers",
+  "tokens": {
+    "input": 291,
+    "output": 271
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

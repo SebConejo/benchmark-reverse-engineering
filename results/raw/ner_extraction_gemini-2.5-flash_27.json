@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-flash",
+  "task": "ner_extraction",
+  "case": 27,
+  "response": "```json\n{\n  \"persons\": [\n    \"Cristiano Ronaldo\"\n  ],\n  \"organizations\": [\n    \"Al Nassr\",\n    \"Manchester United\"\n  ],\n  \"locations\": [\n    \"Riyadh\"\n  ]\n}\n```",
+  "score": 5,
+  "cost": 4.68e-05,
+  "expected": "",
+  "tokens": {
+    "input": 68,
+    "output": 61
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

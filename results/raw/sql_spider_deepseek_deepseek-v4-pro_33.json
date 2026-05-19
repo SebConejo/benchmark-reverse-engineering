@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "sql_spider",
+  "case": 33,
+  "response": "```sql\nSELECT title, rating\nFROM episodes\nORDER BY rating DESC\nLIMIT 3;\n```",
+  "score": 5,
+  "cost": 0.000551145,
+  "expected": "",
+  "tokens": {
+    "input": 75,
+    "output": 298
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

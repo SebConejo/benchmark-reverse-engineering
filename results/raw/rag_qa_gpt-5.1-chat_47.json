@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "rag_qa",
+  "case": 47,
+  "response": "Another group is the Urarina.",
+  "score": 4,
+  "cost": 0.0001584,
+  "expected": "Urarina",
+  "tokens": {
+    "input": 154,
+    "output": 11
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

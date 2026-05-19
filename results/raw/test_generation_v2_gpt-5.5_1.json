@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.5",
+  "task": "test_generation_v2",
+  "case": 1,
+  "response": "```python\n# test_palindrome.py\n# Adjust the import to match your module name, e.g.:\n# from my_module import is_palindrome\n\nimport pytest\n\nfrom your_module import is_palindrome\n\n\n@pytest.mark.parametrize(\n    \"value\",\n    [\n        \"racecar\",\n        \"RaceCar\",\n        \"A Santa at NASA\",\n        \"never odd or even\",\n        \"Was it a car or a cat I saw\",\n    ],\n)\ndef test_is_palindrome_happy_path(value):\n    assert is_palindrome(value) is True\n\n\n@pytest.mark.parametrize(\n    \"value\",\n    [\n        \"hello\",\n        \"palindrome\",\n        \"Race a car\",\n        \"not a palindrome\",\n    ],\n)\ndef test_is_palindrome_returns_false_for_non_palindromes(value):\n    assert is_palindrome(value) is False\n\n\n@pytest.mark.parametrize(\n    \"value\",\n    [\n        \"\",\n        \" \",\n        \"     \",\n        \"a\",\n        \"A\",\n    ],\n)\ndef test_is_palindrome_edge_cases(value):\n    assert is_palindrome(value) is True\n\n\ndef test_is_palindrome_ignores_spaces_and_case_only():\n    assert is_palindrome(\"Taco Cat\") is True\n\n\ndef test_is_palindrome_does_not_ignore_punctuation():\n    assert is_palindrome(\"A man, a plan, a canal, Panama\") is False\n\n\ndef test_is_palindrome_does_not_ignore_tabs_or_newlines():\n    assert is_palindrome(\"a\\tb\\ta\") is True\n    assert is_palindrome(\"a\\nb\\na\") is True\n    assert is_palindrome(\"ab\\t a\") is False\n\n\n@pytest.mark.parametrize(\n    \"value\",\n    [\n        None,\n        12321,\n        [\"r\", \"a\", \"c\", \"e\", \"c\", \"a\", \"r\"],\n    ],\n)\ndef test_is_palindrome_raises_for_non_string_inputs(value):\n    with pytest.raises(AttributeError):\n        is_palindrome(value)\n```",
+  "score": 5,
+  "cost": 0.006966,
+  "expected": "",
+  "tokens": {
+    "input": 62,
+    "output": 565
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

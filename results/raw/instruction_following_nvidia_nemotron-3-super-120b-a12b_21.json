@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "instruction_following",
+  "case": 21,
+  "response": "Okay, the user: \"Give me directions from a library. Use only left and right turns.",
+  "score": 1,
+  "cost": 4.859999999999999e-06,
+  "expected": "",
+  "tokens": {
+    "input": 33,
+    "output": 21
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "sql_spider",
+  "case": 38,
+  "response": "SELECT\n    c.Name AS country_name,\n    COUNT(cl.Language) AS language_count\nFROM\n    country AS c\nJOIN\n    countrylanguage AS cl\n    ON c.Code = cl.CountryCode\nGROUP BY\n    c.Name\nHAVING\n    COUNT(cl.Language) > 2;",
+  "score": 4,
+  "cost": 0.002844,
+  "expected": "",
+  "tokens": {
+    "input": 82,
+    "output": 335
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

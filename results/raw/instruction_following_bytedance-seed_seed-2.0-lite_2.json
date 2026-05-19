@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-lite",
+  "task": "instruction_following",
+  "case": 2,
+  "response": "Red errors flash bright (5)\nOff-by-one halts all my code (7)\nGreen checks bloom at last (5)",
+  "score": 2,
+  "cost": 0.00183175,
+  "expected": "",
+  "tokens": {
+    "input": 55,
+    "output": 1818
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

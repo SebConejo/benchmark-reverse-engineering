@@ -1,0 +1,18 @@
+{
+  "model": "gemini-2.5-flash",
+  "task": "rag_qa",
+  "case": 18,
+  "response": "Allan Bloom",
+  "score": 1,
+  "cost": 2.625e-05,
+  "expected": "Allan Bloom",
+  "tokens": {
+    "input": 167,
+    "output": 2
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

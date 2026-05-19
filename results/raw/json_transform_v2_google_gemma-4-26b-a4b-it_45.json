@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "json_transform_v2",
+  "case": 45,
+  "response": "{\"full_name\": \"Jane Doe\", \"contact\": {\"email\": \"jane.doe@email.com\", \"phone\": \"+1-555-0123\"}, \"metadata\": {\"age\": 32}}",
+  "score": 5,
+  "cost": 1.05e-05,
+  "expected": "",
+  "tokens": {
+    "input": 125,
+    "output": 50
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

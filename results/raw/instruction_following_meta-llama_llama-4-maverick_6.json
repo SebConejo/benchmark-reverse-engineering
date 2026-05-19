@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "instruction_following",
+  "case": 6,
+  "response": "The ocean is vast.",
+  "score": 1,
+  "cost": 6.5999999999999995e-06,
+  "expected": "",
+  "tokens": {
+    "input": 20,
+    "output": 6
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

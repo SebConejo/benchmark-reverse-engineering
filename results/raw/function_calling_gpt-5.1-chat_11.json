@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "function_calling",
+  "case": 11,
+  "response": "{\"name\":\"add_to_list\",\"arguments\":{\"list_name\":\"shopping list\",\"items\":[\"milk\",\"eggs\",\"bread\"]}}",
+  "score": 5,
+  "cost": 0.00018319999999999998,
+  "expected": "",
+  "tokens": {
+    "input": 89,
+    "output": 35
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

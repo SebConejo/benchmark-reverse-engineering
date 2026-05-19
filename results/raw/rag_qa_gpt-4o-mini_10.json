@@ -1,0 +1,16 @@
+{
+  "model": "gpt-4o-mini",
+  "task": "rag_qa",
+  "case": 10,
+  "response": "The Saxon Garden.",
+  "score": 5,
+  "cost": 6.63e-05,
+  "expected": "The Saxon Garden",
+  "tokens": {
+    "input": 422,
+    "output": 5
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

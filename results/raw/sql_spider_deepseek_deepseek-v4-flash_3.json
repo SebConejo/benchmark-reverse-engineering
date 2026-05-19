@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "sql_spider",
+  "case": 3,
+  "response": "SELECT Name \nFROM country \nWHERE Continent = 'Africa' \n  AND Population < (SELECT MIN(Population) FROM country WHERE Continent = 'Asia');",
+  "score": 5,
+  "cost": 0.0007190400000000001,
+  "expected": "",
+  "tokens": {
+    "input": 72,
+    "output": 1266
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

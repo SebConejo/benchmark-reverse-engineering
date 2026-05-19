@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "code_generation",
+  "case": 33,
+  "response": "```python\nsides = sorted([a, b, c])\nreturn sides[0]**2 + sides[1]**2 == sides[2]**2\n```",
+  "score": 4,
+  "cost": 4.245e-05,
+  "expected": "",
+  "tokens": {
+    "input": 143,
+    "output": 35
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

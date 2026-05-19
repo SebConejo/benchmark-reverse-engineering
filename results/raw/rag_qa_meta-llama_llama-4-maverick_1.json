@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "rag_qa",
+  "case": 1,
+  "response": "1665.",
+  "score": 1,
+  "cost": 5.34e-05,
+  "expected": "1665",
+  "tokens": {
+    "input": 340,
+    "output": 4
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

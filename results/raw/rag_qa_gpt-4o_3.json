@@ -1,0 +1,16 @@
+{
+  "model": "gpt-4o",
+  "task": "rag_qa",
+  "case": 3,
+  "response": "Hassan al-Turabi was the leader of the Islamist regime in Sudan.",
+  "score": 5,
+  "cost": 0.0005325,
+  "expected": "Hassan al-Turabi",
+  "tokens": {
+    "input": 149,
+    "output": 16
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

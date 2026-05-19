@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-lite",
+  "task": "instruction_following",
+  "case": 8,
+  "response": "Imagine every kid in your preschool class has the exact same handwritten notebook, where we write down every nice thing anyone does, like sharing a crayon or a strawberry gummy. No one can cross out or change anything that\u2019s already written, and every single kid\u2019s notebook has the same exact notes, so no one can lie about what really happened\u2014that\u2019s what blockchain is!",
+  "score": 5,
+  "cost": 0.000577,
+  "expected": "",
+  "tokens": {
+    "input": 64,
+    "output": 561
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

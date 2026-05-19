@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "code_explanation",
+  "case": 43,
+  "response": "This function performs a linear scan over a math expression string and tokenizes it using a simple hand\u2011written lexer. It groups consecutive digits (and decimal points) into numeric tokens and emits single\u2011character operator or parenthesis tokens, skipping whitespace as it goes.",
+  "score": 4,
+  "cost": 0.0003104,
+  "expected": "",
+  "tokens": {
+    "input": 164,
+    "output": 56
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

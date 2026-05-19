@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "instruction_following",
+  "case": 5,
+  "response": "The sun dips low, spreading amber and saffron across the underbelly of the clouds. Gilded edges melt into violet and deep plum, while the western sky blazes with tangerine light that softens to peach, then lavender. Molten gold spills over the water, turning each wave into liquid bronze. Near the rim of the world, coral hues deepen to rose and magenta before surrendering to indigo overhead, where the first stars prick through. The air cools; shadows lengthen into sharp silhouettes. Everything pauses in the hush between day and night\u2014the last honeyed light lingering like a held breath before darkness unfolds.",
+  "score": 5,
+  "cost": 0.0016806,
+  "expected": "",
+  "tokens": {
+    "input": 21,
+    "output": 695
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "instruction_following",
+  "case": 46,
+  "response": "Dear Team,\n\nAs I prepare to move on to my next chapter, I wanted to take a moment to say goodbye and thank you for the incredible support and camaraderie you've shown me over the years. Working alongside such talented and kind individuals has been the highlight of my time here, and I will truly miss our daily collaborations and conversations. I am grateful for everything I have learned from each of you and for the memories we have shared together. Please keep in touch\u2014I would love to hear how you're all doing, and you can reach me at my personal email. I wish you all continued success and happiness in your careers and beyond.\n\nBest,  \n[Your Name]",
+  "score": 3,
+  "cost": 0.0035681999999999997,
+  "expected": "",
+  "tokens": {
+    "input": 19,
+    "output": 1482
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

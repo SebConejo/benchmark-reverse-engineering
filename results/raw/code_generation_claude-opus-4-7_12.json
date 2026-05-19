@@ -1,0 +1,16 @@
+{
+  "model": "claude-opus-4-7",
+  "task": "code_generation",
+  "case": 12,
+  "response": "```\n    return [s for s in strings if substring in s]\n```",
+  "score": 4,
+  "cost": 0.004665,
+  "expected": "",
+  "tokens": {
+    "input": 191,
+    "output": 24
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

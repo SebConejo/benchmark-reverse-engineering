@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "instruction_following",
+  "case": 5,
+  "response": "The sun dips below the horizon, not vanishing but *transforming*. Its light, no longer a direct beam, becomes a diffuse glow that spills upward, painting the undersides of high clouds in molten gold and soft amber. Lower clouds catch the light like embers, glowing with an internal warmth that shifts from tangerine to a deep, quiet violet as minutes pass.  \n\nThe air, still holding the day\u2019s heat, begins to cool rapidly. Shadows, which had been sharp and defined all afternoon, now soften and pool\u2014lengthening across fields, draping over trees, and swallowing the last bright patches of grass. A hush settles",
+  "score": 5,
+  "cost": 4.7969999999999996e-05,
+  "expected": "",
+  "tokens": {
+    "input": 33,
+    "output": 500
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

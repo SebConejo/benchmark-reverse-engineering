@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "code_generation",
+  "case": 15,
+  "response": "largest = 1\n    # Remove all factors of 2\n    while n % 2 == 0:\n        largest = 2\n        n //= 2\n\n    # Check odd factors starting from 3\n    factor = 3\n    while factor * factor <= n:\n        if n % factor == 0:\n            largest = factor\n            while n % factor == 0:\n                n //= factor\n        factor += 2  # Only test odd numbers\n\n    # If remainder is a prime greater than 2, it is the largest prime factor\n    if n > 1:\n        largest = n\n\n    return largest",
+  "score": 4,
+  "cost": 0.003476,
+  "expected": "",
+  "tokens": {
+    "input": 94,
+    "output": 411
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "long_summarization",
+  "case": 44,
+  "response": "**Summary:**\n\nThe modern internet originated in 1969 with ARPANET and evolved through key milestones including the 1983 adoption of TCP/IP protocols and Tim Berners-Lee's 1989 invention of the World Wide Web, which became accessible to mainstream users with the 1993 launch of Mosaic. The late 1990s dot-com boom brought massive investment followed by a 2001 crash, though companies like Amazon and Google emerged as industry giants. The 2000s saw transformative shifts with social media platforms, the 2007 iPhone-driven mobile internet explosion, and AWS founding cloud computing in 2006. Today, the internet connects over 5 billion people and underpins virtually every aspect of modern life.",
+  "score": 5,
+  "cost": 0.0019217000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 343,
+    "output": 351
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

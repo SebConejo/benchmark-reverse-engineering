@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "instruction_following",
+  "case": 21,
+  "response": "Here\u2019s a simple set of directions using only **left** and **right** turns (assuming a typical grid-like layout\u2014adjust based on your actual starting point and destination):\n\n1. **Start at the park entrance**, facing the street.\n2. **Turn right** onto Main Street.\n3. **Turn left** at the second traffic light onto Oak Avenue.\n4. **Turn right** at the next intersection onto Maple Drive.\n5. **Turn left** onto Library Lane.\n6. The library will be on your **right** (or left, depending on the exact layout).\n\n*Note:* For precise directions, share the names of the park and library or use a maps app (like Google Maps) for turn-by-turn navigation. Would you like help with a specific location?",
+  "score": 4,
+  "cost": 0.000326,
+  "expected": "",
+  "tokens": {
+    "input": 20,
+    "output": 159
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

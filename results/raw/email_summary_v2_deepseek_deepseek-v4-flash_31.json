@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "email_summary_v2",
+  "case": 31,
+  "response": "The email proposes a new $29/month 'Starter' tier to retain price-sensitive users, projecting a recovery of 15% of churned users and $180K in annual recurring revenue. No action items are explicitly stated, but the proposal requires review and approval.",
+  "score": 4,
+  "cost": 4.5780000000000006e-05,
+  "expected": "",
+  "tokens": {
+    "input": 107,
+    "output": 55
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

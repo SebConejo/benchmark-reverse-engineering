@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-lite",
+  "task": "function_calling",
+  "case": 40,
+  "response": "{\"name\": \"search_messages\", \"arguments\": {\"channel\": \"announcements\", \"query\": \"release\"}}",
+  "score": 2,
+  "cost": 0.00116,
+  "expected": "",
+  "tokens": {
+    "input": 144,
+    "output": 1124
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "code_explanation",
+  "case": 46,
+  "response": "The function restores the red\u2011black tree invariants after a node insertion by repeatedly recoloring and performing left/right rotations whenever the inserted node\u2019s parent is red, handling the symmetric left\u2011 and right\u2011subtree cases until the root is black. This is the standard insertion\u2011fixup algorithm for red\u2011black trees.",
+  "score": 5,
+  "cost": 2.8349999999999998e-05,
+  "expected": "",
+  "tokens": {
+    "input": 187,
+    "output": 128
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

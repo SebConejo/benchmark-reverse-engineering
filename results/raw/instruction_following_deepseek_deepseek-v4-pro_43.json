@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "instruction_following",
+  "case": 43,
+  "response": "Did you know that the footprints left by Apollo astronauts on the Moon will likely remain there for millions of years because the Moon has no atmosphere, wind, or rain to erode them?",
+  "score": 5,
+  "cost": 0.000510255,
+  "expected": "",
+  "tokens": {
+    "input": 21,
+    "output": 288
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

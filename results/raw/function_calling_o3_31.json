@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "function_calling",
+  "case": 31,
+  "response": "{\"name\": \"archive_emails\", \"arguments\": {\"folder\": \"inbox\", \"older_than_days\": 180}}",
+  "score": 5,
+  "cost": 0.001054,
+  "expected": "",
+  "tokens": {
+    "input": 95,
+    "output": 108
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "ner_extraction",
+  "case": 19,
+  "response": "{\"persons\":[\"Thierry Breton\"],\"organizations\":[\"European Parliament\"],\"locations\":[\"Brussels\"]}",
+  "score": 5,
+  "cost": 0.0009725999999999999,
+  "expected": "",
+  "tokens": {
+    "input": 73,
+    "output": 387
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

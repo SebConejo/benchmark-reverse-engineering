@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen-max",
+  "task": "email_summary_v2",
+  "case": 42,
+  "response": "The workshop with 15 enterprise customers highlighted the need for better bulk import and SSO, while the new analytics dashboard was well-received; surprisingly, 3 customers expressed interest in the internal tool as a standalone product. A follow-up report is attached for further review.",
+  "score": 5,
+  "cost": 0.00034528000000000006,
+  "expected": "",
+  "tokens": {
+    "input": 112,
+    "output": 55
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "rag_qa",
+  "case": 10,
+  "response": "The Saxon Garden.",
+  "score": 1,
+  "cost": 0.00036520000000000004,
+  "expected": "The Saxon Garden",
+  "tokens": {
+    "input": 610,
+    "output": 304
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

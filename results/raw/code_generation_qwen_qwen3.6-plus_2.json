@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "code_generation",
+  "case": 2,
+  "response": "lst = sorted(lst)\n    res = []\n    left, right = 0, len(lst) - 1\n    while left <= right:\n        res.append(lst[left])\n        left += 1\n        if left <= right:\n            res.append(lst[right])\n            right -= 1\n    return res",
+  "score": 5,
+  "cost": 0.003930225000000001,
+  "expected": "",
+  "tokens": {
+    "input": 169,
+    "output": 2981
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

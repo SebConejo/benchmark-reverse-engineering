@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "rag_qa",
+  "case": 7,
+  "response": "The magnitude of the external force is divided by **the mass of the system**.",
+  "score": 2,
+  "cost": 9.84e-05,
+  "expected": "mass of the system",
+  "tokens": {
+    "input": 161,
+    "output": 17
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

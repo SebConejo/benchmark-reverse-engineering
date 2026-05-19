@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "test_generation_v2",
+  "case": 27,
+  "response": "```python\n# test_interleave.py\nimport pytest\n\nfrom your_module import interleave   # <-- adjust import to where `interleave` lives\n\n\n# ---------------------------------------------------------------------------\n# Happy-path tests (typical and boundary-length combinations)\n# ---------------------------------------------------------------------------\n\n@pytest.mark.parametrize(\n    \"a, b, expected\",\n    [\n        # equal length\n        ([1, 2, 3], [\"a\", \"b\", \"c\"], [1, \"a\", 2, \"b\", 3, \"c\"]),\n        # first list longer\n        ([1, 2, 3, 4], [\"a\", \"b\"], [1, \"a\", 2, \"b\", 3, 4]),\n        # second list longer\n        ([1], [\"a\", \"b\", \"c\"], [1, \"a\", \"b\", \"c\"]),\n        # both lists size 1\n        ([42], [99], [42, 99]),\n    ],\n)\ndef test_interleave_happy_path(a, b, expected):\n    result = interleave(a, b)\n    assert result == expected\n    # basic length invariant\n    assert len(result) == len(a) + len(b)\n\n\n# ---------------------------------------------------------------------------\n# Edge-case tests (empty inputs, leftovers, immutability)\n# ---------------------------------------------------------------------------\n\ndef test_interleave_both_empty():\n    assert interleave([], []) == []\n\n\ndef test_interleave_one_empty():\n    leftovers = [1, 2, 3]\n    assert interleave([], leftovers) == leftovers\n    assert interleave(leftovers, []) == leftovers\n\n\ndef test_interleave_does_not_mutate_inputs():\n    a = [1, 2]\n    b = [\"x\", \"y\", \"z\"]\n    a_snapshot = a[:]\n    b_snapshot = b[:]\n\n    interleave(a, b)\n\n    # original lists must stay untouched\n    assert a == a_snapshot\n    assert b == b_snapshot\n\n\n# ---------------------------------------------------------------------------\n# Error-case tests (non-iterable / non-list arguments)\n# ---------------------------------------------------------------------------\n\n@pytest.mark.parametrize(\n    \"a, b\",\n    [\n        (None, [1, 2]),\n        (5, [1, 2]),\n        ([1, 2], None),\n        ([1, 2], 3),\n    ],\n)\ndef test_interleave_type_errors(a, b):\n    with pytest.raises(TypeError):\n        interleave(a, b)\n```",
+  "score": 4,
+  "cost": 0.01412,
+  "expected": "",
+  "tokens": {
+    "input": 88,
+    "output": 1743
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "rag_qa",
+  "case": 22,
+  "response": "The South African Schools Act of 1996",
+  "score": 5,
+  "cost": 9.9e-06,
+  "expected": "South African Schools Act",
+  "tokens": {
+    "input": 153,
+    "output": 12
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

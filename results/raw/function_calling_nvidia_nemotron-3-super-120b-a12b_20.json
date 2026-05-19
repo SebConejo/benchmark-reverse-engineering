@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "function_calling",
+  "case": 20,
+  "response": "{\"name\": \"git_merge\", \"arguments\": {\"source\": \"feature-auth\", \"target\": \"main\"}}",
+  "score": 5,
+  "cost": 8.91e-06,
+  "expected": "",
+  "tokens": {
+    "input": 75,
+    "output": 24
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

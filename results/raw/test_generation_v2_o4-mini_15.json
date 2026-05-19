@@ -1,0 +1,16 @@
+{
+  "model": "o4-mini",
+  "task": "test_generation_v2",
+  "case": 15,
+  "response": "Here\u2019s an example `pytest`\u2010style test module that exercises happy paths, edge cases, and error cases for your `rotate_list` function. Save it as e.g. `test_rotate_list.py` next to your implementation (I\u2019m assuming your function lives in `rotate_list.py`):\n\n```python\nimport pytest\n\nfrom rotate_list import rotate_list\n\n\n@pytest.mark.parametrize(\"lst, k, expected\", [\n    # happy paths\n    ([1, 2, 3, 4, 5], 2, [4, 5, 1, 2, 3]),\n    ([\"a\", \"b\", \"c\"], 1, [\"c\", \"a\", \"b\"]),\n    # zero and multiples of length\n    ([1, 2, 3], 0, [1, 2, 3]),\n    ([1, 2, 3], 3, [1, 2, 3]),\n    ([1, 2, 3], 6, [1, 2, 3]),\n    # negative shifts\n    ([1, 2, 3, 4, 5], -1, [2, 3, 4, 5, 1]),\n    ([1, 2, 3], -4, [2, 3, 1]),\n    # edge cases\n    ([], 5, []),\n    ([42], 999, [42]),\n])\ndef test_rotate_various(lst, k, expected):\n    assert rotate_list(lst, k) == expected\n\n\ndef test_original_list_not_mutated():\n    original = [10, 20, 30, 40]\n    snapshot = original.copy()\n    result = rotate_list(original, 3)\n    # original is unchanged\n    assert original == snapshot\n    # result is a new list, not the same object\n    assert result is not original\n\n\ndef test_none_input_returns_none():\n    # According to the implementation, `if not lst: return lst`,\n    # so passing None will return None.\n    assert rotate_list(None, 3) is None\n\n\n@pytest.mark.parametrize(\"bad_k\", [\"2\", 2.5, None])\ndef test_non_integer_k_raises_type_error(bad_k):\n    with pytest.raises(TypeError):\n        rotate_list([1, 2, 3], bad_k)\n```\n\nExplanation of what\u2019s covered:\n\n- **Happy paths**: rotating by positive `k`, including typical examples.\n- **Zero and multiples of the list\u2019s length**: should return the original list.\n- **Negative shifts**: leverages Python\u2019s modulo arithmetic to rotate \u201cleft.\u201d\n- **Edge cases**: empty list and single\u2010element list.\n- **Immutability**: ensures the original list isn\u2019t modified and that a new list is returned.\n- **None input**: the current code will simply return `None` if you pass `lst is None`.\n- **Type errors**: passing a non\u2010integer `k` should raise a `TypeError`.",
+  "score": 5,
+  "cost": 0.014210900000000002,
+  "expected": "",
+  "tokens": {
+    "input": 75,
+    "output": 3211
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

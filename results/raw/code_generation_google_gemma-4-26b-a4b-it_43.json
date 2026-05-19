@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "code_generation",
+  "case": 43,
+  "response": "if not numbers:\n    return []\nresult = []\nfor i in range(len(numbers) - 1):\n    result.append(numbers[i])\n    result.append(delimeter)\nresult.append(numbers[-1])\nreturn result",
+  "score": 5,
+  "cost": 1.206e-05,
+  "expected": "",
+  "tokens": {
+    "input": 143,
+    "output": 58
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

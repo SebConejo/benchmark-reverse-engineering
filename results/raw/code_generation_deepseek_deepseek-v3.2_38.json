@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "task": "code_generation",
+  "case": 38,
+  "response": "```python\n    negs = [x for x in lst if x < 0]\n    pos = [x for x in lst if x > 0]\n    a = max(negs) if negs else None\n    b = min(pos) if pos else None\n    return (a, b)\n```",
+  "score": 5,
+  "cost": 0.00011745000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 175,
+    "output": 67
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

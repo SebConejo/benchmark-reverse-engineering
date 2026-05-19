@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.5",
+  "task": "ner_extraction",
+  "case": 41,
+  "response": "{\"persons\":[\"LeBron James\"],\"organizations\":[\"Los Angeles Lakers\"],\"locations\":[]}",
+  "score": 5,
+  "cost": 0.001356,
+  "expected": "",
+  "tokens": {
+    "input": 72,
+    "output": 95
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

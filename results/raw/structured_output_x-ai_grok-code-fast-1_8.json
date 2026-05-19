@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "structured_output",
+  "case": 8,
+  "response": "{\n  \"unit\": \"Apartment 4B\",\n  \"street\": \"123 Main Street\",\n  \"city\": \"San Francisco\",\n  \"state\": \"CA\",\n  \"zip\": \"94105\",\n  \"country\": \"United States\"\n}",
+  "score": 5,
+  "cost": 0.00026680000000000003,
+  "expected": "",
+  "tokens": {
+    "input": 278,
+    "output": 264
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

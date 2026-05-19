@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen-turbo",
+  "task": "rag_qa",
+  "case": 10,
+  "response": "Answer: The Saxon Garden was formally a royal garden.",
+  "score": 5,
+  "cost": 1.4850000000000002e-05,
+  "expected": "The Saxon Garden",
+  "tokens": {
+    "input": 438,
+    "output": 12
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

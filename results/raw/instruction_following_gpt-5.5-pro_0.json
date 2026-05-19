@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "instruction_following",
+  "case": 0,
+  "response": "- Improves cardiovascular health\n- Boosts mood and reduces stress\n- Builds strength and endurance",
+  "score": 5,
+  "cost": 0.003675,
+  "expected": "",
+  "tokens": {
+    "input": 20,
+    "output": 45
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

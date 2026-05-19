@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "json_transform_v2",
+  "case": 15,
+  "response": "{\n    \"full_name\": \"Jane Doe\",\n    \"contact\": {\n        \"email\": \"jane.doe@email.com\",\n        \"phone\": \"+1-555-0123\"\n    },\n    \"metadata\": {\n        \"age\": 32\n    }\n}",
+  "score": 5,
+  "cost": 0.0017369000000000004,
+  "expected": "",
+  "tokens": {
+    "input": 139,
+    "output": 360
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

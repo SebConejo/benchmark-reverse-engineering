@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "email_summary_v2",
+  "case": 6,
+  "response": "Customer Acme Corp ($450K ARR) is threatening to churn due to API latency issues over the past three weeks and lack of support response for five days. A dedicated engineer has been assigned, and an executive sponsor is needed for a call this week.",
+  "score": 5,
+  "cost": 0.001067,
+  "expected": "",
+  "tokens": {
+    "input": 114,
+    "output": 214
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

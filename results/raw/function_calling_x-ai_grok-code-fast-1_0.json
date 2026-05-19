@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "function_calling",
+  "case": 0,
+  "response": "{\"name\": \"send_email\", \"arguments\": {\"to\": \"john@example.com\", \"subject\": \"Meeting Tomorrow\", \"body\": \"Hi John can we meet at 2pm\"}}",
+  "score": 5,
+  "cost": 0.00021920000000000002,
+  "expected": "",
+  "tokens": {
+    "input": 304,
+    "output": 198
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

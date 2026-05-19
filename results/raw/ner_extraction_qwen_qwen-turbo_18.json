@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen-turbo",
+  "task": "ner_extraction",
+  "case": 18,
+  "response": "{\n  \"persons\": [\"Professor Sarah Chen\"],\n  \"organizations\": [\"MIT\", \"Science\"],\n  \"locations\": []\n}",
+  "score": 4,
+  "cost": 3.3e-06,
+  "expected": "",
+  "tokens": {
+    "input": 74,
+    "output": 26
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

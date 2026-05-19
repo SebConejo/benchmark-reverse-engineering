@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "instruction_following",
+  "case": 38,
+  "response": "Login failed. Please check your username and password, then try again.",
+  "score": 3,
+  "cost": 7.52e-05,
+  "expected": "",
+  "tokens": {
+    "input": 22,
+    "output": 18
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

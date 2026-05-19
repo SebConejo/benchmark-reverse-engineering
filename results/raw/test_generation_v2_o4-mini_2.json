@@ -1,0 +1,16 @@
+{
+  "model": "o4-mini",
+  "task": "test_generation_v2",
+  "case": 2,
+  "response": "Here\u2019s an example pytest module `test_factorial.py` covering:\n\n\u2022 happy\u2010path cases (including 0, 1, small and larger n)  \n\u2022 negative input (ValueError)  \n\u2022 non\u2010int input (TypeError)  \n\u2022 a recursion\u2010depth edge case  \n\nSave this alongside your `factorial.py` (which contains your `factorial` function).\n\ntest_factorial.py\n# ----------------\nimport pytest\nimport sys\n\nfrom factorial import factorial\n\n@pytest.mark.parametrize(\"n, expected\", [\n    (0, 1),\n    (1, 1),\n    (2, 2),\n    (3, 6),\n    (5, 120),\n    (10, 3628800),\n])\ndef test_factorial_happy_path(n, expected):\n    \"\"\"Test known values of factorial.\"\"\"\n    assert factorial(n) == expected\n\ndef test_factorial_one_and_zero_are_one():\n    assert factorial(0) == 1\n    assert factorial(1) == 1\n\ndef test_factorial_negative_raises_value_error():\n    \"\"\"Passing a negative value should raise ValueError.\"\"\"\n    with pytest.raises(ValueError) as excinfo:\n        factorial(-1)\n    assert str(excinfo.value) == \"n must be non-negative\"\n\ndef test_factorial_non_int_input_raises_type_error():\n    \"\"\"Passing a non-integer should raise a TypeError.\"\"\"\n    with pytest.raises(TypeError):\n        factorial(3.14)  # float\n    with pytest.raises(TypeError):\n        factorial(\"10\")  # string\n\ndef test_factorial_large_input():\n    \"\"\"Test a larger value to ensure correctness and integer type.\"\"\"\n    result = factorial(20)\n    assert isinstance(result, int)\n    assert result == 2432902008176640000\n\ndef test_recursion_depth_error_for_very_large_n():\n    \"\"\"If n exceeds the recursion limit, a RecursionError should be raised.\"\"\"\n    too_big = sys.getrecursionlimit() + 1\n    with pytest.raises(RecursionError):\n        factorial(too_big)",
+  "score": 5,
+  "cost": 0.0068266,
+  "expected": "",
+  "tokens": {
+    "input": 82,
+    "output": 1531
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

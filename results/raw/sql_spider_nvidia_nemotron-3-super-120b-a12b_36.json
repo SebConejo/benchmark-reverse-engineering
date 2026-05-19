@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "sql_spider",
+  "case": 36,
+  "response": "SELECT s.name\nFROM students s\nJOIN likes l ON s.id = l.student_id\nGROUP BY s.id, s.name\nORDER BY COUNT(l.id) DESC\nLIMIT 1;",
+  "score": 5,
+  "cost": 9.99e-06,
+  "expected": "",
+  "tokens": {
+    "input": 71,
+    "output": 40
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

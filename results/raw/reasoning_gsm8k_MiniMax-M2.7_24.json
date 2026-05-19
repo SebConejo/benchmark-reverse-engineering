@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 24,
+  "response": "**Step\u2011by\u2011step solution**\n\n1. **Number of lollipops sold**  \n   - Each of the 30 students sold, on average, 10 lollipops.  \n   - Total lollipops sold = \\(30 \\times 10 = 300\\).\n\n2. **Revenue (money received from sales)**  \n   - Selling price per lollipop = \\$0.8.  \n   - Total revenue = \\(300 \\times 0.8 = \\$240\\).\n\n3. **Cost of the lollipops**  \n   - Purchase price per lollipop = \\$0.5.  \n   - Total cost = \\(300 \\times 0.5 = \\$150\\).\n\n4. **Profit (money raised)**  \n   - Profit per lollipop = selling price \u2013 purchase price = \\$0.8 \u2013 \\$0.5 = \\$0.3.  \n   - Total profit = \\(300 \\times 0.3 = \\$90\\).\n\nHence, the class raised **\\$90** in profit.\n\n**Answer**\n\nANSWER: 90",
+  "score": 5,
+  "cost": 0.0025608000000000002,
+  "expected": "90",
+  "tokens": {
+    "input": 152,
+    "output": 544
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

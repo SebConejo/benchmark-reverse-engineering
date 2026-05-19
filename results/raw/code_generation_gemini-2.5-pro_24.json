@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-pro",
+  "task": "code_generation",
+  "case": 24,
+  "response": "```python\n    if a + b <= c or a + c <= b or b + c <= a:\n        return -1\n    \n    import math\n    \n    # Calculate the semi-perimeter\n    s = (a + b + c) / 2\n    \n    # Calculate the area using Heron's formula\n    area = math.sqrt(s * (s - a) * (s - b) * (s - c))\n    \n    return round(area, 2)\n```",
+  "score": 5,
+  "cost": 0.00132125,
+  "expected": "",
+  "tokens": {
+    "input": 161,
+    "output": 112
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

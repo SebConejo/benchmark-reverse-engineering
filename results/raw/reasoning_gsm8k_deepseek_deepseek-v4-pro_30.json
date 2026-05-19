@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "reasoning_gsm8k",
+  "case": 30,
+  "response": "Adam has 50 points.  \nBetty collected 30% more than Adam: 50 + (0.30 \u00d7 50) = 50 + 15 = 65 points.  \nTom has 30 points less than Betty: 65 \u2212 30 = 35 points.  \nMarta collected 3 times more points than Tom. \"3 times more\" means Tom's points plus 3 times Tom's points: 35 + (3 \u00d7 35) = 35 + 105 = 140 points.  \nTotal points = 50 + 65 + 35 + 140 = 290 points.  \nThe minimum threshold is 400 points, so the class is missing 400 \u2212 290 = 110 points.\n\nANSWER: 110",
+  "score": 4,
+  "cost": 0.00485025,
+  "expected": "145",
+  "tokens": {
+    "input": 142,
+    "output": 2752
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "test_generation_v2",
+  "case": 17,
+  "response": "```python\n# test_is_balanced_parens.py\n\nimport pytest\n\nfrom your_module import is_balanced_parens  # Replace with the actual module name\n\n\n@pytest.mark.parametrize(\n    \"s\",\n    [\n        \"()\",\n        \"[]\",\n        \"{}\",\n        \"()[]{}\",\n        \"{[()]}\",\n        \"([{}])\",\n        \"[{()}([])]\",\n        \"a(b[c]{d}e)f\",\n        \"function_call(arg[0], {'key': [1, 2]})\",\n    ],\n)\ndef test_balanced_parens_happy_path(s):\n    assert is_balanced_parens(s) is True\n\n\n@pytest.mark.parametrize(\n    \"s\",\n    [\n        \"\",\n        \"no brackets here\",\n        \"   \",\n        \"abc123!@#\",\n    ],\n)\ndef test_edge_cases_with_no_bracket_characters_are_balanced(s):\n    assert is_balanced_parens(s) is True\n\n\n@pytest.mark.parametrize(\n    \"s\",\n    [\n        \"(\",\n        \"[\",\n        \"{\",\n        \")\",\n        \"]\",\n        \"}\",\n        \"(]\",\n        \"[)\",\n        \"{]\",\n        \"([)]\",\n        \"{[(])}\",\n        \"(()\",\n        \"())\",\n        \"([{}])]\",\n        \"}{\",\n        \")(\",\n        \"a(b[c]{d}e\",\n        \"a(b]c\",\n    ],\n)\ndef test_unbalanced_parens_return_false(s):\n    assert is_balanced_parens(s) is False\n\n\n@pytest.mark.parametrize(\"bad_input\", [None, 0, 3.14, object()])\ndef test_non_iterable_inputs_raise_type_error(bad_input):\n    with pytest.raises(TypeError):\n        is_balanced_parens(bad_input)  # type: ignore[arg-type]\n```",
+  "score": 5,
+  "cost": 0.250245,
+  "expected": "",
+  "tokens": {
+    "input": 118,
+    "output": 3313
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

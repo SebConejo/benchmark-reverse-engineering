@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "rag_qa",
+  "case": 14,
+  "response": "marine waters worldwide.",
+  "score": 4,
+  "cost": 4.9199999999999997e-05,
+  "expected": "marine waters",
+  "tokens": {
+    "input": 308,
+    "output": 5
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

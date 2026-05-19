@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "code_explanation",
+  "case": 26,
+  "response": "This code solves the 0/1 knapsack problem using a bottom-up dynamic programming approach. It builds a table `dp[i][w]` that stores the maximum total value achievable with the first `i` items and a weight limit of `w`, then returns the optimal value for the full capacity by iteratively deciding whether to include each item.",
+  "score": 5,
+  "cost": 0.00056028,
+  "expected": "",
+  "tokens": {
+    "input": 152,
+    "output": 284
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "instruction_following",
+  "case": 29,
+  "response": "DNA (deoxyribonucleic acid) is a double\u2011helix molecule that carries the genetic instructions used in the growth, development, functioning, and reproduction of all known living organisms and many viruses. It consists of a sugar\u2011phosphate backbone and four nitrogenous bases (adenine, thymine, cytosine, and guanine) that pair to encode biological information.",
+  "score": 1,
+  "cost": 1.332e-05,
+  "expected": "",
+  "tokens": {
+    "input": 31,
+    "output": 117
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

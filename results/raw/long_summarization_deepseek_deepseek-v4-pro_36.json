@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "long_summarization",
+  "case": 36,
+  "response": "The internet originated from a 1960s U.S. defense project, with ARPANET's first message sent in 1969, and later adopted TCP/IP protocols in 1983 to form its modern foundation. Tim Berners-Lee created the World Wide Web in 1989, and the 1993 Mosaic browser brought it to the public, fueling a dot-com boom that peaked in the late 1990s before a 2001 crash left survivors like Amazon and Google. The mid-2000s rise of social media and the 2007 smartphone revolution, alongside cloud computing, made the web ubiquitous. Today, the internet connects over 5 billion people and underpins nearly all aspects of modern life.",
+  "score": 5,
+  "cost": 0.000788655,
+  "expected": "",
+  "tokens": {
+    "input": 309,
+    "output": 376
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

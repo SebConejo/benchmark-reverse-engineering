@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "rag_qa",
+  "case": 36,
+  "response": "Gaseous oxygen.",
+  "score": 1,
+  "cost": 0.00017680000000000001,
+  "expected": "gaseous oxygen.",
+  "tokens": {
+    "input": 161,
+    "output": 15
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

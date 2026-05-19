@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "function_calling",
+  "case": 34,
+  "response": "{\"name\": \"scale_deployment\", \"arguments\": {\"service\": \"web\", \"replicas\": 5}}",
+  "score": 4,
+  "cost": 0.000337125,
+  "expected": "",
+  "tokens": {
+    "input": 91,
+    "output": 171
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

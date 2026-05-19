@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "rag_qa",
+  "case": 37,
+  "response": "On the northeast (border).",
+  "score": 5,
+  "cost": 0.001287,
+  "expected": "northeast",
+  "tokens": {
+    "input": 217,
+    "output": 482
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

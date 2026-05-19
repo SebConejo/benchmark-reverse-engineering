@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 22,
+  "response": "**Step\u2011by\u2011step reasoning**\n\n1. **Find Rafaela\u2019s total tips**  \n   - Each of the 40 customers gave her \\$20.  \n   - Total for Rafaela = 40\u202fcustomers \u00d7 \\$20 per tip = **\\$800**.\n\n2. **Find Julieta\u2019s total tips**  \n   - Julieta received 10\u202f% less than Rafaela.  \n   - 10\u202f% of \\$800 = 0.10 \u00d7 800 = **\\$80**.  \n   - Therefore, Julieta received \\$800\u202f\u2212\u202f\\$80 = **\\$720**.\n\n3. **Add the two amounts**  \n   - Combined total = \\$800 (Rafaela) + \\$720 (Julieta) = **\\$1520**.\n\n**Answer**\n\nANSWER: 1520",
+  "score": 2,
+  "cost": 0.0025036000000000004,
+  "expected": "1520",
+  "tokens": {
+    "input": 108,
+    "output": 542
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

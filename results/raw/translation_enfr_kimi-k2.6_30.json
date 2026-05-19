@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "translation_enfr",
+  "case": 30,
+  "response": "Premi\u00e8re ligne de cr\u00e9dit en Italie pour l'apprentissage des jeunes dans les PME, les ETI et les collectivit\u00e9s locales",
+  "score": 5,
+  "cost": 0.0030648000000000003,
+  "expected": "",
+  "tokens": {
+    "input": 44,
+    "output": 1266
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

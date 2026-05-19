@@ -1,0 +1,16 @@
+{
+  "model": "meta-llama/llama-3.2-1b-instruct",
+  "task": "sql_spider",
+  "case": 3,
+  "response": "SELECT country FROM world_1 WHERE population < (SELECT MAX(population) FROM world_1)",
+  "score": 2,
+  "cost": 2.7e-06,
+  "expected": "",
+  "tokens": {
+    "input": 79,
+    "output": 21
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

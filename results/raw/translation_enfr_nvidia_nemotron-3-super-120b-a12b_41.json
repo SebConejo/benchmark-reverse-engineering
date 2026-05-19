@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "translation_enfr",
+  "case": 41,
+  "response": "We need to translate: \"You ain't in the DGA? Actually they want translation? The user says: \"You ain't in the DGA? Actually the user: \"Translate the following text: \nYou ain't in the DGA.",
+  "score": 1,
+  "cost": 9.45e-06,
+  "expected": "",
+  "tokens": {
+    "input": 52,
+    "output": 53
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

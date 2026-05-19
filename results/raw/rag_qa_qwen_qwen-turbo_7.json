@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen-turbo",
+  "task": "rag_qa",
+  "case": 7,
+  "response": "The magnitude of the force divided by the mass of the system.",
+  "score": 5,
+  "cost": 6.039000000000001e-06,
+  "expected": "mass of the system",
+  "tokens": {
+    "input": 170,
+    "output": 13
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

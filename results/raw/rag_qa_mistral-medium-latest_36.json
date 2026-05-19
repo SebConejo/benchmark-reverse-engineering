@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "rag_qa",
+  "case": 36,
+  "response": "Based on the provided context, oxygen therapy promotes the body to take up **gaseous oxygen**.",
+  "score": 5,
+  "cost": 0.00010559999999999999,
+  "expected": "gaseous oxygen.",
+  "tokens": {
+    "input": 159,
+    "output": 21
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

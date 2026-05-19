@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "rag_qa",
+  "case": 18,
+  "response": "Allan Bloom",
+  "score": 5,
+  "cost": 0.000186615,
+  "expected": "Allan Bloom",
+  "tokens": {
+    "input": 169,
+    "output": 65
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

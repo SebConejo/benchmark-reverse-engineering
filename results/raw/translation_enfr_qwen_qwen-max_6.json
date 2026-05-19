@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen-max",
+  "task": "translation_enfr",
+  "case": 6,
+  "response": "En ce moment, conduire sur Wangan, c'est ce diable.",
+  "score": 4,
+  "cost": 0.000104,
+  "expected": "",
+  "tokens": {
+    "input": 36,
+    "output": 16
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

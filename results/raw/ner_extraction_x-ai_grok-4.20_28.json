@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-4.20",
+  "task": "ner_extraction",
+  "case": 28,
+  "response": "{\n  \"persons\": [],\n  \"organizations\": [\"Johns Hopkins University\"],\n  \"locations\": [\"Baltimore\"]\n}",
+  "score": 4,
+  "cost": 0.000562,
+  "expected": "",
+  "tokens": {
+    "input": 185,
+    "output": 24
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

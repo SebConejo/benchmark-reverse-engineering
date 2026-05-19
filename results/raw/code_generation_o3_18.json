@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "code_generation",
+  "case": 18,
+  "response": "import math\n    \n    def is_prime(n):\n        if n < 2:\n            return False\n        if n == 2:\n            return True\n        if n % 2 == 0:\n            return False\n        limit = int(math.isqrt(n))\n        for i in range(3, limit + 1, 2):\n            if n % i == 0:\n                return False\n        return True\n    \n    words = sentence.split()\n    prime_words = [word for word in words if is_prime(len(word))]\n    return \" \".join(prime_words)",
+  "score": 5,
+  "cost": 0.0035,
+  "expected": "",
+  "tokens": {
+    "input": 178,
+    "output": 393
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

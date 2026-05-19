@@ -1,0 +1,16 @@
+{
+  "model": "claude-haiku-4-5-20251001",
+  "task": "ner_extraction",
+  "case": 35,
+  "response": "```json\n{\n  \"persons\": [],\n  \"organizations\": [\n    \"European Space Agency\",\n    \"NASA\"\n  ],\n  \"locations\": [\n    \"lunar south pole\"\n  ]\n}\n```",
+  "score": 4,
+  "cost": 0.0002768,
+  "expected": "",
+  "tokens": {
+    "input": 76,
+    "output": 54
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

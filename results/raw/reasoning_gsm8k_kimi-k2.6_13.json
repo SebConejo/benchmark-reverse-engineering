@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "reasoning_gsm8k",
+  "case": 13,
+  "response": "Step 1: Find the cost of the material and construction.  \nMaterial = $500  \nConstruction = $800  \nSubtotal = $500 + $800 = $1,300  \n\nStep 2: Calculate the insurance cost.  \nInsurance = 10% of $1,300 = 0.10 \u00d7 $1,300 = $130  \n\nStep 3: Add the insurance to the subtotal.  \nTotal paid = $1,300 + $130 = $1,430  \n\nANSWER: 1430",
+  "score": 5,
+  "cost": 0.0007379999999999998,
+  "expected": "1430",
+  "tokens": {
+    "input": 98,
+    "output": 283
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

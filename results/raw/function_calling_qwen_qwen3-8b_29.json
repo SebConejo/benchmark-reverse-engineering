@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3-8b",
+  "task": "function_calling",
+  "case": 29,
+  "response": "{\"name\": \"ocr_document\", \"arguments\": {\"path\": \"uploads contract.pdf\", \"language\": \"en\"}}",
+  "score": 5,
+  "cost": 1.825e-05,
+  "expected": "",
+  "tokens": {
+    "input": 86,
+    "output": 279
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

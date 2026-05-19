@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "instruction_following",
+  "case": 9,
+  "response": "April, June, September, November",
+  "score": 1,
+  "cost": 9.44e-05,
+  "expected": "",
+  "tokens": {
+    "input": 172,
+    "output": 75
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "task": "rag_qa",
+  "case": 34,
+  "response": "Infinitely many primes.",
+  "score": 5,
+  "cost": 6.884999999999999e-05,
+  "expected": "infinitely many prime numbers",
+  "tokens": {
+    "input": 249,
+    "output": 6
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

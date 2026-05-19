@@ -1,0 +1,13 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "intent_clinc150",
+  "case": 13,
+  "response": "nutrition_info",
+  "score": 5,
+  "cost": 9.464000000000002e-05,
+  "expected": "nutrition_info",
+  "tokens": {
+    "input": 568,
+    "output": 27
+  }
+}

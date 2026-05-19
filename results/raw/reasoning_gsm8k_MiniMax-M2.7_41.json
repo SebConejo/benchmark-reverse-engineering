@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 41,
+  "response": "Let \\(H\\) represent the number of copies Harald sold.\n\nMarilyn sold 10 times as many copies as Harald, so she sold \\(10H\\) copies.\n\nTogether they sold\n\n\\[\nH + 10H = 88{,}000.\n\\]\n\nCombine like terms:\n\n\\[\n11H = 88{,}000.\n\\]\n\nSolve for \\(H\\) by dividing both sides by 11:\n\n\\[\nH = \\frac{88{,}000}{11} = 8{,}000.\n\\]\n\nThus, Harald sold **8,000 copies**.\n\nANSWER: 8000",
+  "score": 5,
+  "cost": 0.0013871,
+  "expected": "8000",
+  "tokens": {
+    "input": 105,
+    "output": 289
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

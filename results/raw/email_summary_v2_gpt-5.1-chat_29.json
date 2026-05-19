@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "email_summary_v2",
+  "case": 29,
+  "response": "Crash rates jumped to 2.3% after yesterday\u2019s release due to a null pointer issue in the Android notification handler. A fix has been merged and an emergency Play Store release has been submitted; no action is needed for iOS.",
+  "score": 5,
+  "cost": 0.00026240000000000004,
+  "expected": "",
+  "tokens": {
+    "input": 96,
+    "output": 58
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

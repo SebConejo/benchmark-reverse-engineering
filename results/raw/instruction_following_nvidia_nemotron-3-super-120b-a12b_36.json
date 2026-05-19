@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "instruction_following",
+  "case": 36,
+  "response": "1. Java  \n2. C++  \n3. Ruby  \n4. Go (Golang)",
+  "score": 5,
+  "cost": 3.6899999999999994e-06,
+  "expected": "",
+  "tokens": {
+    "input": 20,
+    "output": 21
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

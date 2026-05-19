@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "rag_qa",
+  "case": 11,
+  "response": "1.1 \u00d7 10^11 metric tonnes of carbon",
+  "score": 5,
+  "cost": 0.00029927999999999997,
+  "expected": "10% of the carbon stores",
+  "tokens": {
+    "input": 164,
+    "output": 131
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

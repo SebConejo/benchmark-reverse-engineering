@@ -1,0 +1,18 @@
+{
+  "model": "gemini-2.5-pro",
+  "task": "rag_qa",
+  "case": 30,
+  "response": "Melbourne",
+  "score": 1,
+  "cost": 0.0003275,
+  "expected": "Melbourne",
+  "tokens": {
+    "input": 254,
+    "output": 1
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

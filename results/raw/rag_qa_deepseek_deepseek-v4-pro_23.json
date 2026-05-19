@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "rag_qa",
+  "case": 23,
+  "response": "Mortgage banker",
+  "score": 5,
+  "cost": 9.265499999999999e-05,
+  "expected": "the mortgage banker",
+  "tokens": {
+    "input": 197,
+    "output": 4
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

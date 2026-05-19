@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "sql_spider",
+  "case": 34,
+  "response": "SELECT * FROM employee_hire_evaluation;",
+  "score": 1,
+  "cost": 7.02e-06,
+  "expected": "",
+  "tokens": {
+    "input": 69,
+    "output": 9
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

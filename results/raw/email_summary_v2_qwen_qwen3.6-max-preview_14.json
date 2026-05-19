@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-max-preview",
+  "task": "email_summary_v2",
+  "case": 14,
+  "response": "The AWS bill has increased 40% month-over-month, adding an estimated $45K monthly due to new ML training jobs running on expensive p4d instances. Please decide by Friday whether to switch to spot instances for higher savings with interruption risk or reserved instances for moderate savings with a commitment.",
+  "score": 5,
+  "cost": 0.0052753999999999995,
+  "expected": "",
+  "tokens": {
+    "input": 118,
+    "output": 985
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

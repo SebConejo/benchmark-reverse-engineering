@@ -1,0 +1,16 @@
+{
+  "model": "microsoft/phi-4",
+  "task": "code_generation",
+  "case": 31,
+  "response": "```python\nreturn sorted([s for s in lst if len(s) % 2 == 0], key=lambda x: (len(x), x))\n```",
+  "score": 5,
+  "cost": 1.6445e-05,
+  "expected": "",
+  "tokens": {
+    "input": 219,
+    "output": 34
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

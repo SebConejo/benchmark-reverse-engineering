@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "code_generation",
+  "case": 40,
+  "response": "if a == 0:\n    return True\nelif a > 0:\n    root = round(a ** (1/3))\n    return root ** 3 == a\nelse:\n    root = round((-a) ** (1/3))\n    return (-root) ** 3 == a",
+  "score": 4,
+  "cost": 0.0008118,
+  "expected": "",
+  "tokens": {
+    "input": 339,
+    "output": 930
+  },
+  "judge_rerun": true,
+  "judge_raw": "4",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

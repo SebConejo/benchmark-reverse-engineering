@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "test_generation_v2",
+  "case": 8,
+  "response": "```python\n# test_binary_search.py\nimport pytest\n\nfrom your_module import binary_search  # replace with the module where binary_search is defined\n\n\n@pytest.mark.parametrize(\n    (\"arr\", \"target\", \"expected\"),\n    [\n        pytest.param([1, 2, 3, 4, 5], 3, 2, id=\"found-middle-odd-length\"),\n        pytest.param([1, 2, 3, 4, 5], 1, 0, id=\"found-first-element\"),\n        pytest.param([1, 2, 3, 4, 5], 5, 4, id=\"found-last-element\"),\n        pytest.param([1, 2, 3, 4], 2, 1, id=\"found-even-length\"),\n        pytest.param([-10, -5, 0, 5, 10], -5, 1, id=\"found-negative-number\"),\n        pytest.param([0], 0, 0, id=\"found-single-element\"),\n    ],\n)\ndef test_binary_search_found(arr, target, expected):\n    assert binary_search(arr, target) == expected\n\n\n@pytest.mark.parametrize(\n    (\"arr\", \"target\"),\n    [\n        pytest.param([], 1, id=\"empty-list\"),\n        pytest.param([1], 0, id=\"single-element-too-small\"),\n        pytest.param([1], 2, id=\"single-element-too-large\"),\n        pytest.param([1, 3, 5, 7], 0, id=\"target-below-range\"),\n        pytest.param([1, 3, 5, 7], 4, id=\"target-between-elements\"),\n        pytest.param([1, 3, 5, 7], 9, id=\"target-above-range\"),\n        pytest.param([-5, -2, 0, 2], -3, id=\"missing-negative-number\"),\n    ],\n)\ndef test_binary_search_not_found_returns_minus_one(arr, target):\n    assert binary_search(arr, target) == -1\n\n\n@pytest.mark.parametrize(\n    (\"arr\", \"target\"),\n    [\n        pytest.param([1, 2, 2, 2, 3], 2, id=\"duplicates-some-matches\"),\n        pytest.param([5, 5, 5, 5], 5, id=\"duplicates-all-match\"),\n    ],\n)\ndef test_binary_search_with_duplicates_returns_a_valid_matching_index(arr, target):\n    index = binary_search(arr, target)\n\n    assert index != -1\n    assert arr[index] == target\n\n\ndef test_binary_search_duplicate_values_target_absent():\n    assert binary_search([1, 1, 1, 1], 2) == -1\n\n\n@pytest.mark.parametrize(\n    (\"arr\", \"target\"),\n    [\n        pytest.param(None, 1, id=\"arr-is-none\"),\n        pytest.param(123, 1, id=\"arr-is-not-a-sequence\"),\n        pytest.param([1, \"2\", 3], 2, id=\"arr-contains-non-comparable-value\"),\n        pytest.param([1, None, 3], 2, id=\"arr-contains-none\"),\n        pytest.param([1, 2, 3], object(), id=\"target-not-comparable\"),\n    ],\n)\ndef test_binary_search_invalid_inputs_raise_type_error(arr, target):\n    with pytest.raises(TypeError):\n        binary_search(arr, target)\n```\n\nNote: this function assumes `arr` is already sorted in ascending order; it does not validate that precondition, so unsorted input is not tested as an error case here.",
+  "score": 4,
+  "cost": 0.348165,
+  "expected": "",
+  "tokens": {
+    "input": 126,
+    "output": 4617
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

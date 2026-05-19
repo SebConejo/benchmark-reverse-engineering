@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-pro",
+  "task": "sql_spider",
+  "case": 15,
+  "response": "```sql\nSELECT MIN(Share), MAX(Share) FROM TV_series;\n```",
+  "score": 5,
+  "cost": 0.00027375,
+  "expected": "",
+  "tokens": {
+    "input": 67,
+    "output": 19
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

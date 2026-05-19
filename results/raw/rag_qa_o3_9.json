@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "rag_qa",
+  "case": 9,
+  "response": "70",
+  "score": 5,
+  "cost": 0.000436,
+  "expected": "70",
+  "tokens": {
+    "input": 142,
+    "output": 19
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

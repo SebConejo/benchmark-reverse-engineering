@@ -1,0 +1,16 @@
+{
+  "model": "ministral-3b-latest",
+  "task": "ner_extraction",
+  "case": 11,
+  "response": "```json\n{\n  \"persons\": [],\n  \"organizations\": [\"United Nations Security Council\"],\n  \"locations\": [\"New York\"]\n}\n```",
+  "score": 4,
+  "cost": 4.08e-06,
+  "expected": "",
+  "tokens": {
+    "input": 70,
+    "output": 32
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

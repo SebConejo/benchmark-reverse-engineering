@@ -1,0 +1,16 @@
+{
+  "model": "o4-mini",
+  "task": "ner_extraction",
+  "case": 31,
+  "response": "{\"persons\": [], \"organizations\": [\"Samsung Electronics\"], \"locations\": [\"South Korea\"]}",
+  "score": 5,
+  "cost": 0.0008063,
+  "expected": "",
+  "tokens": {
+    "input": 69,
+    "output": 166
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

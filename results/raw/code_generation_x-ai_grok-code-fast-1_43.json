@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "code_generation",
+  "case": 43,
+  "response": "result = []\nfor i in range(len(numbers)):\n    result.append(numbers[i])\n    if i < len(numbers) - 1:\n        result.append(delimeter)\nreturn result",
+  "score": 3,
+  "cost": 0.00033339999999999997,
+  "expected": "",
+  "tokens": {
+    "input": 327,
+    "output": 335
+  },
+  "judge_rerun": true,
+  "judge_raw": "3",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

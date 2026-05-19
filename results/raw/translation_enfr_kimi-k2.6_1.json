@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "translation_enfr",
+  "case": 1,
+  "response": "Hommejeunechh, 49 ans, Pays-de-la-Loire (Angers)",
+  "score": 5,
+  "cost": 0.0015642,
+  "expected": "",
+  "tokens": {
+    "input": 47,
+    "output": 640
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "meta-llama/llama-3.2-3b-instruct",
+  "task": "function_calling",
+  "case": 41,
+  "response": "Here is the correct function call in JSON format:\n\n```\n{\"name\": \"add_comment\", \"arguments\": {\"pr_id\": 789, \"body\": \"LGTM approved\"}}\n```\n\nThis function call will add a comment to pull request 789 with the body \"LGTM approved\".",
+  "score": 5,
+  "cost": 8.16e-06,
+  "expected": "",
+  "tokens": {
+    "input": 100,
+    "output": 60
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

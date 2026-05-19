@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "email_summary_v2",
+  "case": 34,
+  "response": "The Database Team plans a phased migration from MySQL 5.7 to PostgreSQL 16 from May to July using blue-green deployment to avoid downtime. The critical action item is rewriting three stored procedures that pose a risk to the migration.",
+  "score": 5,
+  "cost": 0.000776475,
+  "expected": "",
+  "tokens": {
+    "input": 93,
+    "output": 423
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

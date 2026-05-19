@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "code_explanation",
+  "case": 12,
+  "response": "This code performs a **topological sort** of a directed acyclic graph (DAG) using **depth-first search (DFS)**. It recursively visits each unvisited node, explores all its neighbors first, then appends the node to a stack; finally, reversing the stack gives a valid topological ordering where every node appears before its dependents.",
+  "score": 5,
+  "cost": 5.432000000000001e-05,
+  "expected": "",
+  "tokens": {
+    "input": 104,
+    "output": 71
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

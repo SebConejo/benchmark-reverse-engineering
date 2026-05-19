@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "translation_enfr",
+  "case": 49,
+  "response": "J'ai des g\u00e2teaux \u00e0 la cr\u00e8me, des fruits confits, des harengs marin\u00e9s et des dattes confites.",
+  "score": 4,
+  "cost": 0.001373295,
+  "expected": "",
+  "tokens": {
+    "input": 41,
+    "output": 779
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

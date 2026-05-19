@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "reasoning_gsm8k",
+  "case": 2,
+  "response": "Here is the step-by-step solution:\n\n**Step 1: Calculate the duration of the outbound trip.**\nTom sails from 1 PM to 4 PM. The time difference is 4 - 1 = 3 hours.\n\n**Step 2: Calculate the distance traveled outbound.**\nUsing the formula Distance = Speed \u00d7 Time:\nDistance = 10 mph \u00d7 3 hours = 30 miles.\n\n**Step 3: Calculate the time for the return trip.**\nThe return trip covers the same distance of 30 miles, but at a speed of 6 mph. Using the formula Time = Distance \u00f7 Speed:\nTime = 30 miles \u00f7 6 mph = 5 hours.\n\nIt takes Tom 5 hours to travel back.\n\nANSWER: 5",
+  "score": 5,
+  "cost": 0.0015005250000000002,
+  "expected": "5",
+  "tokens": {
+    "input": 97,
+    "output": 1130
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

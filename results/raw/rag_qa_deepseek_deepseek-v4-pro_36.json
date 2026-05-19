@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "rag_qa",
+  "case": 36,
+  "response": "Oxygen",
+  "score": 5,
+  "cost": 0.00046458000000000003,
+  "expected": "gaseous oxygen.",
+  "tokens": {
+    "input": 160,
+    "output": 227
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

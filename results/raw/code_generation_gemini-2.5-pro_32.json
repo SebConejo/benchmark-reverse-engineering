@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-pro",
+  "task": "code_generation",
+  "case": 32,
+  "response": "```python\n    words = s.split(' ')\n    sorted_words = [''.join(sorted(word)) for word in words]\n    return ' '.join(sorted_words)\n```",
+  "score": 4,
+  "cost": 0.00064375,
+  "expected": "",
+  "tokens": {
+    "input": 171,
+    "output": 43
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

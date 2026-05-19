@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.5",
+  "task": "test_generation_v2",
+  "case": 31,
+  "response": "```python\n# test_camel_to_snake.py\n\nimport pytest\n\n# Replace `your_module` with the module where camel_to_snake is defined\nfrom your_module import camel_to_snake\n\n\n@pytest.mark.parametrize(\n    (\"input_value\", \"expected\"),\n    [\n        # Happy path\n        (\"camelCase\", \"camel_case\"),\n        (\"helloWorld\", \"hello_world\"),\n        (\"someLongVariableName\", \"some_long_variable_name\"),\n\n        # Already lowercase / snake case\n        (\"lowercase\", \"lowercase\"),\n        (\"already_snake\", \"already_snake\"),\n\n        # PascalCase\n        (\"CamelCase\", \"camel_case\"),\n        (\"MyClassName\", \"my_class_name\"),\n\n        # Acronyms / consecutive capitals\n        (\"HTTPServer\", \"httpserver\"),\n        (\"myHTTPServer\", \"my_httpserver\"),\n        (\"XMLHttpRequest\", \"xmlhttp_request\"),\n\n        # Numbers\n        (\"version2Number\", \"version2number\"),\n        (\"versionNumber2\", \"version_number2\"),\n        (\"version2ID\", \"version2id\"),\n\n        # Empty and short strings\n        (\"\", \"\"),\n        (\"a\", \"a\"),\n        (\"A\", \"a\"),\n\n        # Strings with spaces / punctuation\n        (\"hello World\", \"hello world\"),\n        (\"hello-World\", \"hello-world\"),\n        (\"hello.World\", \"hello.world\"),\n\n        # Unicode characters are not matched by [a-z]/[A-Z]\n        (\"caf\u00e9Mug\", \"caf\u00e9mug\"),\n        (\"cafeMug\", \"cafe_mug\"),\n    ],\n)\ndef test_camel_to_snake(input_value, expected):\n    assert camel_to_snake(input_value) == expected\n\n\n@pytest.mark.parametrize(\"invalid_input\", [None, 123, 12.5, [], {}, object()])\ndef test_camel_to_snake_invalid_input_raises_type_error(invalid_input):\n    with pytest.raises(TypeError):\n        camel_to_snake(invalid_input)\n```",
+  "score": 5,
+  "cost": 0.010959,
+  "expected": "",
+  "tokens": {
+    "input": 73,
+    "output": 895
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

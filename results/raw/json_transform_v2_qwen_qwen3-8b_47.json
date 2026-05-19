@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3-8b",
+  "task": "json_transform_v2",
+  "case": 47,
+  "response": "{\"admins\": [\"Alice\", \"Charlie\"], \"users\": [\"Bob\"], \"inactive_count\": 1}",
+  "score": 5,
+  "cost": 2.055e-05,
+  "expected": "",
+  "tokens": {
+    "input": 129,
+    "output": 282
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

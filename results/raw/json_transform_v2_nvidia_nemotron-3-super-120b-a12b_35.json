@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "json_transform_v2",
+  "case": 35,
+  "response": "{\"departments\":{\"eng\":{\"headcount\":2,\"avg_salary\":115000,\"employees\":[\"Alice\",\"Bob\"]},\"sales\":{\"headcount\":2,\"avg_salary\":100000,\"employees\":[\"Carol\",\"Dave\"]}}}",
+  "score": 5,
+  "cost": 4.887e-05,
+  "expected": "",
+  "tokens": {
+    "input": 181,
+    "output": 362
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen-turbo",
+  "task": "rag_qa",
+  "case": 4,
+  "response": "Not found in context.",
+  "score": 5,
+  "cost": 5.544000000000001e-06,
+  "expected": "North America",
+  "tokens": {
+    "input": 163,
+    "output": 5
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

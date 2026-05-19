@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "reasoning_gsm8k",
+  "case": 18,
+  "response": "Eve originally had 20 pomelos.\n\nShe is left with 1/4 of her original amount:\n20 \u00d7 1/4 = 5 pomelos remaining.\n\nTo find how many she gave away, subtract the remaining amount from the original amount:\n20 \u2212 5 = 15 pomelos given away.\n\nAlternatively, if she has 1/4 left, she gave away 3/4 of her pomelos:\n20 \u00d7 3/4 = 15 pomelos given away.\n\nANSWER: 15",
+  "score": 5,
+  "cost": 0.0009408,
+  "expected": "15",
+  "tokens": {
+    "input": 88,
+    "output": 370
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

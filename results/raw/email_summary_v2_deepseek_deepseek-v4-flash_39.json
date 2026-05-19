@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "email_summary_v2",
+  "case": 39,
+  "response": "The audit begins January 15, requiring completion of a pre-audit checklist including revenue recognition, bank reconciliations, stock option records, and related-party disclosures. A controller meeting is scheduled for next Tuesday to assign responsibilities.",
+  "score": 5,
+  "cost": 8.218e-05,
+  "expected": "",
+  "tokens": {
+    "input": 95,
+    "output": 123
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

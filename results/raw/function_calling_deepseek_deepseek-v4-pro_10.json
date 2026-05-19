@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "function_calling",
+  "case": 10,
+  "response": "{\"name\": \"play_song\", \"arguments\": {\"title\": \"Bohemian Rhapsody\", \"artist\": \"Queen\"}}",
+  "score": 5,
+  "cost": 0.000255345,
+  "expected": "",
+  "tokens": {
+    "input": 87,
+    "output": 125
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

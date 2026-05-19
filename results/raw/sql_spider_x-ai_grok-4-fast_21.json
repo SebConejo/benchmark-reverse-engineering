@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "sql_spider",
+  "case": 21,
+  "response": "```sql\nSELECT flight_number FROM flights WHERE airline_name = 'United Airlines';\n```",
+  "score": 5,
+  "cost": 0.000194,
+  "expected": "",
+  "tokens": {
+    "input": 218,
+    "output": 188
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

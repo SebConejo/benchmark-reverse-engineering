@@ -1,0 +1,18 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "rag_qa",
+  "case": 4,
+  "response": "North America",
+  "score": 1,
+  "cost": 0.00016260000000000002,
+  "expected": "North America",
+  "tokens": {
+    "input": 202,
+    "output": 356
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

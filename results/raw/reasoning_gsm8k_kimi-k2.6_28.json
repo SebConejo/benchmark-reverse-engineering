@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "reasoning_gsm8k",
+  "case": 28,
+  "response": "Let $x$ be the number of people who got on the bus at the terminal.\n\n1. **At the terminal:** There are $x$ people on the bus.\n2. **At the first bus stop:** 5 more people got in.\n   - Total now: $x + 5$\n3. **At the second bus stop:** 7 people got down and 8 people got in.\n   - Total now: $(x + 5) - 7 + 8$\n\nThis final total equals 20 people heading to the third stop:\n\n$$(x + 5) - 7 + 8 = 20$$\n\nSimplify the left side:\n\n$$x + 5 - 7 + 8 = 20$$\n$$x + 6 = 20$$\n\nSubtract 6 from both sides:\n\n$$x = 14$$\n\nSo, 14 people got on the bus at the terminal.\n\nANSWER: 14",
+  "score": 5,
+  "cost": 0.0010932000000000001,
+  "expected": "14",
+  "tokens": {
+    "input": 110,
+    "output": 428
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

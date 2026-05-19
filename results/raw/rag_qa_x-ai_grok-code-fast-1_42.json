@@ -1,0 +1,18 @@
+{
+  "model": "x-ai/grok-code-fast-1",
+  "task": "rag_qa",
+  "case": 42,
+  "response": "Not found in context.",
+  "score": 1,
+  "cost": 0.0003582,
+  "expected": "Moselle",
+  "tokens": {
+    "input": 395,
+    "output": 349
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

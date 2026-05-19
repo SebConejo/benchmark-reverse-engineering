@@ -1,0 +1,15 @@
+{
+  "model": "gpt-5.4",
+  "task": "intent_clinc150",
+  "case": 26,
+  "response": "change_volume",
+  "score": 5,
+  "cost": 0.000527,
+  "expected": "change_volume",
+  "tokens": {
+    "input": 507,
+    "output": 5
+  },
+  "input_price_per_m": 1.0,
+  "output_price_per_m": 4.0
+}

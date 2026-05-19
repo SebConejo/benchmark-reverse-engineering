@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "test_generation_v2",
+  "case": 23,
+  "response": "Save as `test_matrix_transpose.py` and replace `your_module` with the module where `matrix_transpose` is defined.\n\n```python\nimport copy\n\nimport pytest\n\nfrom your_module import matrix_transpose\n\n\n@pytest.mark.parametrize(\n    \"matrix, expected\",\n    [\n        pytest.param([], [], id=\"empty-matrix\"),\n        pytest.param([[1, 2], [3, 4]], [[1, 3], [2, 4]], id=\"square-matrix\"),\n        pytest.param(\n            [[1, 2, 3], [4, 5, 6]],\n            [[1, 4], [2, 5], [3, 6]],\n            id=\"rectangular-wide-matrix\",\n        ),\n        pytest.param(\n            [[1, 2], [3, 4], [5, 6]],\n            [[1, 3, 5], [2, 4, 6]],\n            id=\"rectangular-tall-matrix\",\n        ),\n        pytest.param([[1, 2, 3]], [[1], [2], [3]], id=\"single-row\"),\n        pytest.param([[1], [2], [3]], [[1, 2, 3]], id=\"single-column\"),\n        pytest.param(\n            [[1, \"a\"], [None, True]],\n            [[1, None], [\"a\", True]],\n            id=\"mixed-values\",\n        ),\n        pytest.param([[]], [], id=\"one-empty-row\"),\n        pytest.param([[], []], [], id=\"multiple-empty-rows\"),\n    ],\n)\ndef test_matrix_transpose_valid_inputs(matrix, expected):\n    assert matrix_transpose(matrix) == expected\n\n\ndef test_matrix_transpose_does_not_mutate_input():\n    matrix = [[1, 2, 3], [4, 5, 6]]\n    original = copy.deepcopy(matrix)\n\n    result = matrix_transpose(matrix)\n\n    assert result == [[1, 4], [2, 5], [3, 6]]\n    assert matrix == original\n\n\ndef test_matrix_transpose_empty_first_row_ignores_later_rows_current_behavior():\n    # Current implementation uses len(matrix[0]), so later values are ignored\n    # when the first row is empty.\n    assert matrix_transpose([[], [1, 2]]) == []\n\n\ndef test_matrix_transpose_ragged_matrix_longer_later_rows_are_truncated_current_behavior():\n    # Current implementation only iterates over indexes present in the first row.\n    assert matrix_transpose([[1], [2, 3], [4, 5]]) == [[1, 2, 4]]\n\n\n@pytest.mark.parametrize(\n    \"matrix, expected_exception\",\n    [\n        pytest.param(\n            [[1, 2, 3], [4, 5]],\n            IndexError,\n            id=\"later-row-shorter-than-first\",\n        ),\n        pytest.param(\n            [[1, 2], []],\n            IndexError,\n            id=\"later-row-empty\",\n        ),\n        pytest.param(\n            [1, 2, 3],\n            TypeError,\n            id=\"flat-list-not-list-of-rows\",\n        ),\n        pytest.param(\n            [[1, 2], 3],\n            TypeError,\n            id=\"later-row-not-subscriptable\",\n        ),\n    ],\n)\ndef test_matrix_transpose_invalid_inputs_raise(matrix, expected_exception):\n    with pytest.raises(expected_exception):\n        matrix_transpose(matrix)\n```\n\nThe two tests marked `current_behavior` document quirks of the current implementation for ragged matrices. If ragged matrices should always be invalid, the function should be updated to validate row lengths explicitly.",
+  "score": 4,
+  "cost": 0.432975,
+  "expected": "",
+  "tokens": {
+    "input": 75,
+    "output": 5758
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

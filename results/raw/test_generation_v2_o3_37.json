@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "test_generation_v2",
+  "case": 37,
+  "response": "```python\n# test_parse_csv_line.py\nimport pytest\n\n# Replace the following import with the real import path in your project\n# from mypackage.mymodule import parse_csv_line\nfrom your_module import parse_csv_line   # \u2190 adapt as needed\n\n\n# ---------- Happy-path -------------------------------------------------------\n\n@pytest.mark.parametrize(\n    \"line, expected\",\n    [\n        (\"a,b,c\", [\"a\", \"b\", \"c\"]),                              # plain CSV\n        ('\"a,b\",c', [\"a,b\", \"c\"]),                               # quoted field containing a comma\n        ('first,\"second, still second\",\"third, too\",four',\n         [\"first\", \"second, still second\", \"third, too\", \"four\"]),\n        ('\"embedded \"\"quotes\"\" here\",x',\n         ['embedded \"\"quotes\"\" here', \"x\"]),                     # doubled quotes stay untouched\n    ],\n)\ndef test_parse_csv_line_happy(line, expected):\n    assert parse_csv_line(line) == expected\n\n\n# ---------- Edge cases -------------------------------------------------------\n\n@pytest.mark.parametrize(\n    \"line, expected\",\n    [\n        (\"\", [\"\"]),                          # completely empty line\n        (\",\", [\"\", \"\"]),                     # only a delimiter\n        (\",a\", [\"\", \"a\"]),                   # leading comma\n        (\"a,\", [\"a\", \"\"]),                   # trailing comma\n        (\"a,,b,,\", [\"a\", \"\", \"b\", \"\", \"\"]),  # consecutive commas\n        ('\"\"', [\"\"]),                        # empty quoted field\n        ('\"ab,c', [\"ab,c\"]),                 # unmatched opening quote\n        ('\"multi\\nline\",x', [\"multi\\nline\", \"x\"]),  # newline inside quotes\n    ],\n)\ndef test_parse_csv_line_edge_cases(line, expected):\n    assert parse_csv_line(line) == expected\n\n\n# ---------- Error cases ------------------------------------------------------\n\n@pytest.mark.parametrize(\"bad_input\", [123, 12.34, None, [], {}])\ndef test_parse_csv_line_type_errors(bad_input):\n    \"\"\"\n    The implementation expects an iterable of characters (i.e. a string);\n    anything else should raise TypeError because the `for c in line:` loop\n    will not be able to iterate over a non-string scalar or non-iterable.\n    \"\"\"\n    with pytest.raises(TypeError):\n        parse_csv_line(bad_input)\n```",
+  "score": 4,
+  "cost": 0.010852,
+  "expected": "",
+  "tokens": {
+    "input": 114,
+    "output": 1328
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

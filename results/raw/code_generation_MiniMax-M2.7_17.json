@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "code_generation",
+  "case": 17,
+  "response": "if not text:\n    return None\nimport hashlib\nreturn hashlib.md5(text.encode('utf-8')).hexdigest()",
+  "score": 5,
+  "cost": 0.0027258,
+  "expected": "",
+  "tokens": {
+    "input": 122,
+    "output": 589
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "task": "ner_extraction",
+  "case": 29,
+  "response": "{\n  \"persons\": [],\n  \"organizations\": [\"Tokyo Stock Exchange\"],\n  \"locations\": []\n}",
+  "score": 3,
+  "cost": 0.00216175,
+  "expected": "",
+  "tokens": {
+    "input": 79,
+    "output": 2142
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "gemini-2.5-pro",
+  "task": "instruction_following",
+  "case": 1,
+  "response": "The CPU is the brain of the computer, executing the commands and performing the calculations needed to run all of your software.",
+  "score": 4,
+  "cost": 0.00025375,
+  "expected": "",
+  "tokens": {
+    "input": 11,
+    "output": 24
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

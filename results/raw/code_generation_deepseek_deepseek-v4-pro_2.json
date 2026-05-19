@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "code_generation",
+  "case": 2,
+  "response": "if not lst:\n        return []\n    lst.sort()\n    res = []\n    left, right = 0, len(lst) - 1\n    while left <= right:\n        res.append(lst[left])\n        left += 1\n        if left <= right:\n            res.append(lst[right])\n            right -= 1\n    return res",
+  "score": 4,
+  "cost": 0.0010009349999999999,
+  "expected": "",
+  "tokens": {
+    "input": 153,
+    "output": 537
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

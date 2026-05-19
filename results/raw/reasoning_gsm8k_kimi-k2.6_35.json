@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "reasoning_gsm8k",
+  "case": 35,
+  "response": "First, calculate the cost for each type of fruit:\n\n- **Peaches:** 6 pounds \u00d7 $2.00 per pound = $12.00  \n- **Plums:** 8 pounds \u00d7 $1.00 per pound = $8.00  \n- **Apricots:** 6 pounds \u00d7 $3.00 per pound = $18.00  \n\nNext, add the three amounts together:\n\n$12.00 + $8.00 + $18.00 = $38.00\n\nANSWER: 38",
+  "score": 5,
+  "cost": 0.0009078000000000001,
+  "expected": "38",
+  "tokens": {
+    "input": 117,
+    "output": 349
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

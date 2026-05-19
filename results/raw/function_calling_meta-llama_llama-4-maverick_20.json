@@ -1,0 +1,16 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "function_calling",
+  "case": 20,
+  "response": "{\"name\": \"git_merge\", \"arguments\": {\"source\": \"feature-auth\", \"target\": \"main\"}}",
+  "score": 5,
+  "cost": 2.6099999999999997e-05,
+  "expected": "",
+  "tokens": {
+    "input": 78,
+    "output": 24
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

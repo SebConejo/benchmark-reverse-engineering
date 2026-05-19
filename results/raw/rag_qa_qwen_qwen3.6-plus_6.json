@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "rag_qa",
+  "case": 6,
+  "response": "TFEU article 294",
+  "score": 1,
+  "cost": 0.001054625,
+  "expected": "TFEU article 294",
+  "tokens": {
+    "input": 405,
+    "output": 710
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

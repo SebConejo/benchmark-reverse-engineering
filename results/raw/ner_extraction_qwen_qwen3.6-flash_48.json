@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "task": "ner_extraction",
+  "case": 48,
+  "response": "{\"persons\": [], \"organizations\": [\"TSMC\", \"Department of Commerce\"], \"locations\": [\"Phoenix\", \"Arizona\"]}",
+  "score": 4,
+  "cost": 0.001037,
+  "expected": "",
+  "tokens": {
+    "input": 80,
+    "output": 1017
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "function_calling",
+  "case": 43,
+  "response": "{\"name\": \"git_revert\", \"arguments\": {\"commit\": \"develop\"}}",
+  "score": 1,
+  "cost": 0.002783,
+  "expected": "",
+  "tokens": {
+    "input": 130,
+    "output": 600
+  },
+  "judge_v2_score": 2,
+  "judge_v2_raw": "2",
+  "judge_v2_model": "gpt-4o"
+}

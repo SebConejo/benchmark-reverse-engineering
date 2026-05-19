@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.1-chat",
+  "task": "structured_output",
+  "case": 27,
+  "response": "{\"type\": \"RSA\", \"bits\": 4096, \"fingerprint\": \"SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8\", \"created\": \"2024-01-15\", \"comment\": \"deploy-key-prod\"}",
+  "score": 4,
+  "cost": 0.000332,
+  "expected": "",
+  "tokens": {
+    "input": 107,
+    "output": 77
+  },
+  "input_price_per_m": 0.8,
+  "output_price_per_m": 3.2,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

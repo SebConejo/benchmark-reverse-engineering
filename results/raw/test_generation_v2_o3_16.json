@@ -1,0 +1,16 @@
+{
+  "model": "o3",
+  "task": "test_generation_v2",
+  "case": 16,
+  "response": "```python\n# test_gcd.py\nimport pytest\n\nfrom <module_where_gcd_is_defined> import gcd   # replace with actual module name\n\n\n# ---------- Happy-path ------------------------------------------------------- #\n@pytest.mark.parametrize(\n    \"a, b, expected\",\n    [\n        (1, 1, 1),\n        (2, 4, 2),\n        (4, 2, 2),\n        (15, 25, 5),\n        (270, 192, 6),\n        (123456, 789012, 12),\n        (10**12 + 15, 10**12 + 35, 20),          # very large numbers\n        (-18, -42, 6),                            # both negative\n        (-18, 42, 6),                             # one negative\n        (18, -42, 6),\n    ],\n)\ndef test_gcd_happy_path(a, b, expected):\n    \"\"\"Typical inputs should yield the mathematically correct, positive GCD.\"\"\"\n    assert gcd(a, b) == expected\n    # GCD must be non-negative\n    assert gcd(a, b) >= 0\n    # Commutativity: gcd(a, b) == gcd(b, a)\n    assert gcd(a, b) == gcd(b, a)\n\n\n# ---------- Edge cases ------------------------------------------------------- #\ndef test_gcd_with_zero_operand():\n    # gcd(n, 0) == |n|\n    assert gcd(0, 7) == 7\n    assert gcd(7, 0) == 7\n    assert gcd(-7, 0) == 7\n    assert gcd(0, -7) == 7\n\n\ndef test_gcd_both_zero():\n    # Conventionally gcd(0, 0) is defined to be 0\n    assert gcd(0, 0) == 0\n\n\n# ---------- Error cases ------------------------------------------------------ #\n@pytest.mark.parametrize(\"a,b\", [\n    (1.5, 2),          # float\n    (3, 4.2),          # float\n    (\"3\", 3),          # string\n    (3, \"3\"),          # string\n    ([], {}),          # non-numeric iterables\n])\ndef test_gcd_raises_type_error(a, b):\n    \"\"\"\n    Non-integer inputs should ultimately raise TypeError\n    (propagated from % operator inside gcd).\n    \"\"\"\n    with pytest.raises(TypeError):\n        gcd(a, b)\n```",
+  "score": 5,
+  "cost": 0.005972,
+  "expected": "",
+  "tokens": {
+    "input": 66,
+    "output": 730
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

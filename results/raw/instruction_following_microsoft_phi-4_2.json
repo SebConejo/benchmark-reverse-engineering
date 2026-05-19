@@ -1,0 +1,16 @@
+{
+  "model": "microsoft/phi-4",
+  "task": "instruction_following",
+  "case": 2,
+  "response": "Code weaves patterns,  \nLogic flows like rivers wide,  \nSilent symphony.",
+  "score": 5,
+  "cost": 2.1450000000000002e-06,
+  "expected": "",
+  "tokens": {
+    "input": 14,
+    "output": 19
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "rag_qa",
+  "case": 23,
+  "response": "Mortgage banker",
+  "score": 5,
+  "cost": 1.8449999999999998e-05,
+  "expected": "the mortgage banker",
+  "tokens": {
+    "input": 200,
+    "output": 5
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

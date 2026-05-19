@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "reasoning_gsm8k",
+  "case": 31,
+  "response": "Let\u2019s go step by step.  \n\n**Step 1: Identify the number of boys.**  \nThe problem says there are 30 boys.  \n\n**Step 2: Find the number of girls.**  \nGirls = 3 \u00d7 boys = 3 \u00d7 30 = 90.  \n\n**Step 3: Find the number of nongendered children.**  \nNongendered children = \\( \\frac{1}{10} \\) \u00d7 boys = \\( \\frac{1}{10} \\times 30 = 3 \\).  \n\n**Step 4: Find the total number of children.**  \nTotal = boys + girls + nongendered children  \nTotal = 30 + 90 + 3 = 123.  \n\nANSWER: 123",
+  "score": 2,
+  "cost": 0.00030711000000000003,
+  "expected": "123",
+  "tokens": {
+    "input": 86,
+    "output": 155
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

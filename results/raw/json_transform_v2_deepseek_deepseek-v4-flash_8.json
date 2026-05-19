@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-flash",
+  "task": "json_transform_v2",
+  "case": 8,
+  "response": "{\n  \"rankings\": [\n    {\"name\": \"Ben\", \"average\": 91.0, \"rank\": 1},\n    {\"name\": \"Ali\", \"average\": 85.0, \"rank\": 2},\n    {\"name\": \"Cat\", \"average\": 73.33333333333333, \"rank\": 3}\n  ],\n  \"class_average\": 83.11111111111111\n}",
+  "score": 4,
+  "cost": 6.944000000000001e-05,
+  "expected": "",
+  "tokens": {
+    "input": 124,
+    "output": 93
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,13 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "moderation_toxigen",
+  "case": 47,
+  "response": "toxic",
+  "score": 5,
+  "cost": 2.175e-05,
+  "expected": "toxic",
+  "tokens": {
+    "input": 42,
+    "output": 2
+  }
+}

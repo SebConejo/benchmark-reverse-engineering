@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "instruction_following",
+  "case": 21,
+  "response": "I\u2019ll need the exact park and library for real directions.  \n\nExample using only left and right turns:\n\n1. Turn right out of the park.  \n2. Turn left at the first corner.  \n3. Turn right at the next corner.  \n4. Turn left at the next corner.  \n5. Turn right into the library entrance.",
+  "score": 1,
+  "cost": 0.08595,
+  "expected": "",
+  "tokens": {
+    "input": 25,
+    "output": 1141
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "reasoning_gsm8k",
+  "case": 2,
+  "response": "Step 1: Find the duration of the outbound trip.  \nTom sails from 1 PM to 4 PM, which is 3 hours.\n\nStep 2: Calculate the distance he traveled.  \nDistance = speed \u00d7 time = 10 mph \u00d7 3 hours = 30 miles.\n\nStep 3: Determine the time required to return.  \nTime = distance \u00f7 speed = 30 miles \u00f7 6 mph = 5 hours.\n\nANSWER: 5",
+  "score": 5,
+  "cost": 0.0010835999999999999,
+  "expected": "5",
+  "tokens": {
+    "input": 90,
+    "output": 429
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

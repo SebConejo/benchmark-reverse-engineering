@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "translation_enfr",
+  "case": 40,
+  "response": "Voici une traduction fid\u00e8le qui conserve le ton et le sens :\n\n**\"Il nous faut simplement obtenir plus d'informations.\"**\n\n*Variantes possibles selon le contexte :*\n- *\"On a juste besoin d'avoir plus d'informations.\"* (plus informel)\n- *\"Nous devons simplement recueillir plus de renseignements.\"* (plus formel, si le contexte est administratif ou professionnel)\n\nLa premi\u00e8re option est la plus neutre et naturelle. \ud83d\ude0a",
+  "score": 5,
+  "cost": 0.000196,
+  "expected": "",
+  "tokens": {
+    "input": 30,
+    "output": 92
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

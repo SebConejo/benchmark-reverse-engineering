@@ -1,0 +1,16 @@
+{
+  "model": "mistral-medium-latest",
+  "task": "rag_qa",
+  "case": 13,
+  "response": "The Victorian Government owns V/Line.",
+  "score": 5,
+  "cost": 8.04e-05,
+  "expected": "Victorian Government",
+  "tokens": {
+    "input": 156,
+    "output": 9
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

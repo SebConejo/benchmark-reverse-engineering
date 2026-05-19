@@ -1,0 +1,16 @@
+{
+  "model": "x-ai/grok-4-fast",
+  "task": "ner_extraction",
+  "case": 39,
+  "response": "{\"persons\": [\"Dario Amodei\"], \"organizations\": [\"Anthropic\"], \"locations\": [\"Colorado\"]}",
+  "score": 5,
+  "cost": 0.0007420000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 226,
+    "output": 871
+  },
+  "judge_v2_score": 4,
+  "judge_v2_raw": "4",
+  "judge_v2_model": "gpt-4o"
+}

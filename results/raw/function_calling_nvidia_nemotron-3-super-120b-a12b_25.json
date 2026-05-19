@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "function_calling",
+  "case": 25,
+  "response": "We need to schedule a meeting: title \"standup meeting\", duration 30 minutes, time not needed. Provide JSON. No extra text.",
+  "score": 2,
+  "cost": 1.44e-05,
+  "expected": "",
+  "tokens": {
+    "input": 129,
+    "output": 31
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

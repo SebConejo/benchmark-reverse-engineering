@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 40,
+  "response": "Elvis saves \\(x\\) dollars each day in the first half (15 days) and twice as much, \\(2x\\), each day in the second half (also 15 days).  \n\nTotal saving for the month:  \n\\[\n15x + 15(2x) = 1125 \\\\\n15x + 30x = 1125 \\\\\n45x = 1125 \\\\\nx = \\frac{1125}{45}=25\n\\]\n\nThus each day in the second half he must save \\(2x = 2 \\times 25 = 50\\) dollars.\n\n**Answer:**  \nANSWER: 50",
+  "score": 5,
+  "cost": 0.0027038,
+  "expected": "50",
+  "tokens": {
+    "input": 114,
+    "output": 586
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

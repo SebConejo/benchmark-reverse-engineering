@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "rag_qa",
+  "case": 45,
+  "response": "The show globe",
+  "score": 5,
+  "cost": 0.00030363,
+  "expected": "The show globe",
+  "tokens": {
+    "input": 218,
+    "output": 120
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

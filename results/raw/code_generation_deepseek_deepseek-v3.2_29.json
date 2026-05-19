@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v3.2",
+  "task": "code_generation",
+  "case": 29,
+  "response": "```python\n    def digit_sum(n):\n        return sum(int(d) for d in str(abs(n)))\n    \n    indexed = [(digit_sum(num), i, num) for i, num in enumerate(nums)]\n    indexed.sort(key=lambda x: (x[0], x[1]))\n    return [num for _, _, num in indexed]\n```",
+  "score": 5,
+  "cost": 0.00011520000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 144,
+    "output": 72
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

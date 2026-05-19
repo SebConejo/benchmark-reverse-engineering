@@ -1,0 +1,16 @@
+{
+  "model": "google/gemma-4-26b-a4b-it",
+  "task": "sql_spider",
+  "case": 18,
+  "response": "```sql\nSELECT country\nFROM singer\nGROUP BY country\nHAVING MAX(age) > 40 AND MIN(age) < 30;\n```",
+  "score": 3,
+  "cost": 7.56e-06,
+  "expected": "",
+  "tokens": {
+    "input": 90,
+    "output": 36
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

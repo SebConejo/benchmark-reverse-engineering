@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "sql_spider",
+  "case": 13,
+  "response": "```sql\nSELECT MAX(release_date) \nFROM transcripts;\n```",
+  "score": 5,
+  "cost": 1.9799999999999997e-05,
+  "expected": "",
+  "tokens": {
+    "input": 72,
+    "output": 15
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

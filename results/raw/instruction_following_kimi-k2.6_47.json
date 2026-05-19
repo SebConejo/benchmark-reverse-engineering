@@ -1,0 +1,16 @@
+{
+  "model": "kimi-k2.6",
+  "task": "instruction_following",
+  "case": 47,
+  "response": "1. **Make it long.** Aim for at least 12\u201316 characters. Length is the single most important factor in making a password difficult to crack.\n2. **Use a mix of character types.** Combine uppercase letters, lowercase letters, numbers, and special symbols (e.g., !, @, #, $) to increase complexity.\n3. **Avoid personal information.** Never use names, birthdays, pet names, addresses, or hobbies that someone could guess or find on social media.\n4. **Don't use common words or predictable patterns.** Avoid dictionary words, keyboard sequences (like \"qwerty\" or \"123456\"), and simple letter-to-number substitutions (like \"P@ssw0rd\").\n5. **Make it unique.** Use a different password for every account. Reusing passwords means one data breach can compromise multiple accounts.\n6. **Consider using a passphrase.** A random string of four or more unrelated words (e.g., \"Dolphin-Brick-Tango-Window\") is often easier to remember and harder to crack than a short, complex password.\n7. **Use a password manager.** Since strong passwords are hard to remember, a reputable password manager can generate, store, and auto-fill unique passwords for all your accounts securely.\n8. **Enable multi-factor authentication (MFA).** Even a strong password can be stolen, so add a second layer of security\u2014such as a code from an app or a hardware key\u2014wherever possible.",
+  "score": 5,
+  "cost": 0.0021276,
+  "expected": "",
+  "tokens": {
+    "input": 18,
+    "output": 882
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

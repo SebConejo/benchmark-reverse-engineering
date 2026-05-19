@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "instruction_following",
+  "case": 38,
+  "response": "\"Invalid username or password. Please try again or reset your credentials if you've forgotten them.\"",
+  "score": 5,
+  "cost": 2.55e-05,
+  "expected": "",
+  "tokens": {
+    "input": 94,
+    "output": 19
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

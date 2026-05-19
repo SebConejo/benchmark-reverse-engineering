@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "reasoning_gsm8k",
+  "case": 8,
+  "response": "**Step\u2011by\u2011step reasoning**\n\n1. **Identify the base number**:  \n   Last year there were 50 students.\n\n2. **Determine the percentage increase**:  \n   The enrollment rose by 20\u202f%.\n\n3. **Calculate the increase amount**:  \n   \\(20\\% \\times 50 = \\frac{20}{100} \\times 50 = 0.20 \\times 50 = 10\\).\n\n4. **Add the increase to the original enrollment**:  \n   \\(50 + 10 = 60\\).\n\nSo, this year the calligraphy class has **60 students**.\n\nANSWER: 60",
+  "score": 5,
+  "cost": 0.0015378000000000002,
+  "expected": "60",
+  "tokens": {
+    "input": 114,
+    "output": 321
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.4",
+  "task": "structured_output",
+  "case": 2,
+  "response": "{\"product\":\"iPhone 15 Pro\",\"price\":999.0,\"colors\":[\"black titanium\",\"white titanium\",\"blue titanium\"],\"storage_options\":[\"128GB\",\"256GB\",\"512GB\",\"1TB\"]}",
+  "score": 5,
+  "cost": 0.000276,
+  "expected": "",
+  "tokens": {
+    "input": 92,
+    "output": 46
+  },
+  "input_price_per_m": 1.0,
+  "output_price_per_m": 4.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

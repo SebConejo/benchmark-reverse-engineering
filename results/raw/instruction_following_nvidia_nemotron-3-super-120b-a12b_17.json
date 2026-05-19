@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "instruction_following",
+  "case": 17,
+  "response": "Here is a concise table summarizing 3 key pros and 3 cons of remote work:\n\n| **Pros of Remote Work**          | **Cons of Remote Work**          |\n| :------------------------------- | :------------------------------- |\n| **Increased Flexibility & Autonomy**<br>(Control over schedule, environment, and location; eliminates commute time) | **Communication & Collaboration Challenges**<br>(Harder spontaneous interaction, reliance",
+  "score": 4,
+  "cost": 4.788e-05,
+  "expected": "",
+  "tokens": {
+    "input": 32,
+    "output": 500
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

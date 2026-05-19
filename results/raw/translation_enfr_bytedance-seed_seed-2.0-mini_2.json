@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-mini",
+  "task": "translation_enfr",
+  "case": 2,
+  "response": "J\u00e9sus vint et parla avec clart\u00e9 et bienveillance : \u00ab C'est moi ! \u00bb Cette expression devint le fondement de la foi des ap\u00f4tres.",
+  "score": 5,
+  "cost": 0.0008028000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 92,
+    "output": 1984
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

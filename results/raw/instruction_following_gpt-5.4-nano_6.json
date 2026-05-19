@@ -1,0 +1,16 @@
+{
+  "model": "gpt-5.4-nano",
+  "task": "instruction_following",
+  "case": 6,
+  "response": "The ocean whispers ancient secrets.",
+  "score": 1,
+  "cost": 5.2e-06,
+  "expected": "",
+  "tokens": {
+    "input": 16,
+    "output": 9
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

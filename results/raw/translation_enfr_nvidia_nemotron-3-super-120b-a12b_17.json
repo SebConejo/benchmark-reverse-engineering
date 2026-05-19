@@ -1,0 +1,16 @@
+{
+  "model": "nvidia/nemotron-3-super-120b-a12b",
+  "task": "translation_enfr",
+  "case": 17,
+  "response": "A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z",
+  "score": 1,
+  "cost": 1.2239999999999998e-05,
+  "expected": "",
+  "tokens": {
+    "input": 45,
+    "output": 91
+  },
+  "judge_v2_score": 1,
+  "judge_v2_raw": "1",
+  "judge_v2_model": "gpt-4o"
+}

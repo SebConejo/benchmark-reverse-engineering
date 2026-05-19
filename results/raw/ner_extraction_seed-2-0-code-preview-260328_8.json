@@ -1,0 +1,16 @@
+{
+  "model": "seed-2-0-code-preview-260328",
+  "task": "ner_extraction",
+  "case": 8,
+  "response": "{\"persons\":[\"Elon Musk\"],\"organizations\":[\"Tesla\"],\"locations\":[\"Fremont\",\"California\"]}",
+  "score": 5,
+  "cost": 0.0006213000000000001,
+  "expected": "",
+  "tokens": {
+    "input": 99,
+    "output": 493
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-max-preview",
+  "task": "email_summary_v2",
+  "case": 37,
+  "response": "BigCo has offered $15M to acqui-hire our five-person ML team, but the CEO considers the valuation too low. We need to discuss whether to counter or politely decline before responding, and the board must be informed of the offer.",
+  "score": 5,
+  "cost": 0.0031785,
+  "expected": "",
+  "tokens": {
+    "input": 109,
+    "output": 584
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

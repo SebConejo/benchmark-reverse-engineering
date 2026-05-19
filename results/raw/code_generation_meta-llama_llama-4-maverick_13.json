@@ -1,0 +1,18 @@
+{
+  "model": "meta-llama/llama-4-maverick",
+  "task": "code_generation",
+  "case": 13,
+  "response": "```python\nreturn len(string)\n```",
+  "score": 1,
+  "cost": 1.71e-05,
+  "expected": "",
+  "tokens": {
+    "input": 78,
+    "output": 9
+  },
+  "judge_rerun": true,
+  "judge_raw": "1",
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

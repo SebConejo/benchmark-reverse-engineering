@@ -1,0 +1,16 @@
+{
+  "model": "o4-mini",
+  "task": "rag_qa",
+  "case": 23,
+  "response": "The presence of the mortgage banker is highly likely even in small projects.",
+  "score": 5,
+  "cost": 0.0012067,
+  "expected": "the mortgage banker",
+  "tokens": {
+    "input": 197,
+    "output": 225
+  },
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

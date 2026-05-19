@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "code_generation",
+  "case": 24,
+  "response": "if a + b > c and a + c > b and b + c > a:\n    s = (a + b + c) / 2.0\n    area = (s * (s - a) * (s - b) * (s - c)) ** 0.5\n    return round(area, 2)\nelse:\n    return -1",
+  "score": 5,
+  "cost": 0.00084129,
+  "expected": "",
+  "tokens": {
+    "input": 150,
+    "output": 446
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

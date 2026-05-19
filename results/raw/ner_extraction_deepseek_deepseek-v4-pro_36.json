@@ -1,0 +1,16 @@
+{
+  "model": "deepseek/deepseek-v4-pro",
+  "task": "ner_extraction",
+  "case": 36,
+  "response": "{\n  \"persons\": [\"Warren Buffett\"],\n  \"organizations\": [\"Bank of America\", \"SEC\"],\n  \"locations\": []\n}",
+  "score": 5,
+  "cost": 0.000281445,
+  "expected": "",
+  "tokens": {
+    "input": 71,
+    "output": 144
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

@@ -1,0 +1,16 @@
+{
+  "model": "bytedance-seed/seed-2.0-lite",
+  "task": "instruction_following",
+  "case": 11,
+  "response": "Could you share what prompted you to ask for a response made up entirely of questions? Are there any specific topics you\u2019ve been wanting to explore through this conversational prompt? What made you curious to test out this kind of back-and-forth in the first place? Would you want to keep this string of questions going for as long as it feels fun?",
+  "score": 5,
+  "cost": 0.000405,
+  "expected": "",
+  "tokens": {
+    "input": 56,
+    "output": 391
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

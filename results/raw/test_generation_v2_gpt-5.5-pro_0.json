@@ -1,0 +1,18 @@
+{
+  "model": "gpt-5.5-pro",
+  "task": "test_generation_v2",
+  "case": 0,
+  "response": "```python\n# test_add.py\n# Replace \"your_module\" with the module where add is defined.\nimport pytest\n\nfrom your_module import add\n\n\n@pytest.mark.parametrize(\n    (\"a\", \"b\", \"expected\"),\n    [\n        (1, 2, 3),              # basic positive integers\n        (0, 0, 0),              # both zero\n        (0, 5, 5),              # left zero\n        (5, 0, 5),              # right zero\n        (-1, -2, -3),           # negative integers\n        (-1, 5, 4),             # mixed signs\n        (10**100, 1, 10**100 + 1),  # very large integer\n    ],\n)\ndef test_add_returns_sum_for_integers(a, b, expected):\n    assert add(a, b) == expected\n\n\n@pytest.mark.parametrize(\n    (\"a\", \"b\"),\n    [\n        (None, 1),\n        (1, None),\n        (\"1\", 2),\n        (2, \"1\"),\n        ([], 1),\n        (1, []),\n        ({}, 1),\n    ],\n)\ndef test_add_raises_type_error_for_incompatible_types(a, b):\n    with pytest.raises(TypeError):\n        add(a, b)\n\n\ndef test_add_is_commutative_for_integers():\n    assert add(3, 7) == add(7, 3)\n```\n\nNote: Python type hints are not enforced at runtime, so values like `add(1.5, 2)` or `add(\"a\", \"b\")` would not raise `TypeError` with the current implementation. They would return `3.5` and `\"ab\"` respectively.",
+  "score": 4,
+  "cost": 0.09066,
+  "expected": "",
+  "tokens": {
+    "input": 54,
+    "output": 1198
+  },
+  "input_price_per_m": 15.0,
+  "output_price_per_m": 75.0,
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

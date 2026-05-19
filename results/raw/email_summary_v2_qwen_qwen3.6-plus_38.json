@@ -1,0 +1,18 @@
+{
+  "model": "qwen/qwen3.6-plus",
+  "task": "email_summary_v2",
+  "case": 38,
+  "response": "The first month of the bug bounty program demonstrated strong ROI after quickly identifying and patching three critical vulnerabilities. Based on these results, the security team recommends continuing the program.",
+  "score": 5,
+  "cost": 0.001434875,
+  "expected": "",
+  "tokens": {
+    "input": 119,
+    "output": 1074
+  },
+  "judge_rerun": true,
+  "judge_raw": "5",
+  "judge_v2_score": 3,
+  "judge_v2_raw": "3",
+  "judge_v2_model": "gpt-4o"
+}

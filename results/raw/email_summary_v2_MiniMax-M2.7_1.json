@@ -1,0 +1,16 @@
+{
+  "model": "MiniMax-M2.7",
+  "task": "email_summary_v2",
+  "case": 1,
+  "response": "A misconfigured load balancer caused a 47\u2011minute outage at 2:14\u202fPM, affecting about 12,000 users. The post\u2011mortem recommends three follow\u2011up actions: adding load\u2011balancer configuration validation to the CI pipeline, updating the runbook, and implementing traffic\u2011distribution alerts.",
+  "score": 5,
+  "cost": 0.001815,
+  "expected": "",
+  "tokens": {
+    "input": 138,
+    "output": 378
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}

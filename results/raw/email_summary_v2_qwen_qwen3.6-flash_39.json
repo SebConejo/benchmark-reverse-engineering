@@ -1,0 +1,16 @@
+{
+  "model": "qwen/qwen3.6-flash",
+  "task": "email_summary_v2",
+  "case": 39,
+  "response": "The Finance department is preparing for the January 15 year-end audit and requires completion of a pre-audit checklist that includes finalizing Q4 revenue recognition, reconciling bank accounts, verifying stock option records, and preparing related-party transaction disclosures. A controller meeting will be held next Tuesday to assign responsibilities for these tasks.",
+  "score": 5,
+  "cost": 0.00123075,
+  "expected": "",
+  "tokens": {
+    "input": 103,
+    "output": 1205
+  },
+  "judge_v2_score": 5,
+  "judge_v2_raw": "5",
+  "judge_v2_model": "gpt-4o"
+}
