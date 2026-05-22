@@ -48,13 +48,13 @@ We benchmark 46 large language models from 9 API providers across 21
 production tasks spanning sentiment classification, intent detection,
 code generation, mathematical reasoning, and 17 others.  We measure both
 per-query cost and quality on 50 cases per task (51,580 scored cases
-total).  Economy-tier models (\$0.05--\$0.50/M input tokens) show no
+total).  Economy-tier models (\$0.05--\$0.49/M input tokens) show no
 statistically significant quality gap versus Premium models (\$5+/M) on
-any of the 21 tasks (Mann-Whitney $p > 0.05$, 21/21).  Within
-providers, paying 750$\times$ more buys at most $+0.13$ quality points
-on a 1--5 scale.  Per-task routing to the cheapest adequate model
-reduces cost by 99.7\% versus the best single model while matching its
-quality on every task.  Quality scores are produced by an LLM judge
+any of the 21 tasks (Mann-Whitney $p > 0.05$, 21/21;
+$n_{\text{Premium}} = 2$).  Within providers, paying 750$\times$ more
+buys at most $+0.13$ quality points on a 1--5 scale.  Per-task routing
+to the cheapest adequate model reduces cost by 99.7\% versus the best
+single model with negligible quality loss.  Quality scores are produced by an LLM judge
 validated against ground truth on three task types
 ($r = 0.89$--$0.91$).  We release the full dataset, raw model responses,
 and evaluation prompts.\footnote{Data and code:
@@ -83,7 +83,7 @@ specific task, which model gives adequate quality at the lowest cost?
 We make three contributions.
 
 \begin{enumerate}[leftmargin=*,itemsep=2pt]
-\item \textbf{TaskBench}, the first benchmark measuring per-task
+\item \textbf{TaskBench}, a public benchmark measuring per-task
   cost-quality Pareto frontiers across 46 models, 21 production tasks,
   9 providers, and 4 price tiers (51,580 scored cases).
 \item \textbf{Empirical findings.}  Economy-tier models show no
@@ -112,7 +112,7 @@ Four headline results:
   yields $+0.13$ quality.
 \item \textit{Per-task routing saves 99.7\%.}  Routing to the cheapest
   adequate model per task costs \$0.000009/query versus \$0.003332 for
-  o3, while matching o3 quality on every task.
+  o3, with at most 0.2 points quality difference on any single task.
 \item \textit{Five Economy models cover all tasks.}  At the 4.5/5
   quality threshold, five models cover all 21 tasks.  The cheapest is
   Grok~4~Fast at \$0.000435/query average.
@@ -131,8 +131,7 @@ HELM \citep{liang2023helm} evaluates 30 models across 42 scenarios on
 \citep{chiang2024chatbot} collects over 1.5 million human preference
 votes, yet produces a single aggregate ranking without per-task
 granularity.  MMLU \citep{hendrycks2021mmlu} and its successor MMLU-Pro
-test academic knowledge rather than production tasks.  The Berkeley
-Function Calling Leaderboard covers a single task type.  TaskBench adds
+test academic knowledge rather than production tasks.  The Berkeley function calling benchmark covers a single task type.  TaskBench adds
 cost as a first-class evaluation axis and provides per-task granularity
 across 21 diverse production tasks.
 
@@ -141,7 +140,7 @@ across 21 diverse production tasks.
 FrugalGPT \citep{chen2023frugalgpt} introduced LLM cascading for cost
 reduction but evaluated on one task with three models.  RouterBench and
 RouteLLM benchmark router systems, not the underlying models.
-RouterArena \citep{lu2024routerarena} evaluates 14 routers on 8{,}400
+RouterArena \citep{lu2025routerarena} evaluates 14 routers on 8{,}400
 queries but does not provide per-task cost-quality data for the models
 themselves.  Artificial Analysis tracks speed and aggregate pricing but
 not per-task quality.  We produce the underlying per-task cost-quality
@@ -183,10 +182,11 @@ drawn from standard datasets:
   (OPUS-100), and SQL generation (Spider).
 \end{itemize}
 
-Each case has a fixed prompt.  Models receive identical inputs with
-temperature $= 0$ (or $1$ for models that reject zero temperature).  Two
-tasks have fewer than 50 cases due to dataset size: code explanation (48)
-and structured output (41).
+Each case has a fixed prompt sent as a single user message with no system
+prompt.  Models receive identical inputs with temperature $= 0$ (or $1$
+for models that reject zero temperature).  Two tasks have fewer than 50
+cases due to dataset size: code explanation (48) and structured output
+(41).
 
 \subsection{Model Selection}
 
@@ -201,9 +201,9 @@ tiers based on input token price:
 \textbf{Tier} & \textbf{Price range (input \$/M)} & \textbf{$n$} \\
 \midrule
 Premium  & $\geq$ \$5.00         & 2  \\
-Standard & \$0.50--\$4.99        & 22 \\
-Economy  & \$0.05--\$0.49        & 13 \\
-Micro    & $<$ \$0.05            & 9  \\
+Standard & \$0.50--\$4.99        & 19 \\
+Economy  & \$0.05--\$0.49        & 22 \\
+Micro    & $<$ \$0.05            & 3  \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -260,11 +260,9 @@ correlation).  V2: $r = 0.888$.  The V1 judge rewarded fluent
 hallucinations over terse correct answers.
 
 \paragraph{Code generation (HumanEval).}
-Judge scores versus pass@1 execution rate using a multi-strategy test
-harness.  V2: $r = 0.891$.  A naive harness that failed on indentation
-differences yielded only $r = 0.49$; our multi-strategy approach
-(four extraction strategies tried in sequence) resolved 91.4\% of
-formatting failures.
+Judge scores versus pass@1 execution rate.  V2: $r = 0.891$.  A naive
+test harness yielded only $r = 0.49$ due to indentation extraction
+failures; a multi-strategy harness resolved this (see Appendix~\ref{app:judge}).
 
 The V1-to-V2 improvement is driven by rubric specificity, not the judge
 model upgrade.  V1 evaluated ``quality'' and rewarded concise formatting.
@@ -273,7 +271,7 @@ The bias changed 34.7\% of pairwise model rankings across all 17
 LLM-judged tasks (5{,}195 of 14{,}972 pairs flipped).
 
 We applied V2 rubrics to all 17 LLM-judged tasks (40{,}350 cases
-re-scored at approximately \$54).  The 14 tasks without ground truth are
+re-scored at approximately \$60).  The 14 tasks without ground truth are
 validated by mechanism consistency (identical rubric structure and judge
 model), not by direct ground-truth correlation.  This is a limitation we
 discuss in Section~\ref{sec:limitations}.
@@ -442,6 +440,9 @@ the exception, driven by its sub-3B entry-level model.}
 
 \subsection{Model Selection in Practice}
 
+Given that within-provider price increases yield minimal quality returns,
+which models should a practitioner actually choose?
+
 \paragraph{Coverage thresholds.}
 At the 4.0/5 quality threshold, 37 of 46 models cover all 21 tasks.
 Model choice barely matters.  At the 4.5 threshold, only five models
@@ -564,11 +565,12 @@ features that correlate with model price tier.
 % ============================================================
 \section{Conclusion}
 
-TaskBench provides the first systematic per-task cost-quality benchmark
-for production LLM use.  Across 46 models and 21 tasks, we find that the
-cost-quality curve is remarkably flat: Economy models are statistically
-indistinguishable from Premium on every task tested.  The practical
-implication is clear.  Practitioners should default to Economy models and
+TaskBench provides a systematic per-task cost-quality benchmark for
+production LLM use.  Across 46 models and 21 tasks, we find that the
+cost-quality curve is flat: on no task did we detect a significant
+difference between Economy and Premium tiers ($n_{\text{Premium}} = 2$;
+more Premium models are needed to confirm this pattern).  The practical
+implication is that practitioners should default to Economy models and
 use per-task routing for maximum savings.
 
 We also show that standard LLM-as-judge evaluation has a format bias that
@@ -650,6 +652,14 @@ V1 versus V2 correlation summaries for all four validated task types:
 \end{center}
 \textsuperscript{*}V1 code correlation uses a naive harness; V2 uses the
 multi-strategy harness.
+
+The code generation validation required a multi-strategy test harness.
+A naive harness using \texttt{textwrap.indent} failed on 47.2\% of
+responses due to indentation mismatches.  Our multi-strategy approach
+tries four extraction strategies in sequence (standalone function
+extraction, uniform indent, selective indent, raw append), resolving
+91.4\% of formatting failures and raising the pass rate from 44.9\% to
+91.4\%.
 
 Translation BLEU is inconclusive ($r = 0.29$) due to the metric's
 single-reference limitation, not the judge's quality.

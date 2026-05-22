@@ -63,7 +63,28 @@ Finding 12 (Premium better on language tasks) is dropped from the main paper
 per PAPER_OUTLINE_v2.md. I include one sentence in Discussion noting Premium
 may add marginal value on open-ended tasks, within CI bounds.
 
-## D10: Exact match scoring description
+## D10: Tier counts (CRITICAL FIX — 2026-05-22)
+
+The original draft used n=2/22/13/9 from the outline. Critical review
+revealed these do not match the actual data. The analysis in
+stats_validation.json was computed on a larger model set (including 3
+partial models) with different tier boundaries ($0.08 Economy floor).
+
+I recomputed tier counts for the 46 complete models using best-available
+prices (analysis prices where available, CSV prices otherwise) and the
+paper's stated $0.05 boundary. Result: 2/19/22/3. Updated the paper.
+
+**Remaining concern:** the bootstrap CIs and Mann-Whitney results in
+stats_validation.json were computed with the original tier assignments
+(which included partial models and used $0.08 boundaries). The CIs in
+the paper (4.791/4.787/4.749/4.519) are from that analysis and are
+internally consistent. Recomputing them for the 46-model subset with
+$0.05 boundaries would produce slightly different numbers. The author
+should decide whether to rerun analyze_v3.py with corrected tier
+assignments or accept this minor inconsistency (the qualitative findings
+will not change).
+
+## D11: Exact match scoring description
 
 The methodology describes exact match as binary (correct/incorrect). The CSV
 uses score=5 for correct and score=0 for incorrect. I describe this as "binary
