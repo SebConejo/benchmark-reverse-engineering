@@ -44,13 +44,13 @@
 % ABSTRACT
 % ============================================================
 \begin{abstract}
-We benchmark 46 large language models from 9 API providers across 21
+We benchmark 46 large language models from 12 API providers across 21
 production tasks spanning sentiment classification, intent detection,
 code generation, mathematical reasoning, and 17 others.  We measure both
 per-query cost and quality on 50 cases per task (51,580 scored cases
 total).  Economy-tier models (\$0.05--\$0.49/M input tokens) show no
 statistically significant quality gap versus Premium models (\$5+/M) on
-any of the 21 tasks (Mann-Whitney $p > 0.05$, 21/21;
+any of the 21 tasks (Mann-Whitney $p > 0.05$ on 19/21;
 $n_{\text{Premium}} = 2$).  Within providers, paying 750$\times$ more
 buys at most $+0.13$ quality points on a 1--5 scale.  Per-task routing
 to the cheapest adequate model reduces cost by 99.7\% versus the best
@@ -85,7 +85,7 @@ We make three contributions.
 \begin{enumerate}[leftmargin=*,itemsep=2pt]
 \item \textbf{TaskBench}, a public benchmark measuring per-task
   cost-quality Pareto frontiers across 46 models, 21 production tasks,
-  9 providers, and 4 price tiers (51,580 scored cases).
+  12 providers, and 4 price tiers (51,580 scored cases).
 \item \textbf{Empirical findings.}  Economy-tier models show no
   significant quality gap versus Premium on any task.  Per-task routing
   saves 99.7\% versus the best single model.  Within-provider price
@@ -104,8 +104,9 @@ Four headline results:
 
 \begin{itemize}[leftmargin=*,itemsep=2pt]
 \item \textit{No Economy--Premium gap detected.}  Mann-Whitney $p > 0.05$
-  on 21 of 21 tasks.  Premium averages 4.791 versus Economy 4.749, a gap
-  of 0.042 on the 1--5 scale.
+  on 19 of 21 tasks (the two significant results favor opposite tiers).
+  Premium averages 4.791 versus Economy 4.741, a gap of 0.050 on the
+  1--5 scale.
 \item \textit{Flat provider gradients.}  Anthropic Haiku (\$0.80/M)
   scores 4.775 while Opus (\$15/M) scores 4.753.  Google Flash
   (\$0.15/M) matches Pro (\$1.25/M).  OpenAI's 750$\times$ price range
@@ -191,7 +192,7 @@ cases due to dataset size: code explanation (48) and structured output
 \subsection{Model Selection}
 
 We evaluate 46 models that completed all 21 tasks with at least 40 valid
-cases each, drawn from 9 API providers.  We assign models to four price
+cases each, drawn from 12 API providers.  We assign models to four price
 tiers based on input token price:
 
 \begin{center}
@@ -202,16 +203,16 @@ tiers based on input token price:
 \midrule
 Premium  & $\geq$ \$5.00         & 2  \\
 Standard & \$0.50--\$4.99        & 19 \\
-Economy  & \$0.05--\$0.49        & 22 \\
-Micro    & $<$ \$0.05            & 3  \\
+Economy  & \$0.05--\$0.49        & 21 \\
+Micro    & $<$ \$0.05            & 4  \\
 \bottomrule
 \end{tabular}
 \end{center}
 
 The two Premium models are Claude Opus~4.7 (\$15/M) and GPT-5.5~Pro
-(\$15/M).  Providers include OpenAI (10 models), Qwen (7), Mistral (5),
-Anthropic (4), Google (3), ByteDance (3), xAI (3), Meta/Llama (3), and
-others.
+(\$15/M).  Providers include OpenAI (10 models), Qwen (7), ByteDance (5),
+Mistral (5), Anthropic (4), Google (4), xAI (3), Meta (3), DeepSeek (2),
+MiniMax (1), Moonshot (1), and Microsoft (1).
 
 Cost is measured as per-query cost from token counts multiplied by
 provider-published prices at benchmark time (April--May 2026).  Reasoning
@@ -325,27 +326,29 @@ tasks):
 \textbf{Tier} & \textbf{Mean} & \textbf{95\% CI} & \textbf{$n$ (pairs)} \\
 \midrule
 Premium  & 4.791 & [4.729, 4.853] & 42  \\
-Standard & 4.787 & [4.765, 4.808] & 451 \\
-Economy  & 4.749 & [4.715, 4.777] & 313 \\
-Micro    & 4.519 & [4.435, 4.599] & 210 \\
+Standard & 4.783 & [4.760, 4.805] & 399 \\
+Economy  & 4.741 & [4.710, 4.768] & 441 \\
+Micro    & 4.287 & [4.128, 4.449] & 84  \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-The Premium-to-Economy gap is 0.042 points (0.9\% of the 1--5 scale).
+The Premium-to-Economy gap is 0.050 points (1.0\% of the 1--5 scale).
 Confidence intervals overlap heavily.  Mann-Whitney tests find no
-significant difference on any of the 21 individual tasks ($p > 0.05$,
-21/21).
+significant difference on 19 of 21 individual tasks ($p > 0.05$).  The
+two significant results go in opposite directions: Economy outperforms
+Premium on multistep reasoning ($p = 0.029$) while Premium outperforms
+Economy on instruction following ($p = 0.043$).  With 21 simultaneous
+tests at $\alpha = 0.05$, one to two rejections are expected by chance.
 
-Micro is the only tier with a meaningful gap ($-0.27$ versus Premium).
-The practical reality is a three-tier world: Standard, Economy, and Micro
-perform similarly, with Micro lagging on classification tasks where
-sub-3B models fail.
+Micro is the only tier with a large gap ($-0.50$ versus Premium).  This
+is driven by the four Micro models, which include the two sub-3B models
+in our sample (Llama~1B and Ministral~3B).
 
 \textbf{Caveat.}  With $n = 2$ Premium models, the Mann-Whitney test has
 low statistical power.  We report ``no difference detected,'' not ``tiers
 are equal.''  A future benchmark with five or more Premium models could
-detect a small gap.  Even if a gap exists, it is bounded below 0.12
+detect a small gap.  Even if a gap exists, it is bounded below 0.14
 (the difference between the upper CI of Premium and the lower CI of
 Economy).
 

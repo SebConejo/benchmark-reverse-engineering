@@ -1,128 +1,128 @@
 {
   "sentiment_sst2": {
-    "Standard": 4.952,
-    "Micro": 4.7,
-    "Economy": 4.947,
-    "Premium": 4.85
+    "Standard": 4.953,
+    "Economy": 4.929,
+    "Premium": 4.85,
+    "Micro": 4.4
   },
   "intent_clinc150": {
     "Standard": 4.61,
-    "Micro": 3.68,
-    "Economy": 4.553,
-    "Premium": 4.6
+    "Economy": 4.395,
+    "Premium": 4.6,
+    "Micro": 3.3
   },
   "moderation_toxigen": {
-    "Standard": 4.56,
-    "Micro": 4.08,
-    "Economy": 4.507,
-    "Premium": 4.6
+    "Standard": 4.54,
+    "Economy": 4.49,
+    "Premium": 4.6,
+    "Micro": 3.6
   },
   "multistep_reasoning": {
-    "Standard": 4.868,
-    "Micro": 4.87,
-    "Economy": 4.89,
-    "Premium": 4.65
+    "Standard": 4.842,
+    "Economy": 4.91,
+    "Premium": 4.65,
+    "Micro": 4.675
   },
   "reasoning_gsm8k": {
-    "Standard": 4.903,
-    "Micro": 4.674,
-    "Economy": 4.863,
-    "Premium": 4.86
+    "Standard": 4.916,
+    "Economy": 4.858,
+    "Premium": 4.86,
+    "Micro": 4.475
   },
   "rag_qa": {
-    "Standard": 4.456,
-    "Micro": 4.016,
-    "Economy": 4.248,
-    "Premium": 4.64
+    "Standard": 4.458,
+    "Economy": 4.315,
+    "Premium": 4.64,
+    "Micro": 3.34
   },
   "code_generation": {
-    "Standard": 4.723,
-    "Micro": 4.432,
-    "Economy": 4.689,
-    "Premium": 4.6
+    "Standard": 4.713,
+    "Economy": 4.692,
+    "Premium": 4.6,
+    "Micro": 4.175
   },
   "code_review_v2": {
-    "Standard": 4.982,
-    "Micro": 4.586,
-    "Economy": 4.963,
-    "Premium": 5.0
+    "Standard": 4.981,
+    "Economy": 4.922,
+    "Premium": 5.0,
+    "Micro": 4.28
   },
   "code_explanation": {
-    "Standard": 4.964,
-    "Micro": 4.846,
-    "Economy": 4.963,
-    "Premium": 4.969
+    "Standard": 4.968,
+    "Economy": 4.953,
+    "Premium": 4.969,
+    "Micro": 4.719
   },
   "test_generation_v2": {
-    "Standard": 4.785,
-    "Micro": 4.48,
-    "Economy": 4.728,
-    "Premium": 4.92
+    "Standard": 4.756,
+    "Economy": 4.751,
+    "Premium": 4.92,
+    "Micro": 4.15
   },
   "function_calling": {
-    "Standard": 4.648,
-    "Micro": 4.508,
-    "Economy": 4.645,
-    "Premium": 4.66
+    "Standard": 4.65,
+    "Economy": 4.644,
+    "Premium": 4.66,
+    "Micro": 4.325
   },
   "sql_spider": {
-    "Standard": 4.479,
-    "Micro": 4.132,
-    "Economy": 4.485,
-    "Premium": 4.27
+    "Standard": 4.484,
+    "Economy": 4.46,
+    "Premium": 4.27,
+    "Micro": 3.84
   },
   "translation_enfr": {
-    "Standard": 4.933,
-    "Micro": 4.548,
-    "Economy": 4.82,
-    "Premium": 4.94
+    "Standard": 4.936,
+    "Economy": 4.832,
+    "Premium": 4.94,
+    "Micro": 4.365
   },
   "instruction_following": {
-    "Standard": 4.835,
-    "Micro": 4.634,
-    "Economy": 4.777,
-    "Premium": 4.88
+    "Standard": 4.844,
+    "Economy": 4.763,
+    "Premium": 4.88,
+    "Micro": 4.545
   },
   "structured_output": {
-    "Standard": 4.998,
-    "Micro": 4.922,
-    "Economy": 4.972,
-    "Premium": 5.0
+    "Standard": 5.0,
+    "Economy": 4.977,
+    "Premium": 5.0,
+    "Micro": 4.878
   },
   "extraction_hard_v2": {
-    "Standard": 4.906,
-    "Micro": 4.736,
-    "Economy": 4.901,
-    "Premium": 4.91
+    "Standard": 4.912,
+    "Economy": 4.879,
+    "Premium": 4.91,
+    "Micro": 4.6
   },
   "json_transform_v2": {
-    "Standard": 4.785,
-    "Micro": 4.534,
-    "Economy": 4.745,
-    "Premium": 4.8
+    "Standard": 4.782,
+    "Economy": 4.758,
+    "Premium": 4.8,
+    "Micro": 4.3
   },
   "email_summary_v2": {
-    "Standard": 4.897,
-    "Micro": 4.762,
-    "Economy": 4.911,
-    "Premium": 5.0
+    "Standard": 4.894,
+    "Economy": 4.881,
+    "Premium": 5.0,
+    "Micro": 4.715
   },
   "long_summarization": {
-    "Standard": 4.573,
-    "Micro": 4.512,
-    "Economy": 4.547,
-    "Premium": 4.83
+    "Standard": 4.552,
+    "Economy": 4.545,
+    "Premium": 4.83,
+    "Micro": 4.6
   },
   "data_to_text": {
-    "Standard": 4.992,
-    "Micro": 4.81,
-    "Economy": 4.945,
-    "Premium": 5.0
+    "Standard": 4.993,
+    "Economy": 4.984,
+    "Premium": 5.0,
+    "Micro": 4.585
   },
   "ner_extraction": {
     "Standard": 4.658,
-    "Micro": 4.43,
-    "Economy": 4.641,
-    "Premium": 4.63
+    "Economy": 4.633,
+    "Premium": 4.63,
+    "Micro": 4.17
   }
 }

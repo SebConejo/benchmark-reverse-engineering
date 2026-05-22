@@ -32,24 +32,42 @@ V2_TASKS = [
 EXACT_TASKS = {"sentiment_sst2", "intent_clinc150", "moderation_toxigen", "multistep_reasoning"}
 LLM_TASKS = [t for t in V2_TASKS if t not in EXACT_TASKS]
 
+# Canonical input prices ($/M tokens) from provider-published rates at
+# benchmark time (April-May 2026).  Corrections applied:
+#   - grok-4-fast, grok-code-fast-1: $0.20 (not $0.60)
+#   - seed-2-0-pro-260328: $0.60 (not $0.20)
+#   - seed-2-0-code-preview-260328: $0.30 (not $0.10)
+#   - claude-haiku-4-5-20251001: added ($0.80)
 MODEL_PRICES = {
-    "claude-opus-4-7": 15.0, "gpt-5.5-pro": 15.0, "claude-sonnet-4-20250514": 3.0,
-    "claude-sonnet-4-6": 3.0, "gpt-4o": 2.5, "gpt-5.5": 3.0, "gpt-5.1-chat": 0.8,
-    "o3": 2.0, "gemini-2.5-pro": 1.25, "gemini-3.1-pro-preview": 1.25, "MiniMax-M2.7": 1.0,
-    "mistral-large-latest": 2.0, "qwen/qwen-max": 2.0, "x-ai/grok-4.20": 2.0,
-    "qwen/qwen3.6-max-preview": 1.5, "kimi-k2.6": 0.6, "gpt-5.4": 1.0, "o4-mini": 1.1,
-    "gpt-4o-mini": 0.15, "gemini-2.5-flash": 0.15, "mistral-small-latest": 0.1,
-    "mistral-medium-latest": 0.4, "gpt-5.4-mini": 0.1, "deepseek/deepseek-v3.2": 0.14,
-    "deepseek/deepseek-v4-pro": 0.435, "devstral-latest": 0.2, "x-ai/grok-4-fast": 0.6,
-    "x-ai/grok-code-fast-1": 0.6, "qwen/qwen3-coder": 0.3, "qwen/qwen3.6-flash": 0.3,
-    "qwen/qwen3.6-plus": 0.5, "meta-llama/llama-4-maverick": 0.2,
-    "seed-2-0-pro-260328": 0.2, "seed-2-0-code-preview-260328": 0.1,
+    # Premium (>= $5.00)
+    "claude-opus-4-7": 15.0, "gpt-5.5-pro": 15.0,
+    # Standard ($0.50 - $4.99)
+    "claude-sonnet-4-20250514": 3.0, "claude-sonnet-4-6": 3.0,
+    "claude-haiku-4-5-20251001": 0.80,
+    "gpt-4o": 2.5, "gpt-5.5": 3.0, "gpt-5.1-chat": 0.8,
+    "gpt-5.4": 1.0, "o3": 2.0, "o4-mini": 1.1,
+    "gemini-2.5-pro": 1.25, "gemini-3.1-pro-preview": 1.25,
+    "MiniMax-M2.7": 1.0, "kimi-k2.6": 0.6,
+    "mistral-large-latest": 2.0,
+    "qwen/qwen-max": 2.0, "qwen/qwen3.6-max-preview": 1.5, "qwen/qwen3.6-plus": 0.5,
+    "x-ai/grok-4.20": 2.0,
+    "seed-2-0-pro-260328": 0.6,
+    # Economy ($0.05 - $0.49)
+    "gpt-4o-mini": 0.15, "gpt-5.4-mini": 0.1,
+    "gemini-2.5-flash": 0.15,
+    "mistral-small-latest": 0.1, "mistral-medium-latest": 0.4, "devstral-latest": 0.2,
+    "deepseek/deepseek-v3.2": 0.14, "deepseek/deepseek-v4-pro": 0.435,
+    "qwen/qwen-turbo": 0.05, "qwen/qwen3-8b": 0.05, "qwen/qwen3-coder": 0.3,
+    "qwen/qwen3.6-flash": 0.3,
+    "google/gemma-4-26b-a4b-it": 0.05,
+    "meta-llama/llama-3.2-3b-instruct": 0.051, "meta-llama/llama-4-maverick": 0.2,
     "bytedance-seed/seed-2.0-mini": 0.15, "bytedance-seed/seed-2.0-lite": 0.075,
-    "gpt-5.4-nano": 0.02, "ministral-3b-latest": 0.04, "qwen/qwen-turbo": 0.05,
-    "qwen/qwen3-8b": 0.05, "bytedance-seed/seed-1.6-flash": 0.075,
-    "google/gemma-4-26b-a4b-it": 0.05, "microsoft/phi-4": 0.02,
-    "meta-llama/llama-3.2-1b-instruct": 0.027, "meta-llama/llama-3.2-3b-instruct": 0.051,
-    "nvidia/nemotron-3-super-120b-a12b": 0.09,
+    "bytedance-seed/seed-1.6-flash": 0.075,
+    "x-ai/grok-4-fast": 0.2, "x-ai/grok-code-fast-1": 0.2,
+    "seed-2-0-code-preview-260328": 0.3,
+    # Micro (< $0.05)
+    "gpt-5.4-nano": 0.02, "microsoft/phi-4": 0.02,
+    "meta-llama/llama-3.2-1b-instruct": 0.027, "ministral-3b-latest": 0.04,
 }
 
 ORIGIN = {
@@ -93,7 +111,7 @@ def get_tier(model):
     p = MODEL_PRICES.get(model, 0.5)
     if p >= 5: return "Premium"
     if p >= 0.5: return "Standard"
-    if p >= 0.08: return "Economy"
+    if p >= 0.05: return "Economy"
     return "Micro"
 
 
@@ -139,31 +157,68 @@ def task_model_aggregates(agg):
     save("task_model_aggregates.json", agg)
 
 
+def get_complete_models(agg):
+    """Return set of models present in all 21 tasks with >= 40 cases each."""
+    model_tasks = defaultdict(int)
+    for task in V2_TASKS:
+        for model in agg[task]:
+            model_tasks[model] += 1
+    return {m for m, c in model_tasks.items() if c == 21}
+
+
 def tier_comparison(agg):
-    """Average V2 score by tier, per task and global."""
+    """Average V2 score by tier, per task and global (complete models only)."""
+    complete = get_complete_models(agg)
     tier_task = defaultdict(lambda: defaultdict(list))
     tier_global = defaultdict(list)
+    tier_task_models = defaultdict(lambda: defaultdict(list))
     for task in V2_TASKS:
         for model, d in agg[task].items():
+            if model not in complete:
+                continue
             tier = get_tier(model)
             tier_task[task][tier].append(d["avg_score"])
             tier_global[tier].append(d["avg_score"])
+            tier_task_models[task][tier].append((model, d["avg_score"]))
     result = {}
     for task in V2_TASKS:
         result[task] = {t: round(float(np.mean(tier_task[task][t])), 3) for t in tier_task[task]}
     save("tier_comparison.json", result)
-    return tier_global
+    return tier_global, tier_task_models
 
 
-def stats_validation(tier_global):
-    """Bootstrap CIs and Mann-Whitney for tier comparisons."""
+def stats_validation(tier_global, tier_task_models):
+    """Bootstrap CIs per tier + Mann-Whitney Economy vs Premium per task."""
     boot = {}
     for tier in ["Premium", "Standard", "Economy", "Micro"]:
         vals = tier_global[tier]
         if len(vals) >= 2:
             mean, lo, hi = bootstrap_ci(vals)
             boot[tier] = {"mean": mean, "ci_lo": lo, "ci_hi": hi, "n": len(vals)}
-    save("stats_validation.json", {"bootstrap": boot})
+    # Mann-Whitney Economy vs Premium per task
+    mw_per_task = {}
+    sig_count = 0
+    for task in V2_TASKS:
+        econ = [s for _, s in tier_task_models[task].get("Economy", [])]
+        prem = [s for _, s in tier_task_models[task].get("Premium", [])]
+        if len(econ) >= 2 and len(prem) >= 2:
+            u, p = sp_stats.mannwhitneyu(econ, prem, alternative="two-sided")
+            mw_per_task[task] = {
+                "econ_mean": round(float(np.mean(econ)), 3),
+                "prem_mean": round(float(np.mean(prem)), 3),
+                "U": round(float(u), 1),
+                "p": round(float(p), 4),
+                "significant": bool(p < 0.05),
+                "n_econ": len(econ), "n_prem": len(prem),
+            }
+            if p < 0.05:
+                sig_count += 1
+    mw_summary = {
+        "tasks_tested": len(mw_per_task),
+        "significant_at_005": sig_count,
+        "per_task": mw_per_task,
+    }
+    save("stats_validation.json", {"bootstrap": boot, "mann_whitney_econ_vs_prem": mw_summary})
 
 
 def task_discriminativeness(agg):
@@ -453,8 +508,8 @@ def main():
 
     print("Running analyses:")
     task_model_aggregates(agg)
-    tg = tier_comparison(agg)
-    stats_validation(tg)
+    tg, ttm = tier_comparison(agg)
+    stats_validation(tg, ttm)
     task_discriminativeness(agg)
     top5_per_task(agg)
     routing_savings(agg)
