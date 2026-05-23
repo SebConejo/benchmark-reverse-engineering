@@ -50,8 +50,7 @@ code generation, mathematical reasoning, and 17 others.  We measure both
 per-query cost and quality on 50 cases per task (51,580 scored cases
 total).  Economy-tier models (\$0.05--\$0.49/M input tokens) show no
 statistically significant quality gap versus Premium models (\$5+/M) on
-any of the 21 tasks (Mann-Whitney $p > 0.05$ on 19/21;
-$n_{\text{Premium}} = 2$).  Within providers, paying 750$\times$ more
+19 of 21 tasks (Mann-Whitney $p > 0.05$; $n_{\text{Premium}} = 2$).  Within providers, paying 750$\times$ more
 buys at most $+0.13$ quality points on a 1--5 scale.  Per-task routing
 to the cheapest adequate model reduces cost by 99.7\% versus the best
 single model with negligible quality loss.  Quality scores are produced by an LLM judge
@@ -87,7 +86,7 @@ We make three contributions.
   cost-quality Pareto frontiers across 46 models, 21 production tasks,
   12 providers, and 4 price tiers (51,580 scored cases).
 \item \textbf{Empirical findings.}  Economy-tier models show no
-  significant quality gap versus Premium on any task.  Per-task routing
+  significant quality gap versus Premium on 19 of 21 tasks.  Per-task routing
   saves 99.7\% versus the best single model.  Within-provider price
   gradients are nearly flat.
 \item \textbf{Judge validation.}  We show that standard LLM-as-judge
@@ -475,9 +474,10 @@ Upgrading generations is a more reliable strategy than upgrading tiers.
 Three recommendations for practitioners:
 
 \begin{enumerate}[leftmargin=*,itemsep=2pt]
-\item \textbf{Default to Economy tier.}  On 21 of 21 tasks, Economy
-  models showed no significant quality loss versus Premium.  The safest
-  default is the cheapest model scoring at least 4.5 on the target task.
+\item \textbf{Default to Economy tier.}  On 19 of 21 tasks, Economy
+  models showed no significant quality difference versus Premium (the
+  two exceptions favor opposite tiers).  The safest default is the
+  cheapest model scoring at least 4.5 on the target task.
 \item \textbf{Route per task for maximum savings.}  A four-model
   portfolio covers all 21 tasks at the 4.0 threshold and costs
   \$0.000009/query average.  The savings come from commodity tasks where
@@ -570,9 +570,10 @@ features that correlate with model price tier.
 
 TaskBench provides a systematic per-task cost-quality benchmark for
 production LLM use.  Across 46 models and 21 tasks, we find that the
-cost-quality curve is flat: on no task did we detect a significant
-difference between Economy and Premium tiers ($n_{\text{Premium}} = 2$;
-more Premium models are needed to confirm this pattern).  The practical
+cost-quality curve is flat: on 19 of 21 tasks we detect no significant
+difference between Economy and Premium tiers, and the two significant
+results favor opposite tiers ($n_{\text{Premium}} = 2$; more Premium
+models are needed to confirm this pattern).  The practical
 implication is that practitioners should default to Economy models and
 use per-task routing for maximum savings.
 
