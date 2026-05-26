@@ -110,9 +110,9 @@ Four headline results:
   scores 4.775 while Opus (\$15/M) scores 4.753.  Google Flash
   (\$0.15/M) matches Pro (\$1.25/M).  OpenAI's 750$\times$ price range
   yields $+0.13$ quality.
-\item \textit{Per-task routing saves 99.7\%.}  Routing to the cheapest
-  adequate model per task costs \$0.000009/query versus \$0.003332 for
-  o3, with at most 0.2 points quality difference on any single task.
+\item \textit{Per-task routing saves 99.7\%.}  The cheapest adequate
+  model per task averages \$0.000009/query versus \$0.003332 for o3
+  alone, with at most 0.2 points quality difference on any task.
 \item \textit{Five Economy models cover all tasks.}  At the 4.5/5
   quality threshold, five models cover all 21 tasks.  The cheapest is
   Grok~4~Fast at \$0.000435/query average.
@@ -168,9 +168,9 @@ We evaluate 21 production tasks in four categories, with 50 cases each
 drawn from standard datasets:
 
 \begin{itemize}[leftmargin=*,itemsep=1pt]
-\item \textbf{Classification} (4 tasks, exact-match scoring): sentiment
-  analysis (SST-2), intent detection (CLINC-150, 150 classes), content
-  moderation (ToxiGen), and multistep reasoning (ARC-Challenge).
+\item \textbf{Classification} (4 tasks, exact-match): sentiment (SST-2),
+  intent detection (CLINC-150, 150 classes), content moderation
+  (ToxiGen), and multistep reasoning (ARC-Challenge).
 \item \textbf{Structured output} (5 tasks, LLM-judge): entity
   extraction, JSON transformation, named-entity recognition, function
   calling, and structured output generation.
@@ -301,9 +301,7 @@ is to use the cheapest available model.
 
 \begin{figure}[t]
 \centering
-% NOTE: Convert SVG to PDF for LaTeX compilation.
-% inkscape --export-type=pdf ../results/analysis_v3_final/heatmap_v3.svg
-\includegraphics[width=\textwidth]{../results/analysis_v3_final/heatmap_v3}
+\includegraphics[width=\textwidth]{figures/heatmap_v3}
 \caption{Quality heatmap (46 models $\times$ 21 tasks).  Rows sorted by
 average score, columns grouped by task category.  Color intensity
 indicates mean score per (model, task) pair on the 1--5 scale.  Most
@@ -353,7 +351,7 @@ Economy).
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.6\textwidth]{../results/analysis_v3_final/tier_comparison_v3}
+\includegraphics[width=0.6\textwidth]{figures/tier_comparison_v3}
 \caption{Average quality by price tier with bootstrap 95\% confidence
 intervals.  Premium and Economy intervals overlap on all 21 tasks.  Micro
 is the only tier with a visible quality gap.}
@@ -380,7 +378,7 @@ Gemma~26B on 1.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{../results/figures/pareto_rag_qa}
+\includegraphics[width=\textwidth]{figures/pareto_rag_qa}
 \caption{Pareto frontier for extractive QA (high-discrimination task).
 Left panel: low-cost region showing the dense cluster of Economy and
 Micro models near the frontier.  Right panel: full price range showing
@@ -391,7 +389,7 @@ frontier.  Point shapes indicate price tiers.}
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\textwidth]{../results/figures/pareto_data_to_text}
+\includegraphics[width=\textwidth]{figures/pareto_data_to_text}
 \caption{Pareto frontier for data-to-text (commodity task).  Nearly all
 models cluster above 4.8/5 regardless of price, illustrating a task
 where model selection is irrelevant.}
@@ -430,7 +428,7 @@ Micro average down.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=0.85\textwidth]{../results/analysis_v3_final/provider_gradient}
+\includegraphics[width=0.85\textwidth]{figures/provider_gradient}
 \caption{Within-provider price-quality gradient.  Each line connects
 models from the same provider, ordered by input price.  The gradient is
 nearly flat for Anthropic, Google, and Qwen.  OpenAI shows the largest
@@ -597,8 +595,7 @@ co-founder of Manifest (\url{https://github.com/mnfst/manifest}), an
 open-source LLM model router.  Manifest was not used in this benchmark.
 The routing savings analysis (Section~4.3) applies to any routing system
 and is computed from the benchmark data using a simple per-task argmin.
-All code, data, and evaluation prompts are publicly available at
-\url{https://github.com/SebConejo/benchmark-reverse-engineering}.
+All code, data, and evaluation prompts are publicly available.\footnote{\url{https://github.com/SebConejo/benchmark-reverse-engineering}}
 
 
 % ============================================================
