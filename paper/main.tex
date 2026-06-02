@@ -379,20 +379,23 @@ Gemma~26B on 1.
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/pareto_rag_qa}
-\caption{Pareto frontier for extractive QA (high-discrimination task).
-Left panel: low-cost region showing the dense cluster of Economy and
-Micro models near the frontier.  Right panel: full price range showing
-Premium models far from the frontier.  Black line marks the Pareto
-frontier.  Point shapes indicate price tiers.}
+\caption{Pareto frontier for extractive QA (high-discrimination task,
+log-scale cost axis).  Sonnet~4.6 dominates at 0.14\,mc; GPT-5.5~Pro
+costs 7$\times$ more for lower quality.  Black line marks the Pareto
+frontier.  Point shapes and colors indicate price tiers
+(red\,=\,Premium, blue\,=\,Standard, green\,=\,Economy,
+orange\,=\,Micro).}
 \label{fig:pareto-rag}
 \end{figure}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/pareto_data_to_text}
-\caption{Pareto frontier for data-to-text (commodity task).  Nearly all
-models cluster above 4.8/5 regardless of price, illustrating a task
-where model selection is irrelevant.}
+\caption{Pareto frontier for data-to-text (commodity task, log-scale
+cost axis).  Qwen~Turbo achieves a perfect 5.0 at 0.0007\,mc; 30+
+models match that score at up to 2{,}000$\times$ the cost.  The
+near-flat frontier illustrates a task where model selection is
+cost-irrelevant.}
 \label{fig:pareto-data}
 \end{figure}
 
@@ -612,7 +615,7 @@ All code, data, and evaluation prompts are publicly available.\footnote{\url{htt
 \section{Full Pareto Frontiers (21 Tasks)}
 \label{app:pareto}
 
-One dual-panel Pareto figure per task, following the style of
+One single-panel log-scale Pareto figure per task, following the style of
 Figures~\ref{fig:pareto-rag} and~\ref{fig:pareto-data}.  Figures are
 available in \texttt{results/figures/} in the companion repository.
 

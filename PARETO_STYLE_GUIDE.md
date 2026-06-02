@@ -1,39 +1,30 @@
 # Pareto Figure Style Guide
 
-**Validated on:** RAG QA (v8), 2026-05-14
-**Reference file:** `results/analysis_v2_final/pareto_rag_qa_v8.svg`
+**Validated on:** RAG QA + Data-to-Text, 2026-06-02
+**Format:** Single-panel, log-scale X axis (academic convention: HELM, FrugalGPT, RouterArena)
 
 This document defines the exact visual style for all TaskBench Pareto scatter
 plots. A new session MUST follow this guide to produce consistent figures.
-Do NOT use auto-placement libraries (adjustText, etc.) — they failed after
-7 iterations. See LEARNINGS.md section 18.
 
 ---
 
-## Layout: Dual Panel
+## Layout: Single Panel, Log-Scale X
 
-Two panels side by side, same y-axis range, different x-axis ranges.
-
-```python
-fig, (ax_left, ax_right) = plt.subplots(1, 2, figsize=(14, 6.5),
-    gridspec_kw={'width_ratios': [1, 1], 'wspace': 0.25})
-```
-
-- **Left panel ("Low-cost models"):** x-axis 0 to P75 * 1.5 millicents (typically 0-1 mc).
-  Shows the dense cluster where most models live. This is where the action is.
-- **Right panel ("Full price range"):** x-axis 0 to max_cost * 1.1 millicents.
-  Shows Premium outliers. Contains a dashed grey rectangle marking the left panel's
-  range with label "see left panel".
+One panel per figure. X-axis in log scale spans the full cost range.
 
 ```python
-# Compute x ranges
-sorted_costs = sorted(costs_millicents)
-p75 = sorted_costs[int(len(sorted_costs) * 0.75)]
-x_left_max = max(1.0, round(p75 * 1.5, 1))
-x_right_max = max(costs_millicents) * 1.1
+fig, ax = plt.subplots(figsize=(10, 6.5))
+ax.set_xscale("log")
+
+cost_min = min(costs) * 0.5
+cost_max = max(costs) * 2.0
+ax.set_xlim(cost_min, cost_max)
+ax.set_ylim(min(scores) - 0.3, 5.2)
 ```
 
-Y-axis: `min(scores) - 0.3` to `5.4` (same for both panels).
+- Log scale naturally separates the dense low-cost cluster from expensive outliers.
+- No need for dual panels or zoom rectangles.
+- Follows the convention used by HELM, FrugalGPT, and RouterArena.
 
 ---
 
@@ -51,12 +42,12 @@ TIER_COLOR = {'Premium': '#d62728', 'Standard': '#1f77b4', 'Economy': '#2ca02c',
 TIER_MARKER = {'Premium': 'D', 'Standard': 's', 'Economy': 'o', 'Micro': '^'}
 ```
 
-Point size: `s=35`. Edge: `edgecolors='#444444', linewidths=0.5`. Alpha: `0.75`.
+Point size: `s=50`. Edge: `edgecolors='#444444', linewidths=0.5`. Alpha: `0.75`.
 
 ```python
 ax.scatter(x, y, c=TIER_COLOR[tier], marker=TIER_MARKER[tier],
-           s=35, alpha=0.75, zorder=3, edgecolors='#444444', linewidths=0.5,
-           label=f'{tier} (n={count})' if is_left_panel else tier)
+           s=50, alpha=0.75, zorder=3, edgecolors='#444444', linewidths=0.5,
+           label=f'{tier} (n={count})')
 ```
 
 ---
@@ -68,8 +59,7 @@ ax.scatter(x, y, c=TIER_COLOR[tier], marker=TIER_MARKER[tier],
 ```python
 ax.plot(pareto_costs, pareto_scores,
         color='#222222', linewidth=2.5, alpha=0.8, zorder=2,
-        solid_capstyle='round',
-        label='Pareto frontier' if is_left_panel else None)
+        solid_capstyle='round', label='Pareto frontier')
 ```
 
 The frontier is computed as: sort by cost ascending, keep only points where
@@ -88,125 +78,99 @@ def compute_pareto(costs, scores):
 
 ---
 
-## Labels
+## Labels: adjustText (mandatory)
 
-### Rules (non-negotiable)
+Use the `adjustText` library for automatic label placement. Manual offsets
+are prohibited (they broke on every data change and caused overlaps).
 
-1. **Maximum 3 labels per panel.** More creates clutter.
-2. **Fully manual placement.** Use `ax.annotate` with `xytext` in offset points.
-3. **No label touches another label, a point, the legend, or the axes.**
-4. **Short arrows only** (10-30 pixel offset). No cross-chart arrows.
-5. If a label cannot be placed cleanly, remove it.
+### Rules
+
+1. **4-5 labels per figure.** More creates clutter.
+2. **adjustText handles placement.** No manual `xytext` offsets.
+3. **Every label has an arrow** pointing to its exact data point.
+4. **No label covers a data point.** adjustText's `force_points` enforces this.
+5. **Cross-check each label's coordinates against the source JSON** before shipping.
 
 ### Which models to label
 
-**Left panel (3 labels):**
-- Pareto winner: highest quality on the frontier (usually top-right of frontier)
-- Worst model: lowest score in the panel (usually bottom-left)
-- Sweet spot: cheapest model scoring >= 4.5 (or an interesting intermediate)
+- **Pareto extremes:** cheapest Pareto point, highest-quality Pareto point
+- **Pareto intermediate:** one Economy sweet-spot on the frontier
+- **Cost extremes:** most expensive model (usually Premium)
+- **Quality extremes:** lowest-quality model (usually Llama 1B)
 
-**Right panel (2 labels):**
-- Most expensive Premium model (usually Claude Opus or GPT-5.5 Pro)
-- Second Premium or the most expensive Standard that tells a story
-
-Do NOT repeat a model that's already labeled on the left panel.
+Before labeling, list the 4-5 candidates and justify each choice. This list
+goes in the spot-check table when presenting the figure.
 
 ### Label style
 
 ```python
-label_style = dict(
-    fontsize=7.5,
-    color='#222222',
-    bbox=dict(boxstyle='round,pad=0.15', fc='white', ec='#bbbbbb', lw=0.4, alpha=0.9),
-    arrowprops=dict(arrowstyle='-', color='#777777', lw=0.7, shrinkA=0, shrinkB=2),
-    zorder=11,
-)
+from adjustText import adjust_text
 
-# Example: label below-right of point
-ax.annotate('Qwen Turbo', xy=(x, y), xytext=(15, -20),
-            textcoords='offset points', fontweight='bold', **label_style)
+texts = []
+label_x, label_y = [], []
+for model_id in label_models:
+    mx = task_data[model_id]["avg_cost"] * 100
+    my = task_data[model_id]["avg_score"]
+    is_frontier = model_id in pareto_set
+    label_x.append(mx)
+    label_y.append(my)
+    texts.append(ax.text(mx, my, display_name(model_id),
+                         fontsize=8.5,
+                         fontweight="bold" if is_frontier else "normal",
+                         color="#222222", zorder=12,
+                         bbox=dict(boxstyle="round,pad=0.15", fc="white",
+                                   ec="#bbbbbb", lw=0.4, alpha=0.92)))
+
+adjust_text(texts, x=label_x, y=label_y, ax=ax,
+            arrowprops=dict(arrowstyle="-|>", color="#555555", lw=0.8),
+            expand=(2.0, 2.0), force_text=(1.5, 1.5), force_points=(2.0, 2.0),
+            ensure_inside_axes=True)
 ```
 
 Bold for Pareto-frontier models. Normal weight for non-frontier.
-
-### Offset directions cheat sheet
-
-| Position needed | xytext |
-|----------------|--------|
-| Below-right | `(15, -20)` |
-| Below-left | `(-25, -18)` |
-| Above-right | `(15, 12)` |
-| Above-left | `(-25, 15)` |
-| Right | `(18, 0)` |
-| Left | `(-25, 0)` |
-
-Adjust by +/-5 pixels to avoid specific collisions.
 
 ---
 
 ## Legend
 
-Position: `loc='lower right'` on the left panel only. `framealpha=0.9`, `fontsize=8`.
-The right panel has no legend (same colors, would be redundant).
+Position: `loc='lower right'`. `framealpha=0.9`, `fontsize=9`.
 
 ```python
-ax_left.legend(fontsize=8, loc='lower right', framealpha=0.9)
+ax.legend(fontsize=9, loc='lower right', framealpha=0.9)
 ```
-
-If labels collide with lower-right, move legend to `'upper left'` — but check
-that the upper-left area is empty first.
 
 ---
 
-## Titles and Caption
+## Title and Caption
 
-**Suptitle** (above both panels):
+**Title:**
 ```python
-fig.suptitle(f'{task_title}: Cost vs Quality', fontsize=14, fontweight='bold', y=0.99)
+ax.set_title(f'{task_title}: Cost vs Quality', fontsize=14, fontweight='bold', pad=12)
 ```
 
-**Panel titles:**
-```python
-ax_left.set_title(f'Low-cost models (0–{x_left_max:.0f} mc)', fontsize=11, fontweight='bold')
-ax_right.set_title(f'Full price range (0–{x_right_max:.0f} mc)', fontsize=11, fontweight='bold')
-```
-
-**Caption** (below both panels):
+**Caption** (below the figure):
 ```python
 fig.text(0.5, 0.005,
-    f'n = {n} models, {n_cases} cases each. Dataset: {dataset}. Evaluation: {eval_method}.',
+    f'n = {n} models, {n_cases} cases each. X-axis: log scale. '
+    f'Black line: Pareto frontier. {CAPTION_TIER_TEXT}',
     ha='center', fontsize=8, color='#555555', style='italic')
 ```
 
 **Axes:**
 ```python
-ax.set_xlabel('Cost per query (millicents)', fontsize=10)
-ax_left.set_ylabel('Average quality score (1–5)', fontsize=10)
+ax.set_xlabel('Cost per query (millicents, log scale)', fontsize=11)
+ax.set_ylabel('Average quality score (1-5)', fontsize=11)
 ```
 
----
-
-## Zoom Rectangle (right panel)
-
-Grey dashed rectangle marking the left panel's x-range:
-
-```python
-from matplotlib.patches import Rectangle
-rect = Rectangle((0, y_min), x_left_max, y_max - y_min,
-                  lw=1.5, edgecolor='#aaaaaa', facecolor='#f5f5f5',
-                  alpha=0.2, linestyle='--', zorder=1)
-ax_right.add_patch(rect)
-ax_right.annotate('← see left panel',
-    xy=(x_left_max + x_right_max*0.01, y_min + 0.12),
-    fontsize=7, color='#999999', style='italic')
-```
+**Caption typography (check 15):** every `$` sign must be escaped as `\$`
+in matplotlib text to avoid LaTeX math mode interpretation.
 
 ---
 
 ## Grid and Ticks
 
 ```python
-ax.grid(True, alpha=0.15)
+ax.grid(True, alpha=0.15, which="both")  # both major and minor for log scale
 ax.tick_params(labelsize=9)
 ```
 
@@ -215,25 +179,8 @@ ax.tick_params(labelsize=9)
 ## Tight Layout
 
 ```python
-fig.tight_layout(rect=[0, 0.03, 1, 0.96])
+fig.tight_layout(rect=[0, 0.04, 1, 0.97])
 ```
-
-The `rect` leaves room for the suptitle (top) and caption (bottom).
-
----
-
-## Per-Task Label Positions
-
-Each task needs its own hardcoded label positions because point distributions
-differ. When generating a new task's Pareto:
-
-1. Generate the figure WITHOUT labels first
-2. Open the SVG and identify the 3-5 key models visually
-3. Look up their (cost, score) coordinates
-4. Add `ax.annotate` calls with offset-point positions
-5. Verify no overlaps by opening the SVG
-
-This takes ~3 minutes per task. It's faster than debugging auto-placement.
 
 ---
 
@@ -250,11 +197,9 @@ DISPLAY_NAMES = {
     'qwen/qwen3-8b': 'Qwen3-8B',
     'meta-llama/llama-3.2-1b-instruct': 'Llama 1B',
     'meta-llama/llama-3.2-3b-instruct': 'Llama 3B',
-    'bytedance-seed/seed-2.0-lite': 'Seed 2.0 Lite',
-    'nvidia/nemotron-3-super-120b-a12b': 'Nemotron 120B',
-    'ministral-3b-latest': 'Ministral 3B',
-    'devstral-latest': 'Devstral',
-    # ... add more as needed
+    'bytedance-seed/seed-2.0-mini': 'Seed 2.0 Mini',
+    'claude-sonnet-4-6': 'Sonnet 4.6',
+    # ... see generate_figures.py for full dict
 }
 ```
 
@@ -266,5 +211,5 @@ DISPLAY_NAMES = {
 |------|---------------------|
 | Premium | >= $5.00 |
 | Standard | $0.50 - $4.99 |
-| Economy | $0.08 - $0.49 |
-| Micro | < $0.08 |
+| Economy | $0.05 - $0.49 |
+| Micro | < $0.05 |
