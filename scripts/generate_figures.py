@@ -43,7 +43,7 @@ TASK_SHORT = {
     "data_to_text": "Data-Text", "ner_extraction": "NER",
 }
 
-TIER_COLOR = {"Premium": "#d62728", "Standard": "#1f77b4", "Economy": "#2ca02c", "Micro": "#ff7f0e"}
+TIER_COLOR = {"Premium": "#FE076E", "Standard": "#2733EF", "Economy": "#2ED8B0", "Micro": "#F1C69D"}
 TIER_MARKER = {"Premium": "D", "Standard": "s", "Economy": "o", "Micro": "^"}
 
 # Prices sourced from benchmark_results.csv (actual API costs at benchmark time).
@@ -371,8 +371,8 @@ def fig_provider_gradient(pg):
     from adjustText import adjust_text
 
     provider_colors = {
-        "OpenAI": "#4285F4", "Anthropic": "#E8890C", "Mistral": "#2ECC71",
-        "Qwen": "#E74C3C", "Google": "#9B59B6",
+        "OpenAI": "#2733EF", "Anthropic": "#F1C69D", "Mistral": "#2ED8B0",
+        "Qwen": "#FE076E", "Google": "#9531F9",
     }
     fig, ax = plt.subplots(figsize=(12, 7))
     total_models = 0
@@ -449,7 +449,7 @@ def fig_task_discriminativeness(disc):
     stds = [d["std"] for _, d in tasks_sorted]
 
     fig, ax = plt.subplots(figsize=(12, 6))
-    colors = ["#d62728" if s >= 2.0 else "#1f77b4" if s >= 1.0 else "#2ca02c" for s in spreads]
+    colors = ["#FE076E" if s >= 2.0 else "#2733EF" if s >= 1.0 else "#2ED8B0" for s in spreads]
     bars = ax.bar(range(len(names)), spreads, color=colors, alpha=0.85, edgecolor="#444444", linewidth=0.5)
 
     ax.set_xticks(range(len(names)))
@@ -490,7 +490,7 @@ def fig_origin_comparison(origin):
     # Since we don't have std, use interquartile-like range: show ±(max-min)/4
     yerr = [(ma - mi) / 4 for mi, ma in zip(mins, maxs)]
 
-    colors = ["#E74C3C", "#4285F4", "#2ECC71"]
+    colors = ["#FE076E", "#2733EF", "#2ED8B0"]
     fig, ax = plt.subplots(figsize=(8, 6))
     bars = ax.bar(range(3), means, color=colors, alpha=0.85,
                   yerr=yerr, capsize=8, error_kw={"lw": 1.5})
@@ -528,7 +528,7 @@ def fig_origin_comparison(origin):
 def fig_license_comparison(lic):
     categories = [c for c in ["open", "closed", "proprietary"] if c in lic]
     cat_labels = {"open": "Open-weight", "closed": "Proprietary", "proprietary": "Proprietary"}
-    colors_map = {"open": "#2ECC71", "closed": "#E74C3C", "proprietary": "#E74C3C"}
+    colors_map = {"open": "#2ED8B0", "closed": "#FE076E", "proprietary": "#FE076E"}
 
     fig, ax = plt.subplots(figsize=(7, 6))
     for i, cat in enumerate(categories):
@@ -571,7 +571,7 @@ def fig_generational_delta(gen):
     fig, ax1 = plt.subplots(figsize=(10, 6))
 
     x = range(len(pairs))
-    bars = ax1.bar(x, deltas, color=["#2ca02c" if d > 0 else "#d62728" for d in deltas],
+    bars = ax1.bar(x, deltas, color=["#2ED8B0" if d > 0 else "#FE076E" for d in deltas],
                    alpha=0.85, edgecolor="#444444", linewidth=0.5, label="Quality delta")
     ax1.set_ylabel("Quality delta (new - old)", fontsize=11, color="#333333")
     ax1.axhline(y=0, color="#888888", linewidth=0.8)
@@ -586,15 +586,15 @@ def fig_generational_delta(gen):
 
     # Secondary axis for price change
     ax2 = ax1.twinx()
-    ax2.plot(x, price_changes, "D-", color="#9B59B6", markersize=8, linewidth=1.5,
+    ax2.plot(x, price_changes, "D-", color="#9531F9", markersize=8, linewidth=1.5,
              alpha=0.8, label="Price change %")
-    ax2.set_ylabel("Price change (%)", fontsize=11, color="#9B59B6")
-    ax2.tick_params(axis="y", labelcolor="#9B59B6")
+    ax2.set_ylabel("Price change (%)", fontsize=11, color="#9531F9")
+    ax2.tick_params(axis="y", labelcolor="#9531F9")
 
     # Annotate price changes
     for i, p in enumerate(price_changes):
         ax2.text(i, p + 3, f"{p:+d}%", ha="center", va="bottom", fontsize=7.5,
-                 color="#9B59B6", fontweight="bold")
+                 color="#9531F9", fontweight="bold")
 
     ax1.set_title("Generational Delta: Newer Models vs Predecessors",
                   fontsize=14, fontweight="bold")
@@ -620,7 +620,7 @@ def fig_per_task_routing_savings(routing):
     savings = [d["savings_pct"] for _, d in tasks_sorted]
 
     fig, ax = plt.subplots(figsize=(12, 6))
-    colors = ["#2ca02c" if s >= 95 else "#1f77b4" if s >= 80 else "#ff7f0e" for s in savings]
+    colors = ["#2ED8B0" if s >= 95 else "#2733EF" if s >= 80 else "#F1C69D" for s in savings]
     ax.barh(range(len(names)), savings, color=colors, alpha=0.85,
             edgecolor="#444444", linewidth=0.5)
     ax.set_yticks(range(len(names)))
