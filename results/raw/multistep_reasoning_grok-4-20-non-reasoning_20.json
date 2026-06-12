@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 20,
   "response": "A\n\nThe question defines a trade-off as solving one problem while sacrificing a feature. Option A directly matches this: improving gas mileage (solving efficiency) comes at the cost of reduced engine power (sacrificed performance). The other options describe improvements without any mentioned sacrifice, so they are not trade-offs.",
-  "score": 5,
+  "score": 0,
   "cost": 0.000752,
   "expected": "A",
   "tokens": {

@@ -1,128 +1,128 @@
 {
   "sentiment_sst2": {
-    "Standard": 4.953,
-    "Economy": 4.929,
+    "Standard": 4.95,
+    "Economy": 4.943,
     "Premium": 4.85,
-    "Micro": 4.4
+    "Micro": 4.133
   },
   "intent_clinc150": {
-    "Standard": 4.61,
-    "Economy": 4.395,
+    "Standard": 4.605,
+    "Economy": 4.378,
     "Premium": 4.6,
-    "Micro": 3.3
+    "Micro": 3.167
   },
   "moderation_toxigen": {
-    "Standard": 4.54,
-    "Economy": 4.49,
+    "Standard": 4.548,
+    "Economy": 4.483,
     "Premium": 4.6,
-    "Micro": 3.6
+    "Micro": 3.333
   },
   "multistep_reasoning": {
-    "Standard": 4.842,
-    "Economy": 4.91,
+    "Standard": 4.261,
+    "Economy": 4.021,
     "Premium": 4.65,
-    "Micro": 4.675
+    "Micro": 3.6
   },
   "reasoning_gsm8k": {
-    "Standard": 4.916,
-    "Economy": 4.858,
+    "Standard": 4.913,
+    "Economy": 4.865,
     "Premium": 4.86,
-    "Micro": 4.475
+    "Micro": 4.327
   },
   "rag_qa": {
-    "Standard": 4.458,
-    "Economy": 4.315,
+    "Standard": 4.44,
+    "Economy": 4.304,
     "Premium": 4.64,
-    "Micro": 3.34
+    "Micro": 3.26
   },
   "code_generation": {
     "Standard": 4.713,
-    "Economy": 4.692,
+    "Economy": 4.701,
     "Premium": 4.6,
-    "Micro": 4.175
+    "Micro": 3.94
   },
   "code_review_v2": {
-    "Standard": 4.981,
-    "Economy": 4.922,
+    "Standard": 4.98,
+    "Economy": 4.921,
     "Premium": 5.0,
-    "Micro": 4.28
+    "Micro": 4.1
   },
   "code_explanation": {
     "Standard": 4.968,
-    "Economy": 4.953,
+    "Economy": 4.957,
     "Premium": 4.969,
-    "Micro": 4.719
+    "Micro": 4.625
   },
   "test_generation_v2": {
-    "Standard": 4.756,
-    "Economy": 4.751,
+    "Standard": 4.751,
+    "Economy": 4.757,
     "Premium": 4.92,
-    "Micro": 4.15
+    "Micro": 3.933
   },
   "function_calling": {
     "Standard": 4.65,
-    "Economy": 4.644,
+    "Economy": 4.642,
     "Premium": 4.66,
-    "Micro": 4.325
+    "Micro": 4.233
   },
   "sql_spider": {
-    "Standard": 4.484,
-    "Economy": 4.46,
+    "Standard": 4.499,
+    "Economy": 4.438,
     "Premium": 4.27,
-    "Micro": 3.84
+    "Micro": 3.72
   },
   "translation_enfr": {
-    "Standard": 4.936,
-    "Economy": 4.832,
+    "Standard": 4.933,
+    "Economy": 4.836,
     "Premium": 4.94,
-    "Micro": 4.365
+    "Micro": 4.233
   },
   "instruction_following": {
-    "Standard": 4.844,
-    "Economy": 4.763,
+    "Standard": 4.842,
+    "Economy": 4.762,
     "Premium": 4.88,
-    "Micro": 4.545
+    "Micro": 4.513
   },
   "structured_output": {
     "Standard": 5.0,
-    "Economy": 4.977,
+    "Economy": 4.973,
     "Premium": 5.0,
     "Micro": 4.878
   },
   "extraction_hard_v2": {
-    "Standard": 4.912,
-    "Economy": 4.879,
+    "Standard": 4.914,
+    "Economy": 4.872,
     "Premium": 4.91,
-    "Micro": 4.6
+    "Micro": 4.56
   },
   "json_transform_v2": {
     "Standard": 4.782,
-    "Economy": 4.758,
+    "Economy": 4.749,
     "Premium": 4.8,
-    "Micro": 4.3
+    "Micro": 4.22
   },
   "email_summary_v2": {
-    "Standard": 4.894,
-    "Economy": 4.881,
+    "Standard": 4.902,
+    "Economy": 4.891,
     "Premium": 5.0,
-    "Micro": 4.715
+    "Micro": 4.533
   },
   "long_summarization": {
-    "Standard": 4.552,
-    "Economy": 4.545,
+    "Standard": 4.574,
+    "Economy": 4.567,
     "Premium": 4.83,
-    "Micro": 4.6
+    "Micro": 4.313
   },
   "data_to_text": {
-    "Standard": 4.993,
-    "Economy": 4.984,
+    "Standard": 4.994,
+    "Economy": 4.98,
     "Premium": 5.0,
-    "Micro": 4.585
+    "Micro": 4.473
   },
   "ner_extraction": {
-    "Standard": 4.658,
-    "Economy": 4.633,
+    "Standard": 4.657,
+    "Economy": 4.625,
     "Premium": 4.63,
-    "Micro": 4.17
+    "Micro": 4.093
   }
 }

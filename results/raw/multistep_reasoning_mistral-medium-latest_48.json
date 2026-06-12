@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 48,
   "response": "C) have accurate notes describing the location.",
-  "score": 5,
+  "score": 0,
   "cost": 7.04e-05,
   "expected": "C",
   "tokens": {

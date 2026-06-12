@@ -1,38 +1,38 @@
 {
   "Chinese": {
     "n": 16,
-    "avg": 4.779,
-    "min": 4.654,
-    "max": 4.836
+    "avg": 4.753,
+    "min": 4.625,
+    "max": 4.816
   },
   "American": {
-    "n": 26,
-    "avg": 4.682,
-    "min": 3.394,
+    "n": 25,
+    "avg": 4.656,
+    "min": 3.261,
     "max": 4.842
   },
   "European": {
     "n": 5,
-    "avg": 4.691,
-    "min": 4.441,
-    "max": 4.813
+    "avg": 4.627,
+    "min": 4.427,
+    "max": 4.771
   },
   "pairwise_tests": {
     "Chinese_vs_American": {
-      "U": 262,
-      "p": 0.1658
+      "U": 240,
+      "p": 0.2911
     },
     "Chinese_vs_European": {
-      "U": 46,
-      "p": 0.6599
+      "U": 64,
+      "p": 0.05
     },
     "American_vs_European": {
-      "U": 65,
-      "p": 1.0
+      "U": 84,
+      "p": 0.2513
     }
   },
   "kruskal_wallis": {
-    "H": 1.83,
-    "p": 0.4002
+    "H": 3.8,
+    "p": 0.1499
   }
 }

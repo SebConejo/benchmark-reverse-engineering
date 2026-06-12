@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 49,
   "response": "A) The air stays cleaner.",
-  "score": 5,
+  "score": 0,
   "cost": 0.00022576499999999998,
   "expected": "A",
   "tokens": {

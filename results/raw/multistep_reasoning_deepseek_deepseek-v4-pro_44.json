@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 44,
   "response": "D) having leaves that form at a slow rate",
-  "score": 5,
+  "score": 0,
   "cost": 0.000282315,
   "expected": "D",
   "tokens": {

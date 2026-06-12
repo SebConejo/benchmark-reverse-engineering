@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 14,
   "response": "C) includes repeated trials.",
-  "score": 5,
+  "score": 0,
   "cost": 5.1200000000000004e-05,
   "expected": "C",
   "tokens": {

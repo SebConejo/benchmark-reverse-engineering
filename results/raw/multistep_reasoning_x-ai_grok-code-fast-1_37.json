@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 37,
   "response": "A) copper wire\n\nCopper wire is highly malleable and ductile, allowing it to be easily bent into a circle without breaking. Glass rods are brittle and will shatter, lead pipes are rigid and harder to bend smoothly, and wooden sticks are inflexible and prone to snapping.",
-  "score": 5,
+  "score": 0,
   "cost": 0.0003548,
   "expected": "A",
   "tokens": {

@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 47,
   "response": "A) construct a prototype of a boat for testing",
-  "score": 5,
+  "score": 0,
   "cost": 8.32e-05,
   "expected": "A",
   "tokens": {

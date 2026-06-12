@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 1,
   "response": "C) blow up a beach ball or balloon",
-  "score": 5,
+  "score": 0,
   "cost": 0.000327555,
   "expected": "C",
   "tokens": {

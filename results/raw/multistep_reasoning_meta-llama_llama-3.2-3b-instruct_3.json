@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 3,
   "response": "B. The outdoor temperature in November would be the most uncontrollable factor in their investigation.",
-  "score": 5,
+  "score": 0,
   "cost": 8.568e-06,
   "expected": "B",
   "tokens": {

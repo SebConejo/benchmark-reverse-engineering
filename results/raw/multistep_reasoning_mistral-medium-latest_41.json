@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 41,
   "response": "A) The population of fish will increase.",
-  "score": 5,
+  "score": 0,
   "cost": 7.680000000000001e-05,
   "expected": "A",
   "tokens": {

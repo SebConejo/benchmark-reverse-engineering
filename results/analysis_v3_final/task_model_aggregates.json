@@ -732,47 +732,47 @@
   },
   "multistep_reasoning": {
     "Codestral-2501": {
-      "avg_score": 5.0,
+      "avg_score": 3.0,
       "avg_cost": 0.00017287200000000002,
       "n": 50
     },
     "DeepSeek-R1": {
-      "avg_score": 5.0,
+      "avg_score": 4.479166666666667,
       "avg_cost": 0.0014131716666666665,
       "n": 48
     },
     "DeepSeek-V3.2": {
-      "avg_score": 5.0,
+      "avg_score": 4.7,
       "avg_cost": 0.000204462,
       "n": 50
     },
     "Llama-4-Scout-17B-16E-Instruct": {
-      "avg_score": 5.0,
+      "avg_score": 4.4,
       "avg_cost": 6.05472e-05,
       "n": 50
     },
     "MiniMax-M2.7": {
-      "avg_score": 4.9,
+      "avg_score": 4.1,
       "avg_cost": 0.002306876,
       "n": 50
     },
     "bytedance-seed/seed-1.6-flash": {
-      "avg_score": 5.0,
+      "avg_score": 4.5,
       "avg_cost": 0.00022914150000000002,
       "n": 50
     },
     "bytedance-seed/seed-2.0-lite": {
-      "avg_score": 5.0,
+      "avg_score": 4.591836734693878,
       "avg_cost": 0.0007172908163265306,
       "n": 49
     },
     "bytedance-seed/seed-2.0-mini": {
-      "avg_score": 5.0,
+      "avg_score": 4.5,
       "avg_cost": 0.00026769,
       "n": 50
     },
     "claude-haiku-4-5-20251001": {
-      "avg_score": 5.0,
+      "avg_score": 3.6,
       "avg_cost": 0.0010557440000000002,
       "n": 50
     },
@@ -782,42 +782,42 @@
       "n": 50
     },
     "claude-sonnet-4-20250514": {
-      "avg_score": 5.0,
+      "avg_score": 4.4,
       "avg_cost": 0.00429984,
       "n": 50
     },
     "claude-sonnet-4-6": {
-      "avg_score": 5.0,
+      "avg_score": 4.7,
       "avg_cost": 0.00274974,
       "n": 50
     },
     "deepseek/deepseek-v3.2": {
-      "avg_score": 5.0,
+      "avg_score": 4.6,
       "avg_cost": 0.000212582,
       "n": 50
     },
     "deepseek/deepseek-v4-flash": {
-      "avg_score": 4.8,
+      "avg_score": 4.4,
       "avg_cost": 0.00011096400000000002,
       "n": 50
     },
     "deepseek/deepseek-v4-pro": {
-      "avg_score": 4.7,
+      "avg_score": 3.4,
       "avg_cost": 0.00041433749999999993,
       "n": 50
     },
     "devstral-latest": {
-      "avg_score": 5.0,
+      "avg_score": 3.7,
       "avg_cost": 6.816000000000001e-05,
       "n": 50
     },
     "gemini-2.5-flash": {
-      "avg_score": 4.7,
+      "avg_score": 4.0,
       "avg_cost": 2.4426000000000006e-05,
       "n": 50
     },
     "gemini-2.5-pro": {
-      "avg_score": 5.0,
+      "avg_score": 4.7,
       "avg_cost": 0.00233355,
       "n": 50
     },
@@ -827,17 +827,17 @@
       "n": 50
     },
     "google/gemma-4-26b-a4b-it": {
-      "avg_score": 5.0,
+      "avg_score": 4.6,
       "avg_cost": 2.5870800000000006e-05,
       "n": 50
     },
     "gpt-4o": {
-      "avg_score": 5.0,
+      "avg_score": 4.6,
       "avg_cost": 0.0025729000000000004,
       "n": 50
     },
     "gpt-4o-mini": {
-      "avg_score": 5.0,
+      "avg_score": 4.5,
       "avg_cost": 0.00013423799999999998,
       "n": 50
     },
@@ -872,67 +872,67 @@
       "n": 50
     },
     "grok-4-20-non-reasoning": {
-      "avg_score": 5.0,
+      "avg_score": 1.7,
       "avg_cost": 0.0015147999999999997,
       "n": 50
     },
     "grok-4-20-reasoning": {
-      "avg_score": 5.0,
+      "avg_score": 0.6,
       "avg_cost": 0.0015520800000000002,
       "n": 50
     },
     "kimi-k2.6": {
-      "avg_score": 4.8,
+      "avg_score": 4.6,
       "avg_cost": 0.0018067080000000002,
       "n": 50
     },
     "meta-llama/llama-3.2-1b-instruct": {
-      "avg_score": 5.0,
+      "avg_score": 2.2,
       "avg_cost": 6.79914e-06,
       "n": 50
     },
     "meta-llama/llama-3.2-3b-instruct": {
-      "avg_score": 5.0,
+      "avg_score": 3.2,
       "avg_cost": 1.3901579999999998e-05,
       "n": 50
     },
     "meta-llama/llama-4-maverick": {
-      "avg_score": 5.0,
+      "avg_score": 4.5,
       "avg_cost": 0.00022714800000000001,
       "n": 50
     },
     "microsoft/phi-4": {
-      "avg_score": 5.0,
+      "avg_score": 3.1,
       "avg_cost": 2.2211800000000006e-05,
       "n": 50
     },
     "ministral-3b-latest": {
-      "avg_score": 4.5,
+      "avg_score": 4.2,
       "avg_cost": 5.052800000000001e-06,
       "n": 50
     },
     "mistral-large-latest": {
-      "avg_score": 4.8,
+      "avg_score": 4.2,
       "avg_cost": 0.00038508,
       "n": 50
     },
     "mistral-medium-2505": {
-      "avg_score": 5.0,
+      "avg_score": 4.2,
       "avg_cost": 0.000421048,
       "n": 50
     },
     "mistral-medium-latest": {
-      "avg_score": 4.8,
+      "avg_score": 1.1,
       "avg_cost": 0.00017520800000000002,
       "n": 50
     },
     "mistral-small-latest": {
-      "avg_score": 5.0,
+      "avg_score": 4.1,
       "avg_cost": 7.212600000000001e-05,
       "n": 50
     },
     "nvidia/nemotron-3-super-120b-a12b": {
-      "avg_score": 4.7560975609756095,
+      "avg_score": 4.2682926829268295,
       "avg_cost": 2.7360000000000002e-05,
       "n": 41
     },
@@ -947,62 +947,62 @@
       "n": 50
     },
     "qwen/qwen-max": {
-      "avg_score": 5.0,
+      "avg_score": 3.7,
       "avg_cost": 0.0008745360000000002,
       "n": 50
     },
     "qwen/qwen-turbo": {
-      "avg_score": 5.0,
+      "avg_score": 4.4,
       "avg_cost": 1.314192e-05,
       "n": 50
     },
     "qwen/qwen3-8b": {
-      "avg_score": 5.0,
+      "avg_score": 4.1,
       "avg_cost": 4.7109000000000006e-05,
       "n": 50
     },
     "qwen/qwen3-coder": {
-      "avg_score": 5.0,
+      "avg_score": 4.7,
       "avg_cost": 0.0002337148,
       "n": 50
     },
     "qwen/qwen3.6-flash": {
-      "avg_score": 5.0,
+      "avg_score": 4.6,
       "avg_cost": 0.001508185,
       "n": 50
     },
     "qwen/qwen3.6-max-preview": {
-      "avg_score": 4.9,
+      "avg_score": 4.6,
       "avg_cost": 0.005026241999999999,
       "n": 50
     },
     "qwen/qwen3.6-plus": {
-      "avg_score": 5.0,
+      "avg_score": 4.782608695652174,
       "avg_cost": 0.0012392391304347826,
       "n": 46
     },
     "seed-2-0-code-preview-260328": {
-      "avg_score": 5.0,
+      "avg_score": 4.6,
       "avg_cost": 0.0013178460000000001,
       "n": 50
     },
     "seed-2-0-pro-260328": {
-      "avg_score": 5.0,
+      "avg_score": 4.6,
       "avg_cost": 0.001223964,
       "n": 50
     },
     "x-ai/grok-4-fast": {
-      "avg_score": 4.8,
+      "avg_score": 3.3,
       "avg_cost": 0.00031508,
       "n": 50
     },
     "x-ai/grok-4.20": {
-      "avg_score": 5.0,
+      "avg_score": 1.3,
       "avg_cost": 0.00177416,
       "n": 50
     },
     "x-ai/grok-code-fast-1": {
-      "avg_score": 4.7,
+      "avg_score": 3.4,
       "avg_cost": 0.00031021600000000004,
       "n": 50
     }

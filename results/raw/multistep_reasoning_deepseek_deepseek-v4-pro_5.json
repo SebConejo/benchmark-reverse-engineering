@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 5,
   "response": "C) Cells break down nutrients into usable forms.",
-  "score": 5,
+  "score": 0,
   "cost": 0.000433695,
   "expected": "C",
   "tokens": {

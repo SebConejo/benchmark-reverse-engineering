@@ -38,36 +38,33 @@ LLM_TASKS = [t for t in V2_TASKS if t not in EXACT_TASKS]
 #   - seed-2-0-pro-260328: $0.60 (not $0.20)
 #   - seed-2-0-code-preview-260328: $0.30 (not $0.10)
 #   - claude-haiku-4-5-20251001: added ($0.80)
+# Prices sourced from benchmark_results.csv (actual API costs at benchmark time).
+# This is the single source of truth — do not override manually.
 MODEL_PRICES = {
     # Premium (>= $5.00)
-    "claude-opus-4-7": 15.0, "gpt-5.5-pro": 15.0,
+    "gpt-5.5-pro": 15.0, "claude-opus-4-7": 15.0,
     # Standard ($0.50 - $4.99)
-    "claude-sonnet-4-20250514": 3.0, "claude-sonnet-4-6": 3.0,
-    "claude-haiku-4-5-20251001": 0.80,
-    "gpt-4o": 2.5, "gpt-5.5": 3.0, "gpt-5.1-chat": 0.8,
-    "gpt-5.4": 1.0, "o3": 2.0, "o4-mini": 1.1,
-    "gemini-2.5-pro": 1.25, "gemini-3.1-pro-preview": 1.25,
-    "MiniMax-M2.7": 1.0, "kimi-k2.6": 0.6,
-    "mistral-large-latest": 2.0,
-    "qwen/qwen-max": 2.0, "qwen/qwen3.6-max-preview": 1.5, "qwen/qwen3.6-plus": 0.5,
-    "x-ai/grok-4.20": 2.0,
-    "seed-2-0-pro-260328": 0.6,
+    "kimi-k2.6": 0.6, "seed-2-0-pro-260328": 0.6,
+    "claude-haiku-4-5-20251001": 0.8, "gpt-5.1-chat": 0.8,
+    "gpt-5.4": 1.0, "qwen/qwen-max": 1.04, "o4-mini": 1.1, "MiniMax-M2.7": 1.1,
+    "x-ai/grok-4.20": 1.25, "gemini-2.5-pro": 1.25, "qwen/qwen3.6-max-preview": 1.3,
+    "o3": 2.0, "mistral-large-latest": 2.0,
+    "gemini-3.1-pro-preview": 2.5, "gpt-4o": 2.5,
+    "gpt-5.5": 3.0, "claude-sonnet-4-6": 3.0, "claude-sonnet-4-20250514": 3.0,
     # Economy ($0.05 - $0.49)
-    "gpt-4o-mini": 0.15, "gpt-5.4-mini": 0.1,
-    "gemini-2.5-flash": 0.15,
-    "mistral-small-latest": 0.1, "mistral-medium-latest": 0.4, "devstral-latest": 0.2,
-    "deepseek/deepseek-v3.2": 0.14, "deepseek/deepseek-v4-pro": 0.435,
-    "qwen/qwen-turbo": 0.05, "qwen/qwen3-8b": 0.05, "qwen/qwen3-coder": 0.3,
-    "qwen/qwen3.6-flash": 0.3,
-    "google/gemma-4-26b-a4b-it": 0.05,
-    "meta-llama/llama-3.2-3b-instruct": 0.051, "meta-llama/llama-4-maverick": 0.2,
-    "bytedance-seed/seed-2.0-mini": 0.15, "bytedance-seed/seed-2.0-lite": 0.075,
+    "qwen/qwen3-8b": 0.05, "meta-llama/llama-3.2-3b-instruct": 0.051,
+    "google/gemma-4-26b-a4b-it": 0.06, "microsoft/phi-4": 0.065,
     "bytedance-seed/seed-1.6-flash": 0.075,
-    "x-ai/grok-4-fast": 0.2, "x-ai/grok-code-fast-1": 0.2,
-    "seed-2-0-code-preview-260328": 0.3,
+    "gpt-5.4-nano": 0.1, "bytedance-seed/seed-2.0-mini": 0.1,
+    "mistral-small-latest": 0.1, "devstral-latest": 0.1,
+    "gemini-2.5-flash": 0.15, "meta-llama/llama-4-maverick": 0.15, "gpt-4o-mini": 0.15,
+    "x-ai/grok-4-fast": 0.2, "x-ai/grok-code-fast-1": 0.2, "qwen/qwen3-coder": 0.22,
+    "bytedance-seed/seed-2.0-lite": 0.25, "deepseek/deepseek-v3.2": 0.25,
+    "qwen/qwen3.6-flash": 0.25, "seed-2-0-code-preview-260328": 0.3, "gpt-5.4-mini": 0.3,
+    "qwen/qwen3.6-plus": 0.325, "mistral-medium-latest": 0.4, "deepseek/deepseek-v4-pro": 0.435,
     # Micro (< $0.05)
-    "gpt-5.4-nano": 0.02, "microsoft/phi-4": 0.02,
-    "meta-llama/llama-3.2-1b-instruct": 0.027, "ministral-3b-latest": 0.04,
+    "meta-llama/llama-3.2-1b-instruct": 0.027, "qwen/qwen-turbo": 0.033,
+    "ministral-3b-latest": 0.04,
 }
 
 ORIGIN = {
@@ -344,18 +341,19 @@ def generational_delta(agg):
 
 def provider_gradient(agg):
     """Per-provider quality gradient (price vs score)."""
+    # Prices from MODEL_PRICES (sourced from CSV)
     providers = {
-        "OpenAI": [("gpt-4o-mini", 0.15), ("gpt-5.4-nano", 0.02), ("gpt-5.4-mini", 0.1),
+        "OpenAI": [("gpt-4o-mini", 0.15), ("gpt-5.4-nano", 0.1), ("gpt-5.4-mini", 0.3),
                    ("gpt-5.1-chat", 0.8), ("gpt-5.4", 1.0), ("gpt-4o", 2.5),
                    ("gpt-5.5", 3.0), ("gpt-5.5-pro", 15.0), ("o3", 2.0), ("o4-mini", 1.1)],
         "Anthropic": [("claude-haiku-4-5-20251001", 0.80), ("claude-sonnet-4-6", 3.0),
                       ("claude-sonnet-4-20250514", 3.0), ("claude-opus-4-7", 15.0)],
         "Mistral": [("ministral-3b-latest", 0.04), ("mistral-small-latest", 0.1),
-                    ("mistral-medium-latest", 0.4), ("devstral-latest", 0.2), ("mistral-large-latest", 2.0)],
-        "Qwen": [("qwen/qwen-turbo", 0.05), ("qwen/qwen3-8b", 0.05), ("qwen/qwen3-coder", 0.3),
-                 ("qwen/qwen3.6-flash", 0.3), ("qwen/qwen3.6-plus", 0.5), ("qwen/qwen-max", 2.0),
-                 ("qwen/qwen3.6-max-preview", 1.5)],
-        "Google": [("gemini-2.5-flash", 0.15), ("gemini-2.5-pro", 1.25), ("gemini-3.1-pro-preview", 1.25)],
+                    ("mistral-medium-latest", 0.4), ("devstral-latest", 0.1), ("mistral-large-latest", 2.0)],
+        "Qwen": [("qwen/qwen-turbo", 0.033), ("qwen/qwen3-8b", 0.05), ("qwen/qwen3-coder", 0.22),
+                 ("qwen/qwen3.6-flash", 0.25), ("qwen/qwen3.6-plus", 0.325), ("qwen/qwen-max", 1.04),
+                 ("qwen/qwen3.6-max-preview", 1.3)],
+        "Google": [("gemini-2.5-flash", 0.15), ("gemini-2.5-pro", 1.25), ("gemini-3.1-pro-preview", 2.5)],
     }
     result = {}
     for prov, models in providers.items():
@@ -369,11 +367,11 @@ def provider_gradient(agg):
 
 
 def origin_comparison(agg):
-    """Quality by provider origin (Chinese / American / European)."""
+    """Quality by provider origin (Chinese / American / European). Complete models only."""
     model_avgs = {}
     for model in set(m for t in agg for m in agg[t]):
         scores = [agg[t][model]["avg_score"] for t in V2_TASKS if model in agg.get(t, {})]
-        if len(scores) >= 15:
+        if len(scores) == 21:
             model_avgs[model] = float(np.mean(scores))
     groups = defaultdict(list)
     for m, s in model_avgs.items():
@@ -401,11 +399,11 @@ def origin_comparison(agg):
 
 
 def license_comparison(agg):
-    """Quality by weight availability (open vs closed)."""
+    """Quality by weight availability (open vs closed). Complete models only."""
     model_avgs = {}
     for model in set(m for t in agg for m in agg[t]):
         scores = [agg[t][model]["avg_score"] for t in V2_TASKS if model in agg.get(t, {})]
-        if len(scores) >= 15:
+        if len(scores) == 21:
             model_avgs[model] = float(np.mean(scores))
     open_scores = [s for m, s in model_avgs.items() if LICENSE.get(m) == "Open"]
     closed_scores = [s for m, s in model_avgs.items() if LICENSE.get(m) != "Open"]

@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 23,
   "response": "C) Make a table for recording data. This step involves planning how to organize and collect data before starting observations, which is essential for a structured investigation. The other options occur later in the process.",
-  "score": 5,
+  "score": 0,
   "cost": 0.00040620000000000006,
   "expected": "C",
   "tokens": {

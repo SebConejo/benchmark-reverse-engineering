@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 17,
   "response": "A) caused by physical vibrations.",
-  "score": 5,
+  "score": 0,
   "cost": 1.83e-05,
   "expected": "A",
   "tokens": {

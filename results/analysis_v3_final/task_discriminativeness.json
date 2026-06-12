@@ -18,10 +18,10 @@
     "max": 4.9
   },
   "multistep_reasoning": {
-    "spread": 0.8,
-    "std": 0.192,
-    "min": 4.2,
-    "max": 5.0
+    "spread": 4.183,
+    "std": 0.962,
+    "min": 0.6,
+    "max": 4.783
   },
   "reasoning_gsm8k": {
     "spread": 1.86,

@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 48,
   "response": "C) have accurate notes describing the location.  \n\nWithout precise details on the original digging site, the second scientist couldn't locate it, especially if rain altered the landscape. Other options are irrelevant to pinpointing the exact spot.",
-  "score": 5,
+  "score": 0,
   "cost": 0.0004852,
   "expected": "C",
   "tokens": {

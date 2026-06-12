@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 12,
   "response": "A) erosion of rocks",
-  "score": 5,
+  "score": 0,
   "cost": 0.00047154,
   "expected": "A",
   "tokens": {

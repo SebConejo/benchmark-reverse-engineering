@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 19,
   "response": "D) the strongest source of gravity in the solar system.",
-  "score": 5,
+  "score": 0,
   "cost": 1.4500000000000002e-05,
   "expected": "D",
   "tokens": {

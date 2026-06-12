@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 21,
   "response": "B) Few plants survive severe changes to their environment.",
-  "score": 5,
+  "score": 0,
   "cost": 0.0001056,
   "expected": "B",
   "tokens": {

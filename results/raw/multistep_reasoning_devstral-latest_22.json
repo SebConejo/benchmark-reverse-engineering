@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 22,
   "response": "B) along a river",
-  "score": 5,
+  "score": 0,
   "cost": 9.5e-06,
   "expected": "B",
   "tokens": {

@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 49,
   "response": "A\n\nThe question is about cities regulating car pollution emissions. This is an environmental control measure. The direct and primary benefit to people is improved air quality by reducing pollutants from vehicles. This matches option A exactly.\n\nOptions B, C, and D relate to traffic flow, driver ability, or road safety, none of which have any logical connection to pollution controls.",
-  "score": 5,
+  "score": 0,
   "cost": 0.000758,
   "expected": "A",
   "tokens": {

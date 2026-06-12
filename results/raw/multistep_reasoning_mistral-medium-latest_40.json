@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 40,
   "response": "B) graduated cylinder",
-  "score": 5,
+  "score": 0,
   "cost": 4.0400000000000006e-05,
   "expected": "B",
   "tokens": {

@@ -98,33 +98,33 @@
   "multistep_reasoning": [
     {
       "rank": 1,
-      "model": "meta-llama/llama-3.2-1b-instruct",
-      "avg_score": 5.0,
-      "avg_cost": 7e-06
+      "model": "qwen/qwen3.6-plus",
+      "avg_score": 4.783,
+      "avg_cost": 0.001239
     },
     {
       "rank": 2,
-      "model": "qwen/qwen-turbo",
-      "avg_score": 5.0,
-      "avg_cost": 1.3e-05
+      "model": "DeepSeek-V3.2",
+      "avg_score": 4.7,
+      "avg_cost": 0.000204
     },
     {
       "rank": 3,
-      "model": "meta-llama/llama-3.2-3b-instruct",
-      "avg_score": 5.0,
-      "avg_cost": 1.4e-05
+      "model": "qwen/qwen3-coder",
+      "avg_score": 4.7,
+      "avg_cost": 0.000234
     },
     {
       "rank": 4,
-      "model": "microsoft/phi-4",
-      "avg_score": 5.0,
-      "avg_cost": 2.2e-05
+      "model": "gemini-2.5-pro",
+      "avg_score": 4.7,
+      "avg_cost": 0.002334
     },
     {
       "rank": 5,
-      "model": "google/gemma-4-26b-a4b-it",
-      "avg_score": 5.0,
-      "avg_cost": 2.6e-05
+      "model": "claude-opus-4-7",
+      "avg_score": 4.7,
+      "avg_cost": 0.00274
     }
   ],
   "reasoning_gsm8k": [

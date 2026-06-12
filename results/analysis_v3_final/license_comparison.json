@@ -1,7 +1,7 @@
 {
   "open": {
-    "n": 18,
-    "avg": 4.603,
+    "n": 17,
+    "avg": 4.566,
     "models": [
       "deepseek/deepseek-v3.2",
       "deepseek/deepseek-v4-pro",
@@ -13,7 +13,6 @@
       "microsoft/phi-4",
       "ministral-3b-latest",
       "mistral-small-latest",
-      "nvidia/nemotron-3-super-120b-a12b",
       "qwen/qwen-max",
       "qwen/qwen-turbo",
       "qwen/qwen3-8b",
@@ -24,8 +23,8 @@
     ]
   },
   "closed": {
-    "n": 30,
-    "avg": 4.786,
+    "n": 29,
+    "avg": 4.757,
     "models": [
       "MiniMax-M2.7",
       "bytedance-seed/seed-1.6-flash",
@@ -35,7 +34,6 @@
       "claude-opus-4-7",
       "claude-sonnet-4-20250514",
       "claude-sonnet-4-6",
-      "deepseek/deepseek-v4-flash",
       "gemini-2.5-flash",
       "gemini-2.5-pro",
       "gemini-3.1-pro-preview",
@@ -59,6 +57,6 @@
       "x-ai/grok-code-fast-1"
     ]
   },
-  "mann_whitney_p": 0.0004,
+  "mann_whitney_p": 0.0016,
   "significant": true
 }

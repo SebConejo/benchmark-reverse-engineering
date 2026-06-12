@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 20,
   "response": "A) A car's gas mileage is increased and the engine has less power.",
-  "score": 5,
+  "score": 0,
   "cost": 8.759999999999999e-05,
   "expected": "A",
   "tokens": {

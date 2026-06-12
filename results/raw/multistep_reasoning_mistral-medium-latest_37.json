@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 37,
   "response": "A) copper wire",
-  "score": 5,
+  "score": 0,
   "cost": 4.72e-05,
   "expected": "A",
   "tokens": {

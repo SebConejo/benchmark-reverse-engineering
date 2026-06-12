@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 42,
   "response": "C) No, because ocean water is too salty for plants grown on land.",
-  "score": 5,
+  "score": 0,
   "cost": 1.9699999999999998e-05,
   "expected": "C",
   "tokens": {

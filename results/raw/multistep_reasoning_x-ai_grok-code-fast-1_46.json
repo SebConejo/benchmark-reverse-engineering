@@ -3,7 +3,7 @@
   "task": "multistep_reasoning",
   "case": 46,
   "response": "A) Endothermic because energy is absorbed.",
-  "score": 5,
+  "score": 0,
   "cost": 0.0002946,
   "expected": "A",
   "tokens": {
