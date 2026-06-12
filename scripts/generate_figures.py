@@ -768,9 +768,10 @@ def fig_judge_validation_scatter(data, title, metric_label, out_name):
     ax.set_title(title, fontsize=14, fontweight="bold")
     ax.axis("off")
 
+    pop_note = " (includes incomplete models)" if n_val != 46 else ""
     fig.text(0.5, 0.005,
              f"Correlation between V2 judge scores and {metric_label}. "
-             f"r = {r_val:.3f} ({sig}). n = {n_val} models.",
+             f"r = {r_val:.3f} ({sig}). n = {n_val} models{pop_note}.",
              ha="center", fontsize=8, color="#555555", style="italic")
     fig.tight_layout(rect=[0, 0.04, 1, 0.97])
     save_all(fig, out_name)
