@@ -183,7 +183,7 @@ def compute_pareto(costs, scores):
 
 CAPTION_TIER_TEXT = (
     "Tier colors: red = Premium (\\$5+/M), blue = Standard (\\$0.50 - \\$4.99), "
-    "green = Economy (\\$0.05 - \\$0.49), orange = Micro (< \\$0.05)."
+    "green = Economy (\\$0.05 - \\$0.49), tan = Micro (< \\$0.05)."
 )
 
 
@@ -229,7 +229,7 @@ def fig_heatmap(agg):
              f"46 models, 21 tasks. V2 judge (GPT-4o, correctness-focused). "
              f"Label colors indicate price tier: red = Premium (\\$5+/M), "
              f"blue = Standard (\\$0.50 - \\$4.99), green = Economy (\\$0.05 - \\$0.49), "
-             f"orange = Micro (< \\$0.05).",
+             f"tan = Micro (< \\$0.05).",
              ha="center", fontsize=9, color="#555555", style="italic",
              wrap=True)
     fig.tight_layout(rect=[0.10, 0.03, 1, 0.97])
@@ -292,7 +292,9 @@ def fig_pareto(agg, task_key, task_title, out_name, label_models):
     costs = [task_data[m]["avg_cost"] * 100_000 for m in models]  # millicents
     scores = [task_data[m]["avg_score"] for m in models]
     tiers = [get_tier(m) for m in models]
-    n_cases = task_data[models[0]]["n"]
+    all_n = [task_data[m]["n"] for m in models]
+    n_min, n_max = min(all_n), max(all_n)
+    n_cases_str = str(n_min) if n_min == n_max else f"{n_min}-{n_max}"
 
     pareto_idx = compute_pareto(costs, scores)
     pareto_costs = [costs[i] for i in pareto_idx]
@@ -357,7 +359,7 @@ def fig_pareto(agg, task_key, task_title, out_name, label_models):
 
     ax.set_title(f"{task_title}: Cost vs Quality", fontsize=14, fontweight="bold", pad=12)
     fig.text(0.5, 0.005,
-             f"n = 46 models, {n_cases} cases each. X-axis: log scale. "
+             f"n = 46 models, {n_cases_str} cases per model. X-axis: log scale. "
              f"Black line: Pareto frontier. {CAPTION_TIER_TEXT}",
              ha="center", fontsize=8, color="#555555", style="italic")
     fig.tight_layout(rect=[0, 0.04, 1, 0.97])
@@ -462,7 +464,7 @@ def fig_task_discriminativeness(disc):
 
     # Annotate spread values on top of bars
     for i, (s, std) in enumerate(zip(spreads, stds)):
-        ax.text(i, s + 0.05, f"{s:.1f}", ha="center", va="bottom", fontsize=7.5, fontweight="bold")
+        ax.text(i, s + 0.05, f"{s:.2f}", ha="center", va="bottom", fontsize=7.5, fontweight="bold")
 
     fig.text(0.5, 0.005,
              "Spread = max score - min score across 46 complete models. "
@@ -626,11 +628,11 @@ def fig_per_task_routing_savings(routing):
     ax.set_yticks(range(len(names)))
     ax.set_yticklabels(names, fontsize=9)
     ax.set_xlabel("Cost savings vs o3 (%)", fontsize=11)
-    ax.set_title("Per-Task Routing Savings: Cheapest Model with Score >= 4.5",
+    ax.set_title("Per-Task Routing Savings: Cheapest Model with Score >= 4.0",
                  fontsize=14, fontweight="bold")
     ax.invert_yaxis()
     ax.grid(axis="x", alpha=0.2)
-    ax.set_xlim(0, 105)
+    ax.set_xlim(98, 100.2)
 
     for i, s in enumerate(savings):
         cheapest = tasks_sorted[i][1]["cheapest_model"]
@@ -639,7 +641,7 @@ def fig_per_task_routing_savings(routing):
 
     fig.text(0.5, 0.005,
              "Savings = 1 - (cheapest qualifying model cost / o3 cost). "
-             "Qualifying = avg score >= 4.5 on that task.",
+             "Qualifying = avg score >= 4.0 on that task.",
              ha="center", fontsize=8, color="#555555", style="italic")
     fig.tight_layout(rect=[0, 0.04, 1, 0.97])
     save_all(fig, "per_task_routing_savings.svg")
@@ -751,8 +753,9 @@ def fig_judge_validation_scatter(data, title, metric_label, out_name):
     p_val = data.get("p", 0)
     n_val = data.get("n", 0)
 
+    p_str = f"p < 0.001" if p_val < 0.001 else f"p = {p_val:.4f}"
     ax.text(0.5, 0.6,
-            f"Pearson r = {r_val:.4f}\np = {p_val:.6f}\nn = {n_val} models",
+            f"Pearson r = {r_val:.4f}\n{p_str}\nn = {n_val} models",
             ha="center", va="center", fontsize=16, fontweight="bold",
             transform=ax.transAxes,
             bbox=dict(boxstyle="round,pad=0.5", fc="#f0f0f0", ec="#cccccc"))
@@ -764,14 +767,20 @@ def fig_judge_validation_scatter(data, title, metric_label, out_name):
         ax.text(0.5, 0.3, eb_text, ha="center", va="center", fontsize=10,
                 transform=ax.transAxes, color="#555555")
 
-    sig = "significant" if p_val < 0.05 else "not significant"
+    if p_val < 0.001:
+        sig = "significant"
+    elif p_val < 0.05:
+        sig = "weakly significant"
+    else:
+        sig = "not significant"
     ax.set_title(title, fontsize=14, fontweight="bold")
     ax.axis("off")
 
+    p_caption = "p < 0.001" if p_val < 0.001 else f"p = {p_val:.4f}"
     pop_note = " (includes incomplete models)" if n_val != 46 else ""
     fig.text(0.5, 0.005,
              f"Correlation between V2 judge scores and {metric_label}. "
-             f"r = {r_val:.3f} ({sig}). n = {n_val} models{pop_note}.",
+             f"r = {r_val:.3f}, {p_caption} ({sig}). n = {n_val} models{pop_note}.",
              ha="center", fontsize=8, color="#555555", style="italic")
     fig.tight_layout(rect=[0, 0.04, 1, 0.97])
     save_all(fig, out_name)
@@ -791,7 +800,9 @@ def fig_pareto_appendix(agg, task_key, task_title, out_name):
     costs = [task_data[m]["avg_cost"] * 100_000 for m in models]  # millicents
     scores = [task_data[m]["avg_score"] for m in models]
     tiers = [get_tier(m) for m in models]
-    n_cases = task_data[models[0]]["n"]
+    all_n = [task_data[m]["n"] for m in models]
+    n_min, n_max = min(all_n), max(all_n)
+    n_cases_str = str(n_min) if n_min == n_max else f"{n_min}-{n_max}"
 
     pareto_idx = compute_pareto(costs, scores)
     pareto_costs = [costs[i] for i in pareto_idx]
@@ -863,7 +874,7 @@ def fig_pareto_appendix(agg, task_key, task_title, out_name):
 
     ax.set_title(f"{task_title}: Cost vs Quality", fontsize=14, fontweight="bold", pad=12)
     fig.text(0.5, 0.005,
-             f"n = 46 models, {n_cases} cases each. X-axis: log scale. "
+             f"n = 46 models, {n_cases_str} cases per model. X-axis: log scale. "
              f"Black line: Pareto frontier. {CAPTION_TIER_TEXT}",
              ha="center", fontsize=8, color="#555555", style="italic")
     fig.tight_layout(rect=[0, 0.04, 1, 0.97])
