@@ -450,11 +450,17 @@ def fig_provider_gradient(pg):
 # =====================================================================
 # Figure 6: Task Discriminativeness (bar chart)
 # =====================================================================
-def fig_task_discriminativeness(disc):
-    tasks_sorted = sorted(disc.items(), key=lambda x: x[1]["spread"], reverse=True)
+def fig_task_discriminativeness(disc, agg):
+    # Recompute spreads from complete models only (46) to match Pareto figures
+    complete = get_complete_models(agg)
+    spreads_computed = {}
+    for t in V2_TASKS:
+        scores = [agg[t][m]["avg_score"] for m in complete if m in agg[t]]
+        spreads_computed[t] = max(scores) - min(scores)
+    tasks_sorted = sorted(spreads_computed.items(), key=lambda x: x[1], reverse=True)
     names = [TASK_SHORT.get(t, t) for t, _ in tasks_sorted]
-    spreads = [d["spread"] for _, d in tasks_sorted]
-    stds = [d["std"] for _, d in tasks_sorted]
+    spreads = [s for _, s in tasks_sorted]
+    stds = [disc.get(t, {}).get("std", 0) for t, _ in tasks_sorted]
 
     fig, ax = plt.subplots(figsize=(12, 6))
     colors = ["#FE076E" if s >= 2.0 else "#2733EF" if s >= 1.0 else "#2ED8B0" for s in spreads]
@@ -568,8 +574,9 @@ def fig_origin_comparison(origin, agg):
     notes = []
     for key, data in pw.items():
         if isinstance(data, dict) and "p" in data:
+            label = key.replace("_", " ").replace(" vs ", " vs. ")
             sig = "p < 0.05" if data["p"] < 0.05 else f"p = {data['p']:.3f}"
-            notes.append(f"{key}: {sig}")
+            notes.append(f"{label}: {sig}")
     note_text = ". ".join(notes) if notes else ""
 
     ax.set_ylim(4.2, 5.1)
@@ -680,11 +687,11 @@ def fig_generational_delta(gen):
                  color="#9531F9", fontweight="bold")
 
     ax1.set_title("Generational Delta: Newer Models vs Predecessors",
-                  fontsize=14, fontweight="bold")
+                  fontsize=14, fontweight="bold", pad=20)
     # Combined legend
     lines1, labels1 = ax1.get_legend_handles_labels()
     lines2, labels2 = ax2.get_legend_handles_labels()
-    ax1.legend(lines1 + lines2, labels1 + labels2, fontsize=9, loc="upper left")
+    ax1.legend(lines1 + lines2, labels1 + labels2, fontsize=9, loc="upper right")
 
     fig.text(0.5, 0.005,
              "Quality delta = average score difference across 21 tasks (new model - predecessor). "
@@ -857,7 +864,7 @@ def fig_judge_validation_scatter(scatter_data, title, metric_label, x_label, out
     ax.plot(xline, np.polyval(z, xline), "--", color="#888888", linewidth=1, alpha=0.7)
 
     ax.set_xlabel(metric_label, fontsize=11)
-    ax.set_ylabel("Judge V2 score (1-5)", fontsize=11)
+    ax.set_ylabel("Judge V2 score", fontsize=11)
     ax.set_title(title, fontsize=14, fontweight="bold")
     ax.legend(fontsize=9)
     ax.grid(True, alpha=0.15)
@@ -1038,7 +1045,7 @@ def main():
 
     print("Figure 6: Task Discriminativeness")
     disc = load_json("task_discriminativeness.json")
-    fig_task_discriminativeness(disc)
+    fig_task_discriminativeness(disc, agg)
 
     print("\nFigure 7: Origin Comparison")
     origin = load_json("origin_comparison.json")
