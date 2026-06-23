@@ -50,7 +50,7 @@ code generation, mathematical reasoning, and 17 others.  We measure both
 per-query cost and quality on 50 cases per task (51,580 scored cases
 total).  Economy-tier models (\$0.05--\$0.49/M input tokens) show no
 statistically significant quality gap versus Premium models (\$5+/M) on
-19 of 21 tasks (Mann-Whitney $p > 0.05$; $n_{\text{Premium}} = 2$).  Within providers, paying 750$\times$ more
+20 of 21 tasks (Mann-Whitney $p > 0.05$; $n_{\text{Premium}} = 2$).  Within providers, paying 150$\times$ more
 buys at most $+0.13$ quality points on a 1--5 scale.  Per-task routing
 to the cheapest adequate model reduces cost by 99.7\% versus the best
 single model with negligible quality loss.  Quality scores are produced by an LLM judge
@@ -86,7 +86,7 @@ We make three contributions.
   cost-quality Pareto frontiers across 46 models, 21 production tasks,
   12 providers, and 4 price tiers (51,580 scored cases).
 \item \textbf{Empirical findings.}  Economy-tier models show no
-  significant quality gap versus Premium on 19 of 21 tasks.  Per-task routing
+  significant quality gap versus Premium on 20 of 21 tasks.  Per-task routing
   saves 99.7\% versus the best single model.  Within-provider price
   gradients are nearly flat.
 \item \textbf{Judge validation.}  We show that standard LLM-as-judge
@@ -103,17 +103,18 @@ Four headline results:
 
 \begin{itemize}[leftmargin=*,itemsep=2pt]
 \item \textit{No Economy--Premium gap detected.}  Mann-Whitney $p > 0.05$
-  on 19 of 21 tasks (the two significant results favor opposite tiers).
-  Premium averages 4.791 versus Economy 4.741, a gap of 0.050 on the
+  on 20 of 21 tasks (the single significant result favors Premium on
+  instruction following).
+  Premium averages 4.791 versus Economy 4.698, a gap of 0.093 on the
   1--5 scale.
 \item \textit{Flat provider gradients.}  Anthropic Haiku (\$0.80/M)
   scores 4.775 while Opus (\$15/M) scores 4.753.  Google Flash
-  (\$0.15/M) matches Pro (\$1.25/M).  OpenAI's 750$\times$ price range
+  (\$0.15/M) matches Pro (\$1.25/M).  OpenAI's 150$\times$ price range
   yields $+0.13$ quality.
 \item \textit{Per-task routing saves 99.7\%.}  The cheapest adequate
   model per task averages \$0.000009/query versus \$0.003332 for o3
   alone, with at most 0.2 points quality difference on any task.
-\item \textit{Five Economy models cover all tasks.}  At the 4.5/5
+\item \textit{Five Economy models cover all tasks.}  At the 4.0/5
   quality threshold, five models cover all 21 tasks.  The cheapest is
   Grok~4~Fast at \$0.000435/query average.
 \end{itemize}
@@ -201,9 +202,9 @@ tiers based on input token price:
 \textbf{Tier} & \textbf{Price range (input \$/M)} & \textbf{$n$} \\
 \midrule
 Premium  & $\geq$ \$5.00         & 2  \\
-Standard & \$0.50--\$4.99        & 19 \\
-Economy  & \$0.05--\$0.49        & 21 \\
-Micro    & $<$ \$0.05            & 4  \\
+Standard & \$0.50--\$4.99        & 18 \\
+Economy  & \$0.05--\$0.49        & 23 \\
+Micro    & $<$ \$0.05            & 3  \\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -289,11 +290,11 @@ dominant pattern is uniformity: most cells score above 4.5/5.  Quality
 variance comes from 10 high-discrimination tasks where score spread
 exceeds 1.5 across models.  On these tasks, model choice matters.
 
-The four most discriminative tasks are intent detection (CLINC-150, spread
+The five most discriminative tasks are multistep reasoning (spread
+3.68), intent detection (CLINC-150, spread
 3.20, $\sigma = 0.624$), extractive QA (spread 2.84, $\sigma = 0.560$),
 content moderation (spread 2.40), and test generation (spread 2.40).  The
-two least discriminative are structured output (spread 0.29) and
-multistep reasoning (spread 0.80).
+least discriminative is structured output (spread 0.29).
 
 For 11 of 21 tasks, the score spread is below 1.5 and model selection has
 minimal impact on quality.  On these tasks, the practical recommendation
@@ -323,23 +324,22 @@ tasks):
 \textbf{Tier} & \textbf{Mean} & \textbf{95\% CI} & \textbf{$n$ (pairs)} \\
 \midrule
 Premium  & 4.791 & [4.729, 4.853] & 42  \\
-Standard & 4.783 & [4.760, 4.805] & 399 \\
-Economy  & 4.741 & [4.710, 4.768] & 441 \\
-Micro    & 4.287 & [4.128, 4.449] & 84  \\
+Standard & 4.756 & [4.722, 4.785] & 378 \\
+Economy  & 4.698 & [4.665, 4.731] & 483 \\
+Micro    & 4.104 & [3.904, 4.303] & 63  \\
 \bottomrule
 \end{tabular}
 \end{center}
 
-The Premium-to-Economy gap is 0.050 points (1.0\% of the 1--5 scale).
+The Premium-to-Economy gap is 0.093 points (2.3\% of the 1--5 scale).
 Confidence intervals overlap heavily.  Mann-Whitney tests find no
-significant difference on 19 of 21 individual tasks ($p > 0.05$).  The
-two significant results go in opposite directions: Economy outperforms
-Premium on multistep reasoning ($p = 0.029$) while Premium outperforms
-Economy on instruction following ($p = 0.043$).  With 21 simultaneous
-tests at $\alpha = 0.05$, one to two rejections are expected by chance.
+significant difference on 20 of 21 individual tasks ($p > 0.05$).  The
+single significant result is instruction following, where Premium
+outperforms Economy ($p = 0.050$).  With 21 simultaneous
+tests at $\alpha = 0.05$, one rejection is expected by chance.
 
-Micro is the only tier with a large gap ($-0.50$ versus Premium).  This
-is driven by the four Micro models, which include the two sub-3B models
+Micro is the only tier with a large gap ($-0.687$ versus Premium).  This
+is driven by the three Micro models, which include the two sub-3B models
 in our sample (Llama~1B and Ministral~3B).
 
 \textbf{Caveat.}  With $n = 2$ Premium models, the Mann-Whitney test has
@@ -411,8 +411,8 @@ scores 4.753.  Paying 19$\times$ more yields $-0.022$ quality.
 \textbf{Google.}  Flash at \$0.15/M scores 4.749.  Pro at \$1.25/M
 scores 4.747.  An 8$\times$ price increase yields $-0.002$.
 
-\textbf{OpenAI.}  Nano at \$0.02/M scores 4.694.  GPT-5.5~Pro at
-\$15/M scores 4.828.  A 750$\times$ price increase yields $+0.134$, the
+\textbf{OpenAI.}  Nano at \$0.10/M scores 4.694.  GPT-5.5~Pro at
+\$15/M scores 4.828.  A 150$\times$ price increase yields $+0.134$, the
 largest intra-provider gain in our data, and still only 2.7\% of the
 scale.
 
@@ -435,7 +435,7 @@ Micro average down.
 \caption{Within-provider price-quality gradient.  Each line connects
 models from the same provider, ordered by input price.  The gradient is
 nearly flat for Anthropic, Google, and Qwen.  OpenAI shows the largest
-absolute gain ($+0.13$) across its 750$\times$ price range.  Mistral is
+absolute gain ($+0.13$) across its 150$\times$ price range.  Mistral is
 the exception, driven by its sub-3B entry-level model.}
 \label{fig:gradient}
 \end{figure}
@@ -475,9 +475,9 @@ Upgrading generations is a more reliable strategy than upgrading tiers.
 Three recommendations for practitioners:
 
 \begin{enumerate}[leftmargin=*,itemsep=2pt]
-\item \textbf{Default to Economy tier.}  On 19 of 21 tasks, Economy
+\item \textbf{Default to Economy tier.}  On 20 of 21 tasks, Economy
   models showed no significant quality difference versus Premium (the
-  two exceptions favor opposite tiers).  The safest default is the
+  single exception favors Premium on instruction following).  The safest default is the
   cheapest model scoring at least 4.5 on the target task.
 \item \textbf{Route per task for maximum savings.}  A four-model
   portfolio covers all 21 tasks at the 4.0 threshold and costs
@@ -571,9 +571,9 @@ features that correlate with model price tier.
 
 TaskBench provides a systematic per-task cost-quality benchmark for
 production LLM use.  Across 46 models and 21 tasks, we find that the
-cost-quality curve is flat: on 19 of 21 tasks we detect no significant
-difference between Economy and Premium tiers, and the two significant
-results favor opposite tiers ($n_{\text{Premium}} = 2$; more Premium
+cost-quality curve is flat: on 20 of 21 tasks we detect no significant
+difference between Economy and Premium tiers, and the single significant
+result favors Premium ($n_{\text{Premium}} = 2$; more Premium
 models are needed to confirm this pattern).  The practical
 implication is that practitioners should default to Economy models and
 use per-task routing for maximum savings.
