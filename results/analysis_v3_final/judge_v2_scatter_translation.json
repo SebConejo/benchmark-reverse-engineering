@@ -1,0 +1,247 @@
+{
+  "points": [
+    {
+      "model": "MiniMax-M2.7",
+      "judge_v2_score": 4.76,
+      "bleu_score": 29.23
+    },
+    {
+      "model": "bytedance-seed/seed-1.6-flash",
+      "judge_v2_score": 4.7,
+      "bleu_score": 4.41
+    },
+    {
+      "model": "bytedance-seed/seed-2.0-lite",
+      "judge_v2_score": 4.84,
+      "bleu_score": 10.08
+    },
+    {
+      "model": "bytedance-seed/seed-2.0-mini",
+      "judge_v2_score": 4.86,
+      "bleu_score": 24.86
+    },
+    {
+      "model": "claude-haiku-4-5-20251001",
+      "judge_v2_score": 4.9,
+      "bleu_score": 13.5
+    },
+    {
+      "model": "claude-opus-4-7",
+      "judge_v2_score": 4.92,
+      "bleu_score": 19.43
+    },
+    {
+      "model": "claude-sonnet-4-20250514",
+      "judge_v2_score": 4.94,
+      "bleu_score": 28.49
+    },
+    {
+      "model": "claude-sonnet-4-6",
+      "judge_v2_score": 4.92,
+      "bleu_score": 28.01
+    },
+    {
+      "model": "deepseek/deepseek-v3.2",
+      "judge_v2_score": 4.94,
+      "bleu_score": 30.73
+    },
+    {
+      "model": "deepseek/deepseek-v4-flash",
+      "judge_v2_score": 4.938775510204081,
+      "bleu_score": 30.53
+    },
+    {
+      "model": "deepseek/deepseek-v4-pro",
+      "judge_v2_score": 4.88,
+      "bleu_score": 33.72
+    },
+    {
+      "model": "devstral-latest",
+      "judge_v2_score": 4.86,
+      "bleu_score": 11.49
+    },
+    {
+      "model": "gemini-2.5-flash",
+      "judge_v2_score": 4.88,
+      "bleu_score": 18.63
+    },
+    {
+      "model": "gemini-2.5-pro",
+      "judge_v2_score": 4.94,
+      "bleu_score": 16.17
+    },
+    {
+      "model": "gemini-3.1-pro-preview",
+      "judge_v2_score": 4.92,
+      "bleu_score": 9.1
+    },
+    {
+      "model": "google/gemma-4-26b-a4b-it",
+      "judge_v2_score": 4.9,
+      "bleu_score": 5.74
+    },
+    {
+      "model": "gpt-4o",
+      "judge_v2_score": 4.94,
+      "bleu_score": 33.0
+    },
+    {
+      "model": "gpt-4o-mini",
+      "judge_v2_score": 4.9,
+      "bleu_score": 32.12
+    },
+    {
+      "model": "gpt-5.1-chat",
+      "judge_v2_score": 5.0,
+      "bleu_score": 29.58
+    },
+    {
+      "model": "gpt-5.4",
+      "judge_v2_score": 4.94,
+      "bleu_score": 29.8
+    },
+    {
+      "model": "gpt-5.4-mini",
+      "judge_v2_score": 4.96,
+      "bleu_score": 30.67
+    },
+    {
+      "model": "gpt-5.4-nano",
+      "judge_v2_score": 4.92,
+      "bleu_score": 30.33
+    },
+    {
+      "model": "gpt-5.5",
+      "judge_v2_score": 5.0,
+      "bleu_score": 30.86
+    },
+    {
+      "model": "gpt-5.5-pro",
+      "judge_v2_score": 4.96,
+      "bleu_score": 30.08
+    },
+    {
+      "model": "kimi-k2.6",
+      "judge_v2_score": 4.96,
+      "bleu_score": 30.2
+    },
+    {
+      "model": "meta-llama/llama-3.2-1b-instruct",
+      "judge_v2_score": 3.52,
+      "bleu_score": 18.87
+    },
+    {
+      "model": "meta-llama/llama-3.2-3b-instruct",
+      "judge_v2_score": 4.18,
+      "bleu_score": 18.49
+    },
+    {
+      "model": "meta-llama/llama-4-maverick",
+      "judge_v2_score": 4.82,
+      "bleu_score": 15.07
+    },
+    {
+      "model": "microsoft/phi-4",
+      "judge_v2_score": 4.54,
+      "bleu_score": 23.03
+    },
+    {
+      "model": "ministral-3b-latest",
+      "judge_v2_score": 4.48,
+      "bleu_score": 5.78
+    },
+    {
+      "model": "mistral-large-latest",
+      "judge_v2_score": 4.92,
+      "bleu_score": 6.31
+    },
+    {
+      "model": "mistral-medium-latest",
+      "judge_v2_score": 4.88,
+      "bleu_score": 5.81
+    },
+    {
+      "model": "mistral-small-latest",
+      "judge_v2_score": 4.84,
+      "bleu_score": 13.65
+    },
+    {
+      "model": "nvidia/nemotron-3-super-120b-a12b",
+      "judge_v2_score": 3.7142857142857144,
+      "bleu_score": 9.81
+    },
+    {
+      "model": "o3",
+      "judge_v2_score": 4.96,
+      "bleu_score": 29.16
+    },
+    {
+      "model": "o4-mini",
+      "judge_v2_score": 4.877551020408164,
+      "bleu_score": 31.1
+    },
+    {
+      "model": "qwen/qwen-max",
+      "judge_v2_score": 4.92,
+      "bleu_score": 26.6
+    },
+    {
+      "model": "qwen/qwen-turbo",
+      "judge_v2_score": 4.7,
+      "bleu_score": 27.47
+    },
+    {
+      "model": "qwen/qwen3-8b",
+      "judge_v2_score": 4.7,
+      "bleu_score": 25.22
+    },
+    {
+      "model": "qwen/qwen3-coder",
+      "judge_v2_score": 4.94,
+      "bleu_score": 26.8
+    },
+    {
+      "model": "qwen/qwen3.6-flash",
+      "judge_v2_score": 4.94,
+      "bleu_score": 29.51
+    },
+    {
+      "model": "qwen/qwen3.6-max-preview",
+      "judge_v2_score": 4.98,
+      "bleu_score": 26.34
+    },
+    {
+      "model": "qwen/qwen3.6-plus",
+      "judge_v2_score": 4.98,
+      "bleu_score": 32.26
+    },
+    {
+      "model": "seed-2-0-code-preview-260328",
+      "judge_v2_score": 4.9,
+      "bleu_score": 3.45
+    },
+    {
+      "model": "seed-2-0-pro-260328",
+      "judge_v2_score": 4.98,
+      "bleu_score": 14.46
+    },
+    {
+      "model": "x-ai/grok-4-fast",
+      "judge_v2_score": 4.92,
+      "bleu_score": 31.64
+    },
+    {
+      "model": "x-ai/grok-4.20",
+      "judge_v2_score": 4.94,
+      "bleu_score": 26.74
+    },
+    {
+      "model": "x-ai/grok-code-fast-1",
+      "judge_v2_score": 4.94,
+      "bleu_score": 31.42
+    }
+  ],
+  "r": 0.2903,
+  "p": 0.0452933,
+  "n": 48
+}

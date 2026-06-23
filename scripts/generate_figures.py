@@ -323,8 +323,14 @@ def fig_pareto(agg, task_key, task_title, out_name, label_models):
     cost_min = min(costs) * 0.5
     cost_max = max(costs) * 2.0
     ax.set_xlim(cost_min, cost_max)
+    spread = max(scores) - min(scores)
     y_min = min(scores) - 0.3
     ax.set_ylim(y_min, 5.2)
+
+    # Spread indicator
+    ax.text(0.02, 0.98, f"spread = {spread:.2f}", transform=ax.transAxes,
+            fontsize=8, va="top", ha="left", color="#888888",
+            bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="#cccccc", lw=0.5, alpha=0.85))
 
     ax.set_xlabel("Cost per query (millicents, log scale)", fontsize=11)
     ax.set_ylabel("Average quality score (1-5)", fontsize=11)
@@ -477,32 +483,84 @@ def fig_task_discriminativeness(disc):
 # =====================================================================
 # Figure 7: Origin Comparison (Chinese / American / European)
 # =====================================================================
-def fig_origin_comparison(origin):
-    origins = ["Chinese", "American", "European"]
-    means = [origin[o]["avg"] for o in origins]
-    ns = [origin[o]["n"] for o in origins]
+def bootstrap_ci(vals, n_boot=1000, seed=42):
+    """Bootstrap 95% CI for the mean."""
+    rng = np.random.RandomState(seed)
+    arr = np.array(vals)
+    means = [float(np.mean(rng.choice(arr, len(arr), replace=True))) for _ in range(n_boot)]
+    return float(np.mean(arr)), float(np.percentile(means, 2.5)), float(np.percentile(means, 97.5))
 
-    # Use bootstrap CIs instead of min-max to avoid Llama 1B distortion
-    # Approximate CI from std: we don't have raw values here, so use min-max
-    # but clip to reasonable range
-    mins = [origin[o]["min"] for o in origins]
-    maxs = [origin[o]["max"] for o in origins]
 
-    # Use std-based error bars (1.96 * std/sqrt(n)) if we can approximate
-    # Since we don't have std, use interquartile-like range: show ±(max-min)/4
-    yerr = [(ma - mi) / 4 for mi, ma in zip(mins, maxs)]
+ORIGIN = {
+    "qwen/qwen-turbo": "Chinese", "qwen/qwen3-8b": "Chinese", "qwen/qwen-max": "Chinese",
+    "qwen/qwen3-coder": "Chinese", "qwen/qwen3.6-flash": "Chinese",
+    "qwen/qwen3.6-plus": "Chinese", "qwen/qwen3.6-max-preview": "Chinese",
+    "deepseek/deepseek-v3.2": "Chinese", "deepseek/deepseek-v4-pro": "Chinese",
+    "bytedance-seed/seed-1.6-flash": "Chinese", "bytedance-seed/seed-2.0-lite": "Chinese",
+    "bytedance-seed/seed-2.0-mini": "Chinese", "seed-2-0-pro-260328": "Chinese",
+    "seed-2-0-code-preview-260328": "Chinese", "kimi-k2.6": "Chinese", "MiniMax-M2.7": "Chinese",
+    "gpt-4o": "American", "gpt-4o-mini": "American", "gpt-5.1-chat": "American",
+    "gpt-5.4": "American", "gpt-5.4-mini": "American", "gpt-5.4-nano": "American",
+    "gpt-5.5": "American", "gpt-5.5-pro": "American", "o3": "American", "o4-mini": "American",
+    "claude-opus-4-7": "American", "claude-sonnet-4-20250514": "American",
+    "claude-sonnet-4-6": "American", "claude-haiku-4-5-20251001": "American",
+    "gemini-2.5-flash": "American", "gemini-2.5-pro": "American",
+    "gemini-3.1-pro-preview": "American", "x-ai/grok-4-fast": "American",
+    "x-ai/grok-4.20": "American", "x-ai/grok-code-fast-1": "American",
+    "meta-llama/llama-3.2-1b-instruct": "American", "meta-llama/llama-3.2-3b-instruct": "American",
+    "meta-llama/llama-4-maverick": "American", "google/gemma-4-26b-a4b-it": "American",
+    "microsoft/phi-4": "American", "nvidia/nemotron-3-super-120b-a12b": "American",
+    "mistral-small-latest": "European", "mistral-medium-latest": "European",
+    "mistral-large-latest": "European", "ministral-3b-latest": "European",
+    "devstral-latest": "European",
+}
+
+LICENSE = {
+    "meta-llama/llama-3.2-1b-instruct": "Open", "meta-llama/llama-3.2-3b-instruct": "Open",
+    "meta-llama/llama-4-maverick": "Open", "deepseek/deepseek-v3.2": "Open",
+    "deepseek/deepseek-v4-pro": "Open", "qwen/qwen-turbo": "Open", "qwen/qwen3-8b": "Open",
+    "qwen/qwen-max": "Open", "qwen/qwen3-coder": "Open", "qwen/qwen3.6-flash": "Open",
+    "qwen/qwen3.6-plus": "Open", "qwen/qwen3.6-max-preview": "Open",
+    "google/gemma-4-26b-a4b-it": "Open", "microsoft/phi-4": "Open",
+    "nvidia/nemotron-3-super-120b-a12b": "Open", "ministral-3b-latest": "Open",
+    "mistral-small-latest": "Open", "devstral-latest": "Open",
+}
+
+
+def fig_origin_comparison(origin, agg):
+    complete = get_complete_models(agg)
+    origins_order = ["Chinese", "American", "European"]
+
+    # Collect per-task scores grouped by origin (same unit as tier bootstrap)
+    origin_scores = {o: [] for o in origins_order}
+    for m in complete:
+        o = ORIGIN.get(m)
+        if o:
+            for t in V2_TASKS:
+                origin_scores[o].append(agg[t][m]["avg_score"])
+
+    means, ci_los, ci_his, ns = [], [], [], []
+    for o in origins_order:
+        mean, ci_lo, ci_hi = bootstrap_ci(origin_scores[o])
+        means.append(mean)
+        ci_los.append(ci_lo)
+        ci_his.append(ci_hi)
+        ns.append(len([m for m in complete if ORIGIN.get(m) == o]))
+
+    yerr_lo = [means[i] - ci_los[i] for i in range(3)]
+    yerr_hi = [ci_his[i] - means[i] for i in range(3)]
 
     colors = ["#FE076E", "#2733EF", "#2ED8B0"]
     fig, ax = plt.subplots(figsize=(8, 6))
     bars = ax.bar(range(3), means, color=colors, alpha=0.85,
-                  yerr=yerr, capsize=8, error_kw={"lw": 1.5})
+                  yerr=[yerr_lo, yerr_hi], capsize=8, error_kw={"lw": 1.5})
     ax.set_xticks(range(3))
-    ax.set_xticklabels([f"{o}\n(n={ns[i]})" for i, o in enumerate(origins)], fontsize=11)
+    ax.set_xticklabels([f"{o}\n(n={ns[i]})" for i, o in enumerate(origins_order)], fontsize=11)
     ax.set_ylabel("Mean V2 Quality Score", fontsize=12)
     ax.set_title("Quality by Provider Origin", fontsize=14, fontweight="bold")
 
     for i, m in enumerate(means):
-        ax.text(i, m + yerr[i] + 0.02, f"{m:.3f}", ha="center", va="bottom",
+        ax.text(i, m + yerr_hi[i] + 0.02, f"{m:.3f}", ha="center", va="bottom",
                 fontsize=10, fontweight="bold")
 
     # Add pairwise test results
@@ -518,7 +576,7 @@ def fig_origin_comparison(origin):
     ax.grid(axis="y", alpha=0.2)
     fig.text(0.5, 0.005,
              f"Average quality across 21 tasks, 46 complete models. "
-             f"Error bars: +/- (range/4). {note_text}",
+             f"Bootstrap 95% CIs (1000 iterations, seed 42). {note_text}",
              ha="center", fontsize=8, color="#555555", style="italic", wrap=True)
     fig.tight_layout(rect=[0, 0.04, 1, 0.97])
     save_all(fig, "origin_comparison.svg")
@@ -527,21 +585,43 @@ def fig_origin_comparison(origin):
 # =====================================================================
 # Figure 8: License Comparison (open vs proprietary)
 # =====================================================================
-def fig_license_comparison(lic):
-    categories = [c for c in ["open", "closed", "proprietary"] if c in lic]
-    cat_labels = {"open": "Open-weight", "closed": "Proprietary", "proprietary": "Proprietary"}
-    colors_map = {"open": "#2ED8B0", "closed": "#FE076E", "proprietary": "#FE076E"}
+def fig_license_comparison(lic, agg):
+    complete = get_complete_models(agg)
+    categories = ["open", "closed"]
+    cat_labels = {"open": "Open-weight", "closed": "Proprietary"}
+    colors_map = {"open": "#2ED8B0", "closed": "#FE076E"}
+
+    # Collect per-task scores grouped by license
+    lic_scores = {"open": [], "closed": []}
+    for m in complete:
+        key = "open" if LICENSE.get(m) == "Open" else "closed"
+        for t in V2_TASKS:
+            lic_scores[key].append(agg[t][m]["avg_score"])
+
+    means, ci_los, ci_his, ns = [], [], [], []
+    for cat in categories:
+        mean, ci_lo, ci_hi = bootstrap_ci(lic_scores[cat])
+        means.append(mean)
+        ci_los.append(ci_lo)
+        ci_his.append(ci_hi)
+        if cat == "open":
+            ns.append(len([m for m in complete if LICENSE.get(m) == "Open"]))
+        else:
+            ns.append(len([m for m in complete if LICENSE.get(m) != "Open"]))
+
+    yerr_lo = [means[i] - ci_los[i] for i in range(2)]
+    yerr_hi = [ci_his[i] - means[i] for i in range(2)]
 
     fig, ax = plt.subplots(figsize=(7, 6))
-    for i, cat in enumerate(categories):
-        data = lic[cat]
-        ax.bar(i, data["avg"], color=colors_map[cat], alpha=0.85,
-               edgecolor="#444444", linewidth=0.5)
-        ax.text(i, data["avg"] + 0.02, f"{data['avg']:.3f}", ha="center", va="bottom",
+    bars = ax.bar(range(2), means, color=[colors_map[c] for c in categories], alpha=0.85,
+                  yerr=[yerr_lo, yerr_hi], capsize=8, error_kw={"lw": 1.5},
+                  edgecolor="#444444", linewidth=0.5)
+    for i, m in enumerate(means):
+        ax.text(i, m + yerr_hi[i] + 0.02, f"{m:.3f}", ha="center", va="bottom",
                 fontsize=10, fontweight="bold")
 
-    ax.set_xticks(range(len(categories)))
-    ax.set_xticklabels([f"{cat_labels[c]}\n(n={lic[c]['n']})" for c in categories], fontsize=11)
+    ax.set_xticks(range(2))
+    ax.set_xticklabels([f"{cat_labels[c]}\n(n={ns[i]})" for i, c in enumerate(categories)], fontsize=11)
     ax.set_ylabel("Mean V2 Quality Score", fontsize=12)
     ax.set_title("Quality by License Type", fontsize=14, fontweight="bold")
 
@@ -555,7 +635,8 @@ def fig_license_comparison(lic):
     ax.set_ylim(3.8, 5.1)
     ax.grid(axis="y", alpha=0.2)
     fig.text(0.5, 0.005,
-             f"Average quality across 21 tasks. {test_note}",
+             f"Average quality across 21 tasks. "
+             f"Bootstrap 95% CIs (1000 iterations, seed 42). {test_note}",
              ha="center", fontsize=8, color="#555555", style="italic")
     fig.tight_layout(rect=[0, 0.04, 1, 0.97])
     save_all(fig, "license_comparison.svg")
@@ -607,7 +688,8 @@ def fig_generational_delta(gen):
 
     fig.text(0.5, 0.005,
              "Quality delta = average score difference across 21 tasks (new model - predecessor). "
-             "Price change = input price change (%).",
+             "Price change = input price change (%). "
+             "Pairs selected where both predecessor and successor have complete 21/21 task coverage.",
              ha="center", fontsize=8, color="#555555", style="italic")
     fig.tight_layout(rect=[0, 0.04, 1, 0.97])
     save_all(fig, "generational_delta.svg")
@@ -745,42 +827,55 @@ def fig_verbosity_scatter(verb, agg):
 # =====================================================================
 # Figures 12-13: Judge V1→V2 Scatter Plots
 # =====================================================================
-def fig_judge_validation_scatter(data, title, metric_label, out_name):
-    """Scatter plot of V1 judge score vs external metric, showing correlation."""
-    fig, ax = plt.subplots(figsize=(8, 6))
+def fig_judge_validation_scatter(scatter_data, title, metric_label, x_label, out_name):
+    """Scatter plot of judge V2 score vs external metric with fit line."""
+    from scipy import stats as sp_stats
 
-    r_val = data.get("r", 0)
-    p_val = data.get("p", 0)
-    n_val = data.get("n", 0)
+    points = scatter_data["points"]
+    xs = [p[x_label] for p in points]
+    ys = [p["judge_v2_score"] for p in points]
+    models = [p["model"] for p in points]
+    n_val = len(points)
 
-    p_str = f"p < 0.001" if p_val < 0.001 else f"p = {p_val:.4f}"
-    ax.text(0.5, 0.6,
-            f"Pearson r = {r_val:.4f}\n{p_str}\nn = {n_val} models",
-            ha="center", va="center", fontsize=16, fontweight="bold",
-            transform=ax.transAxes,
-            bbox=dict(boxstyle="round,pad=0.5", fc="#f0f0f0", ec="#cccccc"))
+    # Compute correlation
+    r_val, p_val = sp_stats.pearsonr(xs, ys)
 
-    # Error breakdown if available
-    eb = data.get("error_breakdown", {})
-    if eb:
-        eb_text = "Error breakdown: " + ", ".join(f"{k}: {v}" for k, v in eb.items())
-        ax.text(0.5, 0.3, eb_text, ha="center", va="center", fontsize=10,
-                transform=ax.transAxes, color="#555555")
+    fig, ax = plt.subplots(figsize=(10, 7))
+
+    # Color by tier
+    for tier in ["Premium", "Standard", "Economy", "Micro"]:
+        idx = [i for i in range(n_val) if get_tier(models[i]) == tier]
+        if not idx:
+            continue
+        ax.scatter([xs[i] for i in idx], [ys[i] for i in idx],
+                   c=TIER_COLOR[tier], marker=TIER_MARKER[tier],
+                   s=50, alpha=0.75, label=tier, edgecolors="#444444", linewidths=0.5)
+
+    # Fit line
+    z = np.polyfit(xs, ys, 1)
+    xline = np.linspace(min(xs), max(xs), 100)
+    ax.plot(xline, np.polyval(z, xline), "--", color="#888888", linewidth=1, alpha=0.7)
+
+    ax.set_xlabel(metric_label, fontsize=11)
+    ax.set_ylabel("Judge V2 score (1-5)", fontsize=11)
+    ax.set_title(title, fontsize=14, fontweight="bold")
+    ax.legend(fontsize=9)
+    ax.grid(True, alpha=0.15)
 
     if p_val < 0.001:
         sig = "significant"
+        p_caption = "p < 0.001"
     elif p_val < 0.05:
         sig = "weakly significant"
+        p_caption = f"p = {p_val:.4f}"
     else:
         sig = "not significant"
-    ax.set_title(title, fontsize=14, fontweight="bold")
-    ax.axis("off")
+        p_caption = f"p = {p_val:.4f}"
 
-    p_caption = "p < 0.001" if p_val < 0.001 else f"p = {p_val:.4f}"
     pop_note = " (includes incomplete models)" if n_val != 46 else ""
     fig.text(0.5, 0.005,
-             f"Correlation between V2 judge scores and {metric_label}. "
-             f"r = {r_val:.3f}, {p_caption} ({sig}). n = {n_val} models{pop_note}.",
+             f"Pearson r = {r_val:.3f}, {p_caption} ({sig}). n = {n_val} models{pop_note}. "
+             f"Dashed line: linear fit.",
              ha="center", fontsize=8, color="#555555", style="italic")
     fig.tight_layout(rect=[0, 0.04, 1, 0.97])
     save_all(fig, out_name)
@@ -828,8 +923,14 @@ def fig_pareto_appendix(agg, task_key, task_title, out_name):
     cost_min = min(costs) * 0.5
     cost_max = max(costs) * 2.0
     ax.set_xlim(cost_min, cost_max)
+    spread = max(scores) - min(scores)
     y_min = min(scores) - 0.3
     ax.set_ylim(y_min, 5.2)
+
+    # Spread indicator
+    ax.text(0.02, 0.98, f"spread = {spread:.2f}", transform=ax.transAxes,
+            fontsize=8, va="top", ha="left", color="#888888",
+            bbox=dict(boxstyle="round,pad=0.2", fc="white", ec="#cccccc", lw=0.5, alpha=0.85))
 
     ax.set_xlabel("Cost per query (millicents, log scale)", fontsize=11)
     ax.set_ylabel("Average quality score (1-5)", fontsize=11)
@@ -941,11 +1042,11 @@ def main():
 
     print("\nFigure 7: Origin Comparison")
     origin = load_json("origin_comparison.json")
-    fig_origin_comparison(origin)
+    fig_origin_comparison(origin, agg)
 
     print("\nFigure 8: License Comparison")
     lic = load_json("license_comparison.json")
-    fig_license_comparison(lic)
+    fig_license_comparison(lic, agg)
 
     print("\nFigure 9: Generational Delta")
     gen = load_json("generational_delta.json")
@@ -960,18 +1061,19 @@ def main():
     fig_verbosity_scatter(verb, agg)
 
     print("\nFigure 12: Judge V2 Validation — Code (HumanEval)")
-    code_v4 = load_json("judge_v2_validation_code_v4.json")
-    fig_judge_validation_scatter(code_v4,
+    code_scatter = load_json("judge_v2_scatter_code.json")
+    fig_judge_validation_scatter(code_scatter,
         "Judge V2 vs HumanEval pass@1",
         "HumanEval pass@1 (automated execution)",
+        "humaneval_pass_rate",
         "judge_v2_code.svg")
 
     print("\nFigure 13: Judge V2 Validation — Translation (BLEU)")
-    trans = load_json("judge_v2_validation_translation.json")
-    trans_data = trans.get("translation_enfr", trans)
-    fig_judge_validation_scatter(trans_data,
+    trans_scatter = load_json("judge_v2_scatter_translation.json")
+    fig_judge_validation_scatter(trans_scatter,
         "Judge V2 vs BLEU Score (EN→FR Translation)",
-        "corpus BLEU (sacrebleu)",
+        "Corpus BLEU (sacrebleu)",
+        "bleu_score",
         "judge_v2_translation.svg")
 
     print("\n=== APPENDIX PARETO FIGURES (14-32) ===\n")
