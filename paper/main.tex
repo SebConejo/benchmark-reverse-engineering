@@ -384,7 +384,7 @@ log-scale cost axis).  Sonnet~4.6 dominates at 0.14\,mc; GPT-5.5~Pro
 costs 7$\times$ more for lower quality.  Black line marks the Pareto
 frontier.  Point shapes and colors indicate price tiers
 (red\,=\,Premium, blue\,=\,Standard, green\,=\,Economy,
-orange\,=\,Micro).}
+tan\,=\,Micro).}
 \label{fig:pareto-rag}
 \end{figure}
 
@@ -397,6 +397,16 @@ models match that score at up to 2{,}000$\times$ the cost.  The
 near-flat frontier illustrates a task where model selection is
 cost-irrelevant.}
 \label{fig:pareto-data}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/per_task_routing_savings}
+\caption{Per-task routing savings versus o3.  Each bar shows the cost
+reduction from routing to the cheapest model scoring $\geq 4.0$ on that
+task.  All 21 tasks achieve $>98.7$\% savings.  The x-axis is zoomed to
+98--100\% to make inter-task differences visible.}
+\label{fig:routing}
 \end{figure}
 
 
@@ -463,6 +473,16 @@ $+0.003$ quality.  The exception is DeepSeek V3.2 to V4~Pro:
 $+211$\% price for $+0.061$ quality.  In three of four provider
 families, the new generation is cheaper at equal or better quality.
 Upgrading generations is a more reliable strategy than upgrading tiers.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/generational_delta}
+\caption{Quality delta and price change for four generational model
+pairs.  In three of four cases, the newer model is cheaper or equal in
+price at higher quality.  Pairs selected where both predecessor and
+successor have complete 21/21 task coverage.}
+\label{fig:generational}
+\end{figure}
 
 
 % ============================================================
@@ -555,8 +575,8 @@ features that correlate with model price tier.
 \item \textbf{Model diversity.}  Our sample includes three geographic
   origins and both open-weight and closed-source licenses.  Neither
   dimension significantly predicts quality: provider origin shows no
-  effect (Kruskal-Wallis $H = 1.83$, $p = 0.40$), and the
-  open-versus-closed gap (0.183, $p = 0.0004$) is driven by sub-3B
+  effect (Kruskal-Wallis $H = 3.80$, $p = 0.15$), and the
+  open-versus-closed gap (0.191, $p = 0.0016$) is driven by sub-3B
   open-weight models (see Appendix~\ref{app:diversity}).
 
 \item \textbf{English-only} (except the EN$\to$FR translation task).
@@ -612,28 +632,72 @@ All code, data, and evaluation prompts are publicly available.\footnote{\url{htt
 % ============================================================
 \appendix
 
-\section{Full Pareto Frontiers (21 Tasks)}
+\section{Full Pareto Frontiers (19 Remaining Tasks)}
 \label{app:pareto}
 
 One single-panel log-scale Pareto figure per task, following the style of
-Figures~\ref{fig:pareto-rag} and~\ref{fig:pareto-data}.  Figures are
-available in \texttt{results/figures/} in the companion repository.
+Figures~\ref{fig:pareto-rag} and~\ref{fig:pareto-data}.  RAG~QA and
+Data-to-Text appear in the main text.
 
-% Placeholder: include all 21 Pareto PNGs during formatting.
-% \foreach \task in {sentiment_sst2, intent_clinc150, ...} {
-%   \includegraphics[width=\textwidth]{../results/figures/pareto_\task}
-% }
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/pareto_sentiment_sst2}
+\hfill
+\includegraphics[width=0.48\textwidth]{figures/pareto_intent_clinc150}
+\\[4pt]
+\includegraphics[width=0.48\textwidth]{figures/pareto_moderation_toxigen}
+\hfill
+\includegraphics[width=0.48\textwidth]{figures/pareto_multistep_reasoning}
+\\[4pt]
+\includegraphics[width=0.48\textwidth]{figures/pareto_reasoning_gsm8k}
+\hfill
+\includegraphics[width=0.48\textwidth]{figures/pareto_code_generation}
+\caption{Pareto frontiers (1/4): Classification and reasoning tasks.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/pareto_code_review_v2}
+\hfill
+\includegraphics[width=0.48\textwidth]{figures/pareto_code_explanation}
+\\[4pt]
+\includegraphics[width=0.48\textwidth]{figures/pareto_test_generation_v2}
+\hfill
+\includegraphics[width=0.48\textwidth]{figures/pareto_function_calling}
+\\[4pt]
+\includegraphics[width=0.48\textwidth]{figures/pareto_sql_spider}
+\hfill
+\includegraphics[width=0.48\textwidth]{figures/pareto_translation_enfr}
+\caption{Pareto frontiers (2/4): Code and structured tasks.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/pareto_instruction_following}
+\hfill
+\includegraphics[width=0.48\textwidth]{figures/pareto_structured_output}
+\\[4pt]
+\includegraphics[width=0.48\textwidth]{figures/pareto_extraction_hard_v2}
+\hfill
+\includegraphics[width=0.48\textwidth]{figures/pareto_json_transform_v2}
+\\[4pt]
+\includegraphics[width=0.48\textwidth]{figures/pareto_email_summary_v2}
+\hfill
+\includegraphics[width=0.48\textwidth]{figures/pareto_long_summarization}
+\caption{Pareto frontiers (3/4): Structured output and summarization tasks.}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/pareto_ner_extraction}
+\caption{Pareto frontier (4/4): NER extraction.}
+\end{figure}
 
 
 \section{Complete Model Table}
 \label{app:models}
 
-Table with all 46 complete models: provider, model name, price tier,
-input price/M, output price/M, average score, rank, and number of valid
-cases.  Available as \texttt{task\_model\_aggregates.json} in the
-companion repository.
-
-% Full table to be inserted during formatting.
+\input{table_models}
 
 
 \section{Judge Validation Details}
@@ -665,14 +729,24 @@ extraction, uniform indent, selective indent, raw append), resolving
 91.4\% of formatting failures and raising the pass rate from 44.9\% to
 91.4\%.
 
-Translation BLEU is inconclusive ($r = 0.29$) due to the metric's
-single-reference limitation, not the judge's quality.
+Translation BLEU is inconclusive ($r = 0.29$, weakly significant) due
+to the metric's single-reference limitation, not the judge's quality.
 
 Per-task ranking flip rates range from 20.2\% (code review, Kendall
 $\tau = 0.596$) to 50.3\% (extractive QA, $\tau = -0.006$).  The
 aggregate flip rate is 34.7\% (5{,}195 of 14{,}972 pairs).
 
-% Full score-distribution shift tables and scatter plots to be added.
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/judge_v2_code}
+\hfill
+\includegraphics[width=0.48\textwidth]{figures/judge_v2_translation}
+\caption{Judge V2 validation scatter plots.  \textbf{Left:} Judge score
+versus HumanEval pass@1 ($r = 0.88$, $p < 0.001$, $n = 48$).
+\textbf{Right:} Judge score versus corpus BLEU ($r = 0.29$,
+$p = 0.045$, $n = 48$).  Both include incomplete models.}
+\label{fig:judge-scatter}
+\end{figure}
 
 
 \section{Judge Prompts}
@@ -705,17 +779,17 @@ quality (ties broken by lowest cost).  Available as
 \label{app:diversity}
 
 \paragraph{Provider origin.}
-Three geographic groups: Chinese ($n = 16$, mean 4.779), American
-($n = 26$, mean 4.682), and European ($n = 5$, mean 4.691).
-Kruskal-Wallis $H = 1.83$, $p = 0.40$.  No significant difference.  The
-American group has the widest range (3.394 to 4.842), driven by sub-3B
+Three geographic groups: Chinese ($n = 16$, mean 4.753), American
+($n = 25$, mean 4.656), and European ($n = 5$, mean 4.627).
+Kruskal-Wallis $H = 3.80$, $p = 0.15$.  No significant difference.  The
+American group has the widest range (3.261 to 4.842), driven by sub-3B
 Llama models at the low end.
 
 \paragraph{License type.}
-Open-weight ($n = 18$, mean 4.603) versus closed-source ($n = 30$, mean
-4.786).  Mann-Whitney $p = 0.0004$, gap 0.183.  However, the open-weight
+Open-weight ($n = 17$, mean 4.566) versus closed-source ($n = 29$, mean
+4.757).  Mann-Whitney $p = 0.0016$, gap 0.191.  However, the open-weight
 group includes all sub-3B models (Llama~1B, Llama~3B, Ministral~3B).
-Excluding sub-3B models narrows the gap to approximately 0.066.  The
+Excluding sub-3B models narrows the gap to approximately 0.058.  The
 license effect is driven primarily by model size, not by the open-weight
 development process.
 
@@ -723,9 +797,46 @@ development process.
 \section{Task Discriminativeness}
 \label{app:discriminativeness}
 
-Horizontal bar chart showing score spread (maximum minus minimum) per
-task across all 46 models, with tasks color-coded by category.  Available
-as \texttt{task\_discriminativeness\_v3.svg} in the companion repository.
+\begin{figure}[h]
+\centering
+\includegraphics[width=\textwidth]{figures/task_discriminativeness}
+\caption{Score spread (max $-$ min) per task across all 46 complete
+models.  Red: spread $\geq 2.0$ (highly discriminative).  Blue:
+$1.0$--$2.0$.  Green: $< 1.0$ (saturated).  Multistep reasoning has the
+highest spread (3.68), while structured output is nearly saturated
+(0.29).}
+\label{fig:discriminativeness}
+\end{figure}
+
+
+\section{Verbosity Analysis}
+\label{app:verbosity}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.75\textwidth]{figures/verbosity_scatter}
+\caption{Average output tokens per model versus quality delta from the
+grand mean.  Pearson $r = 0.217$, $p = 0.133$ (not significant).
+Verbosity does not predict the V1-to-V2 score change, indicating that
+rubric ambiguity --- not output length --- drives the format bias.}
+\label{fig:verbosity}
+\end{figure}
+
+
+\section{Origin and License Comparisons}
+\label{app:origin-license}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/origin_comparison}
+\hfill
+\includegraphics[width=0.48\textwidth]{figures/license_comparison}
+\caption{\textbf{Left:} Quality by provider origin (bootstrap 95\% CIs).
+No significant difference (Kruskal-Wallis $p = 0.15$).
+\textbf{Right:} Quality by license type (bootstrap 95\% CIs).
+Open-weight scores lower ($p = 0.0016$), driven by sub-3B models.}
+\label{fig:diversity}
+\end{figure}
 
 
 \end{document}
