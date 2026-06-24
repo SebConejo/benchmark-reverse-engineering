@@ -22,7 +22,7 @@
 \usepackage[dvipsnames]{xcolor}
 
 % --- Hyperlinks ---
-\usepackage[breaklinks=true,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage[breaklinks=true,colorlinks=true,linkcolor=OliveGreen,citecolor=OliveGreen,urlcolor=OliveGreen]{hyperref}
 
 % --- Bibliography ---
 \usepackage{natbib}
@@ -33,9 +33,9 @@
 \usepackage{microtype}
 
 % --- Title ---
-\title{TaskBench: Measuring Cost-Quality Tradeoffs\\Across 46 LLMs and 21 Production Tasks}
-\author{S\'{e}bastien Conejo}
-\date{}
+\title{TaskBench: Measuring Cost-Quality Tradeoffs Across 46 LLMs and 21 Production Tasks}
+\author{S\'{e}bastien Conejo\thanks{sebastien@mnfst.com}}
+\date{June 2026}
 
 \begin{document}
 \maketitle
@@ -65,7 +65,7 @@ and evaluation prompts.\footnote{Data and code:
 % ============================================================
 \section{Introduction}
 
-\subsection{The Problem}
+\subsection{Motivation}
 
 Practitioners choose large language models by reputation or leaderboard
 rank.  Existing benchmarks measure capability along a single axis: MMLU
@@ -97,7 +97,7 @@ We make three contributions.
 
 We release all raw responses, scores, and evaluation code.
 
-\subsection{Key Findings Preview}
+\subsection{Summary of results}
 
 Four headline results:
 
@@ -125,18 +125,19 @@ Four headline results:
 % ============================================================
 \section{Related Work}
 
-\subsection{General LLM Benchmarks}
+\subsection{General LLM benchmarks}
 
 HELM \citep{liang2023helm} evaluates 30 models across 42 scenarios on
 7 metric families, but cost is not among them.  Chatbot Arena
 \citep{chiang2024chatbot} collects over 1.5 million human preference
 votes, yet produces a single aggregate ranking without per-task
 granularity.  MMLU \citep{hendrycks2021mmlu} and its successor MMLU-Pro
-test academic knowledge rather than production tasks.  The Berkeley function calling benchmark covers a single task type.  TaskBench adds
+test academic knowledge rather than production tasks.  The Berkeley
+Function Calling Leaderboard covers a single task type.  TaskBench adds
 cost as a first-class evaluation axis and provides per-task granularity
 across 21 diverse production tasks.
 
-\subsection{Cost-Aware LLM Evaluation and Routing}
+\subsection{Cost-aware LLM evaluation and routing}
 
 FrugalGPT \citep{chen2023frugalgpt} introduced LLM cascading for cost
 reduction but evaluated on one task with three models.  RouterBench and
@@ -163,7 +164,7 @@ quantify this ($r = 0.39 \to 0.91$) and release both V1 and V2 scores.
 % ============================================================
 \section{Methodology}
 
-\subsection{Benchmark Design}
+\subsection{Benchmark design}
 
 We evaluate 21 production tasks in four categories, with 50 cases each
 drawn from standard datasets:
@@ -189,7 +190,7 @@ for models that reject zero temperature).  Two tasks have fewer than 50
 cases due to dataset size: code explanation (48) and structured output
 (41).
 
-\subsection{Model Selection}
+\subsection{Model selection}
 
 We evaluate 46 models that completed all 21 tasks with at least 40 valid
 cases each, drawn from 12 API providers.  We assign models to four price
@@ -241,7 +242,7 @@ Bootstrap 95\% confidence intervals (1{,}000 iterations, seed 42).
 Mann-Whitney $U$ tests for tier comparisons.  Kruskal-Wallis tests for
 multi-group comparisons.
 
-\subsection{Judge Validation}
+\subsection{Judge validation}
 \label{sec:judge-validation}
 
 We validate the LLM judge against ground truth on three task types.
@@ -283,7 +284,7 @@ discuss in Section~\ref{sec:limitations}.
 % ============================================================
 \section{Results}
 
-\subsection{Cost-Quality Landscape}
+\subsection{Cost-quality landscape}
 
 Figure~\ref{fig:heatmap} shows the 46$\times$21 benchmark matrix.  The
 dominant pattern is uniformity: most cells score above 4.5/5.  Quality
@@ -312,7 +313,7 @@ classification and QA tasks.}
 \end{figure}
 
 
-\subsection{Tier Comparison: Economy Matches Premium}
+\subsection{Tier comparison}
 
 Bootstrap 95\% confidence intervals per tier (aggregated across all
 tasks):
@@ -359,7 +360,7 @@ is the only tier with a visible quality gap.}
 \end{figure}
 
 
-\subsection{Per-Task Pareto Frontiers and Routing Savings}
+\subsection{Per-task Pareto frontiers and routing savings}
 
 For each task we compute the cost-quality Pareto frontier: the set of
 models where no other model is both cheaper and higher quality.  Premium
@@ -410,7 +411,7 @@ task.  All 21 tasks achieve $>98.7$\% savings.  The x-axis is zoomed to
 \end{figure}
 
 
-\subsection{Provider Gradient: Paying More Buys Little}
+\subsection{Within-provider price gradient}
 
 Within each major provider, the most expensive model is not reliably the
 best.
@@ -451,10 +452,10 @@ the exception, driven by its sub-3B entry-level model.}
 \end{figure}
 
 
-\subsection{Model Selection in Practice}
+\subsection{Model selection in practice}
 
-Given that within-provider price increases yield minimal quality returns,
-which models should a practitioner actually choose?
+We now consider practical model selection strategies given the flat
+price-quality gradient.
 
 \paragraph{Coverage thresholds.}
 At the 4.0/5 quality threshold, 37 of 46 models cover all 21 tasks.
@@ -490,7 +491,7 @@ successor have complete 21/21 task coverage.}
 % ============================================================
 \section{Discussion}
 
-\subsection{Practical Implications}
+\subsection{Practical implications}
 
 Three recommendations for practitioners:
 
@@ -513,7 +514,7 @@ Premium models may add marginal value on open-ended language tasks, but
 the effect size ($< 0.2$ points) is within our task-level confidence
 intervals.
 
-\subsection{Evaluation Methodology Implications}
+\subsection{Evaluation methodology implications}
 
 The format bias finding (Section~\ref{sec:judge-validation}) generalizes
 beyond this benchmark.  Any LLM-as-judge evaluation using generic ``rate
@@ -611,9 +612,9 @@ longitudinal price tracking.
 % ============================================================
 % ACKNOWLEDGMENTS + DISCLOSURE
 % ============================================================
-\section*{Acknowledgments and Disclosure}
+\section*{Acknowledgments}
 
-\textbf{Disclosure.}  This work was conducted by S\'{e}bastien Conejo,
+\paragraph{Disclosure.}  This work was conducted by S\'{e}bastien Conejo,
 co-founder of Manifest (\url{https://github.com/mnfst/manifest}), an
 open-source LLM model router.  Manifest was not used in this benchmark.
 The routing savings analysis (Section~4.3) applies to any routing system
